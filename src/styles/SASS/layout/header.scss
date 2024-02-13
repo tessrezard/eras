@@ -7,7 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
-.headerContainer {
+.header-container {
     position: fixed;
     left: 0;
     padding: 5px;
@@ -26,37 +26,7 @@
     }
 }
 
-.reddit-mini-logo {
-    width: 35px;
-    height: 30px;
-    display: flex;
-    margin-left: 10px;
-    .logo-tail {
-        position: relative;
-        top: 20px;
-        left: 2px;
-        width: 15px;
-        height: 10px;
-        background: linear-gradient(to bottom right, #ffffff00 0%, #ffffff00 50%, $reddit-red 50%, $reddit-red 100%);
-        border-radius: 10px;
-    }
-    
-    .logo-circle{
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-color: $reddit-red;
-        border-radius: 100%;
-        font-size: 1.5rem;
-    }
-}
-
-.bear{
-    position: relative;
-    left: 2.95px;
-    top: 1px;
-}
-.title {
+.header-title {
     display: none;
     color: $reddit-red;
     margin: 0px;

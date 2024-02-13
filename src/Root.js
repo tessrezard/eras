@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import './styles/CSS/main.css'
 import Header from './components/Header';
-import NavMenu from './components/NavMenu';
 const Root = () => {
     return (
         <>
@@ -11,11 +10,8 @@ const Root = () => {
                     <Header />
                 </header>
                 <main>
-                    <div className='wholeContainer'>
-                        <nav className='wide-nav'>
-                            <NavMenu />
-                        </nav>
-                        <div className='mainContainer'>
+                    <div className='whole-container'>
+                        <div className='main-container'>
                             <Outlet />
                         </div>
                     </div>

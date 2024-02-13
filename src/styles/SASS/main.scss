@@ -41,7 +41,7 @@ ul {
 }
 
 // in root.js
-.wholeContainer {
+.whole-container {
     display: flex;
     position: relative;
     top: $header-height;
@@ -61,7 +61,7 @@ ul {
 
 
 // in root.js
-.mainContainer {
+.main-container {
     display: flex;
     padding-top: 1rem;
     overflow: hidden;
