@@ -27,3 +27,8 @@ function Burger({ active, setActive }) {
     );
 }
 export default Burger;
+
+
+// git remote add origin https://github.com/tessrezard/eras.git
+// git branch -M main
+// git push -u origin main
