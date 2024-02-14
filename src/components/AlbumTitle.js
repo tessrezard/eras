@@ -3,7 +3,8 @@ import '../styles/CSS/main.css';
 import { albumsTracksArr } from "../data/albums-tracks";
 
 
-const AlbumTitle = ({ album, albumHover }) => {
+
+const TrackTitle = ({ album, albumHover }) => {
 
 
     console.log(albumHover);
@@ -33,4 +34,4 @@ const AlbumTitle = ({ album, albumHover }) => {
 };
 
 
-export default AlbumTitle;
+export default TrackTitle;
