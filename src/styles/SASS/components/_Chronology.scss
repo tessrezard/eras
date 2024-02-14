@@ -1,21 +1,55 @@
 .chronology-container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    height: 9rem;
+
 }
 
-.album-container {}
+.album-container {
+    position: relative;
+    top: 4rem;
+    .album-tracks {
+        display: flex;
+        flex-flow: row;
+    }
 
-.album-tracks {
-    display: flex;
-    flex-flow: row;
+    .album-title-container {
+        height: 2rem;
+    }
+
+    .album-title {
+        font-size: 1rem;
+        margin: 0;
+
+    }
+
+    &:hover {
+        .album-title {
+            display: block;
+
+        }
+    }
 }
 
-.track-container {
-    display: flex;
-    margin: 1px;
-    height: 2rem;
-    width: 0.5rem;
-    padding: 0;
-}
+
+
+    .track-bar {
+        display: flex;
+        margin: 1px;
+        height: 2rem;
+        width: 3px;
+        padding: 0;
+    }
+
+    .track-bar:hover + .track-title-container {
+        display: block;
+    }
+
+    .track-title-container {
+        display: none;
+        position: relative;
+        top: 4rem;
+    }
 
 

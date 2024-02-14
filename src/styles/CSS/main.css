@@ -3,23 +3,49 @@
 .chronology-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  height: 9rem;
 }
 
-.album-tracks {
+.album-container {
+  position: relative;
+  top: 4rem;
+}
+.album-container .album-tracks {
   display: flex;
   flex-flow: row;
 }
+.album-container .album-title-container {
+  height: 2rem;
+}
+.album-container .album-title {
+  font-size: 1rem;
+  margin: 0;
+}
+.album-container:hover .album-title {
+  display: block;
+}
 
-.track-container {
+.track-bar {
   display: flex;
   margin: 1px;
   height: 2rem;
-  width: 0.5rem;
+  width: 3px;
   padding: 0;
 }
 
+.track-bar:hover + .track-title-container {
+  display: block;
+}
+
+.track-title-container {
+  display: none;
+  position: relative;
+  top: 4rem;
+}
+
 .background-color-theTorturedPoetsDepartment {
-  background-color: #f2faff;
+  background-color: rgb(237, 236, 232);
 }
 
 .background-color-midnights {
@@ -35,15 +61,15 @@
 }
 
 .background-color-lover {
-  background-color: #e0bdeb;
+  background-color: #e4c8ed;
 }
 
 .background-color-reputation {
-  background-color: #09251f;
+  background-color: #051915;
 }
 
 .background-color-nineteenEightyNine {
-  background-color: #77a7ff;
+  background-color: #9ab9f2;
 }
 
 .background-color-red {
@@ -59,7 +85,7 @@
 }
 
 .background-color-taylorSwift {
-  background-color: #6cebfb;
+  background-color: #99e9f3;
 }
 
 .background-color-nineteenEightyNineTV {
@@ -83,7 +109,7 @@
 }
 
 .color-theTorturedPoetsDepartment {
-  color: #f2faff;
+  color: rgb(237, 236, 232);
 }
 
 .color-midnights {
@@ -99,15 +125,15 @@
 }
 
 .color-lover {
-  color: #e0bdeb;
+  color: #e4c8ed;
 }
 
 .color-reputation {
-  color: #09251f;
+  color: #051915;
 }
 
 .color-nineteenEightyNine {
-  color: #77a7ff;
+  color: #9ab9f2;
 }
 
 .color-red {
@@ -123,7 +149,7 @@
 }
 
 .color-taylorSwift {
-  color: #6cebfb;
+  color: #99e9f3;
 }
 
 .header-container {
@@ -192,6 +218,7 @@ ul {
   display: flex;
   padding-top: 1rem;
   overflow: hidden;
+  justify-content: center;
 }
 @media (min-width: 1200px) {
   .main-container {

@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import '../styles/CSS/main.css';
-import { albumsTracksArr } from "../data/songsData";
+import { albumsTracksArr } from "../data/albums-tracks";
 import Album from "./Album";
-
+import AlbumTitle from "./AlbumTitle";
 const Chronology = () => {
 
-    console.log(albumsTracksArr)
+
+    const [albumHover, setAlbumHover] = useState(false);
+
 
 
     return (
         <>
-            <div className="chronology-container">
-                {albumsTracksArr.map((album, index) => (
-                    <Album album={album} key={index} />
-                ))}
-            </div>
+
+            {albumsTracksArr.toReversed().map((album, index) => (
+                <>
+                    <AlbumTitle album={album} albumHover={albumHover} />
+                    <div className="chronology-container">
+                        <Album
+                            album={album}
+                            key={index}
+                            albumHover={albumHover}
+                            setAlbumHover={setAlbumHover}
+                        />
+                    </div>
+
+                </>
+            ))}
 
         </>
     );

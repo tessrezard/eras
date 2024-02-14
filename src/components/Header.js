@@ -1,11 +1,15 @@
 import React, { useState }  from "react";
 import {Link, useLocation, Navigate } from "react-router-dom";
-import '../styles/SASS/layout/header.css';
+import '../styles/CSS/layout/header.css';
 
 function Header() {
 
     const [activeBurger, setActiveBurger] = useState(false);
 
+    const location = useLocation();
+    if (location.pathname === '/') {
+        return <Navigate to='/home' />
+    }
 
       
     return (
