@@ -1,683 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
-.wide-nav {
-  visibility: hidden;
-  display: none;
-}
-@media (min-width: 960px) {
-  .wide-nav {
-    visibility: visible;
-    display: block;
-  }
-}
-
-a:-webkit-any-link {
-  color: rgb(19, 19, 19);
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.menu-container {
-  display: block;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: sticky;
-  top: 56px;
-  width: 249px;
-  height: calc(100vh - 56px);
-  border-right: 1px solid rgb(203, 203, 203);
-  background-color: rgb(255, 255, 255);
-}
-
-.menu-section {
-  margin: 1rem;
-  border-bottom: 1px solid rgb(203, 203, 203);
-}
-
-.section-title-container {
-  padding: 1rem;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.section-title {
-  color: rgb(87, 111, 118);
-  text-transform: capitalize;
-  font-weight: 400px;
-}
-
-.styled-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 1rem;
-}
-.styled-list li {
-  margin: 0;
-  padding: 1rem;
-  height: 30px;
-  text-decoration: none;
-  color: rgb(19, 19, 19);
-  border-radius: 10px;
-}
-.styled-list li:hover {
-  background-color: rgb(234, 237, 239);
-}
-
-.navLink {
-  margin: 0;
-  height: 30px;
-  width: 249px;
-  line-height: 2rem;
-  margin: auto;
-  text-align: center;
+.chronology-container {
   display: flex;
+  flex-flow: row wrap;
 }
 
-.navMenu-popular-active {
-  background-color: rgb(234, 237, 239);
-  height: 30px;
+.album-tracks {
+  display: flex;
+  flex-flow: row;
 }
 
-.navMenu-active {
+.track-container {
+  display: flex;
+  margin: 1px;
   height: 2rem;
+  width: 0.5rem;
+  padding: 0;
 }
 
-.navMenu-popular {
-  margin: 0;
-  padding: 1rem;
-  height: 30px;
-  text-decoration: none;
-  color: rgb(19, 19, 19);
-  border-radius: 10px;
-}
-.navMenu-popular:hover {
-  background-color: rgb(234, 237, 239);
+.background-color-theTorturedPoetsDepartment {
+  background-color: #f2faff;
 }
 
-.post-layout-container {
-  border-top: 1px solid rgb(203, 203, 203);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  max-width: 1200px;
-}
-@media (min-width: 768px) {
-  .post-layout-container {
-    padding: 1rem;
-  }
+.background-color-midnights {
+  background-color: #0f1e7e;
 }
 
-#overlay {
-  content: "";
-  height: 80px;
-  background: linear-gradient(to top, rgb(255, 255, 255), rgba(253, 253, 253, 0.01));
-  position: absolute;
-  display: block;
-  bottom: 0;
-  width: 100%;
+.background-color-evermore {
+  background-color: #c47f2b;
 }
 
-.post-container {
-  border-radius: 18px;
-  padding: 1rem;
-}
-.post-container:hover {
-  background-color: rgb(234, 237, 239);
-}
-.post-container:hover #overlay {
-  background: linear-gradient(to top, rgb(234, 237, 239), rgba(253, 253, 253, 0.01));
+.background-color-folklore {
+  background-color: #d8e2dd;
 }
 
-.post-header {
-  display: flex;
-  flex-flow: column;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  margin-top: 1rem;
-}
-.post-header .post-subreddit-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.post-header .post-subreddit-icon {
-  height: 24px;
-  width: 24px;
-  margin-right: 5px;
-}
-.post-header .author-name {
-  margin: 0;
-}
-.post-header .post-subreddit-name {
-  font-weight: 700;
-  margin: 0;
-}
-.post-header .post-author-name {
-  margin: 0;
+.background-color-lover {
+  background-color: #e0bdeb;
 }
 
-.post-main {
-  display: flex;
-  flex-flow: column;
-}
-.post-main .post-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .post-main .post-title {
-    font-size: 1.25rem;
-  }
-}
-.post-main .flair {
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 18px;
-  padding: 2px 7px;
-  font-size: 0.75rem;
-  margin: 0;
-  margin-bottom: 0.5rem;
-}
-.post-main .self-text-preview-wrapper {
-  max-height: 300px;
-  overflow: hidden;
-  line-height: 1.25rem;
-  position: relative;
-}
-.post-main .self-text-preview-wrapper p {
-  margin-bottom: 0;
-}
-.post-main .see-whole-post {
-  display: block;
-  color: rgb(0, 69, 172);
-}
-.post-main .see-whole-post:hover {
-  text-decoration: underline;
+.background-color-reputation {
+  background-color: #09251f;
 }
 
-.post-bubbles {
-  display: flex;
-  flex-flow: row;
-  font-size: 0.75rem;
+.background-color-nineteenEightyNine {
+  background-color: #77a7ff;
 }
 
-.post-ups-bubble {
-  background-color: rgb(203, 203, 203);
-  width: 80px;
-  height: 30px;
-  display: flex;
-  margin: 0.5rem;
-  margin-top: 1rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-}
-.post-ups-bubble:hover {
-  background-color: rgb(181, 181, 181);
+.background-color-red {
+  background-color: #fc4456;
 }
 
-.comment-icon {
-  color: rgb(19, 19, 19);
-  margin-right: 2.5px;
+.background-color-speakNow {
+  background-color: #be81ed;
 }
 
-.post-comments-bubble {
-  background-color: rgb(203, 203, 203);
-  width: 60px;
-  height: 30px;
-  display: flex;
-  margin: 0.5rem;
-  margin-top: 1rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-}
-.post-comments-bubble:hover {
-  background-color: rgb(181, 181, 181);
+.background-color-fearless {
+  background-color: #ffc906;
 }
 
-.comment-icon {
-  color: rgb(19, 19, 19);
-  margin-right: 2.5px;
+.background-color-taylorSwift {
+  background-color: #6cebfb;
 }
 
-@media (min-width: 570px) {
-  .comment-container {
-    padding-left: 1rem;
-  }
-}
-@media (min-width: 960px) {
-  .comment-container {
-    padding-left: 2rem;
-  }
+.background-color-nineteenEightyNineTV {
+  background-color: #aedefe;
 }
 
-.comment-header .comment-author-name {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  margin-top: 1rem;
-  font-weight: 700;
-  margin: 0;
+.background-color-redTV {
+  background-color: #db2323;
 }
 
-.comment-body {
-  font-size: 0.875rem;
-  margin: 0.5rem;
-  margin-bottom: 1.75rem;
+.background-color-speakNowTV {
+  background-color: #8c7cf1;
 }
 
-.comment-ups {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  height: 1rem;
-}
-.comment-ups .comment-ups-icon {
-  font-size: 1rem;
-  margin: 0.25rem;
-}
-.comment-ups .comment-ups-number {
-  font-weight: 600;
+.background-color-fearlessTV {
+  background-color: #ffd771;
 }
 
-.loading-page-container {
-  display: flex;
-  margin: auto;
-  width: calc(100vw - 249px);
-  justify-content: center;
-  color: rgb(255, 69, 0);
+.background-color-taylorSwiftTV {
+  background-color: #6cebfb;
 }
 
-@keyframes bounce {
-  0%, 20%, 60%, 80%, 100% {
-    transform: translateY(0);
-  }
-  45% {
-    transform: translateY(-20px);
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-}
-.loading-container {
-  display: flex;
-  margin: auto;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+.color-theTorturedPoetsDepartment {
+  color: #f2faff;
 }
 
-.loading-text {
-  font-size: 1.25rem;
-  font-weight: 700;
+.color-midnights {
+  color: #0f1e7e;
 }
 
-.loading-dots-container {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
+.color-evermore {
+  color: #c47f2b;
 }
 
-.dot-one, .dot-two, .dot-three {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: rgb(255, 69, 0);
-  margin: 0 5px;
-  animation: bounce 1s infinite ease-in-out;
+.color-folklore {
+  color: #d8e2dd;
 }
 
-.dot-two {
-  animation-delay: 150ms;
+.color-lover {
+  color: #e0bdeb;
 }
 
-.dot-three {
-  animation-delay: 300ms;
+.color-reputation {
+  color: #09251f;
 }
 
-.popHead-section-container {
-  display: flex;
-  justify-content: space-between;
-  overflow-x: auto;
-  padding: 0.5rem;
+.color-nineteenEightyNine {
+  color: #77a7ff;
 }
 
-.popHead-card {
-  position: relative;
-  border-radius: 18px;
-  height: 210px;
-  width: 280px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.color-red {
+  color: #fc4456;
 }
 
-.popHead-banner {
-  border-radius: 18px;
-  height: 210px;
-  width: 280px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-.popHead-banner .popHead-banner-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.color-speakNow {
+  color: #be81ed;
 }
 
-.popHead-overlay {
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  height: 210px;
-  width: 280px;
-  justify-content: baseline;
-  align-items: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.417), rgba(253, 253, 253, 0.0001));
-  border-radius: 18px;
-}
-.popHead-overlay .popHead-info {
-  padding: 5px;
-  display: flex;
-  justify-content: baseline;
-  align-items: flex-end;
-}
-.popHead-overlay .popHead-info .popHead-community-icon {
-  height: 50px;
-  width: 50px;
-}
-.popHead-overlay .popHead-info .popHead-name {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: rgb(255, 255, 255);
-  margin: 0;
+.color-fearless {
+  color: #ffc906;
 }
 
-.lead-img, .carousel-img {
-  height: 550px;
-  width: 90%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  background-color: rgb(54, 62, 64);
-  border-radius: 18px;
-  margin: auto;
-}
-@media (max-width: 508px) {
-  .lead-img, .carousel-img {
-    height: 372px;
-  }
+.color-taylorSwift {
+  color: #6cebfb;
 }
 
-.carousel-img {
-  z-index: 9;
-  margin: auto;
-  margin-top: 1rem;
-  background-color: none;
-}
-
-.lead-video, .lead-video-hosted {
-  height: 157px;
-  width: 280px;
-  margin: auto;
-}
-@media (min-width: 370px) {
-  .lead-video, .lead-video-hosted {
-    height: 208px;
-    width: 370px;
-  }
-}
-@media (min-width: 570px) {
-  .lead-video, .lead-video-hosted {
-    height: 320px;
-    width: 570px;
-  }
-}
-@media (min-width: 768px) {
-  .lead-video, .lead-video-hosted {
-    height: 431px;
-    width: 768px;
-  }
-}
-@media (min-width: 1200px) {
-  .lead-video, .lead-video-hosted {
-    height: 538px;
-    width: 900px;
-  }
-}
-
-.lead-video-hosted {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.thumbnail-img {
-  height: 100px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  align-self: flex-start;
-}
-
-.slick-arrow {
-  color: black;
-}
-
-.slider-arrow {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-}
-
-.arrow-btn {
-  top: 45%;
-}
-
-.next {
-  float: right;
-}
-
-.searchBarContainer {
-  border-radius: 50px;
-  border: 1px solid #f2f1f6;
-  margin: 1rem;
-  width: clamp(250px, 50%, 800px);
-  background-color: rgb(234, 237, 239);
-}
-.searchBarContainer:active, .searchBarContainer:hover, .searchBarContainer:focus-within {
-  box-shadow: 0px 5px 5px #b8b7bc;
-}
-@media (max-width: 370px) {
-  .searchBarContainer {
-    width: 130px;
-  }
-}
-
-.searchBar {
-  display: flex;
-  border-radius: 50px;
-}
-
-.searchInput {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  border-radius: 50px;
-  background-color: rgb(234, 237, 239);
-}
-@media (max-width: 370px) {
-  .searchInput {
-    width: 50px;
-  }
-}
-
-.searchButton {
-  background-color: none;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 10px;
-  padding-left: 15px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  border-radius: 100%;
-  background-color: rgb(234, 237, 239);
-}
-
-@media (min-width: 550px) {
-  .searchBarContainer {
-    margin-left: 2rem;
-    width: clamp(170px, 50%, 800px);
-    margin: 1rem;
-  }
-}
-/* ------------------------BURGER------------------------ */
-.burgerContainer {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.burgerContainer:hover {
-  background-color: rgb(234, 237, 239);
-}
-.burgerContainer .burgerBar {
-  width: 18px;
-  height: 1.5px;
-  border-radius: 3px;
-  background-color: rgb(19, 19, 19);
-  margin: auto;
-  position: relative;
-  margin: auto;
-}
-.burgerContainer .burgerBar:nth-child(1) {
-  bottom: 6px;
-}
-.burgerContainer .burgerBar:nth-child(3) {
-  top: 6px;
-}
-
-@media (min-width: 1000px) {
-  .burgerContainer {
-    display: none;
-  }
-}
-/* -------------------- BURGER KEYFRAME ANIMATIONS-------------------- */
-/* 
-Modern browsers have widely adopted the standard @keyframes syntax, 
-so the need for the -webkit-keyframes prefix has diminished over time. 
-However, it's still common to see both versions for compatibility reasons. 
-*/
-@keyframes toBurgerTopBar {
-  0% {
-    transform: translateY(0px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-0.3rem) rotate(0deg);
-  }
-}
-@keyframes toActiveTopBar {
-  0% {
-    transform: translateY(-0.3rem) rotate(0deg);
-  }
-  50% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(0.3rem) rotate(45deg);
-  }
-}
-@keyframes toBurgerMiddleBar {
-  0% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes toActiveMiddleBar {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
-@keyframes toBurgerBottomBar {
-  0% {
-    transform: translateY(0.3rem) rotate(135deg);
-  }
-  50% {
-    top: 0;
-    transform: translateY(0px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(0.3rem) rotate(0deg);
-  }
-}
-@keyframes toActiveBottomBar {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-0.3rem) rotate(135deg);
-  }
-}
-/* @-webkit-keyframes outBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
-} */
-.dropdown-menu-page {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 57px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-}
-
-@media (min-width: 1000px) {
-  .dropdown-menu-page {
-    display: none;
-  }
-}
-.headerContainer {
+.header-container {
   position: fixed;
   left: 0;
   padding: 5px;
@@ -685,273 +134,27 @@ However, it's still common to see both versions for compatibility reasons.
   height: 56px;
   display: flex;
   z-index: 10;
+  justify-content: center;
   align-items: center;
   align-content: center;
   flex-flow: row wrap;
   background-color: #fff;
-  border-bottom: 1px solid rgb(203, 203, 203);
+  border-bottom: pink;
 }
 @media (max-width: 370px) {
-  .headerContainer {
+  .header-container {
     height: -moz-fit-content;
     height: fit-content;
   }
 }
 
-.reddit-mini-logo {
-  width: 35px;
-  height: 30px;
-  display: flex;
-  margin-left: 10px;
-}
-.reddit-mini-logo .logo-tail {
-  position: relative;
-  top: 20px;
-  left: 2px;
-  width: 15px;
-  height: 10px;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgb(255, 69, 0) 50%, rgb(255, 69, 0) 100%);
-  border-radius: 10px;
-}
-.reddit-mini-logo .logo-circle {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: rgb(255, 69, 0);
-  border-radius: 100%;
-  font-size: 1.5rem;
-}
-
-.bear {
-  position: relative;
-  left: 2.95px;
-  top: 1px;
-}
-
-.title {
-  display: none;
-  color: rgb(255, 69, 0);
+.header-title {
+  display: block;
+  color: pink;
   margin: 0px;
   font-weight: 800;
   font-size: 30px;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
-
-@media (min-width: 1000px) {
-  .title {
-    display: flex;
-  }
-}
-.thread-page-container {
-  display: flex;
-  flex-flow: column;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.thread-post-container {
-  border-radius: 18px;
-  padding: 1rem;
-}
-
-.thread-comments-container {
-  margin-bottom: 3rem;
-}
-@media (min-width: 960px) {
-  .thread-comments-container {
-    margin-bottom: 4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .thread-comments-container {
-    margin-bottom: 4rem;
-  }
-}
-
-.subreddit-page-container {
-  display: flex;
-  position: relative;
-  flex-flow: column;
-  overflow-x: hidden;
-}
-
-.subreddit-header-container {
-  display: flex;
-  flex-flow: column;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.subreddit-banner {
-  border-radius: 18px;
-  height: 64px;
-  width: 100%;
-  margin-right: 1rem;
-  overflow: hidden;
-  position: relative;
-}
-.subreddit-banner .banner-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.subreddit-header-icon-and-name {
-  display: flex;
-  flex-flow: row;
-  height: 60px;
-}
-@media (max-width: 370px) {
-  .subreddit-header-icon-and-name {
-    padding-left: 1rem;
-  }
-}
-.subreddit-header-icon-and-name .subreddit-header-community-icon {
-  height: 80px;
-  width: 80px;
-  background-color: rgb(234, 237, 239);
-  border: 4px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  margin-top: 0.5rem;
-  position: relative;
-  bottom: 3rem;
-  left: 2rem;
-}
-@media (max-width: 570px) {
-  .subreddit-header-icon-and-name .subreddit-header-community-icon {
-    bottom: 2.5rem;
-    height: 50px;
-    width: 50px;
-  }
-}
-@media (max-width: 370px) {
-  .subreddit-header-icon-and-name .subreddit-header-community-icon {
-    bottom: 0;
-    left: 0;
-    height: 40px;
-    width: 40px;
-  }
-}
-.subreddit-header-icon-and-name .subreddit-name {
-  margin: 0;
-  padding-left: 2.5rem;
-  letter-spacing: 0.25px;
-}
-@media (max-width: 570px) {
-  .subreddit-header-icon-and-name .subreddit-name {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 370px) {
-  .subreddit-header-icon-and-name .subreddit-name {
-    margin-top: 1rem;
-    padding-left: 0;
-    font-size: 1.25rem;
-    text-align: end;
-  }
-}
-
-.subreddit-bio {
-  margin: 1rem;
-  margin-top: 0;
-  padding: 1rem;
-  background-color: rgb(234, 237, 239);
-  border-radius: 18px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.subreddit-bio .subreddit-bio-title {
-  font-weight: 700;
-}
-
-@media (min-width: 768px) {
-  .subreddit-banner {
-    height: 96px;
-  }
-}
-@media (min-width: 960px) {
-  .subreddit-banner {
-    height: 128px;
-  }
-}
-.subreddit-ul {
-  padding: 0;
-}
-
-.home-link {
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 5px;
-}
-.home-link:hover {
-  background-color: rgb(234, 237, 239);
-}
-
-.home-subreddit-community-icon {
-  height: 50px;
-  width: 50px;
-}
-
-.searchResults-page-container {
-  display: flex;
-  position: relative;
-  flex-flow: column;
-  overflow-x: hidden;
-}
-
-.searchResults-header {
-  background-color: rgb(234, 237, 239);
-  height: 31px;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.searchResults-header p {
-  padding-right: 5px;
-}
-.searchResults-header p:nth-child(2) {
-  color: black;
-  font-weight: 600;
-}
-
-.searchResults-no-results-container {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid rgb(203, 203, 203);
-}
-@media (min-width: 370px) {
-  .searchResults-no-results-container {
-    width: 370px;
-  }
-}
-@media (min-width: 570px) {
-  .searchResults-no-results-container {
-    width: 570px;
-  }
-}
-@media (min-width: 768px) {
-  .searchResults-no-results-container {
-    width: 768px;
-  }
-}
-@media (min-width: 960px) {
-  .searchResults-no-results-container {
-    width: 700px;
-  }
 }
 
 html {
@@ -970,7 +173,7 @@ ul {
   padding: 0;
 }
 
-.wholeContainer {
+.whole-container {
   display: flex;
   position: relative;
   top: 56px;
@@ -979,28 +182,19 @@ ul {
   justify-content: center;
 }
 @media (min-width: 1200px) {
-  .wholeContainer {
+  .whole-container {
     display: flex;
     justify-content: center;
   }
 }
 
-.mainContainer {
+.main-container {
   display: flex;
   padding-top: 1rem;
   overflow: hidden;
 }
 @media (min-width: 1200px) {
-  .mainContainer {
+  .main-container {
     width: 1200px;
   }
-}
-
-.community-icon {
-  height: 100%;
-  width: 100%;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

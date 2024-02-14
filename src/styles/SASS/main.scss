@@ -3,20 +3,11 @@
 @import 'helpers/variables';
 @import 'helpers/functions';
 
-@import 'components/NavMenu';
-// @import 'components/sub-sections';
-@import 'components/Post';
-@import 'components/Comment';
 @import 'components/Loading';
-@import 'components/PopularHeader';
-@import 'components/LeadImg';
-
+@import 'components/Chronology';
+@import 'components/Albums';
 @import 'layout/header';
-
-@import 'pages/Thread';
-@import 'pages/Subreddit';
 @import 'pages/Home';
-@import 'pages/SearchResults';
 
 
 // font for community-icon
@@ -71,67 +62,7 @@ ul {
 }
 
 
-.community-icon {
-    height: 100%; // to fit container
-    width: 100%;
-    margin-right: 0.5rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <div className='default-community-icon-wrapper'>
-//                 <div className='default-community-icon-text-r' > r </div>
-//                 <div className='default-community-icon-text-slash' > / </div>
-//             </div>
-// .default-community-icon-wrapper {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 50px;
-//     width: 50px;
-//     object-fit: contain;
-//     font: {
-//         size: 2.25rem;
-//         family: 'Roboto Mono', monospace;
-//     }
-//     letter-spacing: -7px ;
-//     border: {
-//         color: $reddit-img-background;
-//         width: 3px;
-//         style: solid;
-//         radius: 50%
-//         }  
-//     .default-community-icon-text-r {
-//         position: relative;
-//         bottom: 6px;
-//         color: $reddit-img-background;
-
-//     }
-//     .default-community-icon-text-slash {
-//         position: relative;
-//         right: 2px;
-//         bottom: 7px;
-//         font-stretch:200%;
-//         font-size: 2.75rem;
-//         font-stretch: condensed;
-//         color: $reddit-img-background;
-//     }
-// }

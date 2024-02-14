@@ -1,17 +1,2 @@
 
 
-.home-link {
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 5px;
-    &:hover{
-        background-color: $reddit-grey;
-    }
-}
-
-.home-subreddit-community-icon{
-    height: 50px;
-    width: 50px;
-}

@@ -1,0 +1,21 @@
+.chronology-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.album-container {}
+
+.album-tracks {
+    display: flex;
+    flex-flow: row;
+}
+
+.track-container {
+    display: flex;
+    margin: 1px;
+    height: 2rem;
+    width: 0.5rem;
+    padding: 0;
+}
+
+
