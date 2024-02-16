@@ -1,7 +1,15 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getSubredditPosts, getSubreddits, getPostComments, getSearch, getAboutSubreddit} from '../app/API';
+import { getToken, getSubredditPosts, getSubreddits, getPostComments, getSearch, getAboutSubreddit} from '../app/API';
 
+export const fetchToken = createAsyncThunk('token/fetchToken', async () => {
+  try {
+    const token = await getToken();
+    return token;
+  } catch (error) {
+    throw error;
+  }
+});
 
 export const fetchSubreddits = createAsyncThunk('subreddits/fetchSubreddits', async () => {
   try {

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import { albumsTracksArr } from "../data/albums-tracks";
 import Album from "./Album";
-import AlbumTitle from "./AlbumTitle";
 const Chronology = () => {
 
 
@@ -14,8 +13,7 @@ const Chronology = () => {
         <>
 
             {albumsTracksArr.toReversed().map((album, index) => (
-                <>
-                    <div className="chronology-container">
+                    <div className="chronology-container" key={index}>
                         <Album
                             album={album}
                             key={index}
@@ -24,7 +22,6 @@ const Chronology = () => {
                         />
                     </div>
 
-                </>
             ))}
 
         </>

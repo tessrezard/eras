@@ -1,4 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
+import tokenReducer from './slices/tokenSlice';
 import subredditsReducer from './slices/subredditSlice';
 import subredditPostsReducer from './slices/subredditPostsSlice';
 import postCommentsReducer from './slices/postCommentsSlice';
@@ -8,6 +9,7 @@ import aboutPinnedSubredditsReducer from './slices/aboutPinnedSubredditsSlice';
 import aboutMultipleSubredditsReducer from './slices/aboutMultipleSubredditsSlice';
 
 const rootReducer = combineReducers({
+  token: tokenReducer,
   subreddits: subredditsReducer,
   subredditPosts: subredditPostsReducer,
   postComments: postCommentsReducer,
