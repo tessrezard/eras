@@ -161,7 +161,7 @@ export const albumsTracksArr = [
         ]
     },
     {
-        "red": [
+        "redTV": [
             "State Of Grace (Taylor's Version)",
             "Red (Taylor's Version)",
             "Treacherous (Taylor's Version)",

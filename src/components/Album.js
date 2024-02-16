@@ -20,7 +20,6 @@ const Album = ({ album, albumHover, setAlbumHover }) => {
             <div className="album-container" >
                 <div className="album-title-container " >
                     <p className={`album-title ${albumColor}`}>{albumTitle}</p>
-
                 </div>
 
                 <div className="album-tracks">

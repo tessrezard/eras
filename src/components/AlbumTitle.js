@@ -7,7 +7,6 @@ import { albumsTracksArr } from "../data/albums-tracks";
 const TrackTitle = ({ album, albumHover }) => {
 
 
-    console.log(albumHover);
 
     const albumTitle = Object.keys(album)[0];
     const albumColor = 'color-' + albumTitle;

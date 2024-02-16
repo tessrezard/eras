@@ -15,7 +15,6 @@ const Chronology = () => {
 
             {albumsTracksArr.toReversed().map((album, index) => (
                 <>
-                    <AlbumTitle album={album} albumHover={albumHover} />
                     <div className="chronology-container">
                         <Album
                             album={album}

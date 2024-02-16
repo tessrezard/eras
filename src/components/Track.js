@@ -14,8 +14,9 @@ const Track = ({ track, index, albumTitle }) => {
       <div className="track-container">
 
         <div className={`track-bar ${albumBackgroundColor}`} />
-        <div className="track-title-container" >
-          <p className={`track-title ${albumColor}`} style={{display: 'none'}}>{track}</p>
+
+        <div className="track-title-container " >
+          <p className={`track-title ${albumColor}`}>{track}</p>
         </div>
 
       </div>

@@ -4,13 +4,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  height: 3.5rem;
 }
 
 .album-container {
   position: relative;
   display: flex;
   align-items: flex-end;
+  height: 5.5rem;
 }
 .album-container .album-tracks {
   display: flex;
@@ -32,21 +32,42 @@
   display: block;
 }
 
-.track-container .track-bar {
+.track-container {
+  position: relative;
   display: flex;
-  margin: 1.2px;
-  height: 2rem;
-  width: 3px;
-  padding: 0;
+  align-items: flex-start;
+  height: 4rem;
 }
-.track-container .track-bar:hover .track-title-container {
+.track-container:hover .track-title-container {
   display: block;
 }
-
-.track-title-container {
-  display: none;
+.track-container .track-bar {
+  display: flex;
+  margin: 1.3px;
+  height: 2rem;
+  width: 4px;
+  padding: 0;
+  border-radius: 1px;
+}
+.track-container .track-title-container {
+  height: 3rem;
   position: absolute;
-  top: 4rem;
+  display: flex;
+  align-items: flex-start;
+  bottom: 1px;
+}
+.track-container .track-title {
+  display: none;
+  font-size: 1rem;
+  position: absolute;
+  top: 1rem;
+  margin: 0;
+  margin-top: 3px;
+  z-index: 10;
+  width: 700px;
+}
+.track-container:hover .track-title {
+  display: block;
 }
 
 .background-color-theTorturedPoetsDepartment {
@@ -58,11 +79,11 @@
 }
 
 .background-color-evermore {
-  background-color: #c47f2b;
+  background-color: #d1711e;
 }
 
 .background-color-folklore {
-  background-color: #d8e2dd;
+  background-color: #dee1df;
 }
 
 .background-color-lover {
@@ -122,11 +143,11 @@
 }
 
 .color-evermore {
-  color: #c47f2b;
+  color: #d1711e;
 }
 
 .color-folklore {
-  color: #d8e2dd;
+  color: #dee1df;
 }
 
 .color-lover {
@@ -155,6 +176,30 @@
 
 .color-taylorSwift {
   color: #99e9f3;
+}
+
+.color-reputation {
+  color: #051915;
+}
+
+.color-nineteenEightyNineTV {
+  color: #aedefe;
+}
+
+.color-redTV {
+  color: #db2323;
+}
+
+.color-speakNowTV {
+  color: #8c7cf1;
+}
+
+.color-fearlessTV {
+  color: #ffd771;
+}
+
+.color-taylorSwiftTV {
+  color: #6cebfb;
 }
 
 .header-container {
@@ -222,6 +267,6 @@ ul {
 .main-container {
   display: flex;
   padding-top: 1rem;
-  overflow: hidden;
+  overflow: scroll;
   justify-content: center;
 }/*# sourceMappingURL=main.css.map */
