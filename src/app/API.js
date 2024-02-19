@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { CLIENT_SECRET, CLIENT_ID } from '../secrets';
-import {artistDataTS} from './data/artist_data';
+import { artistDataTS } from './data/artist_data';
 import { artist_albums } from './data/artist_albums';
 export const API_ROOT = 'https://www.reddit.com';
 export const SUBREDDITS_ENDPOINT = `${API_ROOT}/subreddits.json`;
@@ -55,44 +55,84 @@ const token = window.localStorage.getItem('token');
 
 export const getSpotifyArtistAlbums = async () => {
   const search = artistDataTS.name;
-  const typeKey ='tracks';
+  const typeKey = 'tracks';
   const typeOfSearch = 'artist';
-  
-  const response = await axios.get(`https://api.spotify.com/v1/artists/${artistDataTS.id}/albums` , {
-      headers: {
-          Authorization: `Bearer ${token}`,
-      },
-      params: {
-          q: `${search}`,
-          type: `${typeOfSearch}`,
-          limit: 50,
-      }
+
+  const response = await axios.get(`https://api.spotify.com/v1/artists/${artistDataTS.id}/albums`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    params: {
+      q: `${search}`,
+      type: `${typeOfSearch}`,
+      limit: 50,
+    }
   });
 
   const keysToCopy = ['name', 'id', 'album_type', 'artists', 'id', 'release_date', 'total_tracks'];
 
-const filterData = response.data.items.map(item => {
-  const newItem = {}; 
-  keysToCopy.forEach((key) => {
-      if (key === 'artists'){
-          if (item.hasOwnProperty(key)) {
-              const justArtistsNames = item[key].map(artist => artist['name']);
-              newItem['artists'] = justArtistsNames;
-          }
+  const filterData = response.data.items.map(item => {
+    let newItem = {};
+    keysToCopy.forEach((key) => {
+      if (key === 'artists') {
+        if (item.hasOwnProperty(key)) {
+          const justArtistsNames = item[key].map(artist => artist['name']);
+          newItem['artists'] = justArtistsNames;
+        }
       } else {
-          if (item.hasOwnProperty(key)) {
-              newItem[key] = item[key];
-          }
-       }
-      
-  });
-  return newItem;
-})
+        if (item.hasOwnProperty(key)) {
+          newItem[key] = item[key];
+        }
+      }
+
+    });
+    return newItem;
+  })
   return filterData;
 };
 
 
 
+// ---------------------------------------------------------------------------------------------------------------------
+// GET ALBUM INFO
+
+export const getSpotifyAlbum = async (id) => {
+
+  const response = await axios.get(`https://api.spotify.com/v1/albums/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    params: {
+      id: id,
+    }
+  });
+
+  const albumData = {};
+
+  const keysToCopy = ['name', 'id', 'album_type', 'artists', 'label', 'release_date', 'total_tracks'];
+  
+  const filterData = () => {
+    for (let i = 0; i < keysToCopy.length; i++) {
+      let newItem = {};
+      let key = keysToCopy[i];
+      let value = response.data[key];
+      
+      if (key === 'artists') {
+        const justArtistsNames = response.data[key].map(artist => artist['name']);
+        newItem['artists'] = justArtistsNames;
+      } else {
+        newItem[key] = value;
+      }
+  
+      Object.assign(albumData, newItem);
+      
+    }
+  };
+  
+  filterData();
+
+return albumData;
+};
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -100,35 +140,35 @@ const filterData = response.data.items.map(item => {
 
 export const getSpotifyAlbumTracks = async (id) => {
 
-  const response = await axios.get(`https://api.spotify.com/v1/albums/${id}/tracks` , {
-      headers: {
-          Authorization: `Bearer ${token}`,
-      },
-      params: {
-          id: id,
-          limit: 50,
-      }
+  const response = await axios.get(`https://api.spotify.com/v1/albums/${id}/tracks`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    params: {
+      id: id,
+      limit: 50,
+    }
   });
-console.log(response.data.items)
-  const keysToCopy = ['name', 'id', 'album_type', 'artists', 'id', 'release_date', 'total_tracks'];
 
-const filterData = response.data.items.map(item => {
-  const newItem = {}; 
-  keysToCopy.forEach((key) => {
-      if (key === 'artists'){
-          if (item.hasOwnProperty(key)) {
-              const justArtistsNames = item[key].map(artist => artist['name']);
-              newItem['artists'] = justArtistsNames;
-          }
+  const keysToCopy = ['name', 'id', 'disc_number', 'duration_ms', 'explicit', 'track_number', 'type', 'artists'];
+
+  const filterData = response.data.items.map(item => {
+    let newItem = {};
+    keysToCopy.forEach((key) => {
+      if (key === 'artists') {
+        if (item.hasOwnProperty(key)) {
+          const justArtistsNames = item[key].map(artist => artist['name']);
+          newItem['artists'] = justArtistsNames;
+        }
       } else {
-          if (item.hasOwnProperty(key)) {
-              newItem[key] = item[key];
-          }
-       }
-      
-  });
-  return newItem;
-})
+        if (item.hasOwnProperty(key)) {
+          newItem[key] = item[key];
+        }
+      }
+
+    });
+    return newItem;
+  })
   return filterData;
 };
 

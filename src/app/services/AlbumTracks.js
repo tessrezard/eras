@@ -13,7 +13,7 @@ const AlbumTracks = () => {
     const { albumTracksData } = useSelector((state) => state.spotifyAlbumTracks);
 
 
-    
+    console.log('albumTracksData', albumTracksData);
 
     const albumIdsArr = Object.values(artist_albums).map(item => item.id);
 

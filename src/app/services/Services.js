@@ -15,12 +15,12 @@ const Services = () => {
     }, [dispatch]);
 
 
-    //<ArtistAlbums /> to find new albums to add to data set
+    // <ArtistAlbums /> to find new albums to add to data set
+    // <AlbumTracks /> to get albums & corresponding tracks. 
 
 
     return (
         <>
-        <AlbumTracks/>
         </>
     );
 }

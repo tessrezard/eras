@@ -1,6 +1,18 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getSpotifyArtistAlbums, getSpotifyToken, getSpotifyAlbumTracks} from '../app/API';
+import { getSpotifyAlbum, getSpotifyArtistAlbums, getSpotifyToken, getSpotifyAlbumTracks} from '../app/API';
+
+
+export const fetchToken = createAsyncThunk('token/fetchToken', async () => {
+  try {
+    const token = await getSpotifyToken();
+    return token;
+  } catch (error) {
+    throw error;
+  }
+});
+
+
 
 
 export const fetchSpotifyArtistAlbums= createAsyncThunk('spotifyArtistAlbums/fetchSpotifyArtistAlbums', async () => {
@@ -13,19 +25,29 @@ export const fetchSpotifyArtistAlbums= createAsyncThunk('spotifyArtistAlbums/fet
 });
 
 
-export const fetchToken = createAsyncThunk('token/fetchToken', async () => {
+export const  fetchSpotifyAlbumTracksxx = createAsyncThunk('spotifyAlbumTracks/fetchSpotifyAlbumTracks', async (albumIds) => {
   try {
-    const token = await getSpotifyToken();
-    return token;
+    const promises = albumIds.map(id => getSpotifyAlbumTracks(id));
+    const results = await Promise.all(promises);
+    return results;
   } catch (error) {
     throw error;
   }
 });
 
+
 export const  fetchSpotifyAlbumTracks = createAsyncThunk('spotifyAlbumTracks/fetchSpotifyAlbumTracks', async (albumIds) => {
   try {
-    const promises = albumIds.map(id => getSpotifyAlbumTracks(id));
+    // Create an array of promises to fetch both album and tracks for each album ID
+    const promises = albumIds.map(async (id) => {
+      const album = await getSpotifyAlbum(id);  
+      const tracks = await getSpotifyAlbumTracks(id);  // Assuming getSpotifyAlbumTracks fetches tracks data
+      return { album, tracks };
+    });
+
+    // Wait for all promises to resolve
     const results = await Promise.all(promises);
+
     return results;
   } catch (error) {
     throw error;
