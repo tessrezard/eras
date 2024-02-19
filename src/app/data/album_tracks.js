@@ -1,4 +1,4 @@
-[
+export const albumTracks = [
     {
         "album": {
             "name": "1989 (Taylor's Version) [Deluxe]",

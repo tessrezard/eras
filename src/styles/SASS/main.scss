@@ -5,6 +5,7 @@
 
 @import 'components/Loading';
 @import 'components/Chronology';
+@import 'components/VerticalChronology';
 @import 'components/Albums';
 @import 'layout/header';
 @import 'pages/Home';
@@ -54,13 +55,17 @@ ul {
 // in root.js
 .main-container {
     display: flex;
+    flex-flow: column ;
     padding-top: 1rem;
-    overflow: scroll;
+    overflow: hidden;
     justify-content: center;
    
 }
 
-
+.horizontal-chronology {
+    display: flex;
+    flex-flow: row;
+}
 
 
 
