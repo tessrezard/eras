@@ -1,15 +1,28 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getToken, getSubredditPosts, getSubreddits, getPostComments, getSearch, getAboutSubreddit} from '../app/API';
+import { getSpotifyArtistAlbums, getSpotifyToken, getSubredditPosts, getSubreddits, getPostComments, getSearch, getAboutSubreddit} from '../app/API';
+
+
+export const fetchSpotifyArtistAlbums= createAsyncThunk('spotifyArtistAlbums/fetchSpotifyArtistAlbums', async () => {
+  try {
+    const search = await getSpotifyArtistAlbums();
+    return search;
+  } catch (error) {
+    throw error;
+  }
+});
+
 
 export const fetchToken = createAsyncThunk('token/fetchToken', async () => {
   try {
-    const token = await getToken();
+    const token = await getSpotifyToken();
     return token;
   } catch (error) {
     throw error;
   }
 });
+
+
 
 export const fetchSubreddits = createAsyncThunk('subreddits/fetchSubreddits', async () => {
   try {

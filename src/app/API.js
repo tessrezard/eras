@@ -1,18 +1,16 @@
-
+import axios from 'axios';
+import { CLIENT_SECRET, CLIENT_ID } from '../secrets';
+import {artistDataTS} from './data/artist-data';
 
 export const API_ROOT = 'https://www.reddit.com';
 export const SUBREDDITS_ENDPOINT = `${API_ROOT}/subreddits.json`;
 
-
-const CLIENT_ID = '5bcbea61bc0343c5b8f625bb29532455';
-const CLIENT_SECRET = '0c3ca4e34ae248b5b104d9b2452113c1';
 const REDIRECT_URI = 'http://localhost:3000/home';
 
 
 //GET TOKEN
 
-
-export const getToken = async () => {
+export const getSpotifyToken = async () => {
 
   if (window.localStorage.getItem('token')) {
     const token = window.localStorage.getItem('token');
@@ -39,6 +37,99 @@ export const getToken = async () => {
   }
 
   return token;
+};
+
+
+
+// GET ALBUMS & SINGLES SEARCH 
+
+
+export const getSpotifyArtistAlbums = async () => {
+  const search = artistDataTS.name;
+  const token = window.localStorage.getItem('token');
+  const typeKey ='tracks';
+  const typeOfSearch = 'artist';
+  
+  const response = await axios.get(`https://api.spotify.com/v1/artists/${artistDataTS.id}/albums` , {
+      headers: {
+          Authorization: `Bearer ${token}`,
+      },
+      params: {
+          q: `${search}`,
+          type: `${typeOfSearch}`,
+          limit: 50,
+      }
+  });
+
+
+  const keysToCopy = ['name', 'id', 'album_type', 'artists', 'id', 'release_date', 'total_tracks'];
+
+const filterData = response.data.items.map(item => {
+  const newItem = {}; 
+  keysToCopy.forEach((key) => {
+      if (key === 'artists'){
+          if (item.hasOwnProperty(key)) {
+              const justArtistsNames = item[key].map(artist => artist['name']);
+              newItem['artists'] = justArtistsNames;
+          }
+      } else {
+          if (item.hasOwnProperty(key)) {
+              newItem[key] = item[key];
+          }
+       }
+      
+  });
+  return newItem;
+})
+  return filterData;
+};
+
+
+
+
+// GET ALBUMS & SINGLES SEARCH 
+
+
+export const getSpotifyAlbums = async () => {
+  const search = artistDataTS.name;
+  const token = window.localStorage.getItem('token');
+  const typeOfSearch = 'artist';
+  
+  const response = await axios.get(`https://api.spotify.com/v1/artists/${artistDataTS.id}/albums` , {
+      headers: {
+          Authorization: `Bearer ${token}`,
+      },
+      params: {
+          q: `${search}`,
+          type: `${typeOfSearch}`,
+          limit: 50,
+      }
+  });
+
+
+  const keysToCopy = ['name', 'id', 'album_type', 'artists', 'id', 'release_date', 'total_tracks'];
+
+const filterData = response.data.items.map(item => {
+  const newItem = {}; 
+  keysToCopy.forEach((key) => {
+      if (key === 'artists'){
+          if (item.hasOwnProperty(key)) {
+              const justArtistsNames = item[key].map(artist => artist['name']);
+              newItem['artists'] = justArtistsNames;
+          }
+      } else {
+          if (item.hasOwnProperty(key)) {
+              newItem[key] = item[key];
+          }
+       }
+      
+  });
+  return newItem;
+})
+console.log('filterData', filterData);
+
+
+  return filterData;
 };
 
 

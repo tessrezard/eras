@@ -7,8 +7,10 @@ import searchReducer from './slices/searchSlice';
 import aboutSubredditReducer from './slices/aboutSubredditSlice';
 import aboutPinnedSubredditsReducer from './slices/aboutPinnedSubredditsSlice';
 import aboutMultipleSubredditsReducer from './slices/aboutMultipleSubredditsSlice';
+import spotifyArtistAlbumsReducer from './slices/spotify_artist_albums_slice';
 
 const rootReducer = combineReducers({
+  spotifyArtistAlbums: spotifyArtistAlbumsReducer,
   token: tokenReducer,
   subreddits: subredditsReducer,
   subredditPosts: subredditPostsReducer,

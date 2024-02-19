@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/CSS/main.css';
-import { albumsTracksArr } from "../data/albums-tracks";
+import { albumsTracksArr } from "../app/data/albums-tracks";
 import Album from "./Album";
 const Chronology = () => {
 
