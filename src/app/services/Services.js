@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchToken  } from '../../store/thunks';
 
-import AlbumsAndSingles from './AlbumsAndSingles';
+import ArtistAlbums from './ArtistAlbums';
+import AlbumTracks from './AlbumTracks';
 
 const Services = () => {
     const dispatch = useDispatch();
@@ -14,9 +15,12 @@ const Services = () => {
     }, [dispatch]);
 
 
+    //<ArtistAlbums /> to find new albums to add to data set
+
+
     return (
         <>
-            <AlbumsAndSingles />
+        <AlbumTracks/>
         </>
     );
 }

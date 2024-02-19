@@ -7,21 +7,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchSpotifyArtistAlbums } from '../../store/thunks';
 import { artist_albums } from "../data/artist_albums";
 
-const AlbumsAndSingles = () => {
+const ArtistAlbums = () => {
     const dispatch = useDispatch();
     const { data } = useSelector((state) => state.spotifyArtistAlbums);
    
-
-  
     useEffect(() => {
         dispatch(fetchSpotifyArtistAlbums());
-
     }, [dispatch]);
 
-  console.log('data in non visual', data);
+
+    const uniqueIdentifier = 'id';
+
+    // Compare new response to old data set, find new albums  
+    const new_albums = [ ...data.filter(newObj =>
+        !artist_albums.find(oldObj => oldObj[uniqueIdentifier] === newObj[uniqueIdentifier])
+        )];
+
+        console.log('new_albums', new_albums);
+        
 
 
     return null;
 }
 
-export default AlbumsAndSingles;
+export default ArtistAlbums;
