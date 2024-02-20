@@ -172,3 +172,57 @@ export const getSpotifyAlbumTracks = async (id) => {
   return filterData;
 };
 
+// ---------------------------------------------------------------------------------------------------------------------
+// GET Playlist
+// I used this specifically to get the Lover live from Paris playlist as that is the only place those tracks appear. 
+// to get the ID for this playlist i went directly to spotify, share, embed, show code, it is in the src URL
+
+export const getPlaylist = async (id) => {
+
+  const response = await axios.get(`https://api.spotify.com/v1/playlists/${id}/tracks`, {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+  params: {
+    id: {id},
+  }
+});
+
+  const playlistItems = response.data.items;
+
+  console.log(playlistItems);
+
+  try {
+
+    const albumData = {};
+
+    const keysToCopy = ['name', 'id', 'album_type', 'artists', 'label', 'release_date', 'total_tracks'];
+    
+    const filterData = () => {
+      for (let i = 0; i < keysToCopy.length; i++) {
+        let newItem = {};
+        let key = keysToCopy[i];
+        let value = response.data[key];
+        
+        if (key === 'artists') {
+          const justArtistsNames = response.data[key].map(artist => artist['name']);
+          newItem['artists'] = justArtistsNames;
+        } else {
+          newItem[key] = value;
+        }
+    
+        Object.assign(albumData, newItem);
+        
+      }
+    };
+    
+    filterData();
+  
+  return albumData;
+  } catch (error) {
+    console.log(error)
+    return playlistItems;
+  }
+};
+
+getPlaylist('1Ew1IbrHjmNedkANLw1jdr')

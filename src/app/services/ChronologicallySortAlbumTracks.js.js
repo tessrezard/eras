@@ -14,9 +14,27 @@ const ChronologicallySortAlbumTracks = () => {
     //I have added a "era" value to each track to sort them by era
     // the following code is to MAKE A SORTED COPY OF LOCAL COPIED albumTracks in album_tracks.js DATA 
 
-    
+    // sort chronologically and take out duplicate songs
+    const eraOrder = 
+    [
+        "torturedPoetsDepartment",
+        "midnights",
+        "carolina",
+        "renegade",
+        "evermore",
+        "folklore",
+        "christmas",
+        "lover",
+        "reputation",
+        "nineteenEightyNine",
+        "red",
+        "speakNow",
+        "fearless",
+        "taylorSwift"
+    ]
 
-
+    const sortByEra = albumTracks.sort((a,b) => eraOrder.indexOf(a.album.era) - eraOrder.indexOf(b.album.era));
+console.log(sortByEra)
     return (null);
 }
 

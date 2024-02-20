@@ -5,7 +5,6 @@ import { getDefaultNormalizer } from "@testing-library/react";
 
 const VerticalTrack = ({ track, album, index }) => {
 
-    console.log(track);
     // try {
     //     console.log(track)
     // } catch (error) {
@@ -17,7 +16,6 @@ const VerticalTrack = ({ track, album, index }) => {
     const durationInPx = (duration_ms / 1000) + 'px';
 
 
-    console.log(durationInPx);
 
     return (
         <>

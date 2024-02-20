@@ -9,6 +9,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "nineteenEightyNine",
             "release_date": "2023-10-27",
             "total_tracks": 22
         },
@@ -312,6 +313,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "nineteenEightyNine",
             "release_date": "2023-10-26",
             "total_tracks": 21
         },
@@ -601,6 +603,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "speakNow",
             "release_date": "2023-07-07",
             "total_tracks": 22
         },
@@ -897,601 +900,6 @@ export const albumTracks = [
     },
     {
         "album": {
-            "name": "Midnights (The Til Dawn Edition)",
-            "id": "1fnJ7k0bllNfL1kVdNVW1A",
-            "album_type": "album",
-            "artists": [
-                "Taylor Swift"
-            ],
-            "label": "Taylor Swift",
-            "genres": [],
-            "release_date": "2023-05-26",
-            "total_tracks": 23
-        },
-        "tracks": [
-            {
-                "name": "Lavender Haze",
-                "id": "24emu3sabKISjRkrys28jq",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  202395,
-                "explicit": true,
-                "track_number": 1,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Maroon",
-                "id": "6qxvy9Pe4RJIq5JBVbbwbS",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  218270,
-                "explicit": true,
-                "track_number": 2,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Anti-Hero",
-                "id": "5qIHFdkW6phMsTZlN2g8Lc",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  200690,
-                "explicit": false,
-                "track_number": 3,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Snow On The Beach (feat. Lana Del Rey)",
-                "id": "7GA86Uo2jYbj8vIXe2nyWd",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  256124,
-                "explicit": true,
-                "track_number": 4,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift",
-                    "Lana Del Rey"
-                ]
-            },
-            {
-                "name": "You're On Your Own, Kid",
-                "id": "6PQOU00xWNrGwCZzboriXy",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  194206,
-                "explicit": false,
-                "track_number": 5,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Midnight Rain",
-                "id": "4eKMqf9ZMSclDX7V9Ptg7x",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  174782,
-                "explicit": false,
-                "track_number": 6,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Question...?",
-                "id": "7oomkQSYf1ia2VnVEWfFIU",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  210556,
-                "explicit": true,
-                "track_number": 7,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Vigilante Shit",
-                "id": "0GKDhq6ZbmSbRHd3eyGlB7",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  164801,
-                "explicit": true,
-                "track_number": 8,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Bejeweled",
-                "id": "0VpF6RLdCfPIeYRwMu4tZK",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  194165,
-                "explicit": false,
-                "track_number": 9,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Labyrinth",
-                "id": "4bBDkw2KBMX0tcgAaXC83Q",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  247962,
-                "explicit": false,
-                "track_number": 10,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Karma",
-                "id": "45R112Jz5hQeKgITXgSXzs",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  204852,
-                "explicit": true,
-                "track_number": 11,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Sweet Nothing",
-                "id": "2L09RYwH5Pjzca6PmbUAw3",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  188496,
-                "explicit": false,
-                "track_number": 12,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Mastermind",
-                "id": "1QQii3pa5m8MEda0nbkjfw",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  191039,
-                "explicit": false,
-                "track_number": 13,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "The Great War",
-                "id": "2VuqMjgoKaOHNM8HpxtXKx",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  240355,
-                "explicit": false,
-                "track_number": 14,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Bigger Than The Whole Sky",
-                "id": "71CBDRKmF2VeRKYMG1DFBh",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  218502,
-                "explicit": false,
-                "track_number": 15,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Paris",
-                "id": "5tWxKWq1DSP1s9WQ5PWuqu",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  196258,
-                "explicit": false,
-                "track_number": 16,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "High Infidelity",
-                "id": "1SztNGCwEHJEVFx90E5g7D",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  231475,
-                "explicit": false,
-                "track_number": 17,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Glitch",
-                "id": "7C0w28EsX0Um2FrZs9gso2",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  148781,
-                "explicit": false,
-                "track_number": 18,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Would've, Could've, Should've",
-                "id": "4txojlesMFQZGWxwz2EeqB",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  260361,
-                "explicit": false,
-                "track_number": 19,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Dear Reader",
-                "id": "10GRRCR5fctuOF4GFmATJI",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  225194,
-                "explicit": false,
-                "track_number": 20,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Hits Different",
-                "id": "3xYJScVfxByb61dYHTwiby",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  234466,
-                "explicit": true,
-                "track_number": 21,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Snow On The Beach (feat. More Lana Del Rey)",
-                "id": "4zmKGsrXjLmljb5fTaBTot",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  229942,
-                "explicit": true,
-                "track_number": 22,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift",
-                    "Lana Del Rey"
-                ]
-            },
-            {
-                "name": "Karma (feat. Ice Spice)",
-                "id": "4i6cwNY6oIUU2XZxPIw82Y",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  201493,
-                "explicit": true,
-                "track_number": 23,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift",
-                    "Ice Spice"
-                ]
-            }
-        ]
-    },
-    {
-        "album": {
-            "name": "Midnights (3am Edition)",
-            "id": "3lS1y25WAhcqJDATJK70Mq",
-            "album_type": "album",
-            "artists": [
-                "Taylor Swift"
-            ],
-            "label": "Taylor Swift",
-            "genres": [],
-            "release_date": "2022-10-22",
-            "total_tracks": 20
-        },
-        "tracks": [
-            {
-                "name": "Lavender Haze",
-                "id": "4g2c7NoTWAOSYDy44l9nub",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  202395,
-                "explicit": true,
-                "track_number": 1,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Maroon",
-                "id": "199E1RRrVmVTQqBXih5qRC",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  218270,
-                "explicit": true,
-                "track_number": 2,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Anti-Hero",
-                "id": "02Zkkf2zMkwRGQjZ7T4p8f",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  200690,
-                "explicit": false,
-                "track_number": 3,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Snow On The Beach (feat. Lana Del Rey)",
-                "id": "6ADDIJxxqzM9LMpm78yzQG",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  256124,
-                "explicit": true,
-                "track_number": 4,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift",
-                    "Lana Del Rey"
-                ]
-            },
-            {
-                "name": "You're On Your Own, Kid",
-                "id": "7gVWKBcfIW93YxNBi3ApIE",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  194206,
-                "explicit": false,
-                "track_number": 5,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Midnight Rain",
-                "id": "6Nl7KyvjkFncGsjB49SxLl",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  174782,
-                "explicit": false,
-                "track_number": 6,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Question...?",
-                "id": "6C7OF1Jal7YkyjzyUG8vkK",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  210556,
-                "explicit": true,
-                "track_number": 7,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Vigilante Shit",
-                "id": "5yeuXkukVGuix3vmLu2BPJ",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  164801,
-                "explicit": true,
-                "track_number": 8,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Bejeweled",
-                "id": "0jvo9CjnbR0lYUDTSNTMiu",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  194165,
-                "explicit": false,
-                "track_number": 9,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Labyrinth",
-                "id": "43q586vP8gGkYypKoSddhl",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  247962,
-                "explicit": false,
-                "track_number": 10,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Karma",
-                "id": "5oqDgw5VGBln5dSIOPWyBq",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  204852,
-                "explicit": true,
-                "track_number": 11,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Sweet Nothing",
-                "id": "3zmwONxswBAzGwExPugSLN",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  188496,
-                "explicit": false,
-                "track_number": 12,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Mastermind",
-                "id": "56hioFjQ0DXrdn04hZcFgG",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  191039,
-                "explicit": false,
-                "track_number": 13,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "The Great War",
-                "id": "3UMrglJeju5yWyYIW6o99b",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  240355,
-                "explicit": false,
-                "track_number": 14,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Bigger Than The Whole Sky",
-                "id": "0BiqmkasE5FdrChwKfVp8X",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  218502,
-                "explicit": false,
-                "track_number": 15,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Paris",
-                "id": "7712gjoih4QoDbXpljEk21",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  196258,
-                "explicit": false,
-                "track_number": 16,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "High Infidelity",
-                "id": "5kiZGSxgqPdv6rbqL9THdd",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  231475,
-                "explicit": false,
-                "track_number": 17,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Glitch",
-                "id": "6wAFvJPpTZVirBKGZ4EnMW",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  148781,
-                "explicit": false,
-                "track_number": 18,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Would've, Could've, Should've",
-                "id": "0aV5uARAknQgYhBaK944FP",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  260361,
-                "explicit": false,
-                "track_number": 19,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Dear Reader",
-                "id": "3QF5RsWzK1lCvf2o2cY65P",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  225194,
-                "explicit": false,
-                "track_number": 20,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            }
-        ]
-    },
-    {
-        "album": {
             "name": "Midnights",
             "id": "151w1FgRZfnKZA9FEcg9Z3",
             "album_type": "album",
@@ -1500,6 +908,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2022-10-21",
             "total_tracks": 13
         },
@@ -1676,6 +1085,203 @@ export const albumTracks = [
             }
         ]
     },
+    
+    {
+        "album": {
+            "name": "Midnights (3am Edition)",
+            "id": "3lS1y25WAhcqJDATJK70Mq",
+            "album_type": "album",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "label": "Taylor Swift",
+            "genres": [],
+            "era": "midnights",
+            "release_date": "2022-10-22",
+            "total_tracks": 20
+        },
+        "tracks": [
+            {
+                "name": "The Great War",
+                "id": "3UMrglJeju5yWyYIW6o99b",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  240355,
+                "explicit": false,
+                "track_number": 14,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "Bigger Than The Whole Sky",
+                "id": "0BiqmkasE5FdrChwKfVp8X",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  218502,
+                "explicit": false,
+                "track_number": 15,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "Paris",
+                "id": "7712gjoih4QoDbXpljEk21",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  196258,
+                "explicit": false,
+                "track_number": 16,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "High Infidelity",
+                "id": "5kiZGSxgqPdv6rbqL9THdd",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  231475,
+                "explicit": false,
+                "track_number": 17,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "Glitch",
+                "id": "6wAFvJPpTZVirBKGZ4EnMW",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  148781,
+                "explicit": false,
+                "track_number": 18,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "Would've, Could've, Should've",
+                "id": "0aV5uARAknQgYhBaK944FP",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  260361,
+                "explicit": false,
+                "track_number": 19,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "Dear Reader",
+                "id": "3QF5RsWzK1lCvf2o2cY65P",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  225194,
+                "explicit": false,
+                "track_number": 20,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            }
+        ]
+    },
+    {
+        "album": {
+            "name": "Midnights (The Til Dawn Edition)",
+            "id": "1fnJ7k0bllNfL1kVdNVW1A",
+            "album_type": "album",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "label": "Taylor Swift",
+            "genres": [],
+            "era": "midnights",
+            "release_date": "2023-05-26",
+            "total_tracks": 23
+        },
+        "tracks": [
+            {
+                "name": "Hits Different",
+                "id": "3xYJScVfxByb61dYHTwiby",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  234466,
+                "explicit": true,
+                "track_number": 21,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            },
+            {
+                "name": "Snow On The Beach (feat. More Lana Del Rey)",
+                "id": "4zmKGsrXjLmljb5fTaBTot",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  229942,
+                "explicit": true,
+                "track_number": 22,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift",
+                    "Lana Del Rey"
+                ]
+            },
+            {
+                "name": "Karma (feat. Ice Spice)",
+                "id": "4i6cwNY6oIUU2XZxPIw82Y",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  201493,
+                "explicit": true,
+                "track_number": 23,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift",
+                    "Ice Spice"
+                ]
+            }
+        ]
+    },
+    {
+        "album": {
+            "name": "You're Losing Me (From The Vault)",
+            "id": "5q3jthpn2h59P7pe2gmAl7",
+            "album_type": "single",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "label": "Taylor Swift",
+            "genres": [],
+            "era": "midnights",
+            "release_date": "2023-11-29",
+            "total_tracks": 1
+        },
+        "tracks": [
+            {
+                "name": "You’re Losing Me (From The Vault)",
+                "id": "3CWq0pAKKTWb0K4yiglDc4",
+                "disc_number": 1,
+                "era": "midnights",
+                "duration_ms":  277831,
+                "explicit": false,
+                "track_number": 1,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift"
+                ]
+            }
+        ]
+    },
     {
         "album": {
             "name": "Red (Taylor's Version)",
@@ -1686,6 +1292,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2021-11-12",
             "total_tracks": 30
         },
@@ -2097,6 +1704,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "fearless",
             "release_date": "2021-04-09",
             "total_tracks": 26
         },
@@ -2454,6 +2062,7 @@ export const albumTracks = [
             ],
             "label": "TS/Republic",
             "genres": [],
+            "era": "evermore",
             "release_date": "2021-01-07",
             "total_tracks": 17
         },
@@ -2694,6 +2303,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "evermore",
             "release_date": "2020-12-11",
             "total_tracks": 15
         },
@@ -2908,6 +2518,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "folklore",
             "release_date": "2020-11-25",
             "total_tracks": 34
         },
@@ -3367,6 +2978,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "folklore",
             "release_date": "2020-08-18",
             "total_tracks": 17
         },
@@ -3605,6 +3217,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "folklore",
             "release_date": "2020-07-24",
             "total_tracks": 16
         },
@@ -3830,6 +3443,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "lover",
             "release_date": "2019-08-23",
             "total_tracks": 18
         },
@@ -4083,6 +3697,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "reputation",
             "release_date": "2017-11-10",
             "total_tracks": 15
         },
@@ -4296,6 +3911,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "nineteenEightyNine",
             "release_date": "2014-01-01",
             "total_tracks": 19
         },
@@ -4559,6 +4175,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "nineteenEightyNine",
             "release_date": "2014-01-01",
             "total_tracks": 13
         },
@@ -4744,6 +4361,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "red",
             "release_date": "2012-10-22",
             "total_tracks": 22
         },
@@ -5048,6 +4666,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "speakNow",
             "release_date": "2010-10-25",
             "total_tracks": 16
         },
@@ -5272,6 +4891,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "speakNow",
             "release_date": "2010-10-25",
             "total_tracks": 14
         },
@@ -5470,6 +5090,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "speakNow",
             "release_date": "2010-01-01",
             "total_tracks": 22
         },
@@ -5772,6 +5393,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "fearless",
             "release_date": "2008-11-11",
             "total_tracks": 19
         },
@@ -6036,6 +5658,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "fearless",
             "release_date": "2008-11-11",
             "total_tracks": 16
         },
@@ -6261,6 +5884,7 @@ export const albumTracks = [
             ],
             "label": "Big Machine Records, LLC",
             "genres": [],
+            "era": "fearless",
             "release_date": "2008-06-28",
             "total_tracks": 8
         },
@@ -6381,6 +6005,7 @@ export const albumTracks = [
             ],
             "label": "Universal Music",
             "genres": [],
+            "era": "taylorSwift",
             "release_date": "2006-10-24",
             "total_tracks": 15
         },
@@ -6584,35 +6209,6 @@ export const albumTracks = [
     },
     {
         "album": {
-            "name": "You're Losing Me (From The Vault)",
-            "id": "5q3jthpn2h59P7pe2gmAl7",
-            "album_type": "single",
-            "artists": [
-                "Taylor Swift"
-            ],
-            "label": "Taylor Swift",
-            "genres": [],
-            "release_date": "2023-11-29",
-            "total_tracks": 1
-        },
-        "tracks": [
-            {
-                "name": "You’re Losing Me (From The Vault)",
-                "id": "3CWq0pAKKTWb0K4yiglDc4",
-                "disc_number": 1,
-                "era": "midnights",
-                "duration_ms":  277831,
-                "explicit": false,
-                "track_number": 1,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            }
-        ]
-    },
-    {
-        "album": {
             "name": "The Cruelest Summer",
             "id": "12A1Byk8EpqzaHSw12nKyW",
             "album_type": "single",
@@ -6621,6 +6217,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "lover",
             "release_date": "2023-10-19",
             "total_tracks": 4
         },
@@ -6691,6 +6288,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2023-03-31",
             "total_tracks": 1
         },
@@ -6720,6 +6318,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2023-03-03",
             "total_tracks": 5
         },
@@ -6806,6 +6405,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2023-02-10",
             "total_tracks": 1
         },
@@ -6836,6 +6436,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2022-11-25",
             "total_tracks": 1
         },
@@ -6866,6 +6467,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2022-11-18",
             "total_tracks": 1
         },
@@ -6896,6 +6498,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2022-11-11",
             "total_tracks": 5
         },
@@ -6982,6 +6585,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "midnights",
             "release_date": "2022-11-08",
             "total_tracks": 2
         },
@@ -7025,6 +6629,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "carolina",
             "release_date": "2022-06-24",
             "total_tracks": 2
         },
@@ -7067,6 +6672,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2022-06-11",
             "total_tracks": 1
         },
@@ -7096,6 +6702,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "nineteenEightyNine",
             "release_date": "2022-05-06",
             "total_tracks": 2
         },
@@ -7139,6 +6746,7 @@ export const albumTracks = [
             ],
             "label": "Atlantic Records UK",
             "genres": [],
+            "era": "red",
             "release_date": "2022-02-11",
             "total_tracks": 1
         },
@@ -7169,6 +6777,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2022-01-21",
             "total_tracks": 2
         },
@@ -7212,6 +6821,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "christmas",
             "release_date": "2021-11-22",
             "total_tracks": 1
         },
@@ -7241,6 +6851,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2021-11-18",
             "total_tracks": 1
         },
@@ -7270,6 +6881,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2021-11-12",
             "total_tracks": 6
         },
@@ -7368,6 +6980,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2021-11-12",
             "total_tracks": 1
         },
@@ -7399,6 +7012,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "red",
             "release_date": "2021-11-12",
             "total_tracks": 1
         },
@@ -7428,6 +7042,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "nineteenEightyNine",
             "release_date": "2021-09-17",
             "total_tracks": 1
         },
@@ -7436,7 +7051,7 @@ export const albumTracks = [
                 "name": "Wildest Dreams (Taylor's Version)",
                 "id": "1Ov37jtRQ2YNAe8HzfczkL",
                 "disc_number": 1,
-                "era": "nineteenEightyNine",
+                "era": "nineteenEightNine",
                 "duration_ms":  220433,
                 "explicit": false,
                 "track_number": 1,
@@ -7458,13 +7073,14 @@ export const albumTracks = [
             ],
             "label": "Jagjaguwar",
             "genres": [],
+            "era": "renegade",
             "release_date": "2021-08-17",
             "total_tracks": 1
         },
         "tracks": [
             {
                 "name": "Renegade",
-                "id": "73W5aXorr5vxrySFcoZqIN",
+                "id": "06zIBqLC9ZRm5i0iMf0kHI",
                 "disc_number": 1,
                 "era": "renegade",
                 "duration_ms":  231526,
@@ -7502,6 +7118,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "evermore",
             "release_date": "2021-07-24",
             "total_tracks": 1
         },
@@ -7531,6 +7148,7 @@ export const albumTracks = [
             ],
             "label": "Taylor Swift",
             "genres": [],
+            "era": "evermore",
             "release_date": "2021-06-14",
             "total_tracks": 1
         },
@@ -7543,87 +7161,6 @@ export const albumTracks = [
                 "duration_ms":  225106,
                 "explicit": false,
                 "track_number": 1,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            }
-        ]
-    },
-    {
-        "album": {
-            "name": "The More Fearless (Taylor’s Version) Chapter",
-            "id": "6MMVrrxnNgGKg04ze1Pemw",
-            "album_type": "single",
-            "artists": [
-                "Taylor Swift"
-            ],
-            "label": "Taylor Swift",
-            "genres": [],
-            "release_date": "2021-04-09",
-            "total_tracks": 5
-        },
-        "tracks": [
-            {
-                "name": "Fearless (Taylor’s Version)",
-                "id": "5dwLFuYXsOikE1BMoBDMN6",
-                "disc_number": 1,
-                "era": "fearless",
-                "duration_ms":  241591,
-                "explicit": false,
-                "track_number": 1,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Love Story (Taylor’s Version)",
-                "id": "3RG3Jhpi8yAnogztYmzzYm",
-                "disc_number": 1,
-                "era": "fearless",
-                "duration_ms":  235766,
-                "explicit": false,
-                "track_number": 2,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "White Horse (Taylor’s Version)",
-                "id": "4ieGtGwqOpvIQhRngp5VvR",
-                "disc_number": 1,
-                "era": "fearless",
-                "duration_ms":  234515,
-                "explicit": false,
-                "track_number": 3,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "You Belong With Me (Taylor’s Version)",
-                "id": "06qAK0pLx43pwzRi6MWV8g",
-                "disc_number": 1,
-                "era": "fearless",
-                "duration_ms":  231124,
-                "explicit": false,
-                "track_number": 4,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "If This Was A Movie (Taylor’s Version)",
-                "id": "0q6vsjvnCIWrtwRckCV7y0",
-                "disc_number": 1,
-                "era": "fearless",
-                "duration_ms":  237022,
-                "explicit": false,
-                "track_number": 5,
                 "type": "track",
                 "artists": [
                     "Taylor Swift"
