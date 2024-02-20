@@ -76,6 +76,9 @@
   margin: 3rem;
   height: -moz-fit-content;
   height: fit-content;
+  margin: auto;
+  position: relative;
+  left: 28vw;
 }
 
 .vertical-album-container {
@@ -83,7 +86,7 @@
   flex-direction: column;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .vertical-album-container .album-tracks {
   display: flex;
@@ -118,7 +121,6 @@
   display: flex;
   margin: 1.3px;
   height: 1rem;
-  width: 3rem;
   padding: 0;
   border-radius: 1px;
 }
@@ -187,6 +189,18 @@
   background-color: #99e9f3;
 }
 
+.background-color-carolina {
+  background-color: #c3baaa;
+}
+
+.background-color-christmas {
+  background-color: #1c6336;
+}
+
+.background-color-renegade {
+  background-color: #638d98;
+}
+
 .background-color-nineteenEightyNineTV {
   background-color: #aedefe;
 }
@@ -253,6 +267,18 @@
 
 .color-reputation {
   color: #051915;
+}
+
+.color-carolina {
+  color: #c3baaa;
+}
+
+.color-christmas {
+  color: #1c6336;
+}
+
+.color-renegade {
+  color: #638d98;
 }
 
 .color-nineteenEightyNineTV {

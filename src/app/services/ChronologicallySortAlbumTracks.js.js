@@ -4,29 +4,20 @@
 // Here, we can call getSpotifyAlbums again to get updates, and merge the results into albums_and_singles if new. 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSpotifyAlbumTracks, fetchSpotifyArtistAlbums } from '../../store/thunks';
 import { artist_albums } from "../data/artist_albums";
 import { albumTracks } from '../data/album_tracks';
 
-const AlbumTracks = () => {
+const ChronologicallySortAlbumTracks = () => {
     const dispatch = useDispatch();
 
+
+    //I have added a "era" value to each track to sort them by era
+    // the following code is to MAKE A SORTED COPY OF LOCAL COPIED albumTracks in album_tracks.js DATA 
+
     
-    const { albumTracksData } = useSelector((state) => state.spotifyAlbumTracks);
-    // to manually copy from console : 
-    console.log('albumTracksData', albumTracksData);
-
-    // to get : 
-    const albumIdsArr = Object.values(artist_albums).map(item => item.id);
-
-    useEffect(() => {
-        dispatch(fetchSpotifyAlbumTracks(albumIdsArr));
-    }, [dispatch]);
-
-
 
 
     return (null);
 }
 
-export default AlbumTracks;
+export default ChronologicallySortAlbumTracks;

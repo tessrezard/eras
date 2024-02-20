@@ -4,7 +4,7 @@ import { fetchToken  } from '../../store/thunks';
 
 import ArtistAlbums from './ArtistAlbums';
 import AlbumTracks from './AlbumTracks';
-
+import ChronologicallySortAlbumTracks from './ChronologicallySortAlbumTracks.js';
 const Services = () => {
     const dispatch = useDispatch();
 
@@ -16,11 +16,12 @@ const Services = () => {
 
 
     // <ArtistAlbums /> to find new albums to add to data set
-    // <AlbumTracks /> to get albums & corresponding tracks. 
-
+    // <AlbumTracks /> to get albums & corresponding tracks, and sort. 
+    // <ChronologicallySortAlbumTracks/> to sort local albumTracks data
 
     return (
         <>
+            <ChronologicallySortAlbumTracks /> 
         </>
     );
 }

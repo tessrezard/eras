@@ -8,11 +8,21 @@ const VerticalChronology = () => {
 
 console.log(albumTracks);
 
+// try {
+//     albumTracks.map((album, index) => {
+//         // console.log(album, index);
+//         // console.log(album.album.name);
+    
+//     }
+//         )
+//     }catch(error){
+//         console.log(error)
+// }
 
     return (
         <> 
         <div className="vertical-chronology-container">
-        {albumsTracksArr.map((album, index) => (
+        {albumTracks.map((album, index) => (
             <div key={index}>
                 <VerticalAlbum
                     album={album}

@@ -3,6 +3,9 @@
     flex-direction: column;
     margin: 3rem;
     height: fit-content;
+    margin: auto;
+    position: relative;
+    left: calc(28vw);
 }
 
 
@@ -12,7 +15,7 @@
     flex-direction: column;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     .album-tracks {
         display: flex;
@@ -57,7 +60,6 @@ margin: 2px;
         display: flex;
         margin: 1.3px;
         height: 1rem;
-        width: 3rem;
         padding: 0;
         border-radius: 1px;
     }

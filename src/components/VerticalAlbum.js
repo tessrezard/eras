@@ -3,14 +3,27 @@ import '../styles/CSS/main.css';
 import VerticalTrack from "./VerticalTrack";
 
 
-const VerticalAlbum = ({ album }) => {
+const VerticalAlbum = ({ album, index }) => {
 
+    const albumName = album.album.name
+    const albumColor = 'color-' + albumName;
 
+    // console.log('----------------------------------------')
+    // console.log('ALBUM: --------')
+    // console.log(album.album.name)
 
-    const albumTitle = Object.keys(album)[0];
-    const tracks = Object.values(album)[0];
-
-    const albumColor = 'color-' + albumTitle;
+    
+    // try {
+    //     album.tracks.map((track, index) => {
+    //         console.log('-----------')
+    //         console.log(albumName)
+    //         console.log(track.name, index);
+        
+    //     }
+    //         )
+    //     }catch(error){
+    //         console.log(error)
+    // }
 
 
 
@@ -18,15 +31,16 @@ const VerticalAlbum = ({ album }) => {
         <>
             <div className="vertical-album-container" >
                 <div className="vertical-album-title-container " >
-                    <p className={`vertical-album-title ${albumColor}`}>{albumTitle}</p>
+                    <p className={`vertical-album-title ${albumColor}`}>{albumName}</p>
                 </div>
 
                 <div className="vertical-album-tracks">
-                    {tracks.map((track, index) => (
+                    {album.tracks.map((track, index) => (
                         <VerticalTrack
                             track={track}
+                            album={album.album}
                             key={index}
-                            albumTitle={albumTitle}
+                            albumName={albumName}
                             
                         />
                     ))}
