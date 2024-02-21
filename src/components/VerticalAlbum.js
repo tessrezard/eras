@@ -12,7 +12,7 @@ const VerticalAlbum = ({ album, index }) => {
     // console.log('ALBUM: --------')
     // console.log(album.album.name)
 
-    
+
     // try {
     //     album.tracks.map((track, index) => {
     //         console.log('-----------')
@@ -40,7 +40,6 @@ const VerticalAlbum = ({ album, index }) => {
                             track={track}
                             album={album.album}
                             key={index}
-                            albumName={albumName}
                             
                         />
                     ))}

@@ -2214,310 +2214,7 @@ export const sortedByEraAlbumTracks = [
             }
         ]
     },
-    {
-        "album": {
-            "name": "1989 (Taylor's Version) [Deluxe]",
-            "id": "1o59UpKw81iHR0HPiSkJR0",
-            "album_type": "album",
-            "artists": [
-                "Taylor Swift"
-            ],
-            "label": "Taylor Swift",
-            "genres": [],
-            "era": "nineteenEightyNine",
-            "release_date": "2023-10-27",
-            "total_tracks": 22
-        },
-        "tracks": [
-            {
-                "name": "Welcome To New York (Taylor's Version)",
-                "id": "4WUepByoeqcedHoYhSNHRt",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 212600,
-                "explicit": false,
-                "track_number": 1,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Blank Space (Taylor's Version)",
-                "id": "0108kcWLnn2HlH2kedi1gn",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 231833,
-                "explicit": false,
-                "track_number": 2,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Style (Taylor's Version)",
-                "id": "3Vpk1hfMAQme8VJ0SNRSkd",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 231000,
-                "explicit": false,
-                "track_number": 3,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Out Of The Woods (Taylor's Version)",
-                "id": "1OcSfkeCg9hRC2sFKB4IMJ",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 235800,
-                "explicit": false,
-                "track_number": 4,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "All You Had To Do Was Stay (Taylor's Version)",
-                "id": "2k0ZEeAqzvYMcx9Qt5aClQ",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 193289,
-                "explicit": false,
-                "track_number": 5,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Shake It Off (Taylor's Version)",
-                "id": "50yNTF0Od55qnHLxYsA5Pw",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 219209,
-                "explicit": false,
-                "track_number": 6,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "I Wish You Would (Taylor's Version)",
-                "id": "3FxJDucHWdw6caWTKO5b23",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 207650,
-                "explicit": false,
-                "track_number": 7,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Bad Blood (Taylor's Version)",
-                "id": "7oZONwFiFIErZcXAtTu7FY",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 211103,
-                "explicit": false,
-                "track_number": 8,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Wildest Dreams (Taylor's Version)",
-                "id": "27exgla7YBw9DUNNcTIpjy",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 220433,
-                "explicit": false,
-                "track_number": 9,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "How You Get The Girl (Taylor's Version)",
-                "id": "733OhaXQIHY7BKtY3vnSkn",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 247533,
-                "explicit": false,
-                "track_number": 10,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "This Love (Taylor’s Version)",
-                "id": "4WBEj8TeGtRPNJdOmT3WJW",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 250100,
-                "explicit": false,
-                "track_number": 11,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "I Know Places (Taylor's Version)",
-                "id": "1ULabO0PEsdJekqVH6G10G",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 195700,
-                "explicit": false,
-                "track_number": 12,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Clean (Taylor's Version)",
-                "id": "0lKUBmEyQfzsQHozyeXzES",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 271000,
-                "explicit": false,
-                "track_number": 13,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Wonderland (Taylor's Version)",
-                "id": "6HRsJu8vcnzYDN4t0570FY",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 245566,
-                "explicit": false,
-                "track_number": 14,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "You Are In Love (Taylor's Version)",
-                "id": "0TyGh27YQ5LknmiDhCzJiT",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 267389,
-                "explicit": false,
-                "track_number": 15,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "New Romantics (Taylor's Version)",
-                "id": "5M787RexsAiVYjQusM98CV",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 230177,
-                "explicit": false,
-                "track_number": 16,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "'Slut!' (Taylor's Version) (From The Vault)",
-                "id": "0CD7DzeCsuPJygddqlUVYa",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 180381,
-                "explicit": false,
-                "track_number": 17,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Say Don't Go (Taylor's Version) (From The Vault)",
-                "id": "3CCRVu4F91Qp2mnGjmWBrf",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 279833,
-                "explicit": false,
-                "track_number": 18,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Now That We Don't Talk (Taylor's Version) (From The Vault)",
-                "id": "5QUIK7ZtziW8kGWo8RqopF",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 146436,
-                "explicit": false,
-                "track_number": 19,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Suburban Legends (Taylor's Version) (From The Vault)",
-                "id": "6M9ppdfFjR1AbpUl3Y8DcV",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 171818,
-                "explicit": false,
-                "track_number": 20,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Is It Over Now? (Taylor's Version) (From The Vault)",
-                "id": "6IG3sQ8s9nfk6TUlVzRhbN",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 229477,
-                "explicit": false,
-                "track_number": 21,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            },
-            {
-                "name": "Bad Blood (feat. Kendrick Lamar) (Taylor's Version)",
-                "id": "6qAcApH8obo8eqatCKUHd9",
-                "disc_number": 1,
-                "era": "nineteenEightyNine",
-                "duration_ms": 199773,
-                "explicit": false,
-                "track_number": 22,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift",
-                    "Kendrick Lamar"
-                ]
-            }
-        ]
-    },
+    
     {
         "album": {
             "name": "1989 (Taylor's Version)",
@@ -2804,6 +2501,37 @@ export const sortedByEraAlbumTracks = [
                 "type": "track",
                 "artists": [
                     "Taylor Swift"
+                ]
+            }
+        ]
+    },
+    {
+        "album": {
+            "name": "1989 (Taylor's Version) [Deluxe]",
+            "id": "1o59UpKw81iHR0HPiSkJR0",
+            "album_type": "album",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "label": "Taylor Swift",
+            "genres": [],
+            "era": "nineteenEightyNine",
+            "release_date": "2023-10-27",
+            "total_tracks": 22
+        },
+        "tracks": [
+            {
+                "name": "Bad Blood (feat. Kendrick Lamar) (Taylor's Version)",
+                "id": "6qAcApH8obo8eqatCKUHd9",
+                "disc_number": 1,
+                "era": "nineteenEightyNine",
+                "duration_ms": 199773,
+                "explicit": false,
+                "track_number": 22,
+                "type": "track",
+                "artists": [
+                    "Taylor Swift",
+                    "Kendrick Lamar"
                 ]
             }
         ]

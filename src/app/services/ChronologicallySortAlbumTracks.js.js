@@ -34,7 +34,6 @@ const ChronologicallySortAlbumTracks = () => {
     ]
 
     const sortByEra = albumTracks.sort((a,b) => eraOrder.indexOf(a.album.era) - eraOrder.indexOf(b.album.era));
-console.log(sortByEra)
     return (null);
 }
 
