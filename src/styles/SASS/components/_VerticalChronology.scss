@@ -91,3 +91,25 @@ margin: 2px;
         }
     }
 }
+
+
+.sorted-vertical-album-container {
+    @extend .vertical-album-container;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 500px;
+    .sorted-album-tracks {
+        @extend .album-tracks;
+    }
+}
+
+.sorted-vertical-track-title {
+    @extend .vertical-sorted-track-title;
+    margin: 0;
+}
+.sorted-vertical-track-title-container{
+    @extend .vertical-track-title-container;
+width: 700px;
+}

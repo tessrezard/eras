@@ -5,6 +5,8 @@ import VerticalAlbum from "./VerticalAlbum";
 import { albumTracks } from "../app/data/album_tracks";
 import { sortedByEraAlbumTracks } from "../app/data/sorted_by_era_album_tracks";
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
+import VerticalTrack from "./VerticalTrack";
+
 
 const VerticalChronology = () => {
 
@@ -13,15 +15,24 @@ const VerticalChronology = () => {
     };
 
 
+
     const sorted = sortTracksByDuration();
 
     return (
         <>
 
-            <div>
+            <div className="vertical-chronology-container">
                 {sorted.map((track, index) => (
                     <div key={index}>
-                        <p>{track.name} - {millisecondsToMinutes(track.duration_ms)}</p>
+                        <div className="vertical-album-container" >
+                            <div className="vertical-album-tracks">
+                                <VerticalTrack
+                                    type='sortedOrder'
+                                    track={track}
+                                    key={index}
+                                />
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>

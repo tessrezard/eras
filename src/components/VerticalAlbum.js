@@ -37,8 +37,8 @@ const VerticalAlbum = ({ album, index }) => {
                 <div className="vertical-album-tracks">
                     {album.tracks.map((track, index) => (
                         <VerticalTrack
+                            type='eraOrder'
                             track={track}
-                            album={album.album}
                             key={index}
                             
                         />

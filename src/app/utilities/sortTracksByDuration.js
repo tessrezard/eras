@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { albumTracks } from "../data/album_tracks";
 import { sortedByEraAlbumTracks } from "../data/sorted_by_era_album_tracks";
+import { addAlbumName } from "./addValueToTracks";
+
 export const sortTracksByDuration = () => {
 
     // --------------------------------------------------------------------------
@@ -17,6 +19,7 @@ export const sortTracksByDuration = () => {
     });
 
 
+    console.log(addAlbumName)
     // --------------------------------------------------------------------------
     // Combine all tracks into a single array
     const allTracks = albumTracksWithAlbumName.reduce((accumulator, album) => [...accumulator, ...album.tracks], []);
