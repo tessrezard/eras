@@ -173,6 +173,7 @@ export const addValues = () => {
         return acoustic;
     };
 
+
     //          |  |
     //          |  |
     //         \    /
@@ -184,7 +185,8 @@ export const addValues = () => {
     const addTrackVariantFromTrack = justTracks.map(track => {
         const trackVariant = determineTrackVariantFromTrack(track);
         const acoustic = determineIfAcoustic(track);
-        return { ...track, trackVariant, acoustic };
+        const points = 0;
+        return { ...track, trackVariant, acoustic, points };
     });
 
     // const tracksDataWithTrackVariant = justTracks.map(track => determineTrackVariantFromTrack(track))
