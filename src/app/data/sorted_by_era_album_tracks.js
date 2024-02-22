@@ -8,7 +8,6 @@
 //      "era": "ERA_TO_REPLACE"
 //      "trackVariant": "album"
 
-//      trackVariant include : ["album", "extended", "remix", "live", "demo", "single", "acoustic" ]
 
 export const sortedByEraAlbumTracks = [
     {
@@ -366,9 +365,9 @@ export const sortedByEraAlbumTracks = [
     },
     {
         "album": {
-            "name": "You're Losing Me (From The Vault)",
+            "name":  "Midnights (The Late Night Edition)",
             "id": "5q3jthpn2h59P7pe2gmAl7",
-            "album_type": "single",
+            "album_type": "album",
             "artists": [
                 "Taylor Swift"
             ],
@@ -1971,19 +1970,6 @@ export const sortedByEraAlbumTracks = [
                     "LP Giobbi"
                 ]
             },
-            {
-                "name": "Cruel Summer",
-                "id": "1kHVme7OVyPqhtdiLj2SI4",
-                "disc_number": 1,
-                "era": "lover",
-                "duration_ms": 178425,
-                "explicit": false,
-                "track_number": 4,
-                "type": "track",
-                "artists": [
-                    "Taylor Swift"
-                ]
-            }
         ]
     },
     {

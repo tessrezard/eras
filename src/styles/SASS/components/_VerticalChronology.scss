@@ -106,9 +106,10 @@ margin: 2px;
 }
 
 .sorted-vertical-track-title {
-    @extend .vertical-sorted-track-title;
+    @extend .vertical-sorted-track-title !optional;
     margin: 0;
 }
+
 .sorted-vertical-track-title-container{
     @extend .vertical-track-title-container;
 width: 700px;

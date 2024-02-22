@@ -1,2 +1,38 @@
 
 // Mixins
+@mixin generate-era-styles($name, $color) {
+    // Background colors
+    .background-color-#{$name} {
+      background-color: $color;
+    }
+    
+    .background-color-#{$name}-album {
+      background-color: $color;
+    }
+    
+    .background-color-#{$name}-extended {
+      background-color: darken($color, 9%);
+    }
+    
+    .background-color-#{$name}-single {
+      background-color: fade-out($color, 0.15);
+    }
+  
+    // Text colors
+    .color-#{$name} {
+      color: $color;
+    }
+  
+    .color-#{$name}-album {
+      color: $color;
+    }
+  
+    .color-#{$name}-extended {
+      color: darken($color, 9%);
+    }
+  
+    .color-#{$name}-single {
+      color: fade-out($color, 0.15);
+    }
+  }
+  

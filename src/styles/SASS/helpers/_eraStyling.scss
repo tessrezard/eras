@@ -1,67 +1,22 @@
+  // Generate styles using the mixin
+  @include generate-era-styles("theTorturedPoetsDepartment", $theTorturedPoetsDepartment);
+  @include generate-era-styles("midnights", $midnights);
+  @include generate-era-styles("evermore", $evermore);
+  @include generate-era-styles("folklore", $folklore);
+  @include generate-era-styles("lover", $lover);
+  @include generate-era-styles("reputation", $reputation);
+  @include generate-era-styles("nineteenEightyNine", $nineteenEightyNine);
+  @include generate-era-styles("red", $red);
+  @include generate-era-styles("speakNow", $speakNow);
+  @include generate-era-styles("fearless", $fearless);
+  @include generate-era-styles("taylorSwift", $taylorSwift);
+  @include generate-era-styles("carolina", $carolina);
+  @include generate-era-styles("christmas", $christmas);
+  @include generate-era-styles("renegade", $renegade);
 
 
 
-// .background-color-midnights {
-//     background-color: $midnights;
-// }
-// .background-color-midnights-album{
-//     background-color: $midnights
-// }
-// .background-color-midnights-extended{
-//     background-color: darken($midnights, 9%);
-// }
-
-// .background-color-midnights-single{
-//     background-color: fade-out($midnights, 0.15);
-// }
-
-
-// .color-midnights {
-//     color: $midnights;
-// }
-// .color-midnights-album{
-//     color: $midnights
-// }
-// .color-midnights-extended{
-//     color: darken($midnights, 9%);
-// }
-
-// .color-midnights-single{
-//     color: fade-out($midnights, 0.15);
-// }
-
-
-
-
-
-
-// .background-color-evermore {
-//     background-color: $evermore;
-// }
-// .background-color-evermore-album{
-//     background-color: $evermore
-// }
-// .background-color-evermore-extended{
-//     background-color: darken($evermore, 9%);
-// }
-
-// .background-color-evermore-single{
-//     background-color: fade-out($evermore, 0.15);
-// }
-
-// .color-evermore {
-//     color: $evermore;
-// }
-// .color-evermore-album{
-//     color: $evermore
-// }
-// .color-evermore-extended{
-//     color: darken($evermore, 9%);
-// }
-
-// .color-evermore-single{
-//     color: fade-out($evermore, 0.15);
-// }
+  
 
 
 
@@ -70,6 +25,7 @@
 // //------------------------------------------------------------------------------
 // // BACKGROUND COLORS 
 
+// // ALBUMS
 // .background-color-theTorturedPoetsDepartment {
 //     background-color: $theTorturedPoetsDepartment
 // }
@@ -105,6 +61,8 @@
 // }
 
 
+
+
 // .background-color-carolina {
 //     background-color: $carolina
 // }
@@ -113,6 +71,24 @@
 // }
 // .background-color-renegade {
 //     background-color: $renegade
+// }
+
+
+
+// .background-color-nineteenEightyNineTV {
+//     background-color: $nineteenEightyNineTV;
+// }
+// .background-color-redTV {
+//     background-color: $redTV;
+// }
+// .background-color-speakNowTV {
+//     background-color: $speakNowTV;
+// }
+// .background-color-fearlessTV {
+//     background-color: $fearlessTV;
+// }
+// .background-color-taylorSwiftTV {
+//     background-color: $taylorSwiftTV;
 // }
 
 
@@ -157,6 +133,8 @@
 //     color: $reputation;
 // }
 
+
+
 // .color-carolina {
 //     color: $carolina
 // }
@@ -168,5 +146,21 @@
 // }
 
 
+
+// .color-nineteenEightyNineTV {
+//     color: $nineteenEightyNineTV
+// }
+// .color-redTV {
+//     color: $redTV
+// }
+// .color-speakNowTV {
+//     color: $speakNowTV;
+// }
+// .color-fearlessTV {
+//     color: $fearlessTV
+// }
+// .color-taylorSwiftTV {
+//     color: $taylorSwiftTV
+// }
 
 

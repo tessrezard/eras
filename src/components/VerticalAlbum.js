@@ -33,6 +33,10 @@ const VerticalAlbum = ({ album, index }) => {
                 <div className="vertical-album-title-container " >
                     <p className={`vertical-album-title ${albumColor}`}>{albumName}</p>
                 </div>
+                
+                {/* JUST USING FOR TESTING */}
+                <p className={` ${albumColor}`}>{albumName}, {album.album.album_type}</p>
+
 
                 <div className="vertical-album-tracks">
                     {album.tracks.map((track, index) => (

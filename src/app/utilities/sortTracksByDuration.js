@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { albumTracks } from "../data/album_tracks";
 import { sortedByEraAlbumTracks } from "../data/sorted_by_era_album_tracks";
-import { addAlbumName } from "./addValueToTracks";
+import { addValues } from "./addValueToTracks";
 
 export const sortTracksByDuration = () => {
 
+
+    addValues();
+    
     // --------------------------------------------------------------------------
     // BECAUSE WE ARE TAKING THE TRACKS OUT OF THE CONTEXT OF THEIR ALBUM 
     // TO DISPLAY THEM SORTED, ADD VALUE TO TRACK : ALBUMNAME
@@ -18,11 +21,11 @@ export const sortTracksByDuration = () => {
         return { album: { ...album, albumName }, tracks: tracksWithAlbumName };
     });
 
-
-    console.log(addAlbumName)
     // --------------------------------------------------------------------------
     // Combine all tracks into a single array
     const allTracks = albumTracksWithAlbumName.reduce((accumulator, album) => [...accumulator, ...album.tracks], []);
+
+
 
     // Function to sort tracks by duration_ms in descending order
     const sortTracksByDuration = (a, b) => b.duration_ms - a.duration_ms;
@@ -37,8 +40,10 @@ export const sortTracksByDuration = () => {
 
     // --------------------------------------------------------------------------
     // RETURN STATEMENT
+    // const sorted = addAlbumName().sort(sortTracksByDuration);
+
     const sorted = allTracks.sort(sortTracksByDuration);
-    console.log(sorted);
+
     return (sorted);
 }
 
