@@ -365,7 +365,7 @@ export const sortedByEraAlbumTracks = [
     },
     {
         "album": {
-            "name":  "Midnights (The Late Night Edition)",
+            "name": "Midnights (The Late Night Edition)",
             "id": "5q3jthpn2h59P7pe2gmAl7",
             "album_type": "album",
             "artists": [
@@ -614,7 +614,7 @@ export const sortedByEraAlbumTracks = [
                     "Taylor Swift",
                     "Jayda G"
                 ]
-            }, 
+            },
             {
                 "name": "Anti-Hero - ILLENIUM Remix",
                 "id": "6C0H8ts9M6deezz0yYR6LK",
@@ -631,7 +631,7 @@ export const sortedByEraAlbumTracks = [
             }
         ]
     },
-  
+
     {
         "album": {
             "name": "Carolina (From The Motion Picture “Where The Crawdads Sing”)",
@@ -1507,7 +1507,7 @@ export const sortedByEraAlbumTracks = [
             }
         ]
     },
-    
+
     {
         "album": {
             "name": "Christmas Tree Farm (Old Timey Version)",
@@ -1807,11 +1807,11 @@ export const sortedByEraAlbumTracks = [
 
         "tracks": [
             {
-                "duration_ms": 213026,
                 "name": "ME! - Live From Paris",
                 "id": "5fOV54t6mMYv3H9CsnvU81",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 213026,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1820,11 +1820,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 210960,
                 "name": "The Archer (Live From Paris)",
                 "id": "2fgiBCtbWo8pijF6M7pN1i",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 210960,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1833,11 +1833,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 199066,
                 "name": "Death By A Thousand Cuts (Live From Paris)",
                 "id": "3oF7Or7T35yhQbGxbCGvRX",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 199066,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1846,11 +1846,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 296013,
                 "name": "Cornelia Street - Live From Paris",
                 "id": "3fGnrtrtL1IHSX9t4DKOYf",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 296013,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1859,11 +1859,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 219385,
                 "name": "The Man (Live From Paris)",
                 "id": "7FKbTRXXIWVFQmPH8zGfU0",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 219385,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1872,11 +1872,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 262320,
                 "name": "Daylight - Live From Paris",
                 "id": "7ryS0xBZNYjQqql34GCkDp",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 262320,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1885,11 +1885,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 203960,
                 "name": "You Need To Calm Down - Live From Paris",
                 "id": "36a08nLG1xazGaaVKK0vv7",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 203960,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -1898,11 +1898,11 @@ export const sortedByEraAlbumTracks = [
                 ],
             },
             {
-                "duration_ms": 229733,
                 "name": "Lover - Live From Paris",
                 "id": "4lD3RXyvHpJsM3BhIEC4aA",
                 "disc_number": 1,
                 "era": "lover",
+                "duration_ms": 229733,
                 "explicit": false,
                 "track_number": 1,
                 "type": "track",
@@ -2186,7 +2186,7 @@ export const sortedByEraAlbumTracks = [
             }
         ]
     },
-    
+
     {
         "album": {
             "name": "1989 (Taylor's Version)",
@@ -3006,7 +3006,7 @@ export const sortedByEraAlbumTracks = [
             },
         ]
     },
-    
+
     {
         "album": {
             "name": "The Joker And The Queen (feat. Taylor Swift)",
