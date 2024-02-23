@@ -1,28 +1,47 @@
 import React, { useState } from "react";
 import '../styles/CSS/main.css';
-import { albumsTracksArr } from "../app/data/albums-tracks";
+import { albumsTracksArr } from "../app/data/current_data/basic-albums-tracks";
 import VerticalAlbum from "./VerticalAlbum";
-import { albumTracks } from "../app/data/album_tracks";
-import { sortedByEraAlbumTracks } from "../app/data/sorted_by_era_album_tracks";
+import { albumTracks } from "../app/data/current_data/album_tracks";
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import VerticalTrack from "./VerticalTrack";
 
+import { filterTracks } from "../app/utilities/filterTracks";
+import { allTracks } from "../app/data/current_data/all_tracks";
 
 const VerticalChronology = () => {
 
-    const millisecondsToMinutes = (milliseconds) => {
-        return (milliseconds / (1000 * 60)).toFixed(2).replace('.', ':');
-    };
+    const albumFiltered = filterTracks(allTracks, 'album');
+    const extendedFiltered = filterTracks(allTracks, 'extended');
+    const acousticFiltered = filterTracks(allTracks, 'acoustic');
+    const remixFiltered = filterTracks(acousticFiltered, 'remix');
+    const liveFiltered = filterTracks(remixFiltered, 'live');
+    const singleFiltered = filterTracks(liveFiltered, 'single');
+
+    
 
 
+    
+    
 
-    const sorted = sortTracksByDuration();
+    console.log('all tracks', allTracks)
+
+    console.log('remixFiltered', remixFiltered)
+    console.log('acousticFiltered', acousticFiltered)
+
+    console.log('liveFiltered', liveFiltered)
+    console.log('singleFiltered', singleFiltered)
+    console.log('albumFiltered', albumFiltered)
+    console.log('extendedFiltered', extendedFiltered)
+
+    // const sortedDuration = sortTracksByDuration(allTracks);
+    const sortedDuration = sortTracksByDuration(singleFiltered);
 
     return (
         <>
 
-            <div className="vertical-chronology-container">
-                {sorted.map((track, index) => (
+            <div className="vertical-chronology-container" style={{ marginBottom: 40}}>
+                {sortedDuration.map((track, index) => (
                     <div key={index}>
                         <div className="vertical-album-container" >
                             <div className="vertical-album-tracks">
@@ -38,7 +57,7 @@ const VerticalChronology = () => {
             </div>
 
             <div className="vertical-chronology-container">
-                {sortedByEraAlbumTracks.map((album, index) => (
+                {albumTracks.map((album, index) => (
                     <div key={index}>
                         <VerticalAlbum
                             album={album}

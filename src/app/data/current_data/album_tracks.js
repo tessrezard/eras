@@ -9,7 +9,7 @@
 //      "trackVariant": "album"
 
 
-export const sortedByEraAlbumTracks = [
+export const albumTracks = [
     {
         "album": {
             "name": "Midnights",
@@ -1792,17 +1792,19 @@ export const sortedByEraAlbumTracks = [
             }
         ]
     },
-
-
     {
         "album": {
+            "name": "Taylor Swift Live From Paris",
+            "id": "1Ew1IbrHjmNedkANLw1jdr",
+            "era": "lover",
+
             "album_type": "playlist",
             "artists": [
                 "Taylor Swift"
             ],
-            "id": "1Ew1IbrHjmNedkANLw1jdr",
-            "name": "Taylor Swift Live From Paris",
             "release_date": "2020-05-17",
+            "total_tracks": 8
+
         },
 
         "tracks": [
@@ -1908,12 +1910,10 @@ export const sortedByEraAlbumTracks = [
                 "type": "track",
                 "artists": [
                     "Taylor Swift"
-                ],
+                ]
             },
         ]
     },
-
-
     {
         "album": {
             "name": "The Cruelest Summer",

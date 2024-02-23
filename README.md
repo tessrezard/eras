@@ -3,8 +3,6 @@ Work in Progress
 
 A data visualization project. 
 
-The major problem to tackle in this project is one of data structures. 
-
 ## Main Technologies: 
 
 React\
@@ -12,3 +10,10 @@ Redux toolkit\
 React Router\
 Sass
 
+## About: 
+
+I am trying to work from a base of local data as much as possible.\
+How to build and maintain the local data:
+I used the spotify api to draw the majority of the data. 
+I have used adjusted this data to suit this projects needs. 
+I have done this both manually and programmatically. 

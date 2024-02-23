@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import '../styles/CSS/main.css';
-import { albumsTracksArr } from "../app/data/albums-tracks";
+import { albumsTracksArr } from "../app/data/current_data/basic-albums-tracks";
 import Album from "./Album";
-const Chronology = () => {
+const Condensed = () => {
 
-
-    const [albumHover, setAlbumHover] = useState(false);
 
 
 
@@ -30,4 +28,4 @@ const Chronology = () => {
 };
 
 
-export default Chronology;
+export default Condensed;

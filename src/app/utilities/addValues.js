@@ -1,5 +1,5 @@
-import { albumTracks } from "../data/album_tracks";
-import { sortedByEraAlbumTracks } from "../data/sorted_by_era_album_tracks";
+// import { albumTracks } from "../data/spotify_order_album_tracks";
+import { albumTracks } from "../data/current_data/album_tracks";
 
 // THERE ARE A COUPLE OF KEY VALUE PAIRS THAT I NEED TO ADD TO THE MAIN DATASET, WHICH SPOTIFY CANNOT PROVIDE
 // THESE INCLUDE :
@@ -36,7 +36,7 @@ export const addValues = () => {
     //           \/
 
     // ADD VALUE TO TRACK : albumName
-    const dataWithAlbumName = addAlbumName(sortedByEraAlbumTracks);
+    const dataWithAlbumName = addAlbumName(albumTracks);
 
 
     //          |        |
@@ -121,9 +121,10 @@ export const addValues = () => {
     // Combine all tracks into a single array
 
     let justTracks = addTrackVariantFromAlbum.reduce((accumulator, album) => [...accumulator, ...album.tracks], []);
+ 
+    // MANUALLY COPY JUSTTRACKS TO all_tracks 
 
-
-
+    console.log(justTracks, 'just Tracks')
     //  WE NOW TRANSITION FROM WORKING WITH THE ALBUM DATA, TO JUST TRACKS DATA
 
     //          |        |
@@ -182,20 +183,15 @@ export const addValues = () => {
 
     // ADD VALUE TO TRACK : trackVariant (from track) && acoustic (t/f)
 
-    const addTrackVariantFromTrack = justTracks.map(track => {
+    const addValuesFromTrack = justTracks.map(track => {
         const trackVariant = determineTrackVariantFromTrack(track);
         const acoustic = determineIfAcoustic(track);
         const points = 0;
         return { ...track, trackVariant, acoustic, points };
     });
 
-    // const tracksDataWithTrackVariant = justTracks.map(track => determineTrackVariantFromTrack(track))
 
-    // console.log(addTrackVariantFromTrack);
-
-
-
-    return addTrackVariantFromTrack;
+    return addValuesFromTrack;
 }
 
 

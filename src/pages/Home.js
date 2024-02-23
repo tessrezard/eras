@@ -1,7 +1,6 @@
 import React from "react";
 import '../styles/CSS/main.css';
-import { albumsTracksArr } from "../app/data/albums-tracks";
-import Chronology from "../components/Chronology";
+import Condensed from "../components/Condensed";
 import VerticalChronology from "../components/VerticalChronology";
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
   return (
     <>
     <div className="horizontal-chronology">
-    <Chronology />
+    <Condensed />
     </div>
       <VerticalChronology />
     </>

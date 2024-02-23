@@ -4,8 +4,8 @@
 // Here, we can call getSpotifyAlbums again to get updates, and merge the results into albums_and_singles if new. 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { artist_albums } from "../data/artist_albums";
-import { albumTracks } from '../data/album_tracks';
+import { artist_albums } from "../data/current_data/artist_albums";
+import { albumTracks } from '../data/current_data/album_tracks';
 
 const ChronologicallySortAlbumTracks = () => {
     const dispatch = useDispatch();

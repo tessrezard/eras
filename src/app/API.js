@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { CLIENT_SECRET, CLIENT_ID } from '../secrets';
-import { artistDataTS } from './data/artist_data';
-import { artist_albums } from './data/artist_albums';
+import { artistDataTS } from './data/current_data/artist_data';
+import { artist_albums } from './data/current_data/artist_albums';
 export const API_ROOT = 'https://www.reddit.com';
 export const SUBREDDITS_ENDPOINT = `${API_ROOT}/subreddits.json`;
 

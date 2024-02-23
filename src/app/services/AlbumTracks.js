@@ -5,8 +5,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSpotifyAlbumTracks, fetchSpotifyArtistAlbums } from '../../store/thunks';
-import { artist_albums } from "../data/artist_albums";
-import { albumTracks } from '../data/album_tracks';
+import { artist_albums } from "../data/current_data/artist_albums";
+import { albumTracks } from '../data/current_data/album_tracks';
 
 const AlbumTracks = () => {
     const dispatch = useDispatch();
