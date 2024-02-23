@@ -8,6 +8,8 @@ import VerticalTrack from "./VerticalTrack";
 
 import { filterTracks } from "../app/utilities/filterTracks";
 import { allTracks } from "../app/data/current_data/all_tracks";
+import { addValues } from "../app/utilities/addValues";
+import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 
 const VerticalChronology = () => {
 
@@ -20,19 +22,8 @@ const VerticalChronology = () => {
 
     
 
+    reverseEraOrder(allTracks);    
 
-    
-    
-
-    console.log('all tracks', allTracks)
-
-    console.log('remixFiltered', remixFiltered)
-    console.log('acousticFiltered', acousticFiltered)
-
-    console.log('liveFiltered', liveFiltered)
-    console.log('singleFiltered', singleFiltered)
-    console.log('albumFiltered', albumFiltered)
-    console.log('extendedFiltered', extendedFiltered)
 
     // const sortedDuration = sortTracksByDuration(allTracks);
     const sortedDuration = sortTracksByDuration(singleFiltered);

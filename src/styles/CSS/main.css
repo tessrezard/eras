@@ -289,35 +289,35 @@
 }
 
 .background-color-fearless {
-  background-color: #ffd771;
+  background-color: #f5ce6d;
 }
 
 .background-color-fearless-album {
-  background-color: #ffd771;
+  background-color: #f5ce6d;
 }
 
 .background-color-fearless-extended {
-  background-color: #ffca43;
+  background-color: #f2c042;
 }
 
 .background-color-fearless-single {
-  background-color: rgba(255, 215, 113, 0.85);
+  background-color: rgba(245, 206, 109, 0.85);
 }
 
 .color-fearless {
-  color: #ffd771;
+  color: #f5ce6d;
 }
 
 .color-fearless-album {
-  color: #ffd771;
+  color: #f5ce6d;
 }
 
 .color-fearless-extended {
-  color: #ffca43;
+  color: #f2c042;
 }
 
 .color-fearless-single {
-  color: rgba(255, 215, 113, 0.85);
+  color: rgba(245, 206, 109, 0.85);
 }
 
 .background-color-taylorSwift {
@@ -448,74 +448,107 @@
   color: rgba(99, 141, 152, 0.85);
 }
 
-.chronology-container {
+.condensed-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-
-.album-container {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  height: 5.5rem;
-}
-.album-container .album-tracks, .album-container .sorted-vertical-album-container .sorted-album-tracks, .sorted-vertical-album-container .album-container .sorted-album-tracks {
-  display: flex;
-  flex-flow: row;
-}
-.album-container .album-title-container {
-  height: 3rem;
-  position: absolute;
-  display: flex;
   align-items: flex-start;
-  top: 2px;
-}
-.album-container .album-title {
-  display: none;
-  font-size: 1rem;
-  margin: 0;
-}
-.album-container:hover .album-title {
-  display: block;
+  position: relative;
+  top: 60px;
 }
 
-.track-container {
+.condensed-track-container {
   position: relative;
   display: flex;
   align-items: flex-start;
-  height: 4rem;
+  flex-flow: column;
 }
-.track-container:hover .track-title-container {
-  display: block;
-}
-.track-container .track-bar {
-  display: flex;
-  margin: 1.3px;
-  height: 2rem;
-  width: 4px;
-  padding: 0;
-  border-radius: 1px;
-}
-.track-container .track-title-container {
+.condensed-track-container .condensed-album-title-container {
   height: 3rem;
   position: absolute;
-  display: flex;
   align-items: flex-start;
-  bottom: 1px;
+  font-size: smaller;
 }
-.track-container .track-title {
+.condensed-track-container .condensed-album-title {
   display: none;
-  font-size: 1rem;
   position: absolute;
-  top: 1rem;
+  top: -50px;
+  font-size: 1rem;
+  bottom: 1rem;
   margin: 0;
-  margin-top: 3px;
   z-index: 10;
   width: 700px;
 }
-.track-container:hover .track-title {
+.condensed-track-container .condensed-track-title-container {
+  height: 3rem;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  top: -30px;
+}
+.condensed-track-container .condensed-track-title {
+  display: none;
+  font-size: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  z-index: 10;
+  width: 700px;
+}
+.condensed-track-container:hover .condensed-track-title {
   display: block;
+}
+.condensed-track-container:hover .condensed-album-title {
+  display: block;
+}
+.condensed-track-container .condensed-track-bar {
+  display: flex;
+  margin-left: 0.5px;
+  height: 2rem;
+  width: 1px;
+  padding: 0;
+  border-radius: 1px;
+}
+@media (min-width: 570px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 0.5px;
+    width: 1.5px;
+  }
+}
+@media (min-width: 768px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 1px;
+    width: 1.5px;
+  }
+}
+@media (min-width: 960px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 1px;
+    width: 2px;
+  }
+}
+@media (min-width: 1200px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 1px;
+    width: 3px;
+  }
+}
+@media (min-width: 1400px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 1px;
+    width: 3.5px;
+  }
+}
+@media (min-width: 1600px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 1px;
+    width: 4px;
+  }
+}
+@media (min-width: 1700px) {
+  .condensed-track-container .condensed-track-bar {
+    margin-left: 1px;
+    width: 5px;
+  }
 }
 
 .vertical-chronology-container {
@@ -667,14 +700,7 @@ ul {
   position: relative;
   top: 56px;
   right: 1rem;
-  width: 100vw;
   justify-content: center;
-}
-@media (min-width: 1200px) {
-  .whole-container {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .main-container {

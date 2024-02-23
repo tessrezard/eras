@@ -120,8 +120,13 @@ export const addValues = () => {
     // --------------------------------------------------------------------------
     // Combine all tracks into a single array
 
+
+    // justTracks puts first at top
     let justTracks = addTrackVariantFromAlbum.reduce((accumulator, album) => [...accumulator, ...album.tracks], []);
  
+
+
+
     // MANUALLY COPY JUSTTRACKS TO all_tracks 
 
     console.log(justTracks, 'just Tracks')
