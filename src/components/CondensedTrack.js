@@ -4,7 +4,25 @@ import '../styles/CSS/main.css';
 
 const CondensedTrack = ({ track, type }) => {
 
-  const albumBackgroundColor = 'background-color-' + track.era;
+  let variant = track.trackVariant
+  console.log(track.trackVariant);
+  if (variant) {
+    switch (variant) {
+      case 'remix':
+        variant = 'single';
+        break;
+        case 'live':
+          variant = 'single';
+          break;
+        case 'live':
+          variant = 'single';
+          break;
+      default:
+        variant = track.trackVariant;
+    }
+  }
+  
+  const albumBackgroundColor = 'background-color-' + track.era + '-' + variant;
   const albumColor = 'color-' + track.era;
 
   const duration_ms = track.duration_ms;

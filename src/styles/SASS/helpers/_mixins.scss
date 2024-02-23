@@ -6,16 +6,16 @@
       background-color: $color;
     }
     
-    .background-color-#{$name}-album {
+    .background-color-#{$name}-extended {
       background-color: $color;
     }
     
-    .background-color-#{$name}-extended {
+    .background-color-#{$name}-album {
       background-color: darken($color, 9%);
     }
     
     .background-color-#{$name}-single {
-      background-color: fade-out($color, 0.15);
+      background-color: fade-out($color, 0.25);
     }
   
     // Text colors
