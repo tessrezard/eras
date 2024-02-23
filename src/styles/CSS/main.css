@@ -531,28 +531,35 @@
 
 .vertical-album-container, .sorted-vertical-album-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   display: flex;
   align-items: flex-start;
+  width: 350px;
 }
 .vertical-album-container .album-tracks, .sorted-vertical-album-container .album-tracks, .sorted-vertical-album-container .sorted-album-tracks {
   display: flex;
   flex-flow: row;
 }
 .vertical-album-container .vertical-album-title-container, .sorted-vertical-album-container .vertical-album-title-container {
-  height: 3rem;
-  position: absolute;
+  transform: rotate(90deg);
+  margin: auto;
   display: flex;
-  align-items: flex-start;
-  top: 2px;
+  justify-content: center;
+  margin-left: 1rem;
+  height: 2rem;
+  align-items: center;
+  position: absolute;
+  left: 150px;
+  top: 2rem;
 }
 .vertical-album-container .vertical-album-title, .sorted-vertical-album-container .vertical-album-title {
   display: none;
   font-size: 1rem;
   margin: 0;
+  z-index: 10;
 }
-.vertical-album-container:hover .album-title, .sorted-vertical-album-container:hover .album-title {
+.vertical-album-container:hover .vertical-album-title, .sorted-vertical-album-container:hover .vertical-album-title {
   display: block;
 }
 

@@ -20,16 +20,6 @@ const VerticalChronology = () => {
 
     return (
         <>
-            <div>
-                <div className='testColors-album' style={{ height: 50, width: 50 }}>album</div>
-                <div className='testColors-extended' style={{ height: 50, width: 50 }}>extended</div>
-                <div className='testColors-single' style={{ height: 50, width: 50 }}>single</div>
-{/* 
-                <div className='testColors-remix' style={{ height: 50, width: 50 }}>remix</div>
-                <div className='testColors-live' style={{ height: 50, width: 50 }}>live</div>
-                <div className='testColors-acoustic' style={{ height: 50, width: 50 }}>acoustic</div> */}
-
-            </div>
 
             <div className="vertical-chronology-container">
                 {sorted.map((track, index) => (
