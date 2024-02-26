@@ -1,4 +1,4 @@
-export const allTracks = [
+export const allTracks =[
     {
         "name": "Lavender Haze",
         "id": "5jQI2r1RdgtuT8S3iG8zFC",
@@ -14,7 +14,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Maroon",
@@ -31,7 +31,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero",
@@ -48,7 +48,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Snow On The Beach (feat. Lana Del Rey)",
@@ -66,7 +66,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You're On Your Own, Kid",
@@ -83,7 +83,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Midnight Rain",
@@ -100,7 +100,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Question...?",
@@ -117,7 +117,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Vigilante Shit",
@@ -134,7 +134,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Bejeweled",
@@ -151,7 +151,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Labyrinth",
@@ -168,7 +168,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Karma",
@@ -185,7 +185,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Sweet Nothing",
@@ -202,7 +202,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mastermind",
@@ -219,7 +219,7 @@ export const allTracks = [
         "albumName": "Midnights",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Great War",
@@ -236,7 +236,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Bigger Than The Whole Sky",
@@ -253,7 +253,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Paris",
@@ -270,7 +270,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "High Infidelity",
@@ -287,7 +287,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Glitch",
@@ -304,7 +304,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Would've, Could've, Should've",
@@ -321,7 +321,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Dear Reader",
@@ -338,7 +338,7 @@ export const allTracks = [
         "albumName": "Midnights (3am Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Hits Different",
@@ -355,7 +355,7 @@ export const allTracks = [
         "albumName": "Midnights (The Til Dawn Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Snow On The Beach (feat. More Lana Del Rey)",
@@ -373,7 +373,7 @@ export const allTracks = [
         "albumName": "Midnights (The Til Dawn Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Karma (feat. Ice Spice)",
@@ -391,7 +391,7 @@ export const allTracks = [
         "albumName": "Midnights (The Til Dawn Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You’re Losing Me (From The Vault)",
@@ -408,7 +408,7 @@ export const allTracks = [
         "albumName": "Midnights (The Late Night Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lavender Haze - Acoustic Version",
@@ -425,7 +425,7 @@ export const allTracks = [
         "albumName": "Lavender Haze (Acoustic Version)",
         "trackVariant": "single",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lavender Haze - Tensnake Remix",
@@ -443,7 +443,7 @@ export const allTracks = [
         "albumName": "Lavender Haze (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lavender Haze - Snakehips Remix",
@@ -461,7 +461,7 @@ export const allTracks = [
         "albumName": "Lavender Haze (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lavender Haze - Jungle Remix",
@@ -479,7 +479,7 @@ export const allTracks = [
         "albumName": "Lavender Haze (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lavender Haze - Felix Jaehn Remix",
@@ -497,7 +497,7 @@ export const allTracks = [
         "albumName": "Lavender Haze (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero - Acoustic Version",
@@ -514,7 +514,7 @@ export const allTracks = [
         "albumName": "Anti-Hero (Acoustic Version)",
         "trackVariant": "single",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero (feat. Bleachers)",
@@ -532,7 +532,7 @@ export const allTracks = [
         "albumName": "Anti-Hero (feat. Bleachers)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero - Roosevelt Remix",
@@ -550,7 +550,7 @@ export const allTracks = [
         "albumName": "Anti-Hero (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero - Kungs Remix",
@@ -568,7 +568,7 @@ export const allTracks = [
         "albumName": "Anti-Hero (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero - Jayda G Remix",
@@ -586,7 +586,7 @@ export const allTracks = [
         "albumName": "Anti-Hero (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Anti-Hero - ILLENIUM Remix",
@@ -604,7 +604,7 @@ export const allTracks = [
         "albumName": "Anti-Hero (Remixes)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Carolina - From The Motion Picture “Where The Crawdads Sing”",
@@ -621,7 +621,7 @@ export const allTracks = [
         "albumName": "Carolina (From The Motion Picture “Where The Crawdads Sing”)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Renegade",
@@ -639,7 +639,7 @@ export const allTracks = [
         "albumName": "Renegade",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "willow",
@@ -656,7 +656,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "champagne problems",
@@ -673,7 +673,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "gold rush",
@@ -690,7 +690,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "‘tis the damn season",
@@ -707,7 +707,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "tolerate it",
@@ -724,7 +724,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "no body, no crime (feat. HAIM)",
@@ -742,7 +742,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "happiness",
@@ -759,7 +759,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "dorothea",
@@ -776,7 +776,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "coney island (feat. The National)",
@@ -794,7 +794,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "ivy",
@@ -811,7 +811,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "cowboy like me",
@@ -828,7 +828,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "long story short",
@@ -845,7 +845,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "marjorie",
@@ -862,7 +862,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "closure",
@@ -879,7 +879,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "evermore (feat. Bon Iver)",
@@ -897,7 +897,7 @@ export const allTracks = [
         "albumName": "evermore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "right where you left me - bonus track",
@@ -914,7 +914,7 @@ export const allTracks = [
         "albumName": "evermore (deluxe version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "it’s time to go - bonus track",
@@ -931,7 +931,7 @@ export const allTracks = [
         "albumName": "evermore (deluxe version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "willow - 90's trend remix",
@@ -948,7 +948,7 @@ export const allTracks = [
         "albumName": "willow (90's trend remix)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the 1",
@@ -965,7 +965,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "cardigan",
@@ -982,7 +982,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the last great american dynasty",
@@ -999,7 +999,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "exile (feat. Bon Iver)",
@@ -1017,7 +1017,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "my tears ricochet",
@@ -1034,7 +1034,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "mirrorball",
@@ -1051,7 +1051,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "seven",
@@ -1068,7 +1068,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "august",
@@ -1085,7 +1085,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "this is me trying",
@@ -1102,7 +1102,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "illicit affairs",
@@ -1119,7 +1119,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "invisible string",
@@ -1136,7 +1136,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "mad woman",
@@ -1153,7 +1153,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "epiphany",
@@ -1170,7 +1170,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "betty",
@@ -1187,7 +1187,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "peace",
@@ -1204,7 +1204,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "hoax",
@@ -1221,7 +1221,7 @@ export const allTracks = [
         "albumName": "folklore",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the lakes - bonus track",
@@ -1238,7 +1238,7 @@ export const allTracks = [
         "albumName": "folklore (deluxe version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the 1 - the long pond studio sessions",
@@ -1255,7 +1255,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "cardigan - the long pond studio sessions",
@@ -1272,7 +1272,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the last great american dynasty - the long pond studio sessions",
@@ -1289,7 +1289,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "exile (feat. Bon Iver) - the long pond studio sessions",
@@ -1307,7 +1307,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "my tears ricochet - the long pond studio sessions",
@@ -1324,7 +1324,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "mirrorball - the long pond studio sessions",
@@ -1341,7 +1341,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "seven - the long pond studio sessions",
@@ -1358,7 +1358,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "august - the long pond studio sessions",
@@ -1375,7 +1375,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "this is me trying - the long pond studio sessions",
@@ -1392,7 +1392,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "illicit affairs - the long pond studio sessions",
@@ -1409,7 +1409,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "invisible string - the long pond studio sessions",
@@ -1426,7 +1426,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "mad woman - the long pond studio sessions",
@@ -1443,7 +1443,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "epiphany - the long pond studio sessions",
@@ -1460,7 +1460,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "betty - the long pond studio sessions",
@@ -1477,7 +1477,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "peace - the long pond studio sessions",
@@ -1494,7 +1494,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "hoax - the long pond studio sessions",
@@ -1511,7 +1511,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the lakes - the long pond studio sessions",
@@ -1528,7 +1528,7 @@ export const allTracks = [
         "albumName": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "the lakes - original version",
@@ -1545,7 +1545,7 @@ export const allTracks = [
         "albumName": "the lakes (original version)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Christmas Tree Farm (Old Timey Version)",
@@ -1562,7 +1562,7 @@ export const allTracks = [
         "albumName": "Christmas Tree Farm (Old Timey Version)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Forgot That You Existed",
@@ -1579,7 +1579,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cruel Summer",
@@ -1596,7 +1596,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lover",
@@ -1613,7 +1613,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Man",
@@ -1630,7 +1630,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Archer",
@@ -1647,7 +1647,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Think He Knows",
@@ -1664,7 +1664,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Miss Americana & The Heartbreak Prince",
@@ -1681,7 +1681,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Paper Rings",
@@ -1698,7 +1698,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cornelia Street",
@@ -1715,7 +1715,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Death By A Thousand Cuts",
@@ -1732,7 +1732,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "London Boy",
@@ -1749,7 +1749,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Soon You’ll Get Better (feat. The Chicks)",
@@ -1767,7 +1767,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "False God",
@@ -1784,7 +1784,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You Need To Calm Down",
@@ -1801,7 +1801,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Afterglow",
@@ -1818,7 +1818,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "ME! (feat. Brendon Urie of Panic! At The Disco)",
@@ -1837,7 +1837,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "It’s Nice To Have A Friend",
@@ -1854,7 +1854,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Daylight",
@@ -1871,7 +1871,7 @@ export const allTracks = [
         "albumName": "Lover",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "ME! - Live From Paris",
@@ -1888,7 +1888,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Archer (Live From Paris)",
@@ -1905,7 +1905,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Death By A Thousand Cuts (Live From Paris)",
@@ -1922,7 +1922,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cornelia Street - Live From Paris",
@@ -1939,7 +1939,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Man (Live From Paris)",
@@ -1956,7 +1956,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Daylight - Live From Paris",
@@ -1973,7 +1973,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You Need To Calm Down - Live From Paris",
@@ -1990,7 +1990,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Lover - Live From Paris",
@@ -2007,7 +2007,7 @@ export const allTracks = [
         "albumName": "Taylor Swift Live From Paris",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cruel Summer - Live from TS | The Eras Tour",
@@ -2024,7 +2024,7 @@ export const allTracks = [
         "albumName": "The Cruelest Summer",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cruel Summer - LP Giobbi Remix",
@@ -2042,7 +2042,7 @@ export const allTracks = [
         "albumName": "The Cruelest Summer",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cruel Summer - LP Giobbi Remix - Extended Version",
@@ -2060,7 +2060,7 @@ export const allTracks = [
         "albumName": "The Cruelest Summer",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "...Ready For It?",
@@ -2077,7 +2077,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "End Game",
@@ -2096,7 +2096,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Did Something Bad",
@@ -2113,7 +2113,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Don’t Blame Me",
@@ -2130,7 +2130,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Delicate",
@@ -2147,7 +2147,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Look What You Made Me Do",
@@ -2164,7 +2164,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "So It Goes...",
@@ -2181,7 +2181,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Gorgeous",
@@ -2198,7 +2198,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Getaway Car",
@@ -2215,7 +2215,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "King Of My Heart",
@@ -2232,7 +2232,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Dancing With Our Hands Tied",
@@ -2249,7 +2249,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Dress",
@@ -2266,7 +2266,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "This Is Why We Can't Have Nice Things",
@@ -2283,7 +2283,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Call It What You Want",
@@ -2300,7 +2300,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "New Year’s Day",
@@ -2317,7 +2317,7 @@ export const allTracks = [
         "albumName": "reputation",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Welcome To New York (Taylor's Version)",
@@ -2334,7 +2334,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Blank Space (Taylor's Version)",
@@ -2351,7 +2351,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Style (Taylor's Version)",
@@ -2368,7 +2368,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Out Of The Woods (Taylor's Version)",
@@ -2385,7 +2385,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "All You Had To Do Was Stay (Taylor's Version)",
@@ -2402,7 +2402,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Shake It Off (Taylor's Version)",
@@ -2419,7 +2419,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Wish You Would (Taylor's Version)",
@@ -2436,7 +2436,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Bad Blood (Taylor's Version)",
@@ -2453,7 +2453,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Wildest Dreams (Taylor's Version)",
@@ -2470,7 +2470,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "How You Get The Girl (Taylor's Version)",
@@ -2487,7 +2487,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "This Love (Taylor’s Version)",
@@ -2504,7 +2504,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Know Places (Taylor's Version)",
@@ -2521,7 +2521,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Clean (Taylor's Version)",
@@ -2538,7 +2538,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Wonderland (Taylor's Version)",
@@ -2555,7 +2555,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You Are In Love (Taylor's Version)",
@@ -2572,7 +2572,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "New Romantics (Taylor's Version)",
@@ -2589,7 +2589,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "'Slut!' (Taylor's Version) (From The Vault)",
@@ -2606,7 +2606,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Say Don't Go (Taylor's Version) (From The Vault)",
@@ -2623,7 +2623,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Now That We Don't Talk (Taylor's Version) (From The Vault)",
@@ -2640,7 +2640,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Suburban Legends (Taylor's Version) (From The Vault)",
@@ -2657,7 +2657,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Is It Over Now? (Taylor's Version) (From The Vault)",
@@ -2674,7 +2674,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Bad Blood (feat. Kendrick Lamar) (Taylor's Version)",
@@ -2692,7 +2692,7 @@ export const allTracks = [
         "albumName": "1989 (Taylor's Version) [Deluxe]",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "State Of Grace (Taylor's Version)",
@@ -2709,7 +2709,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Red (Taylor's Version)",
@@ -2726,7 +2726,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Treacherous (Taylor's Version)",
@@ -2743,7 +2743,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Knew You Were Trouble (Taylor's Version)",
@@ -2760,7 +2760,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "All Too Well (Taylor's Version)",
@@ -2777,7 +2777,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "22 (Taylor's Version)",
@@ -2794,7 +2794,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Almost Do (Taylor's Version)",
@@ -2811,7 +2811,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "We Are Never Ever Getting Back Together (Taylor's Version)",
@@ -2828,7 +2828,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Stay Stay Stay (Taylor's Version)",
@@ -2845,7 +2845,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Last Time (feat. Gary Lightbody of Snow Patrol) (Taylor’s Version)",
@@ -2863,7 +2863,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Holy Ground (Taylor's Version)",
@@ -2880,7 +2880,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Sad Beautiful Tragic (Taylor's Version)",
@@ -2897,7 +2897,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Lucky One (Taylor's Version)",
@@ -2914,7 +2914,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Everything Has Changed (feat. Ed Sheeran) (Taylor’s Version)",
@@ -2932,7 +2932,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Starlight (Taylor's Version)",
@@ -2949,7 +2949,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Begin Again (Taylor's Version)",
@@ -2966,7 +2966,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Moment I Knew (Taylor's Version)",
@@ -2983,7 +2983,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Come Back...Be Here (Taylor's Version)",
@@ -3000,7 +3000,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Girl At Home (Taylor's Version)",
@@ -3017,7 +3017,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "State Of Grace (Acoustic Version) (Taylor's Version)",
@@ -3034,7 +3034,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Ronan (Taylor's Version)",
@@ -3051,7 +3051,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Better Man (Taylor's Version) (From The Vault)",
@@ -3068,7 +3068,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Nothing New (feat. Phoebe Bridgers) (Taylor’s Version) (From The Vault)",
@@ -3086,7 +3086,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Babe (Taylor's Version) (From The Vault)",
@@ -3103,7 +3103,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Message In A Bottle (Taylor's Version) (From The Vault)",
@@ -3120,7 +3120,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Bet You Think About Me (feat. Chris Stapleton) (Taylor’s Version) (From The Vault)",
@@ -3138,7 +3138,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Forever Winter (Taylor's Version) (From The Vault)",
@@ -3155,7 +3155,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Run (feat. Ed Sheeran) (Taylor’s Version) (From The Vault)",
@@ -3173,7 +3173,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Very First Night (Taylor's Version) (From The Vault)",
@@ -3190,7 +3190,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)",
@@ -3207,7 +3207,7 @@ export const allTracks = [
         "albumName": "Red (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "All Too Well (Sad Girl Autumn Version) - Recorded at Long Pond Studios",
@@ -3224,7 +3224,7 @@ export const allTracks = [
         "albumName": "All Too Well (Sad Girl Autumn Version) - Recorded at Long Pond Studios",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Girl At Home",
@@ -3241,7 +3241,7 @@ export const allTracks = [
         "albumName": "Red (Deluxe Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Treacherous - Original Demo Recording",
@@ -3258,7 +3258,7 @@ export const allTracks = [
         "albumName": "Red (Deluxe Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Red - Original Demo Recording",
@@ -3275,7 +3275,7 @@ export const allTracks = [
         "albumName": "Red (Deluxe Edition)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Joker And The Queen (feat. Taylor Swift)",
@@ -3293,7 +3293,7 @@ export const allTracks = [
         "albumName": "The Joker And The Queen (feat. Taylor Swift)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Message In A Bottle (Fat Max G Remix) (Taylor’s Version)",
@@ -3311,7 +3311,7 @@ export const allTracks = [
         "albumName": "Message In A Bottle (Fat Max G Remix) (Taylor’s Version)",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Safe & Sound (feat. Joy Williams and John Paul White) (Taylor’s Version)",
@@ -3330,7 +3330,7 @@ export const allTracks = [
         "albumName": "Safe & Sound (Taylor's Version)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Eyes Open (Taylor's Version)",
@@ -3347,7 +3347,7 @@ export const allTracks = [
         "albumName": "Eyes Open (Taylor's Version)",
         "trackVariant": "single",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mine (Taylor's Version)",
@@ -3364,7 +3364,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Sparks Fly (Taylor’s Version)",
@@ -3381,7 +3381,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Back To December (Taylor's Version)",
@@ -3398,7 +3398,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Speak Now (Taylor's Version)",
@@ -3415,7 +3415,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Dear John (Taylor's Version)",
@@ -3432,7 +3432,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mean (Taylor's Version)",
@@ -3449,7 +3449,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Story Of Us (Taylor's Version)",
@@ -3466,7 +3466,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Never Grow Up (Taylor's Version)",
@@ -3483,7 +3483,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Enchanted (Taylor's Version)",
@@ -3500,7 +3500,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Better Than Revenge (Taylor's Version)",
@@ -3517,7 +3517,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Innocent (Taylor's Version)",
@@ -3534,7 +3534,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Haunted (Taylor's Version)",
@@ -3551,7 +3551,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Last Kiss (Taylor's Version)",
@@ -3568,7 +3568,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Long Live (Taylor's Version)",
@@ -3585,7 +3585,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Ours (Taylor’s Version)",
@@ -3602,7 +3602,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Superman (Taylor’s Version)",
@@ -3619,7 +3619,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Electric Touch (feat. Fall Out Boy) (Taylor’s Version) (From The Vault)",
@@ -3637,7 +3637,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "When Emma Falls in Love (Taylor’s Version) (From The Vault)",
@@ -3654,7 +3654,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Can See You (Taylor’s Version) (From The Vault)",
@@ -3671,7 +3671,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Castles Crumbling (feat. Hayley Williams) (Taylor’s Version) (From The Vault)",
@@ -3689,7 +3689,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Foolish One (Taylor’s Version) (From The Vault)",
@@ -3706,7 +3706,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Timeless (Taylor’s Version) (From The Vault)",
@@ -3723,7 +3723,7 @@ export const allTracks = [
         "albumName": "Speak Now (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mine - POP Mix",
@@ -3740,7 +3740,7 @@ export const allTracks = [
         "albumName": "Speak Now (Deluxe Package)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "If This Was A Movie",
@@ -3757,7 +3757,7 @@ export const allTracks = [
         "albumName": "Speak Now (Deluxe Package)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Superman",
@@ -3774,7 +3774,7 @@ export const allTracks = [
         "albumName": "Speak Now (Deluxe Package)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Back To December - Acoustic",
@@ -3791,7 +3791,7 @@ export const allTracks = [
         "albumName": "Speak Now (Deluxe Package)",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Haunted - Acoustic Version",
@@ -3808,7 +3808,7 @@ export const allTracks = [
         "albumName": "Speak Now (Deluxe Package)",
         "trackVariant": "extended",
         "acoustic": true,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Sparks Fly - Live/2011",
@@ -3825,7 +3825,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mine - Live/2011",
@@ -3842,7 +3842,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Story Of Us - Live",
@@ -3859,7 +3859,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mean - Live/2011",
@@ -3876,7 +3876,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Ours - Live/2011",
@@ -3893,7 +3893,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Back To December/Apologize/You're Not Sorry - Live/2011/Medley",
@@ -3910,7 +3910,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Better Than Revenge - Live/2011",
@@ -3927,7 +3927,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Speak Now - Live/2011",
@@ -3944,7 +3944,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Last Kiss - Live/2011",
@@ -3961,7 +3961,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Drops Of Jupiter - Live/2011",
@@ -3978,7 +3978,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Bette Davis Eyes - Live/2011",
@@ -3995,7 +3995,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I Want You Back - Live/2011",
@@ -4012,7 +4012,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Dear John - Live/2011",
@@ -4029,7 +4029,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Enchanted - Live/2011",
@@ -4046,7 +4046,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Haunted - Live/2011",
@@ -4063,7 +4063,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Long Live - Live/2011",
@@ -4080,7 +4080,7 @@ export const allTracks = [
         "albumName": "Speak Now World Tour Live",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Fearless (Taylor’s Version)",
@@ -4097,7 +4097,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Fifteen (Taylor’s Version)",
@@ -4114,7 +4114,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Love Story (Taylor’s Version)",
@@ -4131,7 +4131,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Hey Stephen (Taylor’s Version)",
@@ -4148,7 +4148,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "White Horse (Taylor’s Version)",
@@ -4165,7 +4165,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You Belong With Me (Taylor’s Version)",
@@ -4182,7 +4182,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Breathe (feat. Colbie Caillat) (Taylor’s Version)",
@@ -4200,7 +4200,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Tell Me Why (Taylor’s Version)",
@@ -4217,7 +4217,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You’re Not Sorry (Taylor’s Version)",
@@ -4234,7 +4234,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Way I Loved You (Taylor’s Version)",
@@ -4251,7 +4251,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Forever & Always (Taylor’s Version)",
@@ -4268,7 +4268,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Best Day (Taylor’s Version)",
@@ -4285,7 +4285,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Change (Taylor’s Version)",
@@ -4302,7 +4302,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Jump Then Fall (Taylor’s Version)",
@@ -4319,7 +4319,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Untouchable (Taylor’s Version)",
@@ -4336,7 +4336,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Forever & Always (Piano Version) (Taylor’s Version)",
@@ -4353,7 +4353,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Come In With The Rain (Taylor’s Version)",
@@ -4370,7 +4370,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Superstar (Taylor’s Version)",
@@ -4387,7 +4387,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Other Side Of The Door (Taylor’s Version)",
@@ -4404,7 +4404,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Today Was A Fairytale (Taylor’s Version)",
@@ -4421,7 +4421,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "You All Over Me (feat. Maren Morris) (Taylor’s Version) (From The Vault)",
@@ -4439,7 +4439,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mr. Perfectly Fine (Taylor’s Version) (From The Vault)",
@@ -4456,7 +4456,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "We Were Happy (Taylor’s Version) (From The Vault)",
@@ -4473,7 +4473,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "That’s When (feat. Keith Urban) (Taylor’s Version) (From The Vault)",
@@ -4491,7 +4491,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Don’t You (Taylor’s Version) (From The Vault)",
@@ -4508,7 +4508,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Bye Bye Baby (Taylor’s Version) (From The Vault)",
@@ -4525,7 +4525,7 @@ export const allTracks = [
         "albumName": "Fearless (Taylor's Version)",
         "trackVariant": "extended",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Love Story - Live From Clear Channel Stripped 2008",
@@ -4542,7 +4542,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Fearless - Live From Clear Channel Stripped 2008",
@@ -4559,7 +4559,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Beautiful Eyes - Live From Clear Channel Stripped 2008",
@@ -4576,7 +4576,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Untouchable - Live From Clear Channel Stripped 2008",
@@ -4593,7 +4593,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Teardrops On My Guitar - Live From Clear Channel Stripped 2008",
@@ -4610,7 +4610,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Picture To Burn - Live From Clear Channel Stripped 2008",
@@ -4627,7 +4627,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Should've Said No - Live From Clear Channel Stripped 2008",
@@ -4644,7 +4644,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Change - Live From Clear Channel Stripped 2008",
@@ -4661,7 +4661,7 @@ export const allTracks = [
         "albumName": "Live From Clear Channel Stripped 2008",
         "trackVariant": "live",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Tim McGraw",
@@ -4678,7 +4678,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Picture To Burn",
@@ -4695,7 +4695,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Teardrops On My Guitar - Radio Single Remix",
@@ -4712,7 +4712,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "remix",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "A Place in this World",
@@ -4729,7 +4729,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Cold As You",
@@ -4746,7 +4746,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "The Outside",
@@ -4763,7 +4763,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Tied Together with a Smile",
@@ -4780,7 +4780,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Stay Beautiful",
@@ -4797,7 +4797,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Should've Said No",
@@ -4814,7 +4814,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Mary's Song (Oh My My My)",
@@ -4831,7 +4831,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Our Song",
@@ -4848,7 +4848,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "I'm Only Me When I'm With You",
@@ -4865,7 +4865,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Invisible",
@@ -4882,7 +4882,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "A Perfectly Good Heart",
@@ -4899,7 +4899,7 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     },
     {
         "name": "Teardrops on My Guitar - Pop Version",
@@ -4916,6 +4916,6 @@ export const allTracks = [
         "albumName": "Taylor Swift",
         "trackVariant": "album",
         "acoustic": false,
-        "points": 0
+        "points": 1
     }
 ]

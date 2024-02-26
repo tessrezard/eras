@@ -1,37 +1,33 @@
-import { allTracks } from "../data/current_data/all_tracks";
 
-
-export const filterTracks = (tracks, filter) => {
+export const filterTracks = (tracks, filters) => {
     const options = [ "album", "extended", "remix", "live", "single", "acoustic" ]
+    let filtered = [...tracks];
 
-    if (options.includes(filter) ) {
+    console.log('filters', filters);
 
-        if (filter === 'album') {
-            const filtered = tracks.filter(track => track.trackVariant !== filter);
-            return filtered;
-        } else if (filter === 'extended') {
-            const filtered = tracks.filter(track => track.trackVariant !== filter);
-            return filtered;
-        } else if (filter === 'remix') {
-            const filtered = tracks.filter(track => track.trackVariant !== filter);
-            return filtered;
-        } else if (filter === 'live') {
-            const filtered = tracks.filter(track => track.trackVariant !== filter);
-            return filtered;
-        } else if (filter === 'single') {
-            const filtered = tracks.filter(track => track.trackVariant !== filter);
-            return filtered;
-        } else if (filter === 'acoustic') {
-            const filtered = tracks.filter(track => !track.acoustic);
-            return filtered;
-        } else{
-            // Handle other filters here if needed
-            return tracks;
+    if (Array.isArray(filters) && filters.every((filter) => options.includes(filter))) {
+        console.log('in if ');
+
+      filters.forEach((filter) => {
+        switch (filter) {
+          case "album":
+          case "extended":
+          case "remix":
+          case "live":
+          case "single":
+            filtered = filtered.filter((track) => track.trackVariant !== filter);
+            break;
+          case "acoustic":
+            filtered = filtered.filter((track) => !track.acoustic);
+            break;
+          // Handle other filters here if needed
+          default:
+            break;
         }
-
+      });
     } else {
-        return null;
+        return tracks;
     }
+    return filtered;
 
 }
-

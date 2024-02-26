@@ -13,20 +13,20 @@ import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 
 const VerticalChronology = () => {
 
-    const albumFiltered = filterTracks(allTracks, 'album');
-    const extendedFiltered = filterTracks(allTracks, 'extended');
-    const acousticFiltered = filterTracks(allTracks, 'acoustic');
-    const remixFiltered = filterTracks(acousticFiltered, 'remix');
-    const liveFiltered = filterTracks(remixFiltered, 'live');
-    const singleFiltered = filterTracks(liveFiltered, 'single');
+    // const albumFiltered = filterTracks(allTracks, 'album');
+    // const extendedFiltered = filterTracks(allTracks, 'extended');
+    // const acousticFiltered = filterTracks(allTracks, 'acoustic');
+    // const remixFiltered = filterTracks(acousticFiltered, 'remix');
+    // const liveFiltered = filterTracks(remixFiltered, 'live');
+    // const singleFiltered = filterTracks(liveFiltered, 'single');
 
     
 
     reverseEraOrder(allTracks);    
 
 
-    // const sortedDuration = sortTracksByDuration(allTracks);
-    const sortedDuration = sortTracksByDuration(singleFiltered);
+    const sortedDuration = sortTracksByDuration(allTracks);
+    // const sortedDuration = sortTracksByDuration(singleFiltered);
 
     return (
         <>

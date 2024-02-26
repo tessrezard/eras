@@ -455,6 +455,7 @@
   align-items: flex-start;
   position: relative;
   top: 60px;
+  margin-bottom: 2rem;
 }
 
 .condensed-track-container {

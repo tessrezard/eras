@@ -1,10 +1,3 @@
-// import React, { useState } from "react";
-// import { albumTracks } from "../data/old_data/spotify_order_album_tracks";
-// import { sortedByEraAlbumTracks } from "../data/current_data/album_tracks";
-import { albumTracks } from "../data/current_data/album_tracks";
-
-import { addValues } from "./addValues";
-import { allTracks } from "../data/current_data/all_tracks";
 
 
 export const sortTracksByDuration = (tracks) => {
