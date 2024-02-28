@@ -1,0 +1,62 @@
+.quiz-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-options-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    @media (min-width: $small-phone) {
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+}
+
+.quiz-option-container {
+    width: 210px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: $rounded-rectangle;
+    margin: 0.5rem;
+
+    @media (min-width: $small-phone) {
+        width: 142px;
+        margin: 0.15rem;
+        height: 55px;
+        flex-flow: row;
+        justify-content: space-evenly;
+    } 
+    @media (min-width: $phone) {
+        width: 182px;
+        margin: 0.15rem;
+        height: 55px;
+        flex-flow: row;
+        justify-content: space-evenly;
+    } 
+    @media (min-width: $wide-phone) {
+        width: 235px;
+        margin: 0.15rem;
+        height: 55px;
+        flex-flow: row;
+        justify-content: space-evenly;
+    } 
+    @media (min-width: $tablet) {
+        margin: 0.5rem;
+        width: 260px;
+        height: 55px;
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+}
+
+.quiz-song-name {
+    font-size: 1rem;
+}

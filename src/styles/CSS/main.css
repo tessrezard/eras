@@ -450,12 +450,17 @@
 
 .condensed-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: flex-start;
   position: relative;
   top: 60px;
   margin-bottom: 2rem;
+}
+@media (min-width: 470px) {
+  .condensed-container {
+    flex-flow: row wrap;
+  }
 }
 
 .condensed-track-container {
@@ -649,6 +654,99 @@
   width: 700px;
 }
 
+.quiz-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-options-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+@media (min-width: 370px) {
+  .quiz-options-container {
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+}
+
+.quiz-option-container {
+  width: 210px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 19px;
+  margin: 0.5rem;
+}
+@media (min-width: 370px) {
+  .quiz-option-container {
+    width: 142px;
+    margin: 0.15rem;
+    height: 55px;
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 470px) {
+  .quiz-option-container {
+    width: 182px;
+    margin: 0.15rem;
+    height: 55px;
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 570px) {
+  .quiz-option-container {
+    width: 235px;
+    margin: 0.15rem;
+    height: 55px;
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .quiz-option-container {
+    margin: 0.5rem;
+    width: 260px;
+    height: 55px;
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+}
+
+.quiz-song-name {
+  font-size: 1rem;
+}
+
+.filters-whole-container {
+  background-color: rgb(237, 236, 232);
+  display: flex;
+  flex-flow: column;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-button {
+  height: 20px;
+  width: 20px;
+  background-color: aqua;
+}
+
 .header-container {
   position: relative;
   left: 0;
@@ -682,11 +780,10 @@
 
 html {
   font-size: 16px;
+  margin: auto;
 }
 
 body {
-  margin-left: 1rem;
-  margin-right: 1rem;
   font-family: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -694,14 +791,6 @@ ul {
   list-style-type: none;
   /* Removes bullets from an unordered list */
   padding: 0;
-}
-
-.whole-container {
-  display: flex;
-  position: relative;
-  top: 56px;
-  right: 1rem;
-  justify-content: center;
 }
 
 .main-container {

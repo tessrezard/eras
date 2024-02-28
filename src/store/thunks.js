@@ -3,6 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getSpotifyAlbum, getSpotifyArtistAlbums, getSpotifyToken, getSpotifyAlbumTracks} from '../app/API';
 
 
+
 export const fetchToken = createAsyncThunk('token/fetchToken', async () => {
   try {
     const token = await getSpotifyToken();

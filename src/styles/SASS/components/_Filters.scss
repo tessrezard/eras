@@ -1,0 +1,20 @@
+.filters-whole-container {
+    background-color: $theTorturedPoetsDepartment;
+    display: flex;
+    flex-flow: column;
+}
+.filters-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.filter-container{
+    display: flex;
+    align-items: center;
+}
+
+.filter-button {
+    height: 20px;
+    width: 20px;
+    background-color: aqua;
+}

@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/CSS/main.css';
 
 
 const CondensedTrack = ({ track, sortType }) => {
 
-  if (sortType === !'duration'){
-    console.log(sortType);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [ phoneWidth, setPhoneWidth] = useState();
 
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+    // Cleanup the event listener on component unmount
+    if (viewportWidth <= 470) {
+      setPhoneWidth(true)
+    } else if (viewportWidth > 470){
+      setPhoneWidth(false)
+    }
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array to run this effect only once on mount
+
 
   let sortedHeight = '100px';
   if (track) {
@@ -29,7 +45,9 @@ const CondensedTrack = ({ track, sortType }) => {
        sortedHeight = '100px';
     }
   }
+  // console.log('viewportWidth', viewportWidth)
 
+  // console.log('phoneWidth', phoneWidth);
 
   let variant = track.trackVariant
   if (variant) {
@@ -69,9 +87,14 @@ const CondensedTrack = ({ track, sortType }) => {
           <p className={`condensed-track-title ${albumColor}`}>{track.name}</p>
         </div>
 
+        {viewportWidth && viewportWidth < 470? (
+        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ width: sortedHeight, height: 3 }} />
+        ) : (
+        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ height: sortedHeight, width: 3, }} />
+      )}
 
-        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ height: sortedHeight }} />
 
+        {/* <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ height: sortedHeight, width: 3, }} /> */}
 
       </div>
 

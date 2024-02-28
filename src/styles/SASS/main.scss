@@ -9,7 +9,7 @@
 @import 'components/VerticalChronology';
 @import 'components/Albums';
 @import 'components/Quiz';
-
+@import 'components/Filters';
 @import 'layout/header';
 @import 'pages/Home';
 
@@ -20,11 +20,10 @@
 
 html {
     font-size: 16px;
+    margin: auto;
 }
 
 body {
-    margin-left: 1rem;
-    margin-right: 1rem;
     font-family: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -37,12 +36,6 @@ ul {
 
 // in root.js
 .whole-container {
-    display: flex;
-    position: relative;
-    top: $header-height;
-    right: 1rem;
-    // justify-content: center;
-    justify-content: center;
 
 
 }
@@ -51,11 +44,10 @@ ul {
 // in root.js
 .main-container {
     display: flex;
-    flex-flow: column ;
+    flex-flow: column;
     padding-top: 1rem;
     overflow: hidden;
     justify-content: center;
-   
 }
 
 .horizontal-chronology {

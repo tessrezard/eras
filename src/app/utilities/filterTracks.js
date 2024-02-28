@@ -1,12 +1,10 @@
+export const filterOptions = [ "album", "extended", "remix", "live", "single", "acoustic" ]
 
 export const filterTracks = (tracks, filters) => {
-    const options = [ "album", "extended", "remix", "live", "single", "acoustic" ]
     let filtered = [...tracks];
 
-    console.log('filters', filters);
 
-    if (Array.isArray(filters) && filters.every((filter) => options.includes(filter))) {
-        console.log('in if ');
+    if (Array.isArray(filters) && filters.every((filter) => filterOptions.includes(filter))) {
 
       filters.forEach((filter) => {
         switch (filter) {

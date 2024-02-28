@@ -28,9 +28,9 @@ const QuizSongOption = ({ track, onClick }) => {
         const albumColor = 'color-' + track.era;
 
         return (
-            <div className={`${albumBackgroundColor}`}>
-                <h3 style={{color: '#fff'}}>{trackName}</h3>
-                <button onClick={onClick}>Prefer this</button>
+            
+            <div onClick={onClick} className={` quiz-option-container ${albumBackgroundColor}`} >
+                <p className="quiz-song-name" style={{color: '#fff'}}>{trackName}</p>
             </div>
         );
     }
