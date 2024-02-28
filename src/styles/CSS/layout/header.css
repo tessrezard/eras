@@ -1,4 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+@keyframes colorCycle {
+  0% {
+    color: #7fd5e0;
+  }
+  9.0909090909% {
+    color: #f5ce6d;
+  }
+  18.1818181818% {
+    color: #ba91ed;
+  }
+  27.2727272727% {
+    color: #dd2e2e;
+  }
+  36.3636363636% {
+    color: #9ab9f2;
+  }
+  45.4545454545% {
+    color: rgb(4, 32, 27);
+  }
+  54.5454545455% {
+    color: #e4b0f5;
+  }
+  63.6363636364% {
+    color: #aeb4b2;
+  }
+  72.7272727273% {
+    color: #af7039;
+  }
+  81.8181818182% {
+    color: #2536a4;
+  }
+  90.9090909091% {
+    color: rgb(237, 236, 232);
+  }
+}
 .header-container {
   position: relative;
   left: 0;
@@ -71,10 +106,10 @@
     color: #f5ce6d;
   }
   18.1818181818% {
-    color: #ad7ee8;
+    color: #ba91ed;
   }
   27.2727272727% {
-    color: #db2323;
+    color: #dd2e2e;
   }
   36.3636363636% {
     color: #9ab9f2;
@@ -83,16 +118,16 @@
     color: rgb(4, 32, 27);
   }
   54.5454545455% {
-    color: #e8a3ff;
+    color: #e4b0f5;
   }
   63.6363636364% {
     color: #aeb4b2;
   }
   72.7272727273% {
-    color: #a25f25;
+    color: #af7039;
   }
   81.8181818182% {
-    color: #0f1e7e;
+    color: #2536a4;
   }
   90.9090909091% {
     color: rgb(237, 236, 232);

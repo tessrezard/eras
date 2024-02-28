@@ -69,6 +69,7 @@ const CondensedTrack = ({ track, sortType }) => {
   const albumBackgroundColor = 'background-color-' + track.era + '-' + variant;
   const albumColor = 'color-' + track.era;
 
+  
   const duration_ms = track.duration_ms;
   const durationInPx = ((duration_ms / 1000) / 2) + 'px';
 

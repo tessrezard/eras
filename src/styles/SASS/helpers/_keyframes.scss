@@ -1,0 +1,22 @@
+
+@keyframes colorCycle {
+    @for $i from 0 to length($eraList) {
+      $color: nth($eraList, $i + 1);
+      $percentage: percentage($i / length($eraList));
+  
+      #{$percentage} {
+        color: $color;
+      }
+    }
+  }
+
+  @keyframes borderErasColorCycle {
+    @for $i from 0 to length($eraList) {
+      $color: nth($eraList, $i + 1);
+      $percentage: percentage($i / length($eraList));
+  
+      #{$percentage} {
+        border-color: $color;
+      }
+    }
+  }
