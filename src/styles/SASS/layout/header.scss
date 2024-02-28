@@ -1,35 +1,86 @@
-
 @import '../helpers/variables';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
 .header-container {
-    position: relative;
-    left: 0;
-    padding: 5px;
-    width: 100vw;
-    height: $header-height;
-    display: flex;
-    z-index: $header-depth;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-flow: row wrap;
-    background-color: #fff;
-    border-bottom: pink;
-    @media (max-width: $small-phone){
-        height: fit-content;
-    }
+  position: relative;
+  left: 0;
+  padding: 5px;
+  width: 100vw;
+  height: $header-height;
+  display: flex;
+  z-index: $header-depth;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: row wrap;
+  background-color: #fff;
+  border-bottom: pink;
+
+  @media (max-width: $small-phone) {
+    height: fit-content; 
+  }
 }
+
+.header-legend-container {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: $legend-box-container-size;
+  cursor: pointer;
+
+  .header-legend-text-container{
+    display: flex;
+    p {
+      margin: 0;
+      margin: auto;
+      font-size: 0.85rem;
+      text-align: center;
+      font-family: $titleFont;
+      animation: colorCycle 60s infinite;
+    }
+    .header-legend-arrow {
+      font-size: 1rem;
+      transform: rotate(-90deg);
+      margin-left: 0px;
+      transition: all 0.5s ease; /* Add a smooth transition effect */
+
+    }
+  }
+  &.active {
+    .header-legend-arrow {
+      transform: rotate(0);
+      margin-left: 5px;
+      transition: all 0.5s ease; /* Add a smooth transition effect */
+
+    }
+  }
+  }
+  
 
 .header-title {
-    display: block;
-    color: pink;
-    margin: 0px;
-    font-weight: 800;
-    font-size: 30px;
-    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  display: block;
+  margin: 0px;
+  font-weight: 800;
+  font-size: 30px;
+  font-family: $titleFont;
+ animation: colorCycle 60s infinite;
 
 }
 
+
+
+@keyframes colorCycle {
+  @for $i from 0 to length($eraList) {
+    $color: nth($eraList, $i + 1);
+    $percentage: percentage($i / length($eraList));
+
+    #{$percentage} {
+      color: $color;
+    }
+  }
+}

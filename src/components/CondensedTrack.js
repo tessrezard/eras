@@ -88,9 +88,9 @@ const CondensedTrack = ({ track, sortType }) => {
         </div>
 
         {viewportWidth && viewportWidth < 470? (
-        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ width: sortedHeight, height: 3 }} />
+        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ width: sortedHeight }} />
         ) : (
-        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ height: sortedHeight, width: 3, }} />
+        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ height: sortedHeight }} />
       )}
 
 

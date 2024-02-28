@@ -454,12 +454,19 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  top: 60px;
+  top: 270px;
   margin-bottom: 2rem;
+  transform: rotate(-90deg);
 }
 @media (min-width: 470px) {
   .condensed-container {
     flex-flow: row wrap;
+  }
+}
+@media (min-width: 880px) {
+  .condensed-container {
+    transform: rotate(0deg);
+    align-items: flex-start;
   }
 }
 
@@ -510,20 +517,20 @@
   display: flex;
   margin-left: 0.5px;
   height: 2rem;
-  width: 1px;
+  width: 2px;
   padding: 0;
   border-radius: 1px;
 }
 @media (min-width: 570px) {
   .condensed-track-container .condensed-track-bar {
     margin-left: 0.5px;
-    width: 1.5px;
+    width: 2px;
   }
 }
 @media (min-width: 768px) {
   .condensed-track-container .condensed-track-bar {
     margin-left: 1px;
-    width: 1.5px;
+    width: 2px;
   }
 }
 @media (min-width: 960px) {
@@ -541,16 +548,10 @@
 @media (min-width: 1400px) {
   .condensed-track-container .condensed-track-bar {
     margin-left: 1px;
-    width: 3.5px;
-  }
-}
-@media (min-width: 1600px) {
-  .condensed-track-container .condensed-track-bar {
-    margin-left: 1px;
     width: 4px;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 1500px) {
   .condensed-track-container .condensed-track-bar {
     margin-left: 1px;
     width: 5px;
@@ -747,12 +748,72 @@
   background-color: aqua;
 }
 
+.legend-icon-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
+.legend-icon-item-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 15px;
+  width: 15px;
+}
+
+.legend-icon-box {
+  height: 13px;
+  width: 13px;
+  border-radius: 9px;
+}
+
+.legend-icon-text-container {
+  position: absolute;
+  width: 100px;
+  text-align: start;
+  font-size: 0.5rem;
+  transform: rotate(90deg);
+}
+
+.legend-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.legend-item-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+}
+
+.legend-box {
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+}
+
+.legend-text-container {
+  position: absolute;
+  width: 100px;
+  top: 135px;
+  text-align: start;
+  font-size: 0.5rem;
+  transform: rotate(90deg);
+}
+
 .header-container {
   position: relative;
   left: 0;
   padding: 5px;
   width: 100vw;
-  height: 56px;
+  height: 71px;
   display: flex;
   z-index: 10;
   justify-content: center;
@@ -769,15 +830,81 @@
   }
 }
 
+.header-legend-container {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 15px;
+  cursor: pointer;
+}
+.header-legend-container .header-legend-text-container {
+  display: flex;
+}
+.header-legend-container .header-legend-text-container p {
+  margin: 0;
+  margin: auto;
+  font-size: 0.85rem;
+  text-align: center;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  animation: colorCycle 60s infinite;
+}
+.header-legend-container .header-legend-text-container .header-legend-arrow {
+  font-size: 1rem;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+.header-legend-container.active .header-legend-arrow {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
 .header-title {
   display: block;
-  color: pink;
   margin: 0px;
   font-weight: 800;
   font-size: 30px;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  animation: colorCycle 60s infinite;
 }
 
+@keyframes colorCycle {
+  0% {
+    color: #7fd5e0;
+  }
+  9.0909090909% {
+    color: #f5ce6d;
+  }
+  18.1818181818% {
+    color: #ad7ee8;
+  }
+  27.2727272727% {
+    color: #db2323;
+  }
+  36.3636363636% {
+    color: #9ab9f2;
+  }
+  45.4545454545% {
+    color: rgb(4, 32, 27);
+  }
+  54.5454545455% {
+    color: #e8a3ff;
+  }
+  63.6363636364% {
+    color: #aeb4b2;
+  }
+  72.7272727273% {
+    color: #a25f25;
+  }
+  81.8181818182% {
+    color: #0f1e7e;
+  }
+  90.9090909091% {
+    color: rgb(237, 236, 232);
+  }
+}
 html {
   font-size: 16px;
   margin: auto;

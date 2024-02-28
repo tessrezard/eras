@@ -3,48 +3,54 @@
 // era colors
 $theTorturedPoetsDepartment: rgb(237, 236, 232);
 $midnights: #0f1e7e;
-
-
 $evermore: #a25f25;
-
 $folklore: #aeb4b2;
-
-// $lover: #e4c8ed;
 $lover: #e8a3ff;
-
 $reputation: rgb(4, 32, 27);
-
 $nineteenEightyNine: #9ab9f2;
-// $nineteenEightyNine: #aedefe;
-
 $red: #db2323;
-// $red: #fc4456;
-
 $speakNow: #ad7ee8;
-// $speakNow: #a475e2;
-
 $fearless: #f5ce6d;
-// $fearless: #ffc906;
-// 
 $taylorSwift: #7fd5e0;
-
 $carolina: #c3baaa;
 $christmas: #1c6336;
 $renegade: #638d98;
 
+$eraList: (
+  $taylorSwift,
+  $fearless,
+  $speakNow,
+  $red,
+  $nineteenEightyNine,
+  $reputation,
+  $lover,
+  $folklore,
+  $evermore,
+  $midnights,
+  $theTorturedPoetsDepartment
+);
 
-$header-height: 56px;
+
+
+$titleFont: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+$legend-box-container-size: 15px;
+$legend-box-size: 13px;
+
+$header-height: 71px;
 
 //BREAKPOINTS
 $small-phone: 370px;
 $phone: 470px;
 $wide-phone: 570px;
 $tablet: 768px;
+$small-desktop: 880px;
 $desktop: 960px;
 $large-desktop: 1200px;
 $XL-desktop: 1400px;
-$XXL-desktop: 1600px;
-$XXXL-desktop: 1700px;
+$XXL-desktop: 1500px;
+$XXXL-desktop: 1600px;
+$XXXXL-desktop: 1700px;
 
 //Z-ORDER 
 

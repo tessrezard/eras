@@ -7,6 +7,7 @@ import Quiz from "../components/Quiz";
 import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import { filterTracks } from "../app/utilities/filterTracks";
 import { useDispatch, useSelector } from 'react-redux';
+import Legend from "../components/Legend";
 
 const Home = () => {
 
@@ -17,7 +18,7 @@ const Home = () => {
 
   return (  
     <>
-    <Quiz tracks={allTracks}/>
+    <Quiz tracks={reverseTracks}/>
     <div className="horizontal-chronology">
     <Condensed tracks={filtered} sortType='duration'/>
     </div>

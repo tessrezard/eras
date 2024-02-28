@@ -1,0 +1,73 @@
+//___________________ICON________________________
+
+.legend-icon-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: $legend-box-container-size * 4;
+}
+
+.legend-icon-item-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: $legend-box-container-size;
+    width: $legend-box-container-size;
+}
+
+.legend-icon-box {
+    height: $legend-box-size;
+    width: $legend-box-size;
+    border-radius: 9px;
+    // transform: rotate(45deg);
+
+}
+
+.legend-icon-text-container {
+    position: absolute;
+    width: 100px;
+    // top: 135px;
+    text-align: start;
+    font-size: 0.5rem;
+    transform: rotate(90deg);
+}
+
+
+//____________________________________________________________________________________
+
+//___________________LEGEND________________________
+
+.legend-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.legend-item-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+}
+
+.legend-box {
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    // transform: rotate(45deg);
+
+}
+
+.legend-text-container {
+    position: absolute;
+    width: 100px;
+    top: 135px;
+    text-align: start;
+    font-size: 0.5rem;
+    transform: rotate(90deg);
+}
+
+
