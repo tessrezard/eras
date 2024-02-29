@@ -47,6 +47,8 @@
     top: 6rem;
     width: 110px;
     margin-right: 3rem;
+    padding-bottom: 1rem;
+
     background-color: rgb(254, 255, 254);
     height: fit-content;
     border: solid 3px;
@@ -58,10 +60,54 @@
     }
 
     @media (min-width: $wide-phone) {
-        width: fit-content;
+        width: 150px;
         left: 6rem;
         right: 2rem;
         top: 1rem;
+    }
+
+    @media (min-width: $tablet) {
+        width: 250px;
+    }
+
+    @media (min-width: $small-desktop) {
+        width: 350px;
+    }
+
+    @media (min-width: $desktop) {
+        width: 450px;
+    }
+
+    @media (min-width: $large-desktop) {
+        width: 650px;
+    }
+
+    @media (min-width: $XL-desktop) {
+        width: 750px;
+    }
+
+    @media (min-width: $XXL-desktop) {
+        width: 950px;
+    }
+
+    @media (min-width: $XXXL-desktop) {
+        width: 1050px;
+    }
+
+    @media (min-width: $small-monitor) {
+        width: 1150px;
+    }
+
+    @media (min-width: $monitor) {
+        width: 1250px;
+    }
+
+    @media (min-width: $XL-monitor) {
+        width: 1350px;
+    }
+
+    @media (min-width: $XXL-monitor) {
+        width: 1450px;
     }
 }
 
@@ -130,9 +176,59 @@
     left: 113px;
     width: fit-content;
     padding-bottom: 1rem;
+
     @media (min-width: $small-phone) {
         left: 143px;
+    }
 
+    @media (min-width: $wide-phone) {
+        width: fit-content;
+        left: 243px;
+        right: 1rem
+    }
+
+    @media (min-width: $tablet) {
+        left: 350px;
+    }
+
+    @media (min-width: $small-desktop) {
+        left: 450px;
+    }
+
+    @media (min-width: $desktop) {
+        left: 550px;
+    }
+
+    @media (min-width: $large-desktop) {
+        left: 750px;
+    }
+
+    @media (min-width: $XL-desktop) {
+        left: 850px;
+    }
+
+    @media (min-width: $XXL-desktop) {
+        left: 1050px;
+    }
+
+    @media (min-width: $XXXL-desktop) {
+        left: 1150px;
+    }
+
+    @media (min-width: $small-monitor) {
+        left: 1250px;
+    }
+
+    @media (min-width: $monitor) {
+        left: 1350px;
+    }
+
+    @media (min-width: $XL-monitor) {
+        left: 1450px;
+    }
+
+    @media (min-width: $XXL-monitor) {
+        left: 1550px;
     }
 }
 
@@ -141,18 +237,21 @@
     font-weight: 700;
     margin-left: 1rem;
     text-align: center;
+    
 }
 
 .legend-era-bracket {
     border-radius: $rounded-rectangle;
     overflow: scroll;
-    padding: 0 ;
-    
+    padding: 0;
+
 }
+
 .legend-era-section {
     display: flex;
     align-items: center;
 }
+
 .legend-era-track {
     display: flex;
     margin: 0;
@@ -168,11 +267,15 @@
         margin: 0.25rem;
         color: white;
     }
+    font-size: 0.65rem;
+    @media (min-width: $phone) {
+        font-size: 0.75rem;
+    }
 }
 
-.legend-era-section-name{
+.legend-era-section-name {
     font-family: $titleFont;
     transform: rotate(90deg);
     position: relative;
-    right: 10px; 
+    right: 10px;
 }

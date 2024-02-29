@@ -40,7 +40,7 @@ const LegendEra = ({ era }) => {
 
     const extendedEraTracks = [];
     eraTracks.forEach(track => {
-        if (track.trackVariant && track.trackVariant === 'extended') {
+        if (track.trackVariant && track.trackVariant === 'extended' ) {
             extendedEraTracks.push(track);
         }
     });
@@ -163,7 +163,7 @@ const LegendEra = ({ era }) => {
                         </>
                     ) : (<></>)}
 
-                    {extendedEraTracks.length > 1 ? (
+                    {extendedEraTracks.length > 0 ? (
                         <>
                             <div className="legend-era-section">
                                 <div className={`legend-era-bracket ${borderRightExtended}`}>
@@ -181,7 +181,7 @@ const LegendEra = ({ era }) => {
                         </>
                     ) : (<></>)}
 
-                    {remainingTracks.length > 1 ? (
+                    {remainingTracks.length > 0 ? (
                         <>
                             <div className="legend-era-section">
                                 <div className={`legend-era-bracket ${borderRightSingle}`}>

@@ -154,7 +154,7 @@ export const addValues = () => {
             if (track.name.toLowerCase().includes('from the vault')) {
                 trackVariant = 'extended';
             }
-            if (track.name.toLowerCase().includes('live')) {
+            if (track.name.toLowerCase().includes('live') || track.name.toLowerCase().includes('session')) {
                 trackVariant = 'live';
             }
             if (track.name.toLowerCase().includes('remix')) {
@@ -201,7 +201,7 @@ export const addValues = () => {
 
 
 
-// console.log(addValues());
+console.log(addValues());
 
 
 

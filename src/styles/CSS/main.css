@@ -1081,6 +1081,7 @@
   top: 6rem;
   width: 110px;
   margin-right: 3rem;
+  padding-bottom: 1rem;
   background-color: rgb(254, 255, 254);
   height: -moz-fit-content;
   height: fit-content;
@@ -1095,11 +1096,65 @@
 }
 @media (min-width: 570px) {
   .legend-container, .era-legend-container {
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 150px;
     left: 6rem;
     right: 2rem;
     top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .legend-container, .era-legend-container {
+    width: 250px;
+  }
+}
+@media (min-width: 880px) {
+  .legend-container, .era-legend-container {
+    width: 350px;
+  }
+}
+@media (min-width: 960px) {
+  .legend-container, .era-legend-container {
+    width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .legend-container, .era-legend-container {
+    width: 650px;
+  }
+}
+@media (min-width: 1400px) {
+  .legend-container, .era-legend-container {
+    width: 750px;
+  }
+}
+@media (min-width: 1500px) {
+  .legend-container, .era-legend-container {
+    width: 950px;
+  }
+}
+@media (min-width: 1600px) {
+  .legend-container, .era-legend-container {
+    width: 1050px;
+  }
+}
+@media (min-width: 1700px) {
+  .legend-container, .era-legend-container {
+    width: 1150px;
+  }
+}
+@media (min-width: 1800px) {
+  .legend-container, .era-legend-container {
+    width: 1250px;
+  }
+}
+@media (min-width: 2000px) {
+  .legend-container, .era-legend-container {
+    width: 1350px;
+  }
+}
+@media (min-width: 2100px) {
+  .legend-container, .era-legend-container {
+    width: 1450px;
   }
 }
 
@@ -1163,6 +1218,69 @@
     left: 143px;
   }
 }
+@media (min-width: 570px) {
+  .era-legend-container {
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 243px;
+    right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .era-legend-container {
+    left: 350px;
+  }
+}
+@media (min-width: 880px) {
+  .era-legend-container {
+    left: 450px;
+  }
+}
+@media (min-width: 960px) {
+  .era-legend-container {
+    left: 550px;
+  }
+}
+@media (min-width: 1200px) {
+  .era-legend-container {
+    left: 750px;
+  }
+}
+@media (min-width: 1400px) {
+  .era-legend-container {
+    left: 850px;
+  }
+}
+@media (min-width: 1500px) {
+  .era-legend-container {
+    left: 1050px;
+  }
+}
+@media (min-width: 1600px) {
+  .era-legend-container {
+    left: 1150px;
+  }
+}
+@media (min-width: 1700px) {
+  .era-legend-container {
+    left: 1250px;
+  }
+}
+@media (min-width: 1800px) {
+  .era-legend-container {
+    left: 1350px;
+  }
+}
+@media (min-width: 2000px) {
+  .era-legend-container {
+    left: 1450px;
+  }
+}
+@media (min-width: 2100px) {
+  .era-legend-container {
+    left: 1550px;
+  }
+}
 
 .era-legend-title {
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -1190,10 +1308,16 @@
   margin-bottom: 0.25rem;
   font-size: 0.75rem;
   font-weight: 700;
+  font-size: 0.65rem;
 }
 .legend-era-track p {
   margin: 0.25rem;
   color: white;
+}
+@media (min-width: 470px) {
+  .legend-era-track {
+    font-size: 0.75rem;
+  }
 }
 
 .legend-era-section-name {

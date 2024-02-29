@@ -123,8 +123,8 @@ const LegendItem = ({ era, onEraClick }) => {
                         </div>
                     </div>
                     <div className="legend-sub-colors-container">
-                        {subCats.map(cat => (
-                            <div className="legend-sub-cat-container">
+                        {subCats.map((cat, index) => (
+                            <div key={index} className="legend-sub-cat-container">
                                 <div className={`legend-sub-cat-box ${backgroundColor + cat}`}/>
                                 <p>{cat}</p>
                             </div>
