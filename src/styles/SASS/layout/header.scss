@@ -8,7 +8,7 @@
   left: 0;
   padding: 5px;
   width: 100vw;
-  height: $header-height;
+  height: $header-height + $nav-height;
   display: flex;
   z-index: $header-depth;
   justify-content: center;
@@ -60,7 +60,6 @@
     }
     }
 
-    
   }
   }
   
@@ -75,5 +74,16 @@
 
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
 
+}
 
+.nav-link{
+  text-decoration: none; // Remove underline
+  color: darken($theTorturedPoetsDepartment, 20%);
+  //  animation: colorCycle 60s infinite;
+   font-family: $titleFont;
+
+}

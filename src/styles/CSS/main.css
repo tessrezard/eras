@@ -676,70 +676,114 @@
   0% {
     color: #7fd5e0;
   }
-  9.0909090909% {
+  8.3333333333% {
     color: #f5ce6d;
   }
-  18.1818181818% {
+  16.6666666667% {
     color: #ba91ed;
   }
-  27.2727272727% {
+  25% {
     color: #dd2e2e;
   }
-  36.3636363636% {
+  33.3333333333% {
     color: #9ab9f2;
   }
-  45.4545454545% {
+  41.6666666667% {
     color: rgb(4, 32, 27);
   }
-  54.5454545455% {
+  50% {
     color: #e4b0f5;
   }
-  63.6363636364% {
+  58.3333333333% {
     color: #aeb4b2;
   }
-  72.7272727273% {
+  66.6666666667% {
     color: #af7039;
   }
-  81.8181818182% {
+  75% {
     color: #2536a4;
   }
-  90.9090909091% {
+  83.3333333333% {
     color: rgb(237, 236, 232);
+  }
+  91.6666666667% {
+    color: #7fd5e0;
   }
 }
 @keyframes borderErasColorCycle {
   0% {
     border-color: #7fd5e0;
   }
-  9.0909090909% {
+  8.3333333333% {
     border-color: #f5ce6d;
   }
-  18.1818181818% {
+  16.6666666667% {
     border-color: #ba91ed;
   }
-  27.2727272727% {
+  25% {
     border-color: #dd2e2e;
   }
-  36.3636363636% {
+  33.3333333333% {
     border-color: #9ab9f2;
   }
-  45.4545454545% {
+  41.6666666667% {
     border-color: rgb(4, 32, 27);
   }
-  54.5454545455% {
+  50% {
     border-color: #e4b0f5;
   }
-  63.6363636364% {
+  58.3333333333% {
     border-color: #aeb4b2;
   }
-  72.7272727273% {
+  66.6666666667% {
     border-color: #af7039;
   }
-  81.8181818182% {
+  75% {
     border-color: #2536a4;
   }
-  90.9090909091% {
+  83.3333333333% {
     border-color: rgb(237, 236, 232);
+  }
+  91.6666666667% {
+    border-color: #7fd5e0;
+  }
+}
+@keyframes backgroundErasColorCycle {
+  0% {
+    background-color: #7fd5e0;
+  }
+  8.3333333333% {
+    background-color: #f5ce6d;
+  }
+  16.6666666667% {
+    background-color: #ba91ed;
+  }
+  25% {
+    background-color: #dd2e2e;
+  }
+  33.3333333333% {
+    background-color: #9ab9f2;
+  }
+  41.6666666667% {
+    background-color: rgb(4, 32, 27);
+  }
+  50% {
+    background-color: #e4b0f5;
+  }
+  58.3333333333% {
+    background-color: #aeb4b2;
+  }
+  66.6666666667% {
+    background-color: #af7039;
+  }
+  75% {
+    background-color: #2536a4;
+  }
+  83.3333333333% {
+    background-color: rgb(237, 236, 232);
+  }
+  91.6666666667% {
+    background-color: #7fd5e0;
   }
 }
 .condensed-container {
@@ -1039,7 +1083,6 @@
 .filter-button {
   height: 20px;
   width: 20px;
-  background-color: aqua;
 }
 
 .legend-icon-container {

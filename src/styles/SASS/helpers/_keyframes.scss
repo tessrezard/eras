@@ -1,22 +1,33 @@
-
 @keyframes colorCycle {
-    @for $i from 0 to length($eraList) {
-      $color: nth($eraList, $i + 1);
-      $percentage: percentage($i / length($eraList));
-  
-      #{$percentage} {
-        color: $color;
-      }
-    }
-  }
+  @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
+    $color: nth($eraList, $i % length($eraList) + 1); // Use modulo to wrap around
+    $percentage: percentage($i / (length($eraList) + 1)); // Adjust the denominator
 
-  @keyframes borderErasColorCycle {
-    @for $i from 0 to length($eraList) {
-      $color: nth($eraList, $i + 1);
-      $percentage: percentage($i / length($eraList));
-  
-      #{$percentage} {
-        border-color: $color;
-      }
+    #{$percentage} {
+      color: $color;
     }
   }
+}
+
+@keyframes borderErasColorCycle {
+  @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
+    $color: nth($eraList, $i % length($eraList) + 1); // Use modulo to wrap around
+    $percentage: percentage($i / (length($eraList) + 1)); // Adjust the denominator
+
+    #{$percentage} {
+      border-color: $color;
+    }
+  }
+}
+
+
+@keyframes backgroundErasColorCycle {
+  @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
+    $color: nth($eraList, $i % length($eraList) + 1); // Use modulo to wrap around
+    $percentage: percentage($i / (length($eraList) + 1)); // Adjust the denominator
+
+    #{$percentage} {
+      background-color: $color;
+    }
+  }
+}

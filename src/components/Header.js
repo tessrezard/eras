@@ -3,6 +3,7 @@ import { Link, useLocation, Navigate } from "react-router-dom";
 import '../styles/CSS/layout/header.css';
 import LegendIcon from "./LegendIcon";
 import Legend from "./Legend";
+import NavMenu from "./NavMenu";
 
 function Header() {
 
@@ -41,6 +42,7 @@ function Header() {
                     <p className='header-title'> Eras✨ </p>
 
                 </div>
+                <NavMenu/>
 
             </header>
         </>
