@@ -18,21 +18,41 @@
       background-color: fade-out($color, 0.25);
     }
   
+
+
     // Text colors
     .color-#{$name} {
       color: $color;
     }
-  
+
     .color-#{$name}-album {
-      color: $color;
-    }
-  
-    .color-#{$name}-extended {
       color: darken($color, 9%);
+    }
+
+    .color-#{$name}-extended {
+      color: $color;
     }
   
     .color-#{$name}-single {
       color: fade-out($color, 0.15);
+    }
+
+
+    // Border colors
+    .border-right-#{$name} {
+      border-right: solid 3px $color;
+    }
+
+    .border-right-#{$name}-album {
+      border-right: solid 3px  darken($color, 9%);
+    }
+
+    .border-right-#{$name}-extended {
+      border-right: solid 3px  $color;
+    }
+  
+    .border-right-#{$name}-single {
+      border-right: solid 3px fade-out($color, 0.15);
     }
   }
   

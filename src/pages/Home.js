@@ -20,9 +20,9 @@ const Home = () => {
     <>
     <Quiz tracks={reverseTracks}/>
     <div className="horizontal-chronology">
-    <Condensed tracks={filtered} sortType='duration'/>
+    {/* <Condensed tracks={filtered} sortType='duration'/> */}
     </div>
-      <VerticalChronology />
+      {/* <VerticalChronology /> */}
     </>
   );
 };

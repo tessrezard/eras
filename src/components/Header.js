@@ -36,9 +36,10 @@ function Header() {
                             <Legend />
                         </>) : (
                             <>
-                                <p className='header-title'> Eras✨ </p>
                             </>
                         )}
+                    <p className='header-title'> Eras✨ </p>
+
                 </div>
 
             </header>

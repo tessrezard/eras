@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import LegendEra from "./LegendEra";
 import '../styles/CSS/main.css';
 
 
@@ -22,7 +23,17 @@ const Legend = () => {
     ];
 
     const reversedEras = [...erasList].reverse();
+    
+    const [seeEra, setSeeEra] = useState(false);
+    const [ whichEra, setWhichEra] = useState('midnights');
 
+    const handleEraClick = (era) => {
+        setSeeEra(prev => !prev);
+        setWhichEra(era);
+       }
+
+       useEffect(() => {       console.log(seeEra, whichEra);
+       }, [whichEra])
     return (
         <>
             <div className="legend-container">
@@ -30,9 +41,11 @@ const Legend = () => {
                     <LegendItem
                         era={era}
                         key={index}
+                        onEraClick={() => handleEraClick(era)}
                     />
                 ))}
             </div>
+            <LegendEra era={whichEra}/>
 
 
         </>
@@ -44,8 +57,8 @@ export default Legend;
 
 
 
-const LegendItem = ({ era }) => {
-
+const LegendItem = ({ era, onEraClick }) => {
+    
     const textColor = 'color-' + era ;
     const backgroundColor = 'background-color-' + era;
     const subCats = ['-album', '-extended', '-single'];
@@ -56,57 +69,57 @@ const LegendItem = ({ era }) => {
     const extendedColor = 'color-' + era + '-extended';
     const otherColor = 'color-' + era + '-single';
 
-    let albumName = era
+    let eraName = era
     if (era) {
         switch (era) {
             case 'taylorSwift':
-                albumName = 'Taylor Swift';
+                eraName = 'Taylor Swift';
                 break;
             case 'fearless':
-                albumName = 'Fearless';
+                eraName = 'Fearless';
                 break;
             case 'speakNow':
-                albumName = 'Speak Now';
+                eraName = 'Speak Now';
                 break;
             case 'red':
-                albumName = 'Red';
+                eraName = 'Red';
                 break;
             case 'nineteenEightyNine':
-                albumName = '1989';
+                eraName = '1989';
                 break;
             case 'reputation':
-                albumName = 'reputation';
+                eraName = 'reputation';
                 break;
             case 'lover':
-                albumName = 'Lover';
+                eraName = 'Lover';
                 break;
             case 'folklore':
-                albumName = 'folklore';
+                eraName = 'folklore';
                 break;
             case 'evermore':
-                albumName = 'evermore';
+                eraName = 'evermore';
                 break;
             case 'midnights':
-                albumName = 'Midnights';
+                eraName = 'Midnights';
                 break;
             case 'theTorturedPoetsDepartment':
-                albumName = 'Tortured Poets';
+                eraName = 'Tortured Poets';
                 break;
             // ADD NEW ALBUM AS AN WHEN NEEDED
             default:
-                albumName = era
+                eraName = era
         }
-
-
-
 
         return (
             <>
-                <div className="legend-item-container">
+                <div 
+                    className="legend-item-container"
+                    onClick={onEraClick}
+                    >
                     <div className="legend-item-header">
                         <div className={`legend-box ${backgroundAlbumColor}`} />
                         <div className={`legend-text-container ${textAlbumColor}`}>
-                            <p className={`legend-text ${textAlbumColor}`}>{albumName}</p>
+                            <p className={`legend-text ${textAlbumColor}`}>{eraName}</p>
                         </div>
                     </div>
                     <div className="legend-sub-colors-container">
@@ -116,14 +129,12 @@ const LegendItem = ({ era }) => {
                                 <p>{cat}</p>
                             </div>
                         ))}
-
                     </div>
-
                 </div>
-
-
             </>
         )
     }
 
 }
+
+

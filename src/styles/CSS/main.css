@@ -1,40 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
-@keyframes colorCycle {
-  0% {
-    color: #7fd5e0;
-  }
-  9.0909090909% {
-    color: #f5ce6d;
-  }
-  18.1818181818% {
-    color: #ba91ed;
-  }
-  27.2727272727% {
-    color: #dd2e2e;
-  }
-  36.3636363636% {
-    color: #9ab9f2;
-  }
-  45.4545454545% {
-    color: rgb(4, 32, 27);
-  }
-  54.5454545455% {
-    color: #e4b0f5;
-  }
-  63.6363636364% {
-    color: #aeb4b2;
-  }
-  72.7272727273% {
-    color: #af7039;
-  }
-  81.8181818182% {
-    color: #2536a4;
-  }
-  90.9090909091% {
-    color: rgb(237, 236, 232);
-  }
-}
 .background-color-theTorturedPoetsDepartment {
   background-color: rgb(237, 236, 232);
 }
@@ -56,15 +21,31 @@
 }
 
 .color-theTorturedPoetsDepartment-album {
-  color: rgb(237, 236, 232);
+  color: #d9d7ce;
 }
 
 .color-theTorturedPoetsDepartment-extended {
-  color: #d9d7ce;
+  color: rgb(237, 236, 232);
 }
 
 .color-theTorturedPoetsDepartment-single {
   color: rgba(237, 236, 232, 0.85);
+}
+
+.border-right-theTorturedPoetsDepartment {
+  border-right: solid 3px rgb(237, 236, 232);
+}
+
+.border-right-theTorturedPoetsDepartment-album {
+  border-right: solid 3px #d9d7ce;
+}
+
+.border-right-theTorturedPoetsDepartment-extended {
+  border-right: solid 3px rgb(237, 236, 232);
+}
+
+.border-right-theTorturedPoetsDepartment-single {
+  border-right: solid 3px rgba(237, 236, 232, 0.85);
 }
 
 .background-color-midnights {
@@ -88,15 +69,31 @@
 }
 
 .color-midnights-album {
-  color: #2536a4;
+  color: #1d2a7f;
 }
 
 .color-midnights-extended {
-  color: #1d2a7f;
+  color: #2536a4;
 }
 
 .color-midnights-single {
   color: rgba(37, 54, 164, 0.85);
+}
+
+.border-right-midnights {
+  border-right: solid 3px #2536a4;
+}
+
+.border-right-midnights-album {
+  border-right: solid 3px #1d2a7f;
+}
+
+.border-right-midnights-extended {
+  border-right: solid 3px #2536a4;
+}
+
+.border-right-midnights-single {
+  border-right: solid 3px rgba(37, 54, 164, 0.85);
 }
 
 .background-color-evermore {
@@ -120,15 +117,31 @@
 }
 
 .color-evermore-album {
-  color: #af7039;
+  color: #8c5a2e;
 }
 
 .color-evermore-extended {
-  color: #8c5a2e;
+  color: #af7039;
 }
 
 .color-evermore-single {
   color: rgba(175, 112, 57, 0.85);
+}
+
+.border-right-evermore {
+  border-right: solid 3px #af7039;
+}
+
+.border-right-evermore-album {
+  border-right: solid 3px #8c5a2e;
+}
+
+.border-right-evermore-extended {
+  border-right: solid 3px #af7039;
+}
+
+.border-right-evermore-single {
+  border-right: solid 3px rgba(175, 112, 57, 0.85);
 }
 
 .background-color-folklore {
@@ -152,15 +165,31 @@
 }
 
 .color-folklore-album {
-  color: #aeb4b2;
+  color: #969e9b;
 }
 
 .color-folklore-extended {
-  color: #969e9b;
+  color: #aeb4b2;
 }
 
 .color-folklore-single {
   color: rgba(174, 180, 178, 0.85);
+}
+
+.border-right-folklore {
+  border-right: solid 3px #aeb4b2;
+}
+
+.border-right-folklore-album {
+  border-right: solid 3px #969e9b;
+}
+
+.border-right-folklore-extended {
+  border-right: solid 3px #aeb4b2;
+}
+
+.border-right-folklore-single {
+  border-right: solid 3px rgba(174, 180, 178, 0.85);
 }
 
 .background-color-lover {
@@ -184,15 +213,31 @@
 }
 
 .color-lover-album {
-  color: #e4b0f5;
+  color: #d687f0;
 }
 
 .color-lover-extended {
-  color: #d687f0;
+  color: #e4b0f5;
 }
 
 .color-lover-single {
   color: rgba(228, 176, 245, 0.85);
+}
+
+.border-right-lover {
+  border-right: solid 3px #e4b0f5;
+}
+
+.border-right-lover-album {
+  border-right: solid 3px #d687f0;
+}
+
+.border-right-lover-extended {
+  border-right: solid 3px #e4b0f5;
+}
+
+.border-right-lover-single {
+  border-right: solid 3px rgba(228, 176, 245, 0.85);
 }
 
 .background-color-reputation {
@@ -216,15 +261,31 @@
 }
 
 .color-reputation-album {
-  color: rgb(4, 32, 27);
+  color: black;
 }
 
 .color-reputation-extended {
-  color: black;
+  color: rgb(4, 32, 27);
 }
 
 .color-reputation-single {
   color: rgba(4, 32, 27, 0.85);
+}
+
+.border-right-reputation {
+  border-right: solid 3px rgb(4, 32, 27);
+}
+
+.border-right-reputation-album {
+  border-right: solid 3px black;
+}
+
+.border-right-reputation-extended {
+  border-right: solid 3px rgb(4, 32, 27);
+}
+
+.border-right-reputation-single {
+  border-right: solid 3px rgba(4, 32, 27, 0.85);
 }
 
 .background-color-nineteenEightyNine {
@@ -248,15 +309,31 @@
 }
 
 .color-nineteenEightyNine-album {
-  color: #9ab9f2;
+  color: #719ded;
 }
 
 .color-nineteenEightyNine-extended {
-  color: #719ded;
+  color: #9ab9f2;
 }
 
 .color-nineteenEightyNine-single {
   color: rgba(154, 185, 242, 0.85);
+}
+
+.border-right-nineteenEightyNine {
+  border-right: solid 3px #9ab9f2;
+}
+
+.border-right-nineteenEightyNine-album {
+  border-right: solid 3px #719ded;
+}
+
+.border-right-nineteenEightyNine-extended {
+  border-right: solid 3px #9ab9f2;
+}
+
+.border-right-nineteenEightyNine-single {
+  border-right: solid 3px rgba(154, 185, 242, 0.85);
 }
 
 .background-color-red {
@@ -280,15 +357,31 @@
 }
 
 .color-red-album {
-  color: #dd2e2e;
+  color: #be1f1f;
 }
 
 .color-red-extended {
-  color: #be1f1f;
+  color: #dd2e2e;
 }
 
 .color-red-single {
   color: rgba(221, 46, 46, 0.85);
+}
+
+.border-right-red {
+  border-right: solid 3px #dd2e2e;
+}
+
+.border-right-red-album {
+  border-right: solid 3px #be1f1f;
+}
+
+.border-right-red-extended {
+  border-right: solid 3px #dd2e2e;
+}
+
+.border-right-red-single {
+  border-right: solid 3px rgba(221, 46, 46, 0.85);
 }
 
 .background-color-speakNow {
@@ -312,15 +405,31 @@
 }
 
 .color-speakNow-album {
-  color: #ba91ed;
+  color: #a16ae7;
 }
 
 .color-speakNow-extended {
-  color: #a16ae7;
+  color: #ba91ed;
 }
 
 .color-speakNow-single {
   color: rgba(186, 145, 237, 0.85);
+}
+
+.border-right-speakNow {
+  border-right: solid 3px #ba91ed;
+}
+
+.border-right-speakNow-album {
+  border-right: solid 3px #a16ae7;
+}
+
+.border-right-speakNow-extended {
+  border-right: solid 3px #ba91ed;
+}
+
+.border-right-speakNow-single {
+  border-right: solid 3px rgba(186, 145, 237, 0.85);
 }
 
 .background-color-fearless {
@@ -344,15 +453,31 @@
 }
 
 .color-fearless-album {
-  color: #f5ce6d;
+  color: #f2c042;
 }
 
 .color-fearless-extended {
-  color: #f2c042;
+  color: #f5ce6d;
 }
 
 .color-fearless-single {
   color: rgba(245, 206, 109, 0.85);
+}
+
+.border-right-fearless {
+  border-right: solid 3px #f5ce6d;
+}
+
+.border-right-fearless-album {
+  border-right: solid 3px #f2c042;
+}
+
+.border-right-fearless-extended {
+  border-right: solid 3px #f5ce6d;
+}
+
+.border-right-fearless-single {
+  border-right: solid 3px rgba(245, 206, 109, 0.85);
 }
 
 .background-color-taylorSwift {
@@ -376,15 +501,31 @@
 }
 
 .color-taylorSwift-album {
-  color: #7fd5e0;
+  color: #5ac9d7;
 }
 
 .color-taylorSwift-extended {
-  color: #5ac9d7;
+  color: #7fd5e0;
 }
 
 .color-taylorSwift-single {
   color: rgba(127, 213, 224, 0.85);
+}
+
+.border-right-taylorSwift {
+  border-right: solid 3px #7fd5e0;
+}
+
+.border-right-taylorSwift-album {
+  border-right: solid 3px #5ac9d7;
+}
+
+.border-right-taylorSwift-extended {
+  border-right: solid 3px #7fd5e0;
+}
+
+.border-right-taylorSwift-single {
+  border-right: solid 3px rgba(127, 213, 224, 0.85);
 }
 
 .background-color-carolina {
@@ -408,15 +549,31 @@
 }
 
 .color-carolina-album {
-  color: #c3baaa;
+  color: #b0a48f;
 }
 
 .color-carolina-extended {
-  color: #b0a48f;
+  color: #c3baaa;
 }
 
 .color-carolina-single {
   color: rgba(195, 186, 170, 0.85);
+}
+
+.border-right-carolina {
+  border-right: solid 3px #c3baaa;
+}
+
+.border-right-carolina-album {
+  border-right: solid 3px #b0a48f;
+}
+
+.border-right-carolina-extended {
+  border-right: solid 3px #c3baaa;
+}
+
+.border-right-carolina-single {
+  border-right: solid 3px rgba(195, 186, 170, 0.85);
 }
 
 .background-color-christmas {
@@ -440,15 +597,31 @@
 }
 
 .color-christmas-album {
-  color: #1c6336;
+  color: #123f22;
 }
 
 .color-christmas-extended {
-  color: #123f22;
+  color: #1c6336;
 }
 
 .color-christmas-single {
   color: rgba(28, 99, 54, 0.85);
+}
+
+.border-right-christmas {
+  border-right: solid 3px #1c6336;
+}
+
+.border-right-christmas-album {
+  border-right: solid 3px #123f22;
+}
+
+.border-right-christmas-extended {
+  border-right: solid 3px #1c6336;
+}
+
+.border-right-christmas-single {
+  border-right: solid 3px rgba(28, 99, 54, 0.85);
 }
 
 .background-color-renegade {
@@ -472,15 +645,31 @@
 }
 
 .color-renegade-album {
-  color: #638d98;
+  color: #51737c;
 }
 
 .color-renegade-extended {
-  color: #51737c;
+  color: #638d98;
 }
 
 .color-renegade-single {
   color: rgba(99, 141, 152, 0.85);
+}
+
+.border-right-renegade {
+  border-right: solid 3px #638d98;
+}
+
+.border-right-renegade-album {
+  border-right: solid 3px #51737c;
+}
+
+.border-right-renegade-extended {
+  border-right: solid 3px #638d98;
+}
+
+.border-right-renegade-single {
+  border-right: solid 3px rgba(99, 141, 152, 0.85);
 }
 
 @keyframes colorCycle {
@@ -883,20 +1072,35 @@
   transform: rotate(90deg);
 }
 
-.legend-container {
+.legend-container, .era-legend-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   position: absolute;
-  left: 6rem;
-  right: 1rem;
-  top: 1rem;
+  left: 0rem;
+  top: 6rem;
+  width: 110px;
   margin-right: 3rem;
   background-color: rgb(254, 255, 254);
   height: -moz-fit-content;
   height: fit-content;
   border: solid 3px;
   animation: borderErasColorCycle 60s infinite;
+  z-index: 20;
+}
+@media (min-width: 370px) {
+  .legend-container, .era-legend-container {
+    width: 140px;
+  }
+}
+@media (min-width: 570px) {
+  .legend-container, .era-legend-container {
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 6rem;
+    right: 2rem;
+    top: 1rem;
+  }
 }
 
 .legend-item-container {
@@ -947,41 +1151,58 @@
   width: 15px;
 }
 
-@keyframes colorCycle {
-  0% {
-    color: #7fd5e0;
-  }
-  9.0909090909% {
-    color: #f5ce6d;
-  }
-  18.1818181818% {
-    color: #ba91ed;
-  }
-  27.2727272727% {
-    color: #dd2e2e;
-  }
-  36.3636363636% {
-    color: #9ab9f2;
-  }
-  45.4545454545% {
-    color: rgb(4, 32, 27);
-  }
-  54.5454545455% {
-    color: #e4b0f5;
-  }
-  63.6363636364% {
-    color: #aeb4b2;
-  }
-  72.7272727273% {
-    color: #af7039;
-  }
-  81.8181818182% {
-    color: #2536a4;
-  }
-  90.9090909091% {
-    color: rgb(237, 236, 232);
+.era-legend-container {
+  position: absolute;
+  left: 113px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 1rem;
+}
+@media (min-width: 370px) {
+  .era-legend-container {
+    left: 143px;
   }
 }
+
+.era-legend-title {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 700;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.legend-era-bracket {
+  border-radius: 19px;
+  overflow: scroll;
+  padding: 0;
+}
+
+.legend-era-section {
+  display: flex;
+  align-items: center;
+}
+
+.legend-era-track {
+  display: flex;
+  margin: 0;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.legend-era-track p {
+  margin: 0.25rem;
+  color: white;
+}
+
+.legend-era-section-name {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  transform: rotate(90deg);
+  position: relative;
+  right: 10px;
+}
+
 .header-container {
   position: relative;
   left: 0;
@@ -996,12 +1217,6 @@
   flex-flow: row wrap;
   background-color: #fff;
   border-bottom: pink;
-}
-@media (max-width: 370px) {
-  .header-container {
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 
 .header-legend-container {
@@ -1032,9 +1247,14 @@
   transition: all 0.5s ease; /* Add a smooth transition effect */
 }
 .header-legend-container.active .header-legend-arrow {
-  transform: rotate(0);
+  transform: rotate(90deg);
   margin-left: 5px;
   transition: all 0.5s ease; /* Add a smooth transition effect */
+}
+@media (min-width: 570px) {
+  .header-legend-container.active .header-legend-arrow {
+    transform: rotate(0);
+  }
 }
 
 .header-title {
@@ -1046,41 +1266,6 @@
   animation: colorCycle 60s infinite;
 }
 
-@keyframes colorCycle {
-  0% {
-    color: #7fd5e0;
-  }
-  9.0909090909% {
-    color: #f5ce6d;
-  }
-  18.1818181818% {
-    color: #ba91ed;
-  }
-  27.2727272727% {
-    color: #dd2e2e;
-  }
-  36.3636363636% {
-    color: #9ab9f2;
-  }
-  45.4545454545% {
-    color: rgb(4, 32, 27);
-  }
-  54.5454545455% {
-    color: #e4b0f5;
-  }
-  63.6363636364% {
-    color: #aeb4b2;
-  }
-  72.7272727273% {
-    color: #af7039;
-  }
-  81.8181818182% {
-    color: #2536a4;
-  }
-  90.9090909091% {
-    color: rgb(237, 236, 232);
-  }
-}
 html {
   font-size: 16px;
   margin: auto;
