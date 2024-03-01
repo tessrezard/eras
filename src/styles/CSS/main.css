@@ -792,7 +792,7 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  top: 270px;
+  top: 200px;
   margin-bottom: 2rem;
   transform: rotate(-90deg);
 }
@@ -805,6 +805,7 @@
   .condensed-container {
     transform: rotate(0deg);
     align-items: flex-start;
+    top: 10px;
   }
 }
 
@@ -1375,7 +1376,7 @@
   left: 0;
   padding: 5px;
   width: 100vw;
-  height: 71px;
+  height: 91px;
   display: flex;
   z-index: 10;
   justify-content: center;
@@ -1431,6 +1432,17 @@
   font-size: 30px;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   animation: colorCycle 60s infinite;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #c0bdaf;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 html {

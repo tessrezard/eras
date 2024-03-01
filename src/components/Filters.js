@@ -3,7 +3,7 @@ import '../styles/CSS/main.css';
 import { filterOptions, filterTracks } from "../app/utilities/filterTracks";
 import CheckBox from "./FiltersCheckbox";
 
-const Filters = ({ inputTracks, setQuizFiltered }) => {
+const Filters = ({ inputTracks, setFiltered }) => {
 
     const [showFilters, setShowFilters] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
@@ -15,7 +15,7 @@ const Filters = ({ inputTracks, setQuizFiltered }) => {
 
 
     useEffect(() => {
-        setQuizFiltered(filterTracks(inputTracks, selectedFilters));
+        setFiltered(filterTracks(inputTracks, selectedFilters));
         }, [ selectedFilters ] )
 
 

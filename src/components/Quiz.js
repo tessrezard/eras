@@ -129,7 +129,7 @@ const Quiz = ({ tracks }) => {
 
     return (
         <>
-            <Filters inputTracks={tracks} setQuizFiltered={setQuizFiltered}/>
+            <Filters inputTracks={tracks} setFiltered={setQuizFiltered}/>
             <div className="quiz-container" >
                 {trackPair.length === 2 && (
                     <>

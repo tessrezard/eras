@@ -201,7 +201,7 @@ export const addValues = () => {
 
 
 
-console.log(addValues());
+// console.log(addValues());
 
 
 

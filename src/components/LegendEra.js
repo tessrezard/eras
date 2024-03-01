@@ -1,5 +1,8 @@
 import { albumTracks } from "../app/data/current_data/album_tracks";
 import { allTracks } from "../app/data/current_data/all_tracks";
+import { removeTV } from "../app/utilities/removeTaylorsVersion";
+
+
 const LegendEra = ({ era }) => {
 
     console.log('era', era);
@@ -119,22 +122,6 @@ const LegendEra = ({ era }) => {
 
     const otherColor = 'color-' + era + '-single';
 
-    const handleTrackName = (track) => {
-        let trackName = track.name;
-        const target1 = "(Taylor’s Version)";
-        const target2 = "(Taylor's Version)";
-
-        if (trackName.includes(target1)) {
-            trackName = trackName.replace(target1, '');
-        }
-        if (trackName.includes(target2)) {
-            trackName = trackName.replace(target2, '');
-        }
-        console.log(trackName, 'trackName');
-
-        return trackName;
-    }
-
 
 
     return (
@@ -152,7 +139,7 @@ const LegendEra = ({ era }) => {
                                     {albumEraTracks.map((track, index) => (
                                         <div key={index} className={`legend-era-track  ${backgroundAlbumColor} `}>
                                             <p>{track.track_number} - </p>
-                                            <p>{handleTrackName(track)}</p>
+                                            <p>{removeTV(track.name)}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -170,7 +157,7 @@ const LegendEra = ({ era }) => {
                                     {extendedEraTracks.map((track, index) => (
                                         <div key={index} className={` legend-era-track ${backgroundExtendedColor}`}>
                                             <p>{track.track_number} - </p>
-                                            <p>{handleTrackName(track)}</p>
+                                            <p>{removeTV(track.name)}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -187,7 +174,7 @@ const LegendEra = ({ era }) => {
                                 <div className={`legend-era-bracket ${borderRightSingle}`}>
                                     {remainingTracks.map((track, index) => (
                                         <div key={index} className={` legend-era-track ${backgroundSingleColor}`}>
-                                            <p>{handleTrackName(track)}</p>
+                                            <p>{removeTV(track.name)}</p>
                                         </div>
                                     ))}
                                 </div>

@@ -18,11 +18,6 @@ const HomePage = () => {
 
   return (  
     <>
-    <Quiz tracks={reverseTracks}/>
-    <div className="horizontal-chronology">
-    {/* <Condensed tracks={filtered} sortType='duration'/> */}
-    </div>
-      {/* <VerticalChronology /> */}
     </>
   );
 };

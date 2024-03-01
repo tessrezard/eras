@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/CSS/main.css';
 import { getDefaultNormalizer } from "@testing-library/react";
-
+import { removeTV } from "../app/utilities/removeTaylorsVersion";
 
 const VerticalTrack = ({ track, type }) => {
 
@@ -26,27 +26,41 @@ const VerticalTrack = ({ track, type }) => {
     // --------------------------------------------------------------------------
     // options : 
 
-    const TrackForInEraOrder = ({ track }) => (
-        <>
-            <div className="vertical-track-container">
-                <div className={`vertical-track-bar ${albumBackgroundColor}`} style={{ width: durationInPx }} />
-                <div className="vertical-track-title-container " >
-                    <p className={`vertical-track-title ${albumColor}`}>{track.name}</p>
-                </div>
-            </div>
-        </>
-    );
+    const TrackForInEraOrder = ({ track }) => {
+        if (track.name){
+            return (
+                <>
+                    <div className="vertical-track-container">
+                        <div className={`vertical-track-bar ${albumBackgroundColor}`} style={{ width: durationInPx }} />
+                        <div className="vertical-track-title-container " >
+                            <p className={`vertical-track-title ${albumColor}`}>{track.name}</p>
+                        </div>
+                    </div>
+                </>
+            )
+        } else {
+            return <></>
+        }
+        
+    ;}
 
-    const TrackForInSortedOrder = ({ track }) => (
+
+    
+    const TrackForInSortedOrder = ({ track }) => {
+        if (track.name){
+            return (
         <>
             <div className="vertical-track-container">
                 <div className={`vertical-track-bar ${albumBackgroundColor}`} style={{ width: durationInPx }} />
                 <div className="vertical-track-title-container " >
-                    <p className={`vertical-track-title ${albumColor}`}>{track.name} - {millisecondsToMinutes(track.duration_ms)}</p>
+                    <p className={`vertical-track-title ${albumColor}`}>{removeTV(track.name)} - {millisecondsToMinutes(track.duration_ms)}</p>
                 </div>
             </div>
         </>
-    );
+        )} else {
+            return <></>
+        }
+    }
 
 
 

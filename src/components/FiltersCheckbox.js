@@ -26,11 +26,9 @@ function CheckBox({ filter, selectedFilters, setSelectedFilters }) {
         setChecked((prevChecked) => !prevChecked);
 
         if (!checked) {
-            console.log('checked!');
             handleRemoveFilter(filter);
 
         } else {
-            console.log('unchecked!');
             handleAddFilter(filter);
 
         }
@@ -46,7 +44,6 @@ function CheckBox({ filter, selectedFilters, setSelectedFilters }) {
                 checked={isChecked}
                 onChange={() => handleClick(filter)}
             />
-              <span class="checkmark"></span>
 
             <label htmlFor={filterId}> {filter} </label>
         </div>

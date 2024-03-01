@@ -9,7 +9,7 @@ import { filterTracks } from "../app/utilities/filterTracks";
 import { useDispatch, useSelector } from 'react-redux';
 import Legend from "../components/Legend";
 
-const Home = () => {
+const QuizPage = () => {
 
   const reverseTracks = reverseEraOrder(allTracks);
   const filters = ["remix", "live", "acoustic"];
@@ -28,4 +28,4 @@ const Home = () => {
 };
 
 
-export default Home;
+export default QuizPage;
