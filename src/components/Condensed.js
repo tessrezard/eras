@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import CondensedTrack from "./CondensedTrack";
+import CondensedTrackVertical from "./CondensedTrackVertical";
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 
 
@@ -38,7 +39,7 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
         <>
             {eraOrder ? (
                 <>
-                    <div className={`condensed-container ${styledUpOrDown}`}>
+                    <div className={`condensed-container`}>
                         {tracks.map((track, index) => (
                             <div key={index}>
                                 <CondensedTrack
@@ -48,10 +49,22 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
                             </div>
                         ))}
                     </div>
+
+                    <div className={`condensed-vertical-container`}>
+                        {tracks.map((track, index) => (
+                            <div key={index}>
+                                <CondensedTrackVertical
+                                    track={track}
+                                    sortType={sortType}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </>) : (<></>)}
+
             {durationOrder ? (
                 <>
-                    <div className={`condensed-container ${styledUpOrDown}`}>
+                    <div className={`condensed-container`}>
                         {sortedDuration.map((track, index) => (
                             <div key={index}>
                                 <CondensedTrack

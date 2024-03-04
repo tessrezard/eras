@@ -1,3 +1,5 @@
+//_______________________________________________________
+
 @keyframes colorCycle {
   @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
     $color: nth($eraList, $i % length($eraList) + 1); // Use modulo to wrap around
@@ -8,6 +10,12 @@
     }
   }
 }
+
+// animation: colorCycle 60s infinite;
+
+
+
+//_______________________________________________________
 
 @keyframes borderErasColorCycle {
   @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
@@ -20,6 +28,11 @@
   }
 }
 
+// animation: borderErasColorCycle 60s infinite;
+
+
+
+//_______________________________________________________
 
 @keyframes backgroundErasColorCycle {
   @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
@@ -31,6 +44,13 @@
     }
   }
 }
+
+// animation: backgroundErasColorCycle 60s infinite;
+
+
+
+
+//_______________________________________________________
 
 @keyframes fadeInMove {
   from {
@@ -44,3 +64,4 @@
 
   }
 }
+// animation: fadeInMove 3s ease-in-out; 

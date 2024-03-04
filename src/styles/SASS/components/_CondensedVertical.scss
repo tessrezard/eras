@@ -1,0 +1,78 @@
+.condensed-vertical-container {
+    display: flex;
+    flex-flow: column ;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    @media (min-width: $small-desktop) {
+        display: none;
+    }
+}
+
+
+
+.condensed-vertical-track-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row;
+
+
+    .condensed-vertical-album-title-container {
+        width: 3rem;
+        position: absolute;
+        align-items: flex-start;
+        font-size: smaller;
+    }
+
+    .condensed-vertical-album-title {
+        display: none;
+        position: absolute;
+        top: -50px;
+        font-size: 1rem;
+        bottom: 1rem;
+        margin: 0;
+        z-index: 10;
+        height: 700px;
+    }
+
+
+
+    .condensed-vertical-track-title-container {
+        width: 3rem;
+        position: absolute;
+        display: flex;
+        align-items: flex-start;
+        top: -30px;
+    }
+
+    .condensed-vertical-track-title {
+        display: none;
+        font-size: 1rem;
+        bottom: 1rem;
+        margin: 0;
+        z-index: 10;
+        height: 700px;
+    }
+
+    &:hover {
+        .condensed-vertical-track-title {
+            display: block;
+        }
+
+        .condensed-vertical-album-title {
+            display: block;
+        }
+    }
+
+    .condensed-vertical-track-bar {
+        display: flex;
+        margin-left: 0.5px;
+        width: 2rem;
+        height: 2px;
+        padding: 0;
+        border-radius: 1px;
+    }
+
+}
+

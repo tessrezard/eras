@@ -1,7 +1,7 @@
 
   // Apply the animation to the component with a fade-in effect
   .welcome-container {
-    animation: fadeInMove 3s ease-in-out; // Adjust duration and timing function as needed  
+    animation: fadeInMove 2s ease-in-out; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,4 +17,13 @@
 
 .home-link-button{
     margin: auto;
+    border-radius: $rounded-rectangle;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-family: $titleFont;
+    text-decoration: none;
+    animation: backgroundErasColorCycle 60s infinite;
+    color: $background-color;
+    font-weight: 700;
+    letter-spacing: 4px;
 }

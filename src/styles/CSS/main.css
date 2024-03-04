@@ -797,53 +797,18 @@
   }
 }
 .condensed-container {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  top: 200px;
-  margin-bottom: 2rem;
-  transform: rotate(-90deg);
-}
-@media (min-width: 470px) {
-  .condensed-container {
-    flex-flow: row wrap;
-  }
+  display: none;
 }
 @media (min-width: 880px) {
   .condensed-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-start;
     transform: rotate(0deg);
     align-items: flex-start;
+    position: relative;
     top: 10px;
-  }
-}
-
-.condensed-container-styled-up {
-  align-items: flex-end;
-}
-@media (min-width: 470px) {
-  .condensed-container-styled-up {
-    flex-flow: row wrap;
-  }
-}
-@media (min-width: 880px) {
-  .condensed-container-styled-up {
-    align-items: flex-end;
-  }
-}
-
-.condensed-container-styled-down {
-  align-items: flex-start;
-}
-@media (min-width: 470px) {
-  .condensed-container-styled-down {
-    flex-flow: row wrap;
-  }
-}
-@media (min-width: 880px) {
-  .condensed-container-styled-down {
-    align-items: flex-start;
   }
 }
 
@@ -933,6 +898,91 @@
     margin-left: 1px;
     width: 5px;
   }
+}
+
+.condensed-container-vertical {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+@media (min-width: 470px) {
+  .condensed-container-vertical {
+    flex-flow: row;
+  }
+}
+@media (min-width: 880px) {
+  .condensed-container-vertical {
+    transform: rotate(0deg);
+    align-items: flex-start;
+    top: 10px;
+  }
+}
+
+.condensed-vertical-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+@media (min-width: 880px) {
+  .condensed-vertical-container {
+    display: none;
+  }
+}
+
+.condensed-vertical-track-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row;
+}
+.condensed-vertical-track-container .condensed-vertical-album-title-container {
+  width: 3rem;
+  position: absolute;
+  align-items: flex-start;
+  font-size: smaller;
+}
+.condensed-vertical-track-container .condensed-vertical-album-title {
+  display: none;
+  position: absolute;
+  top: -50px;
+  font-size: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  z-index: 10;
+  height: 700px;
+}
+.condensed-vertical-track-container .condensed-vertical-track-title-container {
+  width: 3rem;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  top: -30px;
+}
+.condensed-vertical-track-container .condensed-vertical-track-title {
+  display: none;
+  font-size: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  z-index: 10;
+  height: 700px;
+}
+.condensed-vertical-track-container:hover .condensed-vertical-track-title {
+  display: block;
+}
+.condensed-vertical-track-container:hover .condensed-vertical-album-title {
+  display: block;
+}
+.condensed-vertical-track-container .condensed-vertical-track-bar {
+  display: flex;
+  margin-left: 0.5px;
+  width: 2rem;
+  height: 2px;
+  padding: 0;
+  border-radius: 1px;
 }
 
 .vertical-chronology-container {
@@ -1103,7 +1153,7 @@
   font-size: 1rem;
 }
 
-.filters-whole-container, .order-options-whole-container, .sort-options-whole-container {
+.options-pill-whole-container {
   background-color: rgb(237, 236, 232);
   display: flex;
   border-radius: 19px;
@@ -1112,65 +1162,70 @@
   transition: all 0.5s ease;
 }
 
-.sort-options-whole-container {
-  flex-flow: column;
+.options-pill-whole-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-pill-header {
+  display: flex;
   justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.options-pill-header p {
+  margin: 3px;
+  text-align: center;
+}
+.options-pill-header .options-pill-arrow {
+  margin-right: 5px;
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+}
+.options-pill-header.active .options-pill-arrow {
+  transform: rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+.options-pill-content-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+@media (min-width: 470px) {
+  .options-pill-content-container {
+    flex-flow: row wrap;
+  }
 }
 
 .sort-options-form {
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-around;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
-
-.sort-options-header {
+@media (min-width: 470px) {
+  .sort-options-form {
+    flex-flow: row wrap;
+  }
+}
+.sort-options-form .sort-options-header {
   font-size: 1.5rem;
   text-align: center;
-}
-
-.order-options-whole-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .order-options-form {
   display: flex;
   justify-content: space-around;
+  flex-flow: column wrap;
 }
-
-.filters-whole-container {
-  flex-flow: column;
-}
-
-.filers-header-container {
-  display: flex;
-}
-.filers-header-container p {
-  margin: 3px;
-}
-.filers-header-container .filters-arrow {
-  margin-right: 5px;
-  transform: rotate(0deg);
-  transition: all 0.5s ease;
-}
-.filers-header-container.active .filters-arrow {
-  transform: rotate(90deg);
-  transition: all 0.5s ease;
-}
-
-.filters-container {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.filter-container {
-  display: flex;
-  align-items: center;
-}
-
-.filter-button {
-  height: 20px;
-  width: 20px;
+@media (min-width: 370px) {
+  .order-options-form {
+    flex-flow: row wrap;
+  }
 }
 
 .legend-icon-container {
@@ -1554,7 +1609,7 @@
 }
 
 .welcome-container {
-  animation: fadeInMove 3s ease-in-out;
+  animation: fadeInMove 2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1570,6 +1625,15 @@
 
 .home-link-button {
   margin: auto;
+  border-radius: 19px;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  text-decoration: none;
+  animation: backgroundErasColorCycle 60s infinite;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 4px;
 }
 
 html {

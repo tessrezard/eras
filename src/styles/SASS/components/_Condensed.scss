@@ -1,41 +1,18 @@
 .condensed-container {
-    display: flex;
-    flex-flow: column ;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    top: 200px;
-    margin-bottom: 2rem;
-    transform: rotate(-90deg);
-    @media (min-width: $phone) {
-        flex-flow: row wrap;
-    } 
+    display: none; 
     @media (min-width: $small-desktop) {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: flex-start;
         transform: rotate(0deg);
         align-items: flex-start;
+        position: relative;
         top: 10px;
-
     }
 }
 
-.condensed-container-styled-up{
-    align-items: flex-end;
-    @media (min-width: $phone) {
-        flex-flow: row wrap;
-    } 
-    @media (min-width: $small-desktop) {
-        align-items: flex-end;
-    }
-}
-.condensed-container-styled-down{
-    align-items: flex-start;
-    @media (min-width: $phone) {
-        flex-flow: row wrap;
-    } 
-    @media (min-width: $small-desktop) {
-        align-items: flex-start;
-    }
-}
+
 
 .condensed-track-container {
     position: relative;
@@ -138,3 +115,27 @@
 //     position: absolute;
 //     top: 4rem;
 // }
+
+
+
+
+
+
+.condensed-container-vertical{
+    display: flex;
+    flex-flow: row ;
+    justify-content: flex-end;
+    align-items: flex-start;
+    // position: relative;
+    // top: 180px;
+    margin-bottom: 2rem;
+    // transform: rotate(-90deg);
+    @media (min-width: $phone) {
+        flex-flow: row;
+    } 
+    @media (min-width: $small-desktop) {
+        transform: rotate(0deg);
+        align-items: flex-start;
+        top: 10px;
+    }
+}

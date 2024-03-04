@@ -8,81 +8,81 @@
 }
 
 
-// SORT OPTIONS ________________________________________
-.sort-options-whole-container{
+.options-pill-whole-container {
     @extend %options-filters-containers;
-    flex-flow: column;
+    display: flex;
+    flex-direction: column;
+}
+
+.options-pill-header {
+    display: flex;
     justify-content: center;
 
-}
+    margin: auto;
+    width: 100%;
 
-.sort-options-form {
-    display: flex;
-    justify-content: space-around;
-}
-
-.sort-options-header{
-    font-size: 1.5rem;
-
-    text-align: center;
-}
-
-// ORDER OPTIONS ________________________________________
-
-.order-options-whole-container {
-  @extend %options-filters-containers;
-  display: flex;
-  justify-content: space-around;
-    align-items: center;
-}
-
-.order-options-form{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
-// FILTERS ________________________________________
-
-.filters-whole-container {
-    @extend %options-filters-containers;
-    flex-flow: column;
-}
-
-.filers-header-container {
-    display: flex;
-
-    p{
+    p {
         margin: 3px;
+        text-align: center;
     }
-    .filters-arrow {
+
+    .options-pill-arrow {
         margin-right: 5px;
         transform: rotate(0deg);
         transition: all 0.5s ease;
-  
     }
 
     &.active {
-        .filters-arrow {
+        .options-pill-arrow {
             transform: rotate(90deg);
             transition: all 0.5s ease;
         }
     }
-
 }
 
-.filters-container {
+
+.options-pill-content-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    @media (min-width: $phone) {
+        flex-flow: row wrap;
+    }
 }
 
-.filter-container {
+
+// SORT OPTIONS ________________________________________
+
+
+.sort-options-form {
     display: flex;
-    align-items: center;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    @media (min-width: $phone) {
+        flex-flow: row wrap;
+    }
+
+    .sort-options-header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 
-.filter-button {
-    height: 20px;
-    width: 20px;
+
+// ORDER OPTIONS ________________________________________
+
+.order-options-form {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column wrap;
+
+    @media (min-width: $small-phone) {
+        flex-flow: row wrap;
+    }
 }

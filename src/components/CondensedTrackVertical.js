@@ -2,27 +2,27 @@ import React, { useEffect, useState } from "react";
 import '../styles/CSS/main.css';
 
 
-const CondensedTrack = ({ track, sortType }) => {
+const CondensedTrackVertical = ({ track, sortType }) => {
 
 
-  let sortedHeight = '100px';
+  let sortedWidth = '100px';
   if (track) {
     switch (sortType) {
 
       case 'duration':
         const duration_ms = track.duration_ms;
         const durationInPx = ((duration_ms / 1000) / 2) + 'px';
-        sortedHeight = durationInPx;
+        sortedWidth = durationInPx;
         break;
 
       case 'preference':
         const points = track.points;
         const preferenceInPx = ((points * 20) + 'px');
-        sortedHeight = preferenceInPx
+        sortedWidth = preferenceInPx
         break;
 
       default:
-        sortedHeight = '100px';
+        sortedWidth = '100px';
     }
   }
 
@@ -55,16 +55,16 @@ const CondensedTrack = ({ track, sortType }) => {
   return (
     <>
 
-      <div className="condensed-track-container">
-        <div className="condensed-condensed-album-title-container " >
-          <p className={`condensed-album-title ${albumColor}`}>{track.albumName}</p>
+      <div className="condensed-vertical-track-container">
+        <div className="condensed-vertical-album-title-container " >
+          <p className={`condensed-vertical-album-title ${albumColor}`}>{track.albumName}</p>
         </div>
 
-        <div className="condensed-track-title-container " >
-          <p className={`condensed-track-title ${albumColor}`}>{track.name}</p>
+        <div className="condensed-vertical-track-title-container " >
+          <p className={`condensed-vertical-track-title ${albumColor}`}>{track.name}</p>
         </div>
 
-        <div className={`condensed-track-bar ${albumBackgroundColor}`} style={{ height: sortedHeight, }} />
+        <div className={`condensed-vertical-track-bar ${albumBackgroundColor}`} style={{ width: sortedWidth, }} />
       </div>
 
 
@@ -73,4 +73,4 @@ const CondensedTrack = ({ track, sortType }) => {
 };
 
 
-export default CondensedTrack;
+export default CondensedTrackVertical;

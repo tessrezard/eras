@@ -7,57 +7,44 @@ const Filters = ({ inputTracks, setFiltered }) => {
 
     const [showFilters, setShowFilters] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
+    const [showOptions, setShowOptions] = useState(false);
 
-  
-     const handleClick = () => {
-        setShowFilters(prev => !prev);
+    const handleShowClick = () => {
+        setShowOptions(prev => !prev);
     };
-
 
     useEffect(() => {
         setFiltered(filterTracks(inputTracks, selectedFilters));
-        }, [ selectedFilters ] )
+    }, [selectedFilters])
 
 
     return (
         <>
-            <div className="filters-whole-container">
-
-                <div 
-                onClick={handleClick}
-                className={`filers-header-container ${showFilters ? 'active' : ''}`}
+            <div className="options-pill-whole-container">
+                <div
+                    className={`options-pill-header ${showOptions ? 'active' : ''}`}
+                    onClick={handleShowClick}
                 >
-
-                    <p className="filters-arrow" >➸</p>
+                    <p className="options-pill-arrow" >➸</p>
                     <p>Filters</p>
                 </div>
+                {showOptions ? (
+                    <>
+                        {filterOptions.map(filter => {
+                            return (
+                                <div key={filter}>
+                                    <CheckBox filter={filter} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
+                                </div>
+                            )
 
-                <div className="filters-container">
-                    {showFilters ? (
-                        <>
-                            {filterOptions.map(filter => {
-                                return (
-                                    <div key={filter}>
-                                        <CheckBox filter={filter} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
-                                    </div>
-                                )
-
-                            })}
-
-                            <div>
-
-                            </div>
-
-                        </>
-                    ) : (
-                        <>
-                        </>
-                    )}
-                </div>
-
-
+                        })}
+                    </>
+                ) : (<></>)}
             </div>
+
+
         </>
+
     );
 };
 
