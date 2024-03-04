@@ -2,32 +2,10 @@ import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import CondensedTrack from "./CondensedTrack";
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
-// const Condensed = ({tracks, sortType, orderOption}) => {
-// // console.log(sortType);
-
-//     return (
-//         <>
-//             <div className="condensed-container">
-//             {tracks.map((track, index) => (
-//                     <div key={index}>
-//                                 <CondensedTrack
-//                                     track={track}
-//                                     sortType={sortType}
-//                                 />
-//                     </div>
-//                 ))}
-//             </div>
 
 
-//         </>
-//     );
-// };
 
-
-// export default Condensed;
-
-
-const Condensed = ({ tracks, sortType, orderOption }) => {
+const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
     // console.log(sortType);
     let eraOrder = true;
     let durationOrder = false;
@@ -42,7 +20,17 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
             durationOrder = true;
             break;
     }
+    let styledUpOrDown ;
 
+    const upOrDown = () => {
+        if (directionUp) {
+            styledUpOrDown = 'condensed-container-styled-up'
+        } else {
+            styledUpOrDown = 'condensed-container-styled-down'
+        }
+        return styledUpOrDown
+    }
+   
     const sortedDuration = sortTracksByDuration(tracks);
 
 
@@ -50,7 +38,7 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
         <>
             {eraOrder ? (
                 <>
-                    <div className="condensed-container">
+                    <div className={`condensed-container ${styledUpOrDown}`}>
                         {tracks.map((track, index) => (
                             <div key={index}>
                                 <CondensedTrack
@@ -63,7 +51,7 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
                 </>) : (<></>)}
             {durationOrder ? (
                 <>
-                    <div className="condensed-container">
+                    <div className={`condensed-container ${styledUpOrDown}`}>
                         {sortedDuration.map((track, index) => (
                             <div key={index}>
                                 <CondensedTrack

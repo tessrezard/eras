@@ -6,6 +6,8 @@
     justify-content: center;
     align-items: center;
     width: $legend-box-container-size * 4;
+    z-index: $above-legend-overlay;
+    margin-right: 1rem;
 }
 
 .legend-icon-item-container {
@@ -35,8 +37,28 @@
 
 
 //____________________________________________________________________________________
+.legend-and-era-legend-container{
+    margin-right: 1rem;
+}
+
 
 //___________________LEGEND________________________
+
+.legend-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: fade-out(white, 0.1);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+
+    .whole-container {
+        overflow: hidden;
+      }
+    }
 
 .legend-container {
     display: flex;
@@ -45,7 +67,7 @@
     position: absolute;
     left: 0rem;
     top: 6rem;
-    width: 110px;
+    width: 100px;
     margin-right: 3rem;
     padding-bottom: 1rem;
 
@@ -54,6 +76,7 @@
     border: solid 3px;
     animation: borderErasColorCycle 60s infinite;
     z-index: 20;
+    transition: all 0.5s ease;
 
     @media (min-width: $small-phone) {
         width: 140px;
@@ -173,7 +196,7 @@
 .era-legend-container {
     @extend .legend-container;
     position: absolute;
-    left: 113px;
+    left: 103px;
     width: fit-content;
     padding-bottom: 1rem;
 
@@ -237,7 +260,7 @@
     font-weight: 700;
     margin-left: 1rem;
     text-align: center;
-    
+
 }
 
 .legend-era-bracket {
@@ -267,7 +290,9 @@
         margin: 0.25rem;
         color: white;
     }
+
     font-size: 0.65rem;
+
     @media (min-width: $phone) {
         font-size: 0.75rem;
     }

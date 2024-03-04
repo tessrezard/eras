@@ -3,7 +3,7 @@ import LegendEra from "./LegendEra";
 import '../styles/CSS/main.css';
 
 
-const Legend = () => {
+const Legend = ({ setActiveLegend }) => {
 
     const erasList = [
         'theTorturedPoetsDepartment',
@@ -23,19 +23,26 @@ const Legend = () => {
     ];
 
     const reversedEras = [...erasList].reverse();
-    
+
     const [seeEra, setSeeEra] = useState(false);
-    const [ whichEra, setWhichEra] = useState('midnights');
+    const [whichEra, setWhichEra] = useState('midnights');
 
     const handleEraClick = (era) => {
         setSeeEra(prev => !prev);
         setWhichEra(era);
-       }
+    }
 
-       useEffect(() => {       console.log(seeEra, whichEra);
-       }, [whichEra])
+    const handleLegendClick = () => {
+        setActiveLegend(prev => !prev);
+    }
+
+    useEffect(() => {
+        console.log(seeEra, whichEra);
+    }, [whichEra])
     return (
         <>
+<div className="legend-and-era-legend-container">
+
             <div className="legend-container">
                 {erasList.map((era, index) => (
                     <LegendItem
@@ -45,7 +52,10 @@ const Legend = () => {
                     />
                 ))}
             </div>
-            <LegendEra era={whichEra}/>
+            <LegendEra era={whichEra} />
+            </div>
+
+            <div className="legend-overlay" onClick={() => handleLegendClick()}/>
 
 
         </>
@@ -58,8 +68,8 @@ export default Legend;
 
 
 const LegendItem = ({ era, onEraClick }) => {
-    
-    const textColor = 'color-' + era ;
+
+    const textColor = 'color-' + era;
     const backgroundColor = 'background-color-' + era;
     const subCats = ['-album', '-extended', '-single'];
 
@@ -112,10 +122,10 @@ const LegendItem = ({ era, onEraClick }) => {
 
         return (
             <>
-                <div 
+                <div
                     className="legend-item-container"
                     onClick={onEraClick}
-                    >
+                >
                     <div className="legend-item-header">
                         <div className={`legend-box ${backgroundAlbumColor}`} />
                         <div className={`legend-text-container ${textAlbumColor}`}>
@@ -125,12 +135,13 @@ const LegendItem = ({ era, onEraClick }) => {
                     <div className="legend-sub-colors-container">
                         {subCats.map((cat, index) => (
                             <div key={index} className="legend-sub-cat-container">
-                                <div className={`legend-sub-cat-box ${backgroundColor + cat}`}/>
+                                <div className={`legend-sub-cat-box ${backgroundColor + cat}`} />
                                 <p>{cat}</p>
                             </div>
                         ))}
                     </div>
                 </div>
+
             </>
         )
     }

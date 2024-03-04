@@ -32,7 +32,12 @@ const LegendIcon = () => {
                             era={era}
                             key={index}
                         />
+                        
                     ))}
+                    <div className="header-legend-text-container">
+                            <p className="header-legend-title">Legend</p>
+                            <p className="header-legend-arrow"> ➸ </p>
+                        </div>
             </div>
         </>
     );
@@ -53,6 +58,7 @@ const  LegendItemIcon = ({ era }) => {
                 <div className={`legend-icon-text-container ${textColor}`}>
                 </div>
             </div>
+            
             
 
         </>

@@ -23,7 +23,12 @@ const Filters = ({ inputTracks, setFiltered }) => {
         <>
             <div className="filters-whole-container">
 
-                <div onClick={handleClick}>
+                <div 
+                onClick={handleClick}
+                className={`filers-header-container ${showFilters ? 'active' : ''}`}
+                >
+
+                    <p className="filters-arrow" >➸</p>
                     <p>Filters</p>
                 </div>
 

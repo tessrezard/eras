@@ -97,7 +97,7 @@ const CondensedTrack = ({ track, sortType }) => {
 
         <div 
         className={`condensed-track-bar ${albumBackgroundColor}`} 
-        style={{ height: sortedHeight, width: 3, }} />
+        style={{ height: sortedHeight, }} />
 
       </div>
 

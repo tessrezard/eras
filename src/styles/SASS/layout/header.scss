@@ -16,7 +16,7 @@
   align-content: center;
   flex-flow: row wrap;
   background-color: #fff;
-  border-bottom: pink;
+  border-bottom: $lead-color;
 
 }
 
@@ -76,13 +76,13 @@
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
 .nav-link{
   text-decoration: none; // Remove underline
-  color: darken($theTorturedPoetsDepartment, 20%);
+  color: darken($lead-color, 20%);
   //  animation: colorCycle 60s infinite;
    font-family: $titleFont;
 

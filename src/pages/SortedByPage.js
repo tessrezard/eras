@@ -9,73 +9,39 @@ import { filterTracks } from "../app/utilities/filterTracks";
 import { useDispatch, useSelector } from 'react-redux';
 import Legend from "../components/Legend";
 import Filters from "../components/Filters";
+import OrderOptions from "../components/OrderOptions";
+import SortOptions from "../components/SortOptions";
 
 
 const SortedByPage = () => {
     const reverseTracks = reverseEraOrder(allTracks);
     const [filteredTracks, setFilteredTracks] = useState([allTracks]);
-    const [ orderOption, setOrderOption ] = useState('eraOrderOption')
-    const [sorting, setSorting] = useState("Medium")
-
-    const onOptionChange = e => {
-        setSorting(e.target.value)
-    }
+    const [orderOption, setOrderOption] = useState('eraOrderOption')
+    const [sorting, setSorting] = useState("Duration")
 
     console.log('filteredTracks', filteredTracks)
 
-const handleOrderOptionsClick = (order) => {
-    setOrderOption(order);
-}
+
+    // NOTE: the styling for all the filters & options are in the Filters.scss file. 
     return (
         <>
-            <h1>Sorted by {sorting}</h1>
-            <div>
-                <form>
-                    <input
-                        type="radio"
-                        name="topping"
-                        value="Duration"
-                        id="duration"
-                        checked={sorting === "Duration"}
-                        onChange={onOptionChange}
-                    />
-                    <label htmlFor="duration">Duration</label>
-                </form>
+            <SortOptions sorting={sorting} setSorting={setSorting}/>
+            <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
+            <Filters  inputTracks={allTracks} setFiltered={setFilteredTracks} />
+           
+           
 
-            </div>
+           <h2> Condensed View </h2>
+            <Condensed tracks={filteredTracks} sortType='duration' orderOption={orderOption} directionUp={true}/>
 
-            <div>
-            < div className="sorted-by-order-options">
-            <input
-                className="filter-button"
-                type="radio"
-                checked={orderOption === "eraOrderOption"}
-                value="eraOrderOption"
-                id="eraOrderOption"
-                onChange={() => handleOrderOptionsClick('eraOrderOption')}
-            />
-            <label htmlFor='eraOrderOption'> Era Order </label>
-            
-            <input
-                className="filter-button"
-                type="radio"
-                checked={orderOption === "durationOrderOption"}
-                value="durationOrderOption"
-                id="durationOrderOption"
-                onChange={() => handleOrderOptionsClick('durationOrderOption')}
-            />
-            <label htmlFor='durationOrderOption'> Duration Order </label>
 
-        </div>
-            </div>
-            <Filters inputTracks={allTracks} setFiltered={setFilteredTracks} />
-            <Condensed tracks={filteredTracks} sortType='duration' orderOption='eraOrderOption' />
-            
-            <Condensed tracks={filteredTracks} sortType='duration' orderOption='durationOrderOption' />
+
 
             <div className="horizontal-chronology">
             </div>
-            <VerticalChronology tracks={filteredTracks} orderOption={orderOption}/>
+            <h2> Extended View</h2>
+
+            <VerticalChronology tracks={filteredTracks} orderOption={orderOption} />
         </>
     );
 };

@@ -27,14 +27,10 @@ function Header() {
                         className={`header-legend-container ${activeLegend ? 'active' : ''}`}
                     >
                         <LegendIcon />
-                        <div className="header-legend-text-container">
-                            <p className="header-legend-title">Legend</p>
-                            <p className="header-legend-arrow"> ➸ </p>
-                        </div>
                     </div>
                     {activeLegend ?
                         (<>
-                            <Legend />
+                            <Legend setActiveLegend={setActiveLegend}/>
                         </>) : (
                             <>
                             </>

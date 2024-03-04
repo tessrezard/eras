@@ -18,6 +18,24 @@
     }
 }
 
+.condensed-container-styled-up{
+    align-items: flex-end;
+    @media (min-width: $phone) {
+        flex-flow: row wrap;
+    } 
+    @media (min-width: $small-desktop) {
+        align-items: flex-end;
+    }
+}
+.condensed-container-styled-down{
+    align-items: flex-start;
+    @media (min-width: $phone) {
+        flex-flow: row wrap;
+    } 
+    @media (min-width: $small-desktop) {
+        align-items: flex-start;
+    }
+}
 
 .condensed-track-container {
     position: relative;

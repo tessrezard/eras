@@ -1,15 +1,83 @@
-.filters-whole-container {
-    background-color: $theTorturedPoetsDepartment;
+%options-filters-containers {
+    background-color: $lead-color;
     display: flex;
+    border-radius: $rounded-rectangle;
+    padding: 0.5rem;
+    margin: 0.35rem 1rem;
+    transition: all 0.5s ease;
+}
+
+
+// SORT OPTIONS ________________________________________
+.sort-options-whole-container{
+    @extend %options-filters-containers;
     flex-flow: column;
+    justify-content: center;
 
 }
-.filters-container{
+
+.sort-options-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sort-options-header{
+    font-size: 1.5rem;
+
+    text-align: center;
+}
+
+// ORDER OPTIONS ________________________________________
+
+.order-options-whole-container {
+  @extend %options-filters-containers;
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+}
+
+.order-options-form{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+// FILTERS ________________________________________
+
+.filters-whole-container {
+    @extend %options-filters-containers;
+    flex-flow: column;
+}
+
+.filers-header-container {
+    display: flex;
+
+    p{
+        margin: 3px;
+    }
+    .filters-arrow {
+        margin-right: 5px;
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+  
+    }
+
+    &.active {
+        .filters-arrow {
+            transform: rotate(90deg);
+            transition: all 0.5s ease;
+        }
+    }
+
+}
+
+.filters-container {
     display: flex;
     justify-content: space-evenly;
 }
 
-.filter-container{
+.filter-container {
     display: flex;
     align-items: center;
 }

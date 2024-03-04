@@ -1,2 +1,20 @@
 
+  // Apply the animation to the component with a fade-in effect
+  .welcome-container {
+    animation: fadeInMove 3s ease-in-out; // Adjust duration and timing function as needed  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    h1{
+        animation: colorCycle 60s infinite;
+        text-align: center;
+        font-size: 3rem;
+        font-family: $titleFont;
+    }
+}
 
+.home-link-button{
+    margin: auto;
+}
