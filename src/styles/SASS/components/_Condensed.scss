@@ -1,6 +1,6 @@
 .condensed-container {
     display: none; 
-    @media (min-width: $small-desktop) {
+    @media (min-width: $wide-phone) {
         display: flex;
         flex-flow: row;
         justify-content: center;
@@ -77,11 +77,11 @@
         border-radius: 1px;
 
         @media (min-width: $wide-phone) {
-            margin-left: 0.5px;
+            margin-left: 0px;
             width: 2px;
         }
         @media (min-width: $tablet) {
-            margin-left: 1px;
+            margin-left: 0.5px;
             width: 2px;
         }
         @media (min-width: $desktop) {

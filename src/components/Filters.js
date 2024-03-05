@@ -5,7 +5,6 @@ import CheckBox from "./FiltersCheckbox";
 
 const Filters = ({ inputTracks, setFiltered }) => {
 
-    const [showFilters, setShowFilters] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
 
@@ -30,6 +29,8 @@ const Filters = ({ inputTracks, setFiltered }) => {
                 </div>
                 {showOptions ? (
                     <>
+                    <div className="options-pill-content-container">
+
                         {filterOptions.map(filter => {
                             return (
                                 <div key={filter}>
@@ -38,6 +39,8 @@ const Filters = ({ inputTracks, setFiltered }) => {
                             )
 
                         })}
+                                            </div>
+
                     </>
                 ) : (<></>)}
             </div>

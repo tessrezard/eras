@@ -3,7 +3,7 @@ import '../styles/CSS/main.css';
 
 const OrderOptions = ({ sorting, orderOption, setOrderOption }) => {
 
-    const [showOptions, setShowOptions] = useState(false);
+    const [showOptions, setShowOptions] = useState(true);
     const [showOrderOptions, setShowOrderOptions] = useState(false);
 
     const handleShowClick = () => {

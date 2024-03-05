@@ -17,11 +17,11 @@
 .options-pill-header {
     display: flex;
     justify-content: center;
-
     margin: auto;
     width: 100%;
 
     p {
+        color: darken($lead-color, 30%);
         margin: 3px;
         text-align: center;
     }
@@ -47,6 +47,7 @@
     justify-content: space-around;
     margin-top: 1rem;
     margin-left: 1rem;
+    color: darken($lead-color, 40%);
 
     @media (min-width: $phone) {
         flex-flow: row wrap;
@@ -57,6 +58,14 @@
 // SORT OPTIONS ________________________________________
 
 
+h1.sort-options-header {
+    font-size: 2rem;
+    font-family: $titleFont;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
 .sort-options-form {
     display: flex;
     flex-flow: column wrap;
@@ -68,10 +77,6 @@
         flex-flow: row wrap;
     }
 
-    .sort-options-header {
-        font-size: 1.5rem;
-        text-align: center;
-    }
 }
 
 

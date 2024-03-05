@@ -4,7 +4,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     margin-bottom: 2rem;
-    @media (min-width: $small-desktop) {
+    @media (min-width: $wide-phone) {
         display: none;
     }
 }

@@ -40,7 +40,6 @@ const SortedByPage = () => {
 
             <DisplayFullSizeTracks tracks={filteredTracks} orderOption={orderOption} />
 
-            {/* <VerticalChronology tracks={filteredTracks} orderOption={orderOption} /> */}
         </>
     );
 };
