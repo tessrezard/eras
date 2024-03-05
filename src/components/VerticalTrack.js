@@ -13,7 +13,8 @@ const VerticalTrack = ({ track, type }) => {
     const albumBackgroundColor = 'background-color-' + track.era;
     const albumColor = 'color-' + track.era;
     const duration_ms = track.duration_ms;
-    const durationInPx = ((duration_ms / 1000)/2) + 'px';
+    // const durationInPx = ((duration_ms / 1000)/2) + 'px';
+    const durationInPx = ((duration_ms / 1000)*1.7) + 'px';
 
 
 
@@ -82,6 +83,8 @@ const VerticalTrack = ({ track, type }) => {
     return (
         <>
             <Track track={track} />
+            
+                
         </>
     );
 };

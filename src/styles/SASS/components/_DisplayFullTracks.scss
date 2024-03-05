@@ -1,0 +1,125 @@
+
+
+
+// _______________
+.full-chronology-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    overflow-x: scroll;
+    @media (min-width: $wide-phone) {
+        margin-left: 2rem;
+
+    }
+}
+
+
+
+// TRACK ----------------------------------------
+.full-track-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+justify-content: flex-start;
+
+    .full-track-duration-display{
+        margin: 0;
+        font-size: 0.65rem;
+        font-weight: 700;
+        font-family: $titleFont;
+        min-width: 1.5rem;
+        text-align: end;
+        margin-right: 3px;
+
+        @media (min-width: $wide-phone) {
+            min-width: 3rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+    }
+    .full-track-bar {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1.3px;
+        height: 1rem;
+        padding: 0;
+        border-radius: 1px;
+
+        @media (min-width: $wide-phone) {
+            height: 1.2rem;
+        }
+    }
+
+    .full-track-title-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        bottom: 1px;
+        overflow: scroll;
+
+    }
+
+    .full-track-title {
+        display: block;
+        font-family: $titleFont;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        overflow: hidden;
+        color: $background-color;
+        margin: 0;
+        margin-right: 3px;
+        z-index: 1;
+        @media (min-width: $wide-phone) {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;    
+        }
+    }
+
+    &:hover {
+        .full-track-title {
+        }
+    }
+}
+
+
+
+
+
+
+.full-track-mobile{
+    display: flex;
+    @media (min-width: $wide-phone) {
+        display: none;
+
+    }
+}
+
+.full-track-tablet{
+    display: none;
+    @media (min-width: $wide-phone) {
+        display: flex;
+    }
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.full-track-desktop{
+    display: none;
+    @media (min-width: $desktop) {
+        display: flex;
+    }
+    @media (min-width: $XL-desktop) {
+        display: none;
+    }
+}
+
+.full-track-monitor{
+   display: none;
+    @media (min-width: $XL-desktop) {
+        display: flex;
+    }
+}
+

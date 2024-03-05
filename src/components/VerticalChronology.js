@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import VerticalTrack from "./VerticalTrack";
-const VerticalChronology = ({tracks, orderOption}) => {
+const VerticalChronology = ({ tracks, orderOption }) => {
 
     let eraOrder = true;
     let durationOrder = false;
@@ -28,74 +28,46 @@ const VerticalChronology = ({tracks, orderOption}) => {
 
     return (
         <>
-        {eraOrder? (
-        <>
-        <div className="vertical-chronology-container" style={{ marginBottom: 40 }}>
-                {filteredTracks.map((track, index) => (
-                    <div key={index}>
-                        <div className="vertical-album-container" >
-                            <div className="vertical-album-tracks">
-                                <VerticalTrack
-                                    type='sortedOrder'
-                                    track={track}
-                                    key={index}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </>): (<></>)}
-            
-        {durationOrder? (
-        <>
-        <div className="vertical-chronology-container" style={{ marginBottom: 40 }}>
-                {sortedDuration.map((track, index) => (
-                    <div key={index}>
-                        <div className="vertical-album-container" >
-                            <div className="vertical-album-tracks">
-                                <VerticalTrack
-                                    type='sortedOrder'
-                                    track={track}
-                                    key={index}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </>): (<></>)}
-            
-{/* 
-            <div className="vertical-chronology-container" style={{ marginBottom: 40 }}>
-                {sortedDuration.map((track, index) => (
-                    <div key={index}>
-                        <div className="vertical-album-container" >
-                            <div className="vertical-album-tracks">
-                                <VerticalTrack
-                                    type='sortedOrder'
-                                    track={track}
-                                    key={index}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div> */}
 
 
-
-            {/* 
-            <div className="vertical-chronology-container">
-                {albumTracks.map((album, index) => (
-                    <div key={index}>
-                        <VerticalAlbum
-                            album={album}
-                            key={index}
-                        />
+            {eraOrder ? (
+                <>
+                    <div className="vertical-chronology-container" style={{ marginBottom: 40 }}>
+                        {filteredTracks.map((track, index) => (
+                            <div key={index}>
+                                <div className="vertical-album-container" >
+                                    <div className="vertical-album-tracks">
+                                        <VerticalTrack
+                                            type='sortedOrder'
+                                            track={track}
+                                            key={index}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div> */}
+                </>) : (<></>)}
+
+            {durationOrder ? (
+                <>
+                    <div className="vertical-chronology-container" style={{ marginBottom: 40 }}>
+                        {sortedDuration.map((track, index) => (
+                            <div key={index}>
+                                <div className="vertical-album-container" >
+                                    <div className="vertical-album-tracks">
+                                        <VerticalTrack
+                                            type='sortedOrder'
+                                            track={track}
+                                            key={index}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </>) : (<></>)}
+
         </>
     );
 };

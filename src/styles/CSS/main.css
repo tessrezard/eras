@@ -1082,6 +1082,126 @@
   width: 700px;
 }
 
+.full-chronology-container {
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-x: scroll;
+}
+@media (min-width: 570px) {
+  .full-chronology-container {
+    margin-left: 2rem;
+  }
+}
+
+.full-track-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.full-track-container .full-track-duration-display {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  min-width: 1.5rem;
+  text-align: end;
+  margin-right: 3px;
+}
+@media (min-width: 570px) {
+  .full-track-container .full-track-duration-display {
+    min-width: 3rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+}
+.full-track-container .full-track-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.3px;
+  height: 1rem;
+  padding: 0;
+  border-radius: 1px;
+}
+@media (min-width: 570px) {
+  .full-track-container .full-track-bar {
+    height: 1.2rem;
+  }
+}
+.full-track-container .full-track-title-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  bottom: 1px;
+  overflow: scroll;
+}
+.full-track-container .full-track-title {
+  display: block;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  overflow: hidden;
+  color: #fff;
+  margin: 0;
+  margin-right: 3px;
+  z-index: 1;
+}
+@media (min-width: 570px) {
+  .full-track-container .full-track-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+.full-track-mobile {
+  display: flex;
+}
+@media (min-width: 570px) {
+  .full-track-mobile {
+    display: none;
+  }
+}
+
+.full-track-tablet {
+  display: none;
+}
+@media (min-width: 570px) {
+  .full-track-tablet {
+    display: flex;
+  }
+}
+@media (min-width: 960px) {
+  .full-track-tablet {
+    display: none;
+  }
+}
+
+.full-track-desktop {
+  display: none;
+}
+@media (min-width: 960px) {
+  .full-track-desktop {
+    display: flex;
+  }
+}
+@media (min-width: 1400px) {
+  .full-track-desktop {
+    display: none;
+  }
+}
+
+.full-track-monitor {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .full-track-monitor {
+    display: flex;
+  }
+}
+
 .quiz-container {
   display: flex;
   flex-flow: column;

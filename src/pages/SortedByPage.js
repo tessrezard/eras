@@ -7,6 +7,7 @@ import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import Filters from "../components/Filters";
 import OrderOptions from "../components/OrderOptions";
 import SortOptions from "../components/SortOptions";
+import DisplayFullSizeTracks from "../components/DisplayFullSizeTracks";
 
 
 const SortedByPage = () => {
@@ -21,13 +22,13 @@ const SortedByPage = () => {
     // NOTE: the styling for all the filters & options are in the Filters.scss file. 
     return (
         <>
-            <SortOptions sorting={sorting} setSorting={setSorting}/>
+            <SortOptions sorting={sorting} setSorting={setSorting} />
             <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
-            <Filters  inputTracks={allTracks} setFiltered={setFilteredTracks} />
+            <Filters inputTracks={allTracks} setFiltered={setFilteredTracks} />
 
 
-           <h2> Condensed View </h2>
-            <Condensed tracks={filteredTracks} sortType='duration' orderOption={orderOption} directionUp={true}/>
+            <h2> Condensed View </h2>
+            <Condensed tracks={filteredTracks} sortType='duration' orderOption={orderOption} directionUp={true} />
 
 
 
@@ -36,7 +37,10 @@ const SortedByPage = () => {
             </div>
             <h2> Extended View</h2>
 
-            <VerticalChronology tracks={filteredTracks} orderOption={orderOption} />
+
+            <DisplayFullSizeTracks tracks={filteredTracks} orderOption={orderOption} />
+
+            {/* <VerticalChronology tracks={filteredTracks} orderOption={orderOption} /> */}
         </>
     );
 };
