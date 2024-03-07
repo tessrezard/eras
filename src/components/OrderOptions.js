@@ -51,12 +51,12 @@ const OrderOptions = ({ sorting, orderOption, setOrderOption }) => {
                                     <input
                                         className="filter-button"
                                         type="radio"
-                                        checked={orderOption === "durationOrderOption"}
-                                        value="durationOrderOption"
-                                        id="durationOrderOption"
-                                        onChange={() => handleOrderOptionsClick('durationOrderOption')}
+                                        checked={orderOption === "sortedOrderOption"}
+                                        value="sortedOrderOption"
+                                        id="sortedOrderOption"
+                                        onChange={() => handleOrderOptionsClick('sortedOrderOption')}
                                     />
-                                    <label htmlFor='durationOrderOption'> {sorting} Order </label>
+                                    <label htmlFor='sortedOrderOption'> {sorting} Order </label>
                                 </div>
 
                             </form>

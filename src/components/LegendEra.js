@@ -5,7 +5,6 @@ import { removeTV } from "../app/utilities/removeTaylorsVersion";
 
 const LegendEra = ({ era }) => {
 
-    console.log('era', era);
     const filteredAlbums = [];
     albumTracks.forEach(item => {
         if (item.album && item.album.era === era) {
@@ -14,11 +13,8 @@ const LegendEra = ({ era }) => {
         }
     });
 
-    console.log(era, filteredAlbums)
 
 
-
-    console.log('era', era);
 
     // GET THE ERAS TRACKS
     const eraTracks = [];
@@ -31,7 +27,6 @@ const LegendEra = ({ era }) => {
 
 
     // SPLIT TRACKS INTO CATEGORIES
-    console.log(era, 'eraTracks', eraTracks)
 
     const albumEraTracks = [];
     eraTracks.forEach(track => {
@@ -39,7 +34,6 @@ const LegendEra = ({ era }) => {
             albumEraTracks.push(track);
         }
     });
-    console.log(era, 'albumEraTracks', albumEraTracks)
 
     const extendedEraTracks = [];
     eraTracks.forEach(track => {
@@ -47,7 +41,6 @@ const LegendEra = ({ era }) => {
             extendedEraTracks.push(track);
         }
     });
-    console.log(era, 'extendedEraTracks', extendedEraTracks)
 
     const remainingTracks = eraTracks.filter(track => 
         !albumEraTracks.some(albumTrack => albumTrack.id === track.id) &&

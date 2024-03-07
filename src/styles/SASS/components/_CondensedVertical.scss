@@ -3,9 +3,13 @@
     flex-flow: column ;
     justify-content: flex-end;
     align-items: flex-start;
+    padding: 0.5rem 0rem;
     margin-bottom: 2rem;
+    border: $border-standard;
+    border-radius: $rounded-rectangle;
     @media (min-width: $wide-phone) {
         display: none;
+    
     }
 }
 

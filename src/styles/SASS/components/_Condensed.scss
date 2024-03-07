@@ -1,25 +1,52 @@
-.condensed-container {
-    display: none; 
+.condensed-title {
+    margin: 0;
+    font-size: 0.7rem;
+    height: 2rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 200px;
+
+    @media (min-width: $small-phone) {
+        height: 1rem;
+
+        width: $small-phone;
+    }
+    @media (min-width: $phone) {
+        width: $phone;
+    }
     @media (min-width: $wide-phone) {
+        margin: auto;
+        font-size: 1rem;
+        height: 1rem;
+        width: $wide-phone;
+    }
+}
+
+.condensed-container {
+    display: none;
+    border: $border-standard;
+    border-radius: $rounded-rectangle;
+    padding: 0.25rem;
+
+    @media (min-width: $wide-phone) {
+        padding: 1rem;
+
         display: flex;
         flex-flow: row;
         justify-content: center;
         align-items: flex-start;
-        transform: rotate(0deg);
         align-items: flex-start;
         position: relative;
         top: 10px;
     }
 }
 
-
-
 .condensed-track-container {
     position: relative;
     display: flex;
     align-items: flex-start;
     flex-flow: column;
-
 
     .condensed-album-title-container {
         height: 3rem;
@@ -39,8 +66,6 @@
         width: 700px;
     }
 
-
-
     .condensed-track-title-container {
         height: 3rem;
         position: absolute;
@@ -55,7 +80,8 @@
         bottom: 1rem;
         margin: 0;
         z-index: 10;
-        width: 700px;
+        background-color: $background-color;
+        width: fit-content;
     }
 
     &:hover {
@@ -78,64 +104,42 @@
 
         @media (min-width: $wide-phone) {
             margin-left: 0px;
+            width: 1.5px;
+        }
+
+        @media (min-width: $small-tablet) {
+            margin-left: 0px;
             width: 2px;
         }
+
         @media (min-width: $tablet) {
-            margin-left: 0.5px;
-            width: 2px;
+            margin-left: 0px;
+            width: 2.5px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+
         }
+
         @media (min-width: $desktop) {
-            margin-left: 1px;
-            width: 2px;
+            margin-left: 0px;
+            width: 3px;
         }
+
         @media (min-width: $large-desktop) {
             margin-left: 1px;
             width: 3px;
         }
-        @media (min-width: $XL-desktop) {
+
+        @media (min-width: $XXL-desktop) {
             margin-left: 1px;
             width: 4px;
         }
-        @media (min-width: $XXL-desktop) {
+
+        @media (min-width: $monitor) {
             margin-left: 1px;
             width: 5px;
         }
-       
+
     }
 
-}
-
-
-
-
-
-
-// .track-title-container {
-//     display: none;
-//     position: absolute;
-//     top: 4rem;
-// }
-
-
-
-
-
-
-.condensed-container-vertical{
-    display: flex;
-    flex-flow: row ;
-    justify-content: flex-end;
-    align-items: flex-start;
-    // position: relative;
-    // top: 180px;
-    margin-bottom: 2rem;
-    // transform: rotate(-90deg);
-    @media (min-width: $phone) {
-        flex-flow: row;
-    } 
-    @media (min-width: $small-desktop) {
-        transform: rotate(0deg);
-        align-items: flex-start;
-        top: 10px;
-    }
 }

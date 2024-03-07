@@ -1,12 +1,10 @@
-
-
-
 // _______________
 .full-chronology-container {
     display: flex;
     flex-direction: column;
     height: fit-content;
     overflow-x: scroll;
+
     @media (min-width: $wide-phone) {
         margin-left: 2rem;
 
@@ -20,9 +18,9 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-justify-content: flex-start;
+    justify-content: flex-start;
 
-    .full-track-duration-display{
+    .full-track-duration-display {
         margin: 0;
         font-size: 0.65rem;
         font-weight: 700;
@@ -36,17 +34,43 @@ justify-content: flex-start;
             font-size: 0.85rem;
             font-weight: 700;
         }
+
+
     }
+
+    .explicit-icon-container {
+        width: 1rem;
+        display: flex;
+
+        .explicit-icon {
+            color: $background-color;
+            height: 1rem;
+            width: 0.95rem;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin: 1.3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: $rounded-rectangle;
+            @media (min-width: $wide-phone) {
+                height: 1.2rem;
+                font-size: 0.85rem;
+            font-weight: 600;
+            }
+        }
+    }
+
     .full-track-bar {
         display: flex;
         justify-content: flex-end;
         margin: 1.3px;
-        height: 1rem;
+        height: 2rem;
         padding: 0;
         border-radius: 1px;
-
+        text-align: right;
         @media (min-width: $wide-phone) {
-            height: 1.2rem;
+            height: 2rem;
         }
     }
 
@@ -70,16 +94,16 @@ justify-content: flex-start;
         margin: 0;
         margin-right: 3px;
         z-index: 1;
+
         @media (min-width: $wide-phone) {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            letter-spacing: 1px;    
+            letter-spacing: 1px;
         }
     }
 
     &:hover {
-        .full-track-title {
-        }
+        .full-track-title {}
     }
 }
 
@@ -88,38 +112,43 @@ justify-content: flex-start;
 
 
 
-.full-track-mobile{
+.full-track-mobile {
     display: flex;
+
     @media (min-width: $wide-phone) {
         display: none;
 
     }
 }
 
-.full-track-tablet{
+.full-track-tablet {
     display: none;
+
     @media (min-width: $wide-phone) {
         display: flex;
     }
+
     @media (min-width: $desktop) {
         display: none;
     }
 }
 
-.full-track-desktop{
+.full-track-desktop {
     display: none;
+
     @media (min-width: $desktop) {
         display: flex;
     }
+
     @media (min-width: $XL-desktop) {
         display: none;
     }
 }
 
-.full-track-monitor{
-   display: none;
+.full-track-monitor {
+    display: none;
+
     @media (min-width: $XL-desktop) {
         display: flex;
     }
 }
-

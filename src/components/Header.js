@@ -9,6 +9,7 @@ function Header() {
 
     const [activeLegend, setActiveLegend] = useState(false);
 
+
     const location = useLocation();
     if (location.pathname === '/') {
         return <Navigate to='/home' />

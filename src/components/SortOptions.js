@@ -56,7 +56,7 @@ const SortOptions = ({ sorting, setSorting }) => {
                                     <label htmlFor="Explicit">Explicit</label>
                                 </div>
 
-                                <div>
+                                {/* <div>
                                     <input
                                         type="radio"
                                         name="topping"
@@ -66,9 +66,9 @@ const SortOptions = ({ sorting, setSorting }) => {
                                         onChange={handleSortOptionChange}
                                     />
                                     <label htmlFor="Track Number">Track Number</label>
-                                </div>
+                                </div> */}
 
-                                <div>
+                                {/* <div>
                                     <input
                                         type="radio"
                                         name="topping"
@@ -78,7 +78,7 @@ const SortOptions = ({ sorting, setSorting }) => {
                                         onChange={handleSortOptionChange}
                                     />
                                     <label htmlFor="BPM">Beats Per Minute</label>
-                                </div>
+                                </div> */}
 
                             </form>
                         </div>
@@ -86,7 +86,6 @@ const SortOptions = ({ sorting, setSorting }) => {
                     </>
                 ) : (<></>)}
             </div>
-            <h1 className="sort-options-header">Sorted by {sorting}</h1>
 
         </>
     );

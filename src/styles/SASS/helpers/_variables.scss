@@ -3,6 +3,7 @@
 $small-phone: 370px;
 $phone: 470px;
 $wide-phone: 570px;
+$small-tablet: 650px;
 $tablet: 768px;
 $small-desktop: 880px;
 $desktop: 960px;
@@ -51,10 +52,16 @@ $eraList: (
 
 
 $lead-color: $theTorturedPoetsDepartment;
+$second-color: #f3f4ff;
+$border-standard: 7px solid $theTorturedPoetsDepartment;
 $background-color: #fff;
 $header-height: 71px;
 $nav-height: 20px;
 $titleFont: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+
+$title-font: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+$lead-font: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
 $legend-box-container-size: 15px;
 $legend-box-size: 13px;

@@ -36,9 +36,7 @@ const Legend = ({ setActiveLegend }) => {
         setActiveLegend(prev => !prev);
     }
 
-    useEffect(() => {
-        console.log(seeEra, whichEra);
-    }, [whichEra])
+  
     return (
         <>
 <div className="legend-and-era-legend-container">
