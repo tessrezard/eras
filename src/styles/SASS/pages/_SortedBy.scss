@@ -22,6 +22,7 @@
     h2{
         font-size: 1.5rem;
     }
+   
     .sorted-by-view-arrow{
         background-color: $lead-text-color;
         color: $background-color;
@@ -36,12 +37,7 @@
 
     }
 
-    &.active {
-        .options-pill-arrow {
-            transform: rotate(90deg);
-            transition: all 0.5s ease;
-        }
-    }
+ 
     
 }
 

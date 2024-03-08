@@ -15,7 +15,11 @@ const SortedByPage = () => {
     const [filteredTracks, setFilteredTracks] = useState([allTracks]);
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Duration")
-
+    const [showCondensed, setShowCondensed] = useState(true);
+    console.log(showCondensed, 'showCondensed');
+    const handleShowClick = () => {
+        setShowCondensed(prev => !prev);
+    };
 
     // console.log(prepForAudioFeatures(allTracks));
     // NOTE: the styling for all the filters & options are in the Filters.scss file. 
@@ -28,15 +32,15 @@ const SortedByPage = () => {
 
             <div className="sorted-by-view-container" >
                 <div className="sorted-by-view-header">
-                    <button className="sorted-by-view-arrow">➸</button>
+                    <button className={`sorted-by-view-arrow`}  >➸</button>
                     <h2>Condensed View</h2>
                 </div>
                 <Condensed tracks={filteredTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} directionUp={true} />
             </div>
 
             <div className="sorted-by-view-container" >
-                <div className="sorted-by-view-header">
-                <button className="sorted-by-view-arrow">➸</button>
+                <div className={`sorted-by-view-header `}>
+                    <button className={`sorted-by-view-arrow `} >➸</button>
                     <h2>Extended View</h2>
                 </div>
                 <FullSizeAllTracks tracks={filteredTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} />

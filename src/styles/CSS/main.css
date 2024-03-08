@@ -858,6 +858,26 @@
   }
 }
 
+.condensed-vertical-track-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row;
+}
+.condensed-vertical-track-container .condensed-vertical-track-bar {
+  display: flex;
+  margin-left: 0.5px;
+  width: 2rem;
+  height: 2px;
+  padding: 0;
+  border-radius: 1px;
+}
+@media (min-width: 570px) {
+  .condensed-vertical-track-container .condensed-vertical-track-bar {
+    display: none;
+  }
+}
+
 .condensed-track-container {
   position: relative;
   display: flex;
@@ -920,88 +940,6 @@
   .condensed-track-container .condensed-track-bar {
     margin-left: 1px;
     width: 5px;
-  }
-}
-
-.condensed-vertical {
-  display: flex;
-  margin: auto;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border: 7px solid rgb(237, 236, 232);
-  border-radius: 19px;
-}
-@media (min-width: 570px) {
-  .condensed-vertical {
-    display: none;
-  }
-}
-
-.condensed-vertical-tracks-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.condensed-vertical-track-container {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  flex-flow: row;
-}
-.condensed-vertical-track-container .condensed-vertical-album-title-container {
-  width: 3rem;
-  position: absolute;
-  align-items: flex-start;
-  font-size: smaller;
-}
-.condensed-vertical-track-container .condensed-vertical-album-title {
-  display: none;
-  position: absolute;
-  top: -50px;
-  font-size: 1rem;
-  bottom: 1rem;
-  margin: 0;
-  z-index: 10;
-  height: 700px;
-}
-.condensed-vertical-track-container .condensed-vertical-track-title-container {
-  width: 3rem;
-  position: absolute;
-  display: flex;
-  align-items: flex-start;
-  top: -30px;
-}
-.condensed-vertical-track-container .condensed-vertical-track-title {
-  display: none;
-  font-size: 1rem;
-  bottom: 1rem;
-  margin: 0;
-  z-index: 10;
-  height: 700px;
-}
-.condensed-vertical-track-container:hover .condensed-vertical-track-title {
-  display: block;
-}
-.condensed-vertical-track-container:hover .condensed-vertical-album-title {
-  display: block;
-}
-.condensed-vertical-track-container .condensed-vertical-track-bar {
-  display: flex;
-  margin-left: 0.5px;
-  width: 2rem;
-  height: 2px;
-  padding: 0;
-  border-radius: 1px;
-}
-@media (min-width: 570px) {
-  .condensed-vertical-track-container .condensed-vertical-track-bar {
-    display: none;
   }
 }
 
@@ -1850,10 +1788,6 @@ h1.sort-options-header {
   height: 2rem;
   font-size: 1.25rem;
   margin: 0 0.5rem;
-  transform: rotate(90deg);
-  transition: all 0.5s ease;
-}
-.sorted-by-view-header.active .options-pill-arrow {
   transform: rotate(90deg);
   transition: all 0.5s ease;
 }

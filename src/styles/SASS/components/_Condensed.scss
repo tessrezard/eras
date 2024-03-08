@@ -8,7 +8,7 @@
     padding-bottom: 0.5rem;
     justify-content: center;
     width: 200px;
-    
+
 
     @media (min-width: $small-phone) {
         height: 1rem;
@@ -63,6 +63,31 @@
 //_______________________________________________________________________________________________________________
 
 
+//-------------------------VERTICAL - MOBILE-------------------------
+.condensed-vertical-track-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row;
+
+    .condensed-vertical-track-bar {
+        display: flex;
+        margin-left: 0.5px;
+        width: 2rem;
+        height: 2px;
+        padding: 0;
+        border-radius: 1px;
+
+        @media (min-width: $wide-phone) {
+            display: none;
+        }
+    }
+
+
+}
+
+//-------------------------HORIZONTAL - WIDE SCREEN-------------------------
+
 .condensed-track-container {
     position: relative;
     display: flex;
@@ -74,51 +99,6 @@
         display: flex;
     }
 
-    // .condensed-album-title-container {
-    //     height: 3rem;
-    //     position: absolute;
-    //     align-items: flex-start;
-    //     font-size: smaller;
-    // }
-
-    // .condensed-album-title {
-    //     display: none;
-    //     position: absolute;
-    //     top: -50px;
-    //     font-size: 1rem;
-    //     bottom: 1rem;
-    //     margin: 0;
-    //     z-index: 10;
-    //     width: 700px;
-    // }
-
-    // .condensed-track-title-container {
-    //     height: 3rem;
-    //     position: absolute;
-    //     display: flex;
-    //     align-items: flex-start;
-    //     top: -30px;
-    // }
-
-    // .condensed-track-title {
-    //     display: none;
-    //     font-size: 1rem;
-    //     bottom: 1rem;
-    //     margin: 0;
-    //     z-index: 10;
-    //     background-color: $background-color;
-    //     width: fit-content;
-    // }
-
-    // &:hover {
-    //     .condensed-track-title {
-    //         display: block;
-    //     }
-
-    //     .condensed-album-title {
-    //         display: block;
-    //     }
-    // }
 
     .condensed-track-bar {
         display: flex;
@@ -168,3 +148,5 @@
     }
 
 }
+
+
