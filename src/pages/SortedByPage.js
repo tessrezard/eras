@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import Condensed from "../components/Condensed";
-import VerticalChronology from "../components/VerticalChronology";
 import { allTracks } from "../app/data/current_data/all_tracks";
 import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import Filters from "../components/Filters";
@@ -21,25 +20,30 @@ const SortedByPage = () => {
     // console.log(prepForAudioFeatures(allTracks));
     // NOTE: the styling for all the filters & options are in the Filters.scss file. 
     return (
-        <>
+        <div>
+            <h1 className="sort-options-header">Sorted by {sorting}</h1>
             <SortOptions sorting={sorting} setSorting={setSorting} />
             <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
             <Filters inputTracks={allTracks} setFiltered={setFilteredTracks} />
-            <h1 className="sort-options-header">Sorted by {sorting}</h1>
 
-            <div style={{ margin: 'auto' }}>
-                <h2> Condensed View </h2>
+            <div className="sorted-by-view-container" >
+                <div className="sorted-by-view-header">
+                    <button className="sorted-by-view-arrow">➸</button>
+                    <h2>Condensed View</h2>
+                </div>
                 <Condensed tracks={filteredTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} directionUp={true} />
             </div>
 
-            <div style={{ margin: 'auto' }}>
-                <h2> Extended View</h2>
-
+            <div className="sorted-by-view-container" >
+                <div className="sorted-by-view-header">
+                <button className="sorted-by-view-arrow">➸</button>
+                    <h2>Extended View</h2>
+                </div>
                 <FullSizeAllTracks tracks={filteredTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} />
 
             </div>
 
-        </>
+        </div>
     );
 };
 

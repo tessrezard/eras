@@ -1,20 +1,25 @@
+// CONDENSED _____________________________________
+
 .condensed-title {
-    margin: 0;
     font-size: 0.7rem;
     height: 2rem;
     display: flex;
     margin: auto;
+    padding-bottom: 0.5rem;
     justify-content: center;
     width: 200px;
+    
 
     @media (min-width: $small-phone) {
         height: 1rem;
 
         width: $small-phone;
     }
+
     @media (min-width: $phone) {
         width: $phone;
     }
+
     @media (min-width: $wide-phone) {
         margin: auto;
         font-size: 1rem;
@@ -24,75 +29,96 @@
 }
 
 .condensed-container {
-    display: none;
     border: $border-standard;
     border-radius: $rounded-rectangle;
+    background-color: $background-color;
     padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
 
     @media (min-width: $wide-phone) {
         padding: 1rem;
-
-        display: flex;
         flex-flow: row;
+        align-items: flex-start;
         justify-content: center;
-        align-items: flex-start;
-        align-items: flex-start;
-        position: relative;
-        top: 10px;
     }
 }
+
+.condensed-tracks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (min-width: $wide-phone) {
+        flex-flow: row;
+        align-items: flex-start;
+
+    }
+}
+
+
+//_______________________________________________________________________________________________________________
+
 
 .condensed-track-container {
     position: relative;
     display: flex;
     align-items: flex-start;
     flex-flow: column;
+    display: none;
 
-    .condensed-album-title-container {
-        height: 3rem;
-        position: absolute;
-        align-items: flex-start;
-        font-size: smaller;
-    }
-
-    .condensed-album-title {
-        display: none;
-        position: absolute;
-        top: -50px;
-        font-size: 1rem;
-        bottom: 1rem;
-        margin: 0;
-        z-index: 10;
-        width: 700px;
-    }
-
-    .condensed-track-title-container {
-        height: 3rem;
-        position: absolute;
+    @media (min-width: $wide-phone) {
         display: flex;
-        align-items: flex-start;
-        top: -30px;
     }
 
-    .condensed-track-title {
-        display: none;
-        font-size: 1rem;
-        bottom: 1rem;
-        margin: 0;
-        z-index: 10;
-        background-color: $background-color;
-        width: fit-content;
-    }
+    // .condensed-album-title-container {
+    //     height: 3rem;
+    //     position: absolute;
+    //     align-items: flex-start;
+    //     font-size: smaller;
+    // }
 
-    &:hover {
-        .condensed-track-title {
-            display: block;
-        }
+    // .condensed-album-title {
+    //     display: none;
+    //     position: absolute;
+    //     top: -50px;
+    //     font-size: 1rem;
+    //     bottom: 1rem;
+    //     margin: 0;
+    //     z-index: 10;
+    //     width: 700px;
+    // }
 
-        .condensed-album-title {
-            display: block;
-        }
-    }
+    // .condensed-track-title-container {
+    //     height: 3rem;
+    //     position: absolute;
+    //     display: flex;
+    //     align-items: flex-start;
+    //     top: -30px;
+    // }
+
+    // .condensed-track-title {
+    //     display: none;
+    //     font-size: 1rem;
+    //     bottom: 1rem;
+    //     margin: 0;
+    //     z-index: 10;
+    //     background-color: $background-color;
+    //     width: fit-content;
+    // }
+
+    // &:hover {
+    //     .condensed-track-title {
+    //         display: block;
+    //     }
+
+    //     .condensed-album-title {
+    //         display: block;
+    //     }
+    // }
 
     .condensed-track-bar {
         display: flex;
@@ -117,7 +143,6 @@
             width: 2.5px;
             border-bottom-left-radius: 2px;
             border-bottom-right-radius: 2px;
-
         }
 
         @media (min-width: $desktop) {

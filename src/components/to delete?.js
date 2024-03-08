@@ -54,28 +54,24 @@ const CondensedTrack = ({ track, sortType, setTrackName, setTrackEraColor }) => 
   }
 
   const albumBackgroundColor = 'background-color-' + track.era + '-' + variant;
-  const albumColor = 'color-' + track.era;
+  const albumColor = 'color-' + track.era + '-' + variant;
 
 
-  const duration_ms = track.duration_ms;
 
   const handleHover = () => {
     setTrackName(track.name);
     setTrackEraColor(albumColor);
-    console.log(albumColor);
   };
 
   const handleMouseLeave = () => {
     setTrackName('');
 
   };
+  
 
   const handleClick = () => {
     setTrackName(track.name);
     setTrackEraColor(albumColor);
-    console.log(albumColor);
-
-
   };
 
   return (

@@ -40,12 +40,13 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
     const sortedExplicit = sortbyExplicit(tracks);
 
     return (
-        <>
+        <div className="full-chronology-container" >
+
+            <div className="full-size-tracks-container">
 
 
-            {eraOrder ? (
-                <>
-                    <div className="full-chronology-container" >
+                {eraOrder ? (
+                    <>
                         {filteredTracks.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
@@ -56,12 +57,10 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
                                 />
                             </div>
                         ))}
-                    </div>
-                </>) : (<></>)}
+                    </>) : (<></>)}
 
-            {sortedOrder && durationSortType ? (
-                <>
-                    <div className="full-chronology-container" >
+                {sortedOrder && durationSortType ? (
+                    <>
                         {sortedDuration.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
@@ -72,12 +71,10 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
                                 />
                             </div>
                         ))}
-                    </div>
-                </>) : (<></>)}
+                    </>) : (<></>)}
 
-            {sortedOrder && explicitSortType ? (
-                <>
-                    <div className="full-chronology-container" >
+                {sortedOrder && explicitSortType ? (
+                    <>
                         {sortedExplicit.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
@@ -88,9 +85,9 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
                                 />
                             </div>
                         ))}
-                    </div>
-                </>) : (<></>)}
-        </>
+                    </>) : (<></>)}
+            </div>
+        </div>
     );
 };
 

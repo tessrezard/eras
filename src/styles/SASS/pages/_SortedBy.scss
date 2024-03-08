@@ -1,0 +1,48 @@
+.sorted-by-view-container{
+    margin: auto;
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    border-radius: $rounded-rectangle;
+    padding: 0.5rem;
+    margin: 0.35rem 1rem;
+    transition: all 0.5s ease;
+}
+
+.sorted-by-view-header{
+    display: flex;
+    align-items: center;
+
+    color: $lead-text-color;
+    margin: 0;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+
+    h2{
+        font-size: 1.5rem;
+    }
+    .sorted-by-view-arrow{
+        background-color: $lead-text-color;
+        color: $background-color;
+        border-radius: 5px;
+        border: $lead-color 2px solid;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.25rem;
+        margin: 0 0.5rem;
+        transform: rotate(90deg);
+        transition: all 0.5s ease;
+
+    }
+
+    &.active {
+        .options-pill-arrow {
+            transform: rotate(90deg);
+            transition: all 0.5s ease;
+        }
+    }
+    
+}
+
+

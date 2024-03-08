@@ -2,45 +2,54 @@
 .full-chronology-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: fit-content;
+    width: fit-content;
     overflow-x: scroll;
-
-    @media (min-width: $wide-phone) {
-        margin-left: 2rem;
-
-    }
+    border: $border-standard;
+    border-radius: $rounded-rectangle;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+   
 }
 
-
+.full-size-tracks-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
 
 // TRACK ----------------------------------------
 .full-track-container {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+  
 
     .full-track-duration-display {
         margin: 0;
         font-size: 0.65rem;
         font-weight: 700;
         font-family: $titleFont;
-        min-width: 1.5rem;
+        min-width: 1.2rem;
         text-align: end;
         margin-right: 3px;
 
         @media (min-width: $wide-phone) {
-            min-width: 3rem;
+            min-width: 2rem;
             font-size: 0.85rem;
             font-weight: 700;
         }
-
-
     }
 
     .explicit-icon-container {
         width: 1rem;
         display: flex;
+        align-items: center;
 
         .explicit-icon {
             color: $background-color;
@@ -53,10 +62,11 @@
             align-items: center;
             justify-content: center;
             border-radius: $rounded-rectangle;
+
             @media (min-width: $wide-phone) {
                 height: 1.2rem;
                 font-size: 0.85rem;
-            font-weight: 600;
+                font-weight: 600;
             }
         }
     }
@@ -69,6 +79,7 @@
         padding: 0;
         border-radius: 1px;
         text-align: right;
+
         @media (min-width: $wide-phone) {
             height: 2rem;
         }

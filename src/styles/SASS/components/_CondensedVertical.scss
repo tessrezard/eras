@@ -1,25 +1,36 @@
-.condensed-vertical-container {
+.condensed-vertical {
     display: flex;
-    flex-flow: column ;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 0.5rem 0rem;
+    margin: auto;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem;
     margin-bottom: 2rem;
     border: $border-standard;
     border-radius: $rounded-rectangle;
+
     @media (min-width: $wide-phone) {
         display: none;
-    
+
     }
 }
 
+.condensed-vertical-tracks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+}
 
 .condensed-vertical-track-container {
     position: relative;
     display: flex;
     align-items: flex-start;
     flex-flow: row;
+    @media (min-width: $wide-phone) {
+        // display: none;
+    }
 
 
     .condensed-vertical-album-title-container {
@@ -76,7 +87,11 @@
         height: 2px;
         padding: 0;
         border-radius: 1px;
+        @media (min-width: $wide-phone) {
+            display: none;
+        }
+    
     }
 
-}
 
+}

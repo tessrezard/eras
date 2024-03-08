@@ -21,7 +21,7 @@
     width: 100%;
 
     p {
-        color: darken($lead-color, 30%);
+        color: $lead-text-color;
         margin: 3px;
         text-align: center;
     }

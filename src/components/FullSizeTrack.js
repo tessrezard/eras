@@ -7,9 +7,26 @@ import FullSizeTrackDuration from './FullSizeTrackDuration';
 import FullSizeTrackExplicit from './FullSizeTrackExplicit';
 
 const FullSizeTrack = ({ track, type, sortType }) => {
-
-    const albumBackgroundColor = 'background-color-' + track.era;
-    const albumColor = 'color-' + track.era;
+    
+    let variant = track.trackVariant
+    if (variant) {
+      switch (variant) {
+        case 'remix':
+          variant = 'single';
+          break;
+        case 'live':
+          variant = 'single';
+          break;
+        case 'live':
+          variant = 'single';
+          break;
+        default:
+          variant = track.trackVariant;
+      }
+    }
+  
+    const albumBackgroundColor = 'background-color-' + track.era + '-' + variant;
+    const albumColor = 'color-' + track.era + '-' + variant;
 
 
     // pick the right option: 
@@ -34,7 +51,6 @@ const FullSizeTrack = ({ track, type, sortType }) => {
     return (
         <>
             <Track track={track} id={track.id}/>
-
         </>
     );
 };
