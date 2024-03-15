@@ -1,135 +1,123 @@
 import React, { useState, useEffect, useReducer } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { setPreferenceSortedTracks, updatePreferencePoints } from '../store/slices/preference_sorted_slice';
 import '../styles/CSS/main.css';
 import Condensed from "./Condensed";
 import QuizSongOption from "./QuizSongOption";
-import { testTracks } from "../app/data/current_data/test_data";
-import { mergeSort } from "../app/utilities/sortByPreference";
-import Filters from "./Filters";
+import { getPair } from "../app/utilities/getPair";
+import FullSizeAllTracks from "./FullSizeAllTracks";
 
-const Quiz = ({ tracks }) => {
 
-    const [quizFiltered, setQuizFiltered] = useState([]);
 
-    const [sortedTracks, setSortedTracks] = useState([...testTracks]);
+const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
+    const dispatch = useDispatch();
+     const [localRankedTracks, setLocalRankedTracks] = useState([...rankedTracks]);
+    const preferenceSortedTracks = useSelector(state => state.preferenceSorted);
+
+    const [orderOption, setOrderOption] = useState('eraOrderOption')
+
+    const [sorting, setSorting] = useState("preference")
+
+
+    const [remainingTracks, setRemainingTracks] = useState([...rankedTracks]);
+
+    // const [sortedTracks, setSortedTracks] = useState([...tracks]);
+
     const [trackPair, setTrackPair] = useState([]);
     const [track0, setTrack0] = useState(null);
     const [track1, setTrack1] = useState(null);
+
     const [userPreferences, setUserPreferences] = useState([]);
     const [tracksPoints, setTracksPoints] = useState([]);
     const [preferences, setPreferences] = useState({});
 
+    const updateTrackPoints = (trackId, points) => {
+        dispatch(updatePreferencePoints({ trackId, points }));
+    };
 
 
 
 
-
-    // ATTEMPT AT SORTING LOGIC _______________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    useEffect(() => {
-        initializeSorting();
-    }, [tracks]);
-
-
+    // -------------------------------------- SORTING LOGIC --------------------------------------
     const initializeSorting = () => {
-        const initialPoints = testTracks.map((track) => ({ ...track, points: 0 }));
-        setTracksPoints(initialPoints);
-        const newTrackPair = getNewRandomTrackPair();
-        setTrackPair(newTrackPair);
-        setTrack0(newTrackPair[0].track);
-        setTrack1(newTrackPair[1].track);
+
+        // setRankedTracks([tracks?.map(track => ({...track, points: tracks.length/2}))]);
+
+
+
+        //--------- INITIAL PAIRING ----------
+        const callGetPair = getPair(remainingTracks);
+        const [updatedRemainingTracks, pairTrack1, pairTrack2] = callGetPair;
+
+        setTrackPair([pairTrack1, pairTrack2]);
+        setTrack0(pairTrack1.track);
+        setTrack1(pairTrack2.track);
+        setRemainingTracks(updatedRemainingTracks);
     };
 
-    const getNewRandomTrackPair = () => {
-        const remainingTracks = [...sortedTracks];
-        const randomIndex1 = Math.floor(Math.random() * remainingTracks.length);
-        const track1 = remainingTracks.splice(randomIndex1, 1)[0];
 
-        const randomIndex2 = Math.floor(Math.random() * remainingTracks.length);
-        const track2 = remainingTracks.splice(randomIndex2, 1)[0];
 
-        return [
-            { track: track1, index: randomIndex1 },
-            { track: track2, index: randomIndex2 },
-        ];
-    };
+    // -------------------------------------- HANDLE CLICK LOGIC --------------------------------------
 
     const handlePreference = (preferredTrack, lessPreferredTrack) => {
+
+        console.log(preferredTrack,'preferredTrack' )
         setUserPreferences((prevPreferences) => [...prevPreferences, preferredTrack]);
 
-
-        // TESTING -------------
-        const updatedPreferences = { ...preferences }; 
-
+        const updatedPreferences = { ...preferences };
         if (!updatedPreferences[lessPreferredTrack.id]) {
             updatedPreferences[lessPreferredTrack.id] = [];
         }
-
         updatedPreferences[lessPreferredTrack.id].push(preferredTrack.id);
-
         setPreferences(updatedPreferences);
-        // END TESTING -------------
 
+        // setTracksPoints((prevPoints) => {
+        //     const updatedPoints = [...prevPoints];
+        //     updatedPoints[preferredTrack.eraIndex].points += 1;
+        //     return updatedPoints;
+        // });
 
-        setTracksPoints((prevPoints) => {
-            const updatedPoints = [...prevPoints];
-            updatedPoints[preferredTrack.index].points += 1;
-            return updatedPoints;
-        });
-
-        const remainingTracks = sortedTracks.filter(
-            (track) => track.id !== preferredTrack.id
-        );
-        setSortedTracks(remainingTracks);
-
-        const newTrackPair = getNewRandomTrackPair();
-        setTrackPair(newTrackPair);
-        setTrack0(newTrackPair[0].track);
-        setTrack1(newTrackPair[1].track);
+        // i need to somehow allow for a caveat for if there is only one left, then match it against another an already sorted track.
+        if (remainingTracks.length > 2) {
+            const callGetNewPair = getPair(remainingTracks);
+            const [updatedRemainingTracks, newPairTrack1, newPairTrack2] = callGetNewPair;
+            setTrackPair([newPairTrack1, newPairTrack2]);
+            setTrack0(newPairTrack1.track);
+            setTrack1(newPairTrack2.track);
+            setRemainingTracks(updatedRemainingTracks);
+        }
 
     };
 
-    function compareTracks(track1, track2) {
-        // Check if there are recorded preferences for track1
-        if (preferences[track1.id]) {
-            // If track2 is preferred over track1, move track1 lower in the sorted order
-            if (preferences[track1.id].includes(track2.id)) {
-                return 1;
-            }
-        }
 
-        // Check if there are recorded preferences for track2
-        if (preferences[track2.id]) {
-            // If track1 is preferred over track2, move track2 lower in the sorted order
-            if (preferences[track2.id].includes(track1.id)) {
-                return -1;
-            }
-        }
 
-        // Default: no preference, maintain the original order
-        return 0;
+    // const justSortedTracks = userPreferences.map(({ track }) => track);
+
+    for (let i = 0; i < userPreferences.length; i++) {
+        try {
+            localRankedTracks[userPreferences[i].eraIndex].points = localRankedTracks[userPreferences[i].eraIndex].points + 1;
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    // console.log('mergeSortedTracks', mergeSortedTracks)
-    // -------------------------------------------------------  END TESTING -------------------------------------------------------
-
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
-    //______________________________________________________________________________________________________________________________
 
 
+    useEffect(() => {
+        initializeSorting();
+    }, []);
 
+    useEffect(() => {
+        setRemainingTracks(tracks);
+    }, [tracks])
+
+    useEffect(() => {
+        setRankedTracks(localRankedTracks);
+        setTracksToSort(remainingTracks);
+    }, [remainingTracks])
 
     return (
         <>
-            <Filters inputTracks={tracks} setFiltered={setQuizFiltered}/>
             <div className="quiz-container" >
                 {trackPair.length === 2 && (
                     <>
@@ -155,7 +143,9 @@ const Quiz = ({ tracks }) => {
                 )}
             </div>
 
-            <Condensed tracks={quizFiltered} sortType='preference' />
+            {/* <Condensed tracks={localRankedTracks} sortType='preference' />
+            <FullSizeAllTracks tracks={localRankedTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} /> */}
+
 
         </>
 

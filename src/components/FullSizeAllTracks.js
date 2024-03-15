@@ -5,10 +5,10 @@ import { sortbyExplicit } from "../app/utilities/sortByExplicit";
 import FullSizeTrack from "./FullSizeTrack";
 
 
-const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
+const FullSizeAllTracks = ({ tracks, sortType, orderOption }) => {
 
 
-    // console.log(sortType, 'sortType');
+    // ------------------------ ORDER OPTIONS: era/sorted ------------------------
     let eraOrder = true;
     let sortedOrder = false;
     switch (orderOption) {
@@ -22,9 +22,11 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
             break;
     }
 
-
+    // --------------- SORT TYPE: duration/preference/explicit ---------------
     let durationSortType = false;
     let explicitSortType = false;
+    let preferenceSortType = false;
+
     switch (sortType) {
         case 'duration':
             durationSortType = true;
@@ -32,12 +34,16 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
         case 'explicit':
             explicitSortType = true;
             break;
+        case 'sortedOrderOption':
+            preferenceSortType = true;
+            break;
     }
-    const filteredTracks = tracks;
 
-
-    const sortedDuration = sortTracksByDuration(filteredTracks);
+    const sortedDuration = sortTracksByDuration(tracks);
     const sortedExplicit = sortbyExplicit(tracks);
+
+
+
 
     return (
         <div className="full-chronology-container" >
@@ -47,10 +53,10 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
 
                 {eraOrder ? (
                     <>
-                        {filteredTracks.map((track, index) => (
+                        {tracks.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
-                                    type='sortedOrder'
+                                    orderOption='eraOrder'
                                     track={track}
                                     sortType={sortType}
 
@@ -64,7 +70,7 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
                         {sortedDuration.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
-                                    type='sortedOrder'
+                                    orderOption='sortedOrder'
                                     track={track}
                                     sortType={sortType}
 
@@ -78,7 +84,7 @@ const FullSizeAllTracks = ({ tracks, orderOption, sortType }) => {
                         {sortedExplicit.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
-                                    type='sortedOrder'
+                                    orderOption='sortedOrder'
                                     track={track}
                                     sortType={sortType}
 

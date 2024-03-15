@@ -5,7 +5,8 @@ import CondensedTrackHorizontal from "./CondensedTrack-Horizontal";
 
 
 
-const CondensedTrackDuration = ({ track, setTrackName, setTrackEraColor }) => {
+const CondensedTrackPreference = ({ track, setTrackName, setTrackEraColor }) => {
+
 
     let variant = track.trackVariant
     if (variant) {
@@ -26,8 +27,10 @@ const CondensedTrackDuration = ({ track, setTrackName, setTrackEraColor }) => {
 
     const variantBackGroundColor = 'background-color-' + track.era + '-' + variant;
     const variantColor = 'color-' + track.era + '-' + variant;
-    const duration_ms = track.duration_ms;
+    const points = track.points;
 
+
+    // EVENT HANDLERS --------------------------------------------
     const handleHover = () => {
         setTrackName(track.name);
         setTrackEraColor(variantColor);
@@ -39,26 +42,24 @@ const CondensedTrackDuration = ({ track, setTrackName, setTrackEraColor }) => {
         setTrackName(track.name);
         setTrackEraColor(variantColor);
     };
+    // -------------------------------------------------------------
 
-    let sortedWidth = '100px';
+    let sortedWidth = '200px';
+     if (track) {
+    const pointsInPx = (points * 0.75) + 'px';
+    sortedWidth = pointsInPx;
+ }
+ 
+    let sortedHeight = '200px';
     if (track) {
-        const durationInPx = ((duration_ms / 1000) / 2) + 'px';
-        sortedWidth = durationInPx;
+        const pointsInPx = (points * 0.75) + 'px';
+        sortedHeight = pointsInPx;
     }
 
-
-
-    let sortedHeight = '100px';
-    if (track) {
-        const durationInPx = ((duration_ms / 1000) / 2) + 'px';
-        sortedHeight = durationInPx;
-    }
-
-  
 
     return (
         <>
-            <CondensedTrackVertical
+           <CondensedTrackVertical
                 sortedWidth={sortedWidth}
                 variantBackGroundColor={variantBackGroundColor}
                 handleHover={handleHover}
@@ -79,5 +80,5 @@ const CondensedTrackDuration = ({ track, setTrackName, setTrackEraColor }) => {
 }
 
 
-export default CondensedTrackDuration;
+export default CondensedTrackPreference;
 

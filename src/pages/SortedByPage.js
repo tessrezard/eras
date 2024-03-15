@@ -12,14 +12,16 @@ import { prepForAudioFeatures } from "../app/utilities/prepForAudioFeatures";
 
 const SortedByPage = () => {
     const reverseTracks = reverseEraOrder(allTracks);
+
     const [filteredTracks, setFilteredTracks] = useState([allTracks]);
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Duration")
-    const [showCondensed, setShowCondensed] = useState(true);
-    console.log(showCondensed, 'showCondensed');
-    const handleShowClick = () => {
-        setShowCondensed(prev => !prev);
-    };
+    // const [showCondensed, setShowCondensed] = useState(true);
+    // console.log(showCondensed, 'showCondensed');
+    
+    // const handleShowClick = () => {
+    //     setShowCondensed(prev => !prev);
+    // };
 
     // console.log(prepForAudioFeatures(allTracks));
     // NOTE: the styling for all the filters & options are in the Filters.scss file. 

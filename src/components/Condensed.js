@@ -4,17 +4,17 @@ import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import { sortbyExplicit } from "../app/utilities/sortByExplicit";
 import CondensedTrackDuration from "./CondensedTrackDuration";
 import CondensedTrackExplicit from "./CondensedTrackExplicit";
-
+import CondensedTrackPreference from "./CondensedTrackPreference";
 const Condensed = ({ tracks, sortType, orderOption }) => {
 
     const [trackName, setTrackName] = useState('Hover over track to see name');
     const [trackEraColor, setTrackEraColor] = useState();
-    console.log(trackName);
 
     //_____________________________________________________________________________________________________
     //DETERMINE THE TYPE OF SORT, WHAT DATA TO ILLUSTRATE? DURATION, EXPLICIT, PREFERENCE... (sortType)
     let durationSortType = false;
     let explicitSortType = false;
+    let preferenceSortType = false;
 
     switch (sortType) {
         case 'duration':
@@ -22,6 +22,9 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
             break;
         case 'explicit':
             explicitSortType = true;
+            break;
+        case 'preference':
+            preferenceSortType = true;
             break;
     }
 
@@ -73,6 +76,15 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
                                     {/* -------explicit sort type------- */}
                                     {explicitSortType ? (
                                         <CondensedTrackExplicit
+                                            track={track}
+                                            sortType={sortType}
+                                            setTrackName={setTrackName}
+                                            setTrackEraColor={setTrackEraColor}
+                                            trackName={trackName} />) : (<></>)}
+
+                                    {/* -------explicit sort type------- */}
+                                    {preferenceSortType ? (
+                                        <CondensedTrackPreference
                                             track={track}
                                             sortType={sortType}
                                             setTrackName={setTrackName}

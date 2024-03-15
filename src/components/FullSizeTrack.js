@@ -5,9 +5,11 @@ import { removeTV } from "../app/utilities/removeTaylorsVersion";
 import FullSizeTrackBasic from './FullSizeTrackBasic';
 import FullSizeTrackDuration from './FullSizeTrackDuration';
 import FullSizeTrackExplicit from './FullSizeTrackExplicit';
+import FullSizeTrackPreference from "./FullSizeTrackPreference";
 
-const FullSizeTrack = ({ track, type, sortType }) => {
-    
+const FullSizeTrack = ({ track, sortType }) => {
+
+
     let variant = track.trackVariant
     if (variant) {
       switch (variant) {
@@ -32,10 +34,7 @@ const FullSizeTrack = ({ track, type, sortType }) => {
     // pick the right option: 
 
     const Track = ({ track }) => {
-        if (type === 'eraOrder') {
-            return <FullSizeTrackBasic  track={track} albumBackgroundColor={albumBackgroundColor} albumColor={albumColor}/>;
-        }
-
+  
         if (sortType === 'duration') {
             return <FullSizeTrackDuration track={track} albumBackgroundColor={albumBackgroundColor} albumColor={albumColor}/>;
         }
@@ -44,7 +43,11 @@ const FullSizeTrack = ({ track, type, sortType }) => {
         if (sortType === 'explicit') {
             return <FullSizeTrackExplicit track={track} albumBackgroundColor={albumBackgroundColor} albumColor={albumColor}/>;
         }
-        return null; // No image or thumbnail provided
+
+        if (sortType === 'preference') {
+          return <FullSizeTrackPreference track={track} albumBackgroundColor={albumBackgroundColor} albumColor={albumColor}/>;
+        }
+        return null; 
     };
 
 

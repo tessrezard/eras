@@ -27,7 +27,7 @@ const OrderOptions = ({ sorting, orderOption, setOrderOption }) => {
                     onClick={handleShowClick}
                 >
                     <p className="options-pill-arrow" >➸</p>
-                    <p> Track Order</p>
+                    <p> Display Order</p>
                 </div>
                 {showOptions ? (
                     <>
