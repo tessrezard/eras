@@ -10,50 +10,43 @@ import FullSizeAllTracks from "./FullSizeAllTracks";
 
 
 const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
-    const dispatch = useDispatch();
+    
      const [localRankedTracks, setLocalRankedTracks] = useState([...rankedTracks]);
-    const preferenceSortedTracks = useSelector(state => state.preferenceSorted);
 
-    const [orderOption, setOrderOption] = useState('eraOrderOption')
+    //  console.log('rankedTracks', rankedTracks.length);
+    //  console.log('localRankedTracks', localRankedTracks.length);
 
-    const [sorting, setSorting] = useState("preference")
+     const [remainingTracks, setRemainingTracks] = useState([...rankedTracks]);
 
-
-    const [remainingTracks, setRemainingTracks] = useState([...rankedTracks]);
-
-    // const [sortedTracks, setSortedTracks] = useState([...tracks]);
+     //  const dispatch = useDispatch();
+    // const preferenceSortedTracks = useSelector(state => state.preferenceSorted);
+    // const [orderOption, setOrderOption] = useState('eraOrderOption')
+    // const [sorting, setSorting] = useState("preference")
 
     const [trackPair, setTrackPair] = useState([]);
-    const [track0, setTrack0] = useState(null);
+
     const [track1, setTrack1] = useState(null);
-
-    const [userPreferences, setUserPreferences] = useState([]);
-    const [tracksPoints, setTracksPoints] = useState([]);
-    const [preferences, setPreferences] = useState({});
-
-    const updateTrackPoints = (trackId, points) => {
-        dispatch(updatePreferencePoints({ trackId, points }));
-    };
+    const [track2, setTrack2] = useState(null);
 
 
+
+    // const updateTrackPoints = (trackId, points) => {
+    //     dispatch(updatePreferencePoints({ trackId, points }));
+    // };
 
 
     // -------------------------------------- SORTING LOGIC --------------------------------------
     const initializeSorting = () => {
 
-        // setRankedTracks([tracks?.map(track => ({...track, points: tracks.length/2}))]);
-
-
-
         //--------- INITIAL PAIRING ----------
-        const callGetPair = getPair(remainingTracks);
+        const callGetPair = getPair(remainingTracks, localRankedTracks);
         const [updatedRemainingTracks, pairTrack1, pairTrack2] = callGetPair;
-
         setTrackPair([pairTrack1, pairTrack2]);
-        setTrack0(pairTrack1.track);
-        setTrack1(pairTrack2.track);
+        setTrack1(pairTrack1.track);
+        setTrack2(pairTrack2.track);
         setRemainingTracks(updatedRemainingTracks);
     };
+
 
 
 
@@ -61,60 +54,56 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
 
     const handlePreference = (preferredTrack, lessPreferredTrack) => {
 
-        console.log(preferredTrack,'preferredTrack' )
-        setUserPreferences((prevPreferences) => [...prevPreferences, preferredTrack]);
+        // UPDATE POINTS ACCORDING TO PREFERENCE
+        const addPoint = localRankedTracks[preferredTrack.eraIndex].points + 10;
+        const removePoint = localRankedTracks[lessPreferredTrack.eraIndex].points - 10;
 
-        const updatedPreferences = { ...preferences };
-        if (!updatedPreferences[lessPreferredTrack.id]) {
-            updatedPreferences[lessPreferredTrack.id] = [];
-        }
-        updatedPreferences[lessPreferredTrack.id].push(preferredTrack.id);
-        setPreferences(updatedPreferences);
+        // console.log(addPoint,'addPoint' )
+        // console.log(removePoint,'removePoint' )
 
-        // setTracksPoints((prevPoints) => {
-        //     const updatedPoints = [...prevPoints];
-        //     updatedPoints[preferredTrack.eraIndex].points += 1;
-        //     return updatedPoints;
-        // });
-
-        // i need to somehow allow for a caveat for if there is only one left, then match it against another an already sorted track.
-        if (remainingTracks.length > 2) {
-            const callGetNewPair = getPair(remainingTracks);
+        setLocalRankedTracks(prev => {
+            console.log('prev', prev);
+            const updatedTracks = [...prev]; // Create a copy of the array
+            updatedTracks[preferredTrack.eraIndex].points = addPoint; // Update preferredTrack points
+            updatedTracks[lessPreferredTrack.eraIndex].points = removePoint; // Update lessPreferredTrack points
+            return updatedTracks; // Return the updated array
+        });
+        
+        // GET NEW PAIR
+         if (remainingTracks.length > 2) {
+            const callGetNewPair = getPair(remainingTracks, localRankedTracks);
             const [updatedRemainingTracks, newPairTrack1, newPairTrack2] = callGetNewPair;
             setTrackPair([newPairTrack1, newPairTrack2]);
-            setTrack0(newPairTrack1.track);
-            setTrack1(newPairTrack2.track);
+            setTrack1(newPairTrack1.track);
+            setTrack2(newPairTrack2.track);
             setRemainingTracks(updatedRemainingTracks);
         }
-
+// console.log('localRankedTracks', localRankedTracks);
+        setRankedTracks(localRankedTracks);
     };
 
 
 
-    // const justSortedTracks = userPreferences.map(({ track }) => track);
-
-    for (let i = 0; i < userPreferences.length; i++) {
-        try {
-            localRankedTracks[userPreferences[i].eraIndex].points = localRankedTracks[userPreferences[i].eraIndex].points + 1;
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-
-
+    // initialize sorting on component mounting
     useEffect(() => {
         initializeSorting();
     }, []);
 
+    // if filters get changes, this will reset the sort
     useEffect(() => {
         setRemainingTracks(tracks);
+        setLocalRankedTracks(rankedTracks)
     }, [tracks])
+
+    // when a track gets sorted, update states. 
+    useEffect(() => {
+        // setRankedTracks(localRankedTracks);
+        setTracksToSort(remainingTracks);
+    }, [remainingTracks])
 
     useEffect(() => {
         setRankedTracks(localRankedTracks);
-        setTracksToSort(remainingTracks);
-    }, [remainingTracks])
+    }, [localRankedTracks])
 
     return (
         <>
@@ -124,11 +113,11 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
                         <h2>Which song do you prefer?</h2>
                         <div className="quiz-options-container">
                             <QuizSongOption
-                                track={track0}
+                                track={track1}
                                 onClick={() => handlePreference(trackPair[0], trackPair[1])}
                             />
                             <QuizSongOption
-                                track={track1}
+                                track={track2}
                                 onClick={() => handlePreference(trackPair[1], trackPair[0])}
                             />
                         </div>
@@ -139,7 +128,7 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
                     <p>Only one track left. Last choice!</p>
                 )}
                 {trackPair.length === 0 && (
-                    <p>All tracks have been sorted. User preferences: {JSON.stringify(userPreferences)}</p>
+                    <p>All tracks have been sorted. </p>
                 )}
             </div>
 
