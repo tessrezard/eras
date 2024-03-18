@@ -36,20 +36,57 @@ function partition(A, lo, hi) {
     console.log('j', j)
 
     while (true) {
-        // Move the left index to the right at least once and while the element at
-        // the left index is less than the pivot
+
+        // Move the left index to the right at least once and 
+        // while the element at the left index is less than the pivot
+        // EXPLAINED : 
+        // move index along from left to right 
+        // until song at index is greater than pivot
         do {
             i++;
-            console.log('i++', i)
+            // CHANGE PAIR TO BE A[i] and PIVOT
+            // RENDER :
+                // <QuizSongOption
+                //     track={A[i]}
+                //     onClick={() => setLeftOverPivot(true)}
+                //  />
 
+                // <QuizSongOption
+                //     track={pivot}
+                //     onClick={() => setLeftOverPivot(false)}
+                //  />
+
+            // IF USER CLICKS A[i], --> A[i] > pivot
+            // IF USER CLICKS pivot, --> A[i] < pivot
         } while (A[i] < pivot);
 
-        // Move the right index to the left at least once and while the element at
-        // the right index is greater than the pivot
+
+
+        // Move the right index to the left at least once 
+        // and while the element at the right index is greater than the pivot
+        // EXPLAINED : 
+        // move index along from right to left 
+        // until song at index is greater than pivot
         do {
             j--;
-            console.log('       j++', j)
+            // CHANGE PAIR TO BE PIVOT and A[j] 
+            // RENDER :
+
+                // <QuizSongOption
+                //     track={pivot}
+                //     onClick={() => setRightOverPivot(false)}
+                //  />
+
+                // <QuizSongOption
+                //     track={A[j]}
+                //     onClick={() => setRightOverPivot(true)}
+                //  />
+
+            // IF USER CLICKS A[j], --> A[j] > pivot
+            // IF USER CLICKS pivot, --> A[j] < pivot
+
         } while (A[j] > pivot);
+
 
         // If the indices crossed, return
         if (i >= j) return j;
@@ -60,3 +97,33 @@ function partition(A, lo, hi) {
 }
 
 // to sort entire array  quicksort(A, 0, length(A) - 1)
+
+
+
+
+function renderOptions(track1, track2) {
+    // Render the options using QuizSongOption
+    // Set onClick handlers based on the comparison between track1 and track2
+    // For example:
+    
+    // <QuizSongOption
+    //     track={track1}
+    //     onClick={() => {
+    //         if (track1 > track2) {
+    //             // Handle case when track1 is greater than track2
+    //         } else {
+    //             // Handle case when track2 is greater than track1
+    //         }
+    //     }}
+    // />
+    // <QuizSongOption
+    //     track={track2}
+    //     onClick={() => {
+    //         if (track2 > track1) {
+    //             // Handle case when track2 is greater than track1
+    //         } else {
+    //             // Handle case when track1 is greater than track2
+    //         }
+    //     }}
+    // />
+}
