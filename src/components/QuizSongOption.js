@@ -3,6 +3,14 @@ import '../styles/CSS/main.css';
 
 
 const QuizSongOption = ({ track, onClick }) => {
+
+    const [isActive, setIsActive] = useState(false);
+
+
+    const handleClick = () => {
+        setIsActive(true);
+    };
+
     if (!track) {
         return <></>
     } else {
@@ -28,10 +36,13 @@ const QuizSongOption = ({ track, onClick }) => {
         const albumColor = 'color-' + track.era;
 
         return (
-            
-            <div onClick={onClick} className={` quiz-option-container ${albumBackgroundColor}`} >
+            <div className={` quiz-option-container ${albumBackgroundColor} ${isActive ? 'activeSongOption' : ''}`}>
+
+            <div onClick={onClick} className={` quiz-option ${albumBackgroundColor} ${isActive ? 'activeSongOption' : ''}`} >
                 <p className="quiz-song-name" style={{color: '#fff'}}>{trackName}</p>
             </div>
+            </div>
+
         );
     }
 

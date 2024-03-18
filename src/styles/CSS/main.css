@@ -1215,7 +1215,7 @@
   }
 }
 
-.quiz-option-container {
+.quiz-option {
   width: 210px;
   height: 55px;
   display: flex;
@@ -1227,7 +1227,7 @@
   margin: 0.5rem;
 }
 @media (min-width: 370px) {
-  .quiz-option-container {
+  .quiz-option {
     width: 142px;
     margin: 0.15rem;
     height: 55px;
@@ -1236,7 +1236,7 @@
   }
 }
 @media (min-width: 470px) {
-  .quiz-option-container {
+  .quiz-option {
     width: 182px;
     margin: 0.15rem;
     height: 55px;
@@ -1245,7 +1245,7 @@
   }
 }
 @media (min-width: 570px) {
-  .quiz-option-container {
+  .quiz-option {
     width: 235px;
     margin: 0.15rem;
     height: 55px;
@@ -1254,7 +1254,7 @@
   }
 }
 @media (min-width: 768px) {
-  .quiz-option-container {
+  .quiz-option {
     margin: 0.5rem;
     width: 260px;
     height: 55px;

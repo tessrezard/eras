@@ -4,7 +4,7 @@ import { setPreferenceSortedTracks, updatePreferencePoints } from '../store/slic
 import '../styles/CSS/main.css';
 import Condensed from "./Condensed";
 import QuizSongOption from "./QuizSongOption";
-import { getPair } from "../app/utilities/getPair";
+import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 import FullSizeAllTracks from "./FullSizeAllTracks";
 import QuizContent from "./QuizContent";
 
@@ -12,9 +12,15 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
 
     const [localRankedTracks, setLocalRankedTracks] = useState([...rankedTracks]);
 
+    console.log(localRankedTracks.length / 2);
     //  console.log('rankedTracks', rankedTracks.length);
     //  console.log('localRankedTracks', localRankedTracks.length);
+    const [randomPivotIndex, setRandomPivotIndex] = useState();
+    const [pivot, setPivot] = useState();
+    const [likeMore, setLikeMore] = useState([]);
+    const [likeLess, setLikeLess] = useState([]);
 
+    // IF LIKEMORE OR LIKELESS IS DIVERGING TOO MUCH IN TERMS OF SIZE, THEN THE PIVOT WAS POORLY CHOSEN! RANKS THE PIVOT WHERE IT SHOULD BE AND GET A NEW PIVOT ADD it to the one with hte least songs, be that the top or bottom. 
     const [remainingTracks, setRemainingTracks] = useState([...rankedTracks]);
 
     //  const dispatch = useDispatch();
@@ -26,24 +32,22 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
 
     const [track1, setTrack1] = useState(null);
     const [track2, setTrack2] = useState(null);
-
-
-
+    const [pairs, setPairs] = useState(splitIntoPairs(localRankedTracks, remainingTracks));
+    console.log(pairs[0].length);
     // const updateTrackPoints = (trackId, points) => {
     //     dispatch(updatePreferencePoints({ trackId, points }));
     // };
 
 
+
+    // const pairs = splitIntoPairs(localRankedTracks, remainingTracks);
+
+    // console.log(pairs.length)
+    // console.log(pairs.map(pair => console.log(pair)))
+
     // -------------------------------------- SORTING LOGIC --------------------------------------
     const initializeSorting = () => {
 
-        //--------- INITIAL PAIRING ----------
-        const callGetPair = getPair(remainingTracks, localRankedTracks);
-        const [updatedRemainingTracks, pairTrack1, pairTrack2] = callGetPair;
-        setTrackPair([pairTrack1, pairTrack2]);
-        setTrack1(pairTrack1.track);
-        setTrack2(pairTrack2.track);
-        setRemainingTracks(updatedRemainingTracks);
     };
 
 
@@ -52,41 +56,21 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
     // -------------------------------------- HANDLE CLICK LOGIC --------------------------------------
 
     const handlePreference = (preferredTrack, lessPreferredTrack) => {
-
-        // UPDATE POINTS ACCORDING TO PREFERENCE
-        const addPoint = localRankedTracks[preferredTrack.eraIndex].points + 10;
-        const removePoint = localRankedTracks[lessPreferredTrack.eraIndex].points - 10;
-
-        // console.log(addPoint,'addPoint' )
-        // console.log(removePoint,'removePoint' )
-
-        setLocalRankedTracks(prev => {
-            console.log('prev', prev);
-            const updatedTracks = [...prev]; // Create a copy of the array
-            updatedTracks[preferredTrack.eraIndex].points = addPoint; // Update preferredTrack points
-            updatedTracks[lessPreferredTrack.eraIndex].points = removePoint; // Update lessPreferredTrack points
-            return updatedTracks; // Return the updated array
-        });
-
-        // GET NEW PAIR
-        if (remainingTracks.length > 2) {
-            const callGetNewPair = getPair(remainingTracks, localRankedTracks);
-            const [updatedRemainingTracks, newPairTrack1, newPairTrack2] = callGetNewPair;
-            setTrackPair([newPairTrack1, newPairTrack2]);
-            setTrack1(newPairTrack1.track);
-            setTrack2(newPairTrack2.track);
-            setRemainingTracks(updatedRemainingTracks);
-        }
-        // console.log('localRankedTracks', localRankedTracks);
-        setRankedTracks(localRankedTracks);
+        
     };
 
 
 
     // initialize sorting on component mounting
     useEffect(() => {
-        initializeSorting();
+        let randomIndex = Math.floor(Math.random() * tracks.length);
+        setRandomPivotIndex(randomIndex);
+        setPivot(tracks[randomIndex]);
+initializeSorting();
     }, []);
+
+
+
 
     // if filters get changes, this will reset the sort
     useEffect(() => {
@@ -107,24 +91,31 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
     return (
         <>
 
-            <QuizContent tracks={tracks} />
             <div className="quiz-container" >
-                {trackPair.length === 2 && (
-                    <>
-                        <h2>Which song do you prefer?</h2>
-                        <div className="quiz-options-container">
-                            <QuizSongOption
-                                track={track1}
-                                onClick={() => handlePreference(trackPair[0], trackPair[1])}
-                            />
-                            <QuizSongOption
-                                track={track2}
-                                onClick={() => handlePreference(trackPair[1], trackPair[0])}
-                            />
-                        </div>
 
-                    </>
-                )}
+                {pairs.map(pair => {
+                    if (pair.length >= 2) {
+                        return (
+                            <>
+                                <div className="quiz-options-container">
+                                    <QuizSongOption
+                                        track={pair[0].track}
+                                        onClick={() => handlePreference(pair[0].track, pair[1].track)}
+                                    />
+                                    <QuizSongOption
+                                        track={pair[1].track}
+                                        onClick={() => handlePreference(pair[1].track, pair[0].track)}
+                                    />
+                                </div>
+                            </>
+
+                        )
+                    }
+
+                })}
+
+
+
                 {trackPair.length === 1 && (
                     <p>Only one track left. Last choice!</p>
                 )}

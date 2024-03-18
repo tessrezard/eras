@@ -3,14 +3,17 @@ import '../styles/CSS/main.css';
 import { filterOptions, filterTracks } from "../app/utilities/filterTracks";
 import CheckBox from "./FiltersCheckbox";
 
-const Filters = ({ inputTracks, setFiltered }) => {
+const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
 
-    const [selectedFilters, setSelectedFilters] = useState([]);
+    const [selectedFilters, setSelectedFilters] = useState(defaultFilters);
     const [showOptions, setShowOptions] = useState(false);
+
 
     const handleShowClick = () => {
         setShowOptions(prev => !prev);
     };
+
+
 
     useEffect(() => {
         setFiltered(filterTracks(inputTracks, selectedFilters));
@@ -37,7 +40,6 @@ const Filters = ({ inputTracks, setFiltered }) => {
                                     <CheckBox filter={filter} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
                                 </div>
                             )
-
                         })}
                                             </div>
 
