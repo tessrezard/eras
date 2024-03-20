@@ -25,25 +25,48 @@ const QuizPage = () => {
   const [rankedTracks, setRankedTracks] = useState(defaultPointsTracks);
   const [tracksToSort, setTracksToSort] = useState([...filteredTracks]);
 
+  const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
 
-const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
-
-//   let myArray = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 628,2345, 23, 2, 344, 45,556, 66 ];
-// quicksort(myArray, 0, myArray.length - 1);
-// console.log(myArray);
+  //   let myArray = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 628,2345, 23, 2, 344, 45,556, 66 ];
+  // quicksort(myArray, 0, myArray.length - 1);
+  // console.log(myArray);
 
   useEffect(() => {
     setRankedTracks(defaultPointsTracks);
   }, [filteredTracks])
 
+  useEffect(() => {
+    // Update rankedTracks after filteredTracks has been updated
+    const defaultPoints = filteredTracks.length / 2;
+    const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
+    setRankedTracks(defaultPointsTracks);
+    setTracksToSort(filteredTracks);
+  }, [filteredTracks]);
 
+  console.log(filteredTracks);
 
   return (
     <>
-      <OrderOptions sorting='Preference' orderOption={orderOption} setOrderOption={setOrderOption} />
-      <Filters inputTracks={allTracks} setFiltered={setFilteredTracks} defaultFilters={defaultFilters}/>
+      <OrderOptions
+        sorting='Preference'
+        orderOption={orderOption}
+        setOrderOption={setOrderOption}
+      />
 
-      <Quiz tracks={filteredTracks} setRankedTracks={setRankedTracks} rankedTracks={rankedTracks} setTracksToSort={setTracksToSort} />
+      <Filters
+        inputTracks={allTracks}
+        setFiltered={setFilteredTracks}
+        defaultFilters={defaultFilters}
+      />
+
+      {filteredTracks ? (<><Quiz
+        tracks={filteredTracks}
+        setRankedTracks={setRankedTracks}
+        rankedTracks={rankedTracks}
+        setTracksToSort={setTracksToSort}
+      /></>) : (<></>)}
+
+
       <h3>tracks to sort {tracksToSort.length}</h3>
       <h3>filtered {filteredTracks.length}</h3>
       <h3> ranked {rankedTracks.length}</h3>

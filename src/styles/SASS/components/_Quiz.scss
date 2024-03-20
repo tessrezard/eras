@@ -9,11 +9,20 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-
+    align-items: center;
+    border: 3px solid $lead-color;
+    margin: 0.2rem;
     @media (min-width: $small-phone) {
         flex-flow: row;
         justify-content: space-evenly;
     }
+}
+
+.quiz-option-container {
+   border-radius: $rounded-rectangle;
+   margin: 0.75rem 0.25rem;
+   padding: 0.25rem;
+
 }
 
 .quiz-option {
@@ -25,7 +34,7 @@
     text-align: center;
     padding: 0.5rem;
     border-radius: $rounded-rectangle;
-    margin: 0.5rem;
+    margin: 0.25rem 0.25rem;
 
     @media (min-width: $small-phone) {
         width: 142px;
@@ -49,7 +58,7 @@
         justify-content: space-evenly;
     } 
     @media (min-width: $tablet) {
-        margin: 0.5rem;
+        margin: 0.25rem;
         width: 260px;
         height: 55px;
         flex-flow: row;

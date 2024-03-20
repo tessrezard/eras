@@ -54,5 +54,24 @@
     .border-right-#{$name}-single {
       border-right: solid 3px fade-out($color, 0.15);
     }
+
+
+
+    // Border colors
+    .active-border-#{$name} {
+      border: solid 4px $color;
+    }
+
+    .active-border-#{$name}-album {
+      border: solid 4px  darken($color, 9%);
+    }
+
+    .active-border-#{$name}-extended {
+      border: solid 4px  $color;
+    }
+  
+    .active-border-#{$name}-single {
+      border: solid 4px fade-out($color, 0.15);
+    }
   }
   

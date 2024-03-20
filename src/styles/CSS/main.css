@@ -48,6 +48,22 @@
   border-right: solid 3px rgba(237, 236, 232, 0.85);
 }
 
+.active-border-theTorturedPoetsDepartment {
+  border: solid 4px rgb(237, 236, 232);
+}
+
+.active-border-theTorturedPoetsDepartment-album {
+  border: solid 4px #d9d7ce;
+}
+
+.active-border-theTorturedPoetsDepartment-extended {
+  border: solid 4px rgb(237, 236, 232);
+}
+
+.active-border-theTorturedPoetsDepartment-single {
+  border: solid 4px rgba(237, 236, 232, 0.85);
+}
+
 .background-color-midnights {
   background-color: #2536a4;
 }
@@ -94,6 +110,22 @@
 
 .border-right-midnights-single {
   border-right: solid 3px rgba(37, 54, 164, 0.85);
+}
+
+.active-border-midnights {
+  border: solid 4px #2536a4;
+}
+
+.active-border-midnights-album {
+  border: solid 4px #1d2a7f;
+}
+
+.active-border-midnights-extended {
+  border: solid 4px #2536a4;
+}
+
+.active-border-midnights-single {
+  border: solid 4px rgba(37, 54, 164, 0.85);
 }
 
 .background-color-evermore {
@@ -144,6 +176,22 @@
   border-right: solid 3px rgba(175, 112, 57, 0.85);
 }
 
+.active-border-evermore {
+  border: solid 4px #af7039;
+}
+
+.active-border-evermore-album {
+  border: solid 4px #8c5a2e;
+}
+
+.active-border-evermore-extended {
+  border: solid 4px #af7039;
+}
+
+.active-border-evermore-single {
+  border: solid 4px rgba(175, 112, 57, 0.85);
+}
+
 .background-color-folklore {
   background-color: #aeb4b2;
 }
@@ -190,6 +238,22 @@
 
 .border-right-folklore-single {
   border-right: solid 3px rgba(174, 180, 178, 0.85);
+}
+
+.active-border-folklore {
+  border: solid 4px #aeb4b2;
+}
+
+.active-border-folklore-album {
+  border: solid 4px #969e9b;
+}
+
+.active-border-folklore-extended {
+  border: solid 4px #aeb4b2;
+}
+
+.active-border-folklore-single {
+  border: solid 4px rgba(174, 180, 178, 0.85);
 }
 
 .background-color-lover {
@@ -240,6 +304,22 @@
   border-right: solid 3px rgba(228, 176, 245, 0.85);
 }
 
+.active-border-lover {
+  border: solid 4px #e4b0f5;
+}
+
+.active-border-lover-album {
+  border: solid 4px #d687f0;
+}
+
+.active-border-lover-extended {
+  border: solid 4px #e4b0f5;
+}
+
+.active-border-lover-single {
+  border: solid 4px rgba(228, 176, 245, 0.85);
+}
+
 .background-color-reputation {
   background-color: rgb(4, 32, 27);
 }
@@ -286,6 +366,22 @@
 
 .border-right-reputation-single {
   border-right: solid 3px rgba(4, 32, 27, 0.85);
+}
+
+.active-border-reputation {
+  border: solid 4px rgb(4, 32, 27);
+}
+
+.active-border-reputation-album {
+  border: solid 4px black;
+}
+
+.active-border-reputation-extended {
+  border: solid 4px rgb(4, 32, 27);
+}
+
+.active-border-reputation-single {
+  border: solid 4px rgba(4, 32, 27, 0.85);
 }
 
 .background-color-nineteenEightyNine {
@@ -336,6 +432,22 @@
   border-right: solid 3px rgba(154, 185, 242, 0.85);
 }
 
+.active-border-nineteenEightyNine {
+  border: solid 4px #9ab9f2;
+}
+
+.active-border-nineteenEightyNine-album {
+  border: solid 4px #719ded;
+}
+
+.active-border-nineteenEightyNine-extended {
+  border: solid 4px #9ab9f2;
+}
+
+.active-border-nineteenEightyNine-single {
+  border: solid 4px rgba(154, 185, 242, 0.85);
+}
+
 .background-color-red {
   background-color: #dd2e2e;
 }
@@ -382,6 +494,22 @@
 
 .border-right-red-single {
   border-right: solid 3px rgba(221, 46, 46, 0.85);
+}
+
+.active-border-red {
+  border: solid 4px #dd2e2e;
+}
+
+.active-border-red-album {
+  border: solid 4px #be1f1f;
+}
+
+.active-border-red-extended {
+  border: solid 4px #dd2e2e;
+}
+
+.active-border-red-single {
+  border: solid 4px rgba(221, 46, 46, 0.85);
 }
 
 .background-color-speakNow {
@@ -432,6 +560,22 @@
   border-right: solid 3px rgba(186, 145, 237, 0.85);
 }
 
+.active-border-speakNow {
+  border: solid 4px #ba91ed;
+}
+
+.active-border-speakNow-album {
+  border: solid 4px #a16ae7;
+}
+
+.active-border-speakNow-extended {
+  border: solid 4px #ba91ed;
+}
+
+.active-border-speakNow-single {
+  border: solid 4px rgba(186, 145, 237, 0.85);
+}
+
 .background-color-fearless {
   background-color: #f5ce6d;
 }
@@ -478,6 +622,22 @@
 
 .border-right-fearless-single {
   border-right: solid 3px rgba(245, 206, 109, 0.85);
+}
+
+.active-border-fearless {
+  border: solid 4px #f5ce6d;
+}
+
+.active-border-fearless-album {
+  border: solid 4px #f2c042;
+}
+
+.active-border-fearless-extended {
+  border: solid 4px #f5ce6d;
+}
+
+.active-border-fearless-single {
+  border: solid 4px rgba(245, 206, 109, 0.85);
 }
 
 .background-color-taylorSwift {
@@ -528,6 +688,22 @@
   border-right: solid 3px rgba(127, 213, 224, 0.85);
 }
 
+.active-border-taylorSwift {
+  border: solid 4px #7fd5e0;
+}
+
+.active-border-taylorSwift-album {
+  border: solid 4px #5ac9d7;
+}
+
+.active-border-taylorSwift-extended {
+  border: solid 4px #7fd5e0;
+}
+
+.active-border-taylorSwift-single {
+  border: solid 4px rgba(127, 213, 224, 0.85);
+}
+
 .background-color-carolina {
   background-color: #c3baaa;
 }
@@ -574,6 +750,22 @@
 
 .border-right-carolina-single {
   border-right: solid 3px rgba(195, 186, 170, 0.85);
+}
+
+.active-border-carolina {
+  border: solid 4px #c3baaa;
+}
+
+.active-border-carolina-album {
+  border: solid 4px #b0a48f;
+}
+
+.active-border-carolina-extended {
+  border: solid 4px #c3baaa;
+}
+
+.active-border-carolina-single {
+  border: solid 4px rgba(195, 186, 170, 0.85);
 }
 
 .background-color-christmas {
@@ -624,6 +816,22 @@
   border-right: solid 3px rgba(28, 99, 54, 0.85);
 }
 
+.active-border-christmas {
+  border: solid 4px #1c6336;
+}
+
+.active-border-christmas-album {
+  border: solid 4px #123f22;
+}
+
+.active-border-christmas-extended {
+  border: solid 4px #1c6336;
+}
+
+.active-border-christmas-single {
+  border: solid 4px rgba(28, 99, 54, 0.85);
+}
+
 .background-color-renegade {
   background-color: #638d98;
 }
@@ -670,6 +878,22 @@
 
 .border-right-renegade-single {
   border-right: solid 3px rgba(99, 141, 152, 0.85);
+}
+
+.active-border-renegade {
+  border: solid 4px #638d98;
+}
+
+.active-border-renegade-album {
+  border: solid 4px #51737c;
+}
+
+.active-border-renegade-extended {
+  border: solid 4px #638d98;
+}
+
+.active-border-renegade-single {
+  border: solid 4px rgba(99, 141, 152, 0.85);
 }
 
 @keyframes colorCycle {
@@ -1207,12 +1431,21 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(237, 236, 232);
+  margin: 0.2rem;
 }
 @media (min-width: 370px) {
   .quiz-options-container {
     flex-flow: row;
     justify-content: space-evenly;
   }
+}
+
+.quiz-option-container {
+  border-radius: 19px;
+  margin: 0.75rem 0.25rem;
+  padding: 0.25rem;
 }
 
 .quiz-option {
@@ -1224,7 +1457,7 @@
   text-align: center;
   padding: 0.5rem;
   border-radius: 19px;
-  margin: 0.5rem;
+  margin: 0.25rem 0.25rem;
 }
 @media (min-width: 370px) {
   .quiz-option {
@@ -1255,7 +1488,7 @@
 }
 @media (min-width: 768px) {
   .quiz-option {
-    margin: 0.5rem;
+    margin: 0.25rem;
     width: 260px;
     height: 55px;
     flex-flow: row;

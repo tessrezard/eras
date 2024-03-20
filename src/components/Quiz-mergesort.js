@@ -7,121 +7,110 @@ import QuizSongOption from "./QuizSongOption";
 import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 import FullSizeAllTracks from "./FullSizeAllTracks";
 import QuizContent from "./QuizContent";
+import InitialOptions from "./Quiz-InitialOptions";
+import NextStep from "./Quiz-nextStepOptions";
+import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
+
 
 const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
 
-    const [localRankedTracks, setLocalRankedTracks] = useState([...rankedTracks]);
-
-    console.log(localRankedTracks.length / 2);
-    //  console.log('rankedTracks', rankedTracks.length);
-    //  console.log('localRankedTracks', localRankedTracks.length);
-    const [randomPivotIndex, setRandomPivotIndex] = useState();
-    const [pivot, setPivot] = useState();
-    const [likeMore, setLikeMore] = useState([]);
-    const [likeLess, setLikeLess] = useState([]);
-
-    // IF LIKEMORE OR LIKELESS IS DIVERGING TOO MUCH IN TERMS OF SIZE, THEN THE PIVOT WAS POORLY CHOSEN! RANKS THE PIVOT WHERE IT SHOULD BE AND GET A NEW PIVOT ADD it to the one with hte least songs, be that the top or bottom. 
+    const [localRankedTracks, setLocalRankedTracks] = useState([...tracks]);
     const [remainingTracks, setRemainingTracks] = useState([...rankedTracks]);
 
-    //  const dispatch = useDispatch();
-    // const preferenceSortedTracks = useSelector(state => state.preferenceSorted);
-    // const [orderOption, setOrderOption] = useState('eraOrderOption')
-    // const [sorting, setSorting] = useState("preference")
-
-    const [trackPair, setTrackPair] = useState([]);
-
-    const [track1, setTrack1] = useState(null);
-    const [track2, setTrack2] = useState(null);
     const [pairs, setPairs] = useState(splitIntoPairs(localRankedTracks, remainingTracks));
-    console.log(pairs[0].length);
-    // const updateTrackPoints = (trackId, points) => {
-    //     dispatch(updatePreferencePoints({ trackId, points }));
-    // };
+    const [rankedPairs, setRankedPairs] = useState([]);
+
+    const [completedRankedPairs, setCompletedRankedPairs] = useState([]);
 
 
+    const [ latestSortedTracks, setLatestSortedTracks ] = useState([rankedPairs]);
 
-    // const pairs = splitIntoPairs(localRankedTracks, remainingTracks);
+    const [step1, setStep1] = useState(true);
+    const [step2, setStep2] = useState(false);
 
-    // console.log(pairs.length)
-    // console.log(pairs.map(pair => console.log(pair)))
-
-    // -------------------------------------- SORTING LOGIC --------------------------------------
-    const initializeSorting = () => {
-
+    // Function to update rankedPairs
+    const updateRankedPairs = (updatedRankedPairs) => {
+        setRankedPairs(updatedRankedPairs);
+        setLatestSortedTracks(updatedRankedPairs)
     };
 
-
-
-
-    // -------------------------------------- HANDLE CLICK LOGIC --------------------------------------
-
-    const handlePreference = (preferredTrack, lessPreferredTrack) => {
-        
-    };
-
-
-
-    // initialize sorting on component mounting
-    useEffect(() => {
-        let randomIndex = Math.floor(Math.random() * tracks.length);
-        setRandomPivotIndex(randomIndex);
-        setPivot(tracks[randomIndex]);
-initializeSorting();
-    }, []);
-
-
-
+    const updateLatestSortedTracks = (sortedPiece) => {
+        setLatestSortedTracks([...latestSortedTracks, sortedPiece]);
+    }
 
     // if filters get changes, this will reset the sort
     useEffect(() => {
         setRemainingTracks(tracks);
-        setLocalRankedTracks(rankedTracks)
+        setLocalRankedTracks(rankedTracks);
+        setPairs(splitIntoPairs(tracks, remainingTracks))
     }, [tracks])
 
-    // when a track gets sorted, update states. 
     useEffect(() => {
-        // setRankedTracks(localRankedTracks);
-        setTracksToSort(remainingTracks);
-    }, [remainingTracks])
+        setRankedTracks(rankedPairs);
+    }, [rankedPairs])
 
-    useEffect(() => {
-        setRankedTracks(localRankedTracks);
-    }, [localRankedTracks])
+    //not working? 
+    if (rankedPairs.length >= (tracks.length / 2)) {
+        setCompletedRankedPairs(rankedPairs);
+    }
+
+    const handleNextStep = () => {
+        if (step2) { }
+        if (step1) {
+            setStep1(false);
+            setStep2(true);
+        }
+    }
+
+console.log('latestSortedTracks', latestSortedTracks);
+
 
     return (
         <>
 
             <div className="quiz-container" >
+                <button onClick={() => handleNextStep()}>Next step</button>
+                {step1 ? (
+                    <>
+                        <p>step 1</p>
+                        {pairs.map((pair, index) => {
+                            return (
+                                <InitialOptions
+                                    pair={pair}
+                                    index={index}
+                                    rankedPairs={rankedPairs}
+                                    onUpdateRankedPairs={updateRankedPairs}
+                                    key={index}
+                                />
+                            )
+                        })}
+                    </>
+                ) : (<></>)}
 
-                {pairs.map(pair => {
-                    if (pair.length >= 2) {
-                        return (
-                            <>
-                                <div className="quiz-options-container">
-                                    <QuizSongOption
-                                        track={pair[0].track}
-                                        onClick={() => handlePreference(pair[0].track, pair[1].track)}
-                                    />
-                                    <QuizSongOption
-                                        track={pair[1].track}
-                                        onClick={() => handlePreference(pair[1].track, pair[0].track)}
-                                    />
-                                </div>
-                            </>
+                {step2 ? (
+                    <>
+                        <p>step 2</p>
+                        {nextStepOfSorting(latestSortedTracks).map((piece, index) => {
+                            if (piece.length % 2 === 0){
+                                return (
+                                    <>
+                                        <NextStep 
+                                            piece={piece}
+                                            index={index}
+                                            key={index}
+                                            updateLatestSortedTracks={updateLatestSortedTracks}
+                                            />
+                                    </>
+                                )
+                            }
+                            
+                        })}
+                    </>
+                ) : (<></>)}
 
-                        )
-                    }
-
-                })}
 
 
 
-                {trackPair.length === 1 && (
-                    <p>Only one track left. Last choice!</p>
-                )}
-                {trackPair.length === 0 && (
-                    <p>All tracks have been sorted. </p>
-                )}
             </div>
 
             {/* <Condensed tracks={localRankedTracks} sortType='preference' />
