@@ -43,7 +43,6 @@ const QuizPage = () => {
     setTracksToSort(filteredTracks);
   }, [filteredTracks]);
 
-  console.log(filteredTracks);
 
   return (
     <>

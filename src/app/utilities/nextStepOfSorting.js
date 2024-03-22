@@ -7,7 +7,7 @@ export const nextStepOfSorting = (rankedArr) => {
         for (let i = 0; i < rankedArr.length; i += pieceSize) {
             pieces.push(rankedArr.slice(i, i + pieceSize));
         }
-        console.log('pieces', pieces);
+        console.log('IN UTILITIES FUNTION : pieces', pieces);
         return pieces;
     }
 }

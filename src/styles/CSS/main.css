@@ -1434,6 +1434,7 @@
   align-items: center;
   border: 3px solid rgb(237, 236, 232);
   margin: 0.2rem;
+  width: 700px;
 }
 @media (min-width: 370px) {
   .quiz-options-container {
@@ -1498,6 +1499,62 @@
 
 .quiz-song-name {
   font-size: 1rem;
+}
+
+.quiz-both-stacks {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 1rem;
+  width: 700px;
+  height: 100px;
+}
+
+.quiz-stack-group-container {
+  position: absolute;
+  height: 100px;
+  background-color: aqua;
+}
+
+.quiz-stack-group-A {
+  left: 0;
+}
+
+.quiz-stack-group-B {
+  left: 380px;
+}
+
+.quiz-stack {
+  position: relative;
+  opacity: 0.35;
+}
+
+.quiz-stack-current-song {
+  all: unset;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  transition: all 100ms ease;
+  border: 0;
+  padding: 0;
+  background-color: 0;
+}
+.quiz-stack-current-song:hover {
+  top: -5px;
+  transition: all 100ms ease;
+}
+.quiz-stack-current-song:active {
+  top: 3px;
+  transition: all 900ms ease;
+}
+
+.quiz-stack-item-container {
+  position: "absolute";
+}
+
+.quiz-sorted-item {
+  padding: 0;
+  margin: 0.25rem;
 }
 
 .options-pill-whole-container {

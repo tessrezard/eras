@@ -4,9 +4,12 @@ import { setPreferenceSortedTracks, updatePreferencePoints } from '../store/slic
 import '../styles/CSS/main.css';
 import Condensed from "./Condensed";
 import QuizSongOption from "./QuizSongOption";
+import QuizStackedOption from "./QuizStackedOption";
 import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 import FullSizeAllTracks from "./FullSizeAllTracks";
 import QuizContent from "./QuizContent";
+import { isAbsolute } from "path-browserify";
+import QuizSortedItem from "./QuizSortedItem";
 
 
 // 
@@ -25,9 +28,6 @@ const NextStep = ({ piece, index, updateLatestSortedTracks }) => {
     const [trackA, setTrackA] = useState(pieceCopy[groupA][indexTrackA].track);
     const [trackB, setTrackB] = useState(pieceCopy[groupB][indexTrackB].track);
 
-
-    // const pieceAlreadySorted =  piece.length % 2 === 1;
-    // console.log('pieceAlreadySorted', pieceAlreadySorted );
 
     // figure out how many elements in the piece ( to know when they have all been sorted. )
     let totalElements = 0;
@@ -59,7 +59,6 @@ const NextStep = ({ piece, index, updateLatestSortedTracks }) => {
                 }
                 break;
             case 'B':
-                console.log(indexTrackB);
                 if (pieceCopy[groupB].length > indexTrackB + 1) {
                     setIndexTrackB(indexTrackB + 1);
                 }
@@ -67,39 +66,92 @@ const NextStep = ({ piece, index, updateLatestSortedTracks }) => {
             default:
                 break;
         }
-        
+
     }
 
     useEffect(() => {
-        if (sortedPiece.length == totalElements){
+        if (sortedPiece.length == totalElements) {
             updateLatestSortedTracks(sortedPiece);
         }
     }, [sortedPiece])
 
+    const renderStackA = pieceCopy[groupA].map((track, index) => {
+        if (index > indexTrackA) {
+            return (
+                <div key={index}>
+                    <QuizStackedOption
+                        track={track.track}
+                        group='A'
+                        index={index}
+                        position={index - indexTrackA}
+                    />
+                </div>); // Display the number in JSX if index < stopIndex
+        }
+        return null; // Return null for elements beyond the stopIndex
+    });
 
+    const renderStackB = pieceCopy[groupB].map((track, index) => {
+        if (index > indexTrackB) {
+            return (
+                <div key={index}>
+                    <QuizStackedOption
+                        track={track.track}
+                        group='B'
+                        index={index}
+                        position={index - indexTrackB}
+                    />
+                </div>); // Display the number in JSX if index < stopIndex
+        }
+        return null; // Return null for elements beyond the stopIndex
+    });
 
     return (
         <>
             <div className="quiz-options-container">
-                <QuizSongOption
-                    track={trackA}
-                    onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A')}
-                />
 
-                <p>vs</p>
+                <div className="quiz-both-stacks">
 
-                <QuizSongOption
-                    track={trackB}
-                    onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B')}
-                />
+                    <div className="quiz-stack-group-container quiz-stack-group-A">
+                        <div className="quiz-stack">
+                            {renderStackA}
+                        </div>
+                        <button className="quiz-stack-current-song">
+                            <QuizSongOption
+                                track={trackA}
+                                onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A')}
+                            />
+                        </button>
+                    </div>
+
+                    <p>vs</p>
+
+                    <div className="quiz-stack-group-container quiz-stack-group-B">
+                        <div className="quiz-stack">
+                            {renderStackB}
+                        </div>
+
+                        <button className="quiz-stack-current-song">
+                            <QuizSongOption
+                                track={trackB}
+                                onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B')}
+                            /> 
+                            </button>
+                    </div>
+
+                </div>
+
             </div>
 
 
+<div>
+
             {sortedPiece.map((item, index) => {
                 return (
-                    <p>{index + 1} : {item.track.name}</p>
+                    <QuizSortedItem item={item} index={index}/>
                 )
             })}
+            </div>
+
         </>
     )
 }

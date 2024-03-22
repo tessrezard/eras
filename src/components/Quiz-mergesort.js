@@ -23,11 +23,11 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
     const [completedRankedPairs, setCompletedRankedPairs] = useState([]);
 
 
-    const [ latestSortedTracks, setLatestSortedTracks ] = useState([rankedPairs]);
-
+    const [latestSortedTracks, setLatestSortedTracks] = useState([rankedPairs]);
+    const [addUpSortedPieces, setAddUpSortedPieces] = useState([]);
     const [step1, setStep1] = useState(true);
     const [step2, setStep2] = useState(false);
-
+    let toSort = nextStepOfSorting(latestSortedTracks);
     // Function to update rankedPairs
     const updateRankedPairs = (updatedRankedPairs) => {
         setRankedPairs(updatedRankedPairs);
@@ -35,7 +35,15 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
     };
 
     const updateLatestSortedTracks = (sortedPiece) => {
+        console.log('----------in update lastest tracks-------');
+        setAddUpSortedPieces([...addUpSortedPieces, sortedPiece]);
+
         setLatestSortedTracks([...latestSortedTracks, sortedPiece]);
+    }
+
+    if (addUpSortedPieces.length == (latestSortedTracks.length - latestSortedTracks % 2)){
+        setLatestSortedTracks(addUpSortedPieces);
+        setAddUpSortedPieces([]);
     }
 
     // if filters get changes, this will reset the sort
@@ -62,8 +70,13 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
         }
     }
 
-console.log('latestSortedTracks', latestSortedTracks);
+    console.log('latestSortedTracks', latestSortedTracks);
+    console.log('addUpSortedPieces', addUpSortedPieces);
+    console.log('addUpSortedPieces.length', addUpSortedPieces.length);
 
+    useEffect(() => {
+         toSort = nextStepOfSorting(latestSortedTracks)
+            }, [latestSortedTracks])
 
     return (
         <>
@@ -90,20 +103,20 @@ console.log('latestSortedTracks', latestSortedTracks);
                 {step2 ? (
                     <>
                         <p>step 2</p>
-                        {nextStepOfSorting(latestSortedTracks).map((piece, index) => {
-                            if (piece.length % 2 === 0){
+                        {toSort.map((piece, index) => {
+                            if (piece.length % 2 === 0) {
                                 return (
                                     <>
-                                        <NextStep 
+                                        <NextStep
                                             piece={piece}
                                             index={index}
                                             key={index}
                                             updateLatestSortedTracks={updateLatestSortedTracks}
-                                            />
+                                        />
                                     </>
                                 )
                             }
-                            
+
                         })}
                     </>
                 ) : (<></>)}
