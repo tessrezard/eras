@@ -13,7 +13,7 @@ import { prepForAudioFeatures } from "../app/utilities/prepForAudioFeatures";
 const SortedByPage = () => {
     const reverseTracks = reverseEraOrder(allTracks);
 
-    const [filteredTracks, setFilteredTracks] = useState([allTracks]);
+    const [filteredTracks, setFilteredTracks] = useState(allTracks);
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Duration")
     // const [showCondensed, setShowCondensed] = useState(true);

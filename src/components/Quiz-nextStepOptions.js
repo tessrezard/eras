@@ -143,7 +143,7 @@ const NextStep = ({ piece, index, updateLatestSortedTracks }) => {
             </div>
 
 
-<div>
+<div className="quiz-sorted-piece-list">
 
             {sortedPiece.map((item, index) => {
                 return (

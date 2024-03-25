@@ -5,7 +5,8 @@ import CheckBox from "./FiltersCheckbox";
 
 const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
 
-    const [selectedFilters, setSelectedFilters] = useState(defaultFilters);
+    // const [selectedFilters, setSelectedFilters] = useState(defaultFilters);
+    const [selectedFilters, setSelectedFilters] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
 
 

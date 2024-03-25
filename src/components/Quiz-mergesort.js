@@ -14,10 +14,10 @@ import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
 
 const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
 
-    const [localRankedTracks, setLocalRankedTracks] = useState([...tracks]);
+    const [localTracks, setLocalTracks] = useState([...tracks]);
     const [remainingTracks, setRemainingTracks] = useState([...rankedTracks]);
 
-    const [pairs, setPairs] = useState(splitIntoPairs(localRankedTracks, remainingTracks));
+    const [pairs, setPairs] = useState(splitIntoPairs(localTracks, remainingTracks));
     const [rankedPairs, setRankedPairs] = useState([]);
 
     const [completedRankedPairs, setCompletedRankedPairs] = useState([]);
@@ -49,7 +49,7 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
     // if filters get changes, this will reset the sort
     useEffect(() => {
         setRemainingTracks(tracks);
-        setLocalRankedTracks(rankedTracks);
+        setLocalTracks(rankedTracks);
         setPairs(splitIntoPairs(tracks, remainingTracks))
     }, [tracks])
 
@@ -126,8 +126,8 @@ const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {
 
             </div>
 
-            {/* <Condensed tracks={localRankedTracks} sortType='preference' />
-            <FullSizeAllTracks tracks={localRankedTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} /> */}
+            {/* <Condensed tracks={localTracks} sortType='preference' />
+            <FullSizeAllTracks tracks={localTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} /> */}
 
 
         </>

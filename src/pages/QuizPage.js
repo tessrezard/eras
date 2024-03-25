@@ -16,10 +16,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const QuizPage = () => {
 
-
-
+// for OrderOptions, to view tracks in era order or preference order 
   const [orderOption, setOrderOption] = useState('eraOrderOption')
-  const [filteredTracks, setFilteredTracks] = useState([...allTracks]);
+
+  // for Filters, initialize with allTracks from database 
+  const [filteredTracks, setFilteredTracks] = useState(allTracks);
+
+
   const defaultPoints = filteredTracks.length / 2;
   const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
   const [rankedTracks, setRankedTracks] = useState(defaultPointsTracks);
@@ -27,13 +30,7 @@ const QuizPage = () => {
 
   const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
 
-  //   let myArray = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 628,2345, 23, 2, 344, 45,556, 66 ];
-  // quicksort(myArray, 0, myArray.length - 1);
-  // console.log(myArray);
 
-  useEffect(() => {
-    setRankedTracks(defaultPointsTracks);
-  }, [filteredTracks])
 
   useEffect(() => {
     // Update rankedTracks after filteredTracks has been updated
@@ -42,6 +39,9 @@ const QuizPage = () => {
     setRankedTracks(defaultPointsTracks);
     setTracksToSort(filteredTracks);
   }, [filteredTracks]);
+
+  // I cant find the error that is causing issues with filteredTracks in quiz, so for now this catches those errors. 
+  const tracksForQuiz = filteredTracks.filter(track => track.eraIndex != -1);
 
 
   return (
@@ -58,20 +58,21 @@ const QuizPage = () => {
         defaultFilters={defaultFilters}
       />
 
-      {filteredTracks ? (<><Quiz
-        tracks={filteredTracks}
-        setRankedTracks={setRankedTracks}
-        rankedTracks={rankedTracks}
-        setTracksToSort={setTracksToSort}
-      /></>) : (<></>)}
+      <Condensed tracks={rankedTracks} sortType='preference' />
 
+      {tracksForQuiz ?
+        (<>
+          <Quiz
+            tracks={tracksForQuiz}
+            setRankedTracks={setRankedTracks}
+            rankedTracks={rankedTracks}
+            setTracksToSort={setTracksToSort}
+          />
+        </>) : (<></>)}
 
       <h3>tracks to sort {tracksToSort.length}</h3>
       <h3>filtered {filteredTracks.length}</h3>
       <h3> ranked {rankedTracks.length}</h3>
-
-
-
 
       <Condensed tracks={rankedTracks} sortType='preference' />
       <FullSizeAllTracks tracks={rankedTracks} sortType='preference' orderOption={orderOption} />
