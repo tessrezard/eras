@@ -61,14 +61,12 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
                         onClick={() => handleClick(0)}
                         isActive={activeIndex === 0}
                     />
-                    <p>{pair[0].eraIndex}</p>
                     <p>vs</p>
                     <QuizSongOption
                         track={pair[1].track}
                         onClick={() => handleClick(1)}
                         isActive={activeIndex === 1}
                     />
-                    <p>{pair[1].eraIndex}</p>
 
                 </div>
             </>

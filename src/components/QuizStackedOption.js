@@ -7,7 +7,7 @@ const QuizStackedOption = ({ track, group, index, position }) => {
     // is it pile a or pile b 
     // --> is it positions left(A) or right(B) 
 
-    console.log(track, group, index, position)
+    // console.log(track, group, index, position)
 
 
     let offset = (10 * position);

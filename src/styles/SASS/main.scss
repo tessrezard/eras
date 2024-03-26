@@ -49,7 +49,9 @@ ul {
 
 
 }
-
+p{
+    color: $lead-text-color;
+}
 
 // in root.js
 .main-container {

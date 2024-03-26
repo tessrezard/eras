@@ -3,13 +3,11 @@ import '../styles/CSS/main.css';
 
 function CheckBox({ filter, selectedFilters, setSelectedFilters }) {
 
-
-    // the checked & selected logic here is a little messy. 
     // to select a filter, you must deselect the checkbox. 
 
     const isChecked = !selectedFilters.includes(filter);
-
     const [checked, setChecked] = useState(true);
+
     const handleAddFilter = (filter) => {
         setSelectedFilters((prevSelected) => (
             [...prevSelected, filter]
@@ -51,4 +49,4 @@ function CheckBox({ filter, selectedFilters, setSelectedFilters }) {
     );
 
 }
- export default CheckBox;
+export default CheckBox;

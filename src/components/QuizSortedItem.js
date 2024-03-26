@@ -23,10 +23,11 @@ const QuizSortedItem = ({ item, index }) => {
     }
     const albumBackgroundColor = 'background-color-' + item.track.era + '-' + variant;
     const albumColor = 'color-' + item.track.era;
-    let albumActiveBorder = '';
+    let albumActiveBorder = 'active-border-' + item.track.era + '-' + variant;
+
 
     return (
-        <div >
+        <div className={`${albumActiveBorder} quiz-sorted-item-container`}>
             <p className={`quiz-sorted-item ${albumColor}`} >
                 {index + 1} : {item.track.name}
                 </p>

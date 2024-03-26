@@ -13,7 +13,7 @@
 }
 
 .background-color-theTorturedPoetsDepartment-single {
-  background-color: rgba(237, 236, 232, 0.75);
+  background-color: #fdfdfc;
 }
 
 .color-theTorturedPoetsDepartment {
@@ -29,7 +29,7 @@
 }
 
 .color-theTorturedPoetsDepartment-single {
-  color: rgba(237, 236, 232, 0.85);
+  color: white;
 }
 
 .border-right-theTorturedPoetsDepartment {
@@ -45,7 +45,7 @@
 }
 
 .border-right-theTorturedPoetsDepartment-single {
-  border-right: solid 3px rgba(237, 236, 232, 0.85);
+  border-right: solid 3px #fdfdfc;
 }
 
 .active-border-theTorturedPoetsDepartment {
@@ -61,7 +61,7 @@
 }
 
 .active-border-theTorturedPoetsDepartment-single {
-  border: solid 4px rgba(237, 236, 232, 0.85);
+  border: solid 4px #fdfdfc;
 }
 
 .background-color-midnights {
@@ -77,7 +77,7 @@
 }
 
 .background-color-midnights-single {
-  background-color: rgba(37, 54, 164, 0.75);
+  background-color: #2c40c1;
 }
 
 .color-midnights {
@@ -93,7 +93,7 @@
 }
 
 .color-midnights-single {
-  color: rgba(37, 54, 164, 0.85);
+  color: #4155d4;
 }
 
 .border-right-midnights {
@@ -109,7 +109,7 @@
 }
 
 .border-right-midnights-single {
-  border-right: solid 3px rgba(37, 54, 164, 0.85);
+  border-right: solid 3px #2c40c1;
 }
 
 .active-border-midnights {
@@ -125,7 +125,7 @@
 }
 
 .active-border-midnights-single {
-  border: solid 4px rgba(37, 54, 164, 0.85);
+  border: solid 4px #2c40c1;
 }
 
 .background-color-evermore {
@@ -141,7 +141,7 @@
 }
 
 .background-color-evermore-single {
-  background-color: rgba(175, 112, 57, 0.75);
+  background-color: #c38248;
 }
 
 .color-evermore {
@@ -157,7 +157,7 @@
 }
 
 .color-evermore-single {
-  color: rgba(175, 112, 57, 0.85);
+  color: #cd9767;
 }
 
 .border-right-evermore {
@@ -173,7 +173,7 @@
 }
 
 .border-right-evermore-single {
-  border-right: solid 3px rgba(175, 112, 57, 0.85);
+  border-right: solid 3px #c38248;
 }
 
 .active-border-evermore {
@@ -189,7 +189,7 @@
 }
 
 .active-border-evermore-single {
-  border: solid 4px rgba(175, 112, 57, 0.85);
+  border: solid 4px #c38248;
 }
 
 .background-color-folklore {
@@ -205,7 +205,7 @@
 }
 
 .background-color-folklore-single {
-  background-color: rgba(174, 180, 178, 0.75);
+  background-color: #c1c5c4;
 }
 
 .color-folklore {
@@ -221,7 +221,7 @@
 }
 
 .color-folklore-single {
-  color: rgba(174, 180, 178, 0.85);
+  color: #d6d9d8;
 }
 
 .border-right-folklore {
@@ -237,7 +237,7 @@
 }
 
 .border-right-folklore-single {
-  border-right: solid 3px rgba(174, 180, 178, 0.85);
+  border-right: solid 3px #c1c5c4;
 }
 
 .active-border-folklore {
@@ -253,71 +253,71 @@
 }
 
 .active-border-folklore-single {
-  border: solid 4px rgba(174, 180, 178, 0.85);
+  border: solid 4px #c1c5c4;
 }
 
 .background-color-lover {
-  background-color: #e4b0f5;
+  background-color: #e49afc;
 }
 
 .background-color-lover-extended {
-  background-color: #e4b0f5;
+  background-color: #e49afc;
 }
 
 .background-color-lover-album {
-  background-color: #d687f0;
+  background-color: #d86dfb;
 }
 
 .background-color-lover-single {
-  background-color: rgba(228, 176, 245, 0.75);
+  background-color: #edbdfd;
 }
 
 .color-lover {
-  color: #e4b0f5;
+  color: #e49afc;
 }
 
 .color-lover-album {
-  color: #d687f0;
+  color: #d86dfb;
 }
 
 .color-lover-extended {
-  color: #e4b0f5;
+  color: #e49afc;
 }
 
 .color-lover-single {
-  color: rgba(228, 176, 245, 0.85);
+  color: #f8e4fe;
 }
 
 .border-right-lover {
-  border-right: solid 3px #e4b0f5;
+  border-right: solid 3px #e49afc;
 }
 
 .border-right-lover-album {
-  border-right: solid 3px #d687f0;
+  border-right: solid 3px #d86dfb;
 }
 
 .border-right-lover-extended {
-  border-right: solid 3px #e4b0f5;
+  border-right: solid 3px #e49afc;
 }
 
 .border-right-lover-single {
-  border-right: solid 3px rgba(228, 176, 245, 0.85);
+  border-right: solid 3px #edbdfd;
 }
 
 .active-border-lover {
-  border: solid 4px #e4b0f5;
+  border: solid 4px #e49afc;
 }
 
 .active-border-lover-album {
-  border: solid 4px #d687f0;
+  border: solid 4px #d86dfb;
 }
 
 .active-border-lover-extended {
-  border: solid 4px #e4b0f5;
+  border: solid 4px #e49afc;
 }
 
 .active-border-lover-single {
-  border: solid 4px rgba(228, 176, 245, 0.85);
+  border: solid 4px #edbdfd;
 }
 
 .background-color-reputation {
@@ -333,7 +333,7 @@
 }
 
 .background-color-reputation-single {
-  background-color: rgba(4, 32, 27, 0.75);
+  background-color: #084036;
 }
 
 .color-reputation {
@@ -349,7 +349,7 @@
 }
 
 .color-reputation-single {
-  color: rgba(4, 32, 27, 0.85);
+  color: #0d6454;
 }
 
 .border-right-reputation {
@@ -365,7 +365,7 @@
 }
 
 .border-right-reputation-single {
-  border-right: solid 3px rgba(4, 32, 27, 0.85);
+  border-right: solid 3px #084036;
 }
 
 .active-border-reputation {
@@ -381,7 +381,7 @@
 }
 
 .active-border-reputation-single {
-  border: solid 4px rgba(4, 32, 27, 0.85);
+  border: solid 4px #084036;
 }
 
 .background-color-nineteenEightyNine {
@@ -397,7 +397,7 @@
 }
 
 .background-color-nineteenEightyNine-single {
-  background-color: rgba(154, 185, 242, 0.75);
+  background-color: #bacff6;
 }
 
 .color-nineteenEightyNine {
@@ -413,7 +413,7 @@
 }
 
 .color-nineteenEightyNine-single {
-  color: rgba(154, 185, 242, 0.85);
+  color: #dee8fb;
 }
 
 .border-right-nineteenEightyNine {
@@ -429,7 +429,7 @@
 }
 
 .border-right-nineteenEightyNine-single {
-  border-right: solid 3px rgba(154, 185, 242, 0.85);
+  border-right: solid 3px #bacff6;
 }
 
 .active-border-nineteenEightyNine {
@@ -445,7 +445,7 @@
 }
 
 .active-border-nineteenEightyNine-single {
-  border: solid 4px rgba(154, 185, 242, 0.85);
+  border: solid 4px #bacff6;
 }
 
 .background-color-red {
@@ -461,7 +461,7 @@
 }
 
 .background-color-red-single {
-  background-color: rgba(221, 46, 46, 0.75);
+  background-color: #e24d4d;
 }
 
 .color-red {
@@ -477,7 +477,7 @@
 }
 
 .color-red-single {
-  color: rgba(221, 46, 46, 0.85);
+  color: #e87070;
 }
 
 .border-right-red {
@@ -493,7 +493,7 @@
 }
 
 .border-right-red-single {
-  border-right: solid 3px rgba(221, 46, 46, 0.85);
+  border-right: solid 3px #e24d4d;
 }
 
 .active-border-red {
@@ -509,7 +509,7 @@
 }
 
 .active-border-red-single {
-  border: solid 4px rgba(221, 46, 46, 0.85);
+  border: solid 4px #e24d4d;
 }
 
 .background-color-speakNow {
@@ -525,7 +525,7 @@
 }
 
 .background-color-speakNow-single {
-  background-color: rgba(186, 145, 237, 0.75);
+  background-color: #cdb0f2;
 }
 
 .color-speakNow {
@@ -541,7 +541,7 @@
 }
 
 .color-speakNow-single {
-  color: rgba(186, 145, 237, 0.85);
+  color: #e3d3f8;
 }
 
 .border-right-speakNow {
@@ -557,7 +557,7 @@
 }
 
 .border-right-speakNow-single {
-  border-right: solid 3px rgba(186, 145, 237, 0.85);
+  border-right: solid 3px #cdb0f2;
 }
 
 .active-border-speakNow {
@@ -573,7 +573,7 @@
 }
 
 .active-border-speakNow-single {
-  border: solid 4px rgba(186, 145, 237, 0.85);
+  border: solid 4px #cdb0f2;
 }
 
 .background-color-fearless {
@@ -589,7 +589,7 @@
 }
 
 .background-color-fearless-single {
-  background-color: rgba(245, 206, 109, 0.75);
+  background-color: #f7d98e;
 }
 
 .color-fearless {
@@ -605,7 +605,7 @@
 }
 
 .color-fearless-single {
-  color: rgba(245, 206, 109, 0.85);
+  color: #fae6b5;
 }
 
 .border-right-fearless {
@@ -621,7 +621,7 @@
 }
 
 .border-right-fearless-single {
-  border-right: solid 3px rgba(245, 206, 109, 0.85);
+  border-right: solid 3px #f7d98e;
 }
 
 .active-border-fearless {
@@ -637,7 +637,7 @@
 }
 
 .active-border-fearless-single {
-  border: solid 4px rgba(245, 206, 109, 0.85);
+  border: solid 4px #f7d98e;
 }
 
 .background-color-taylorSwift {
@@ -653,7 +653,7 @@
 }
 
 .background-color-taylorSwift-single {
-  background-color: rgba(127, 213, 224, 0.75);
+  background-color: #9cdee7;
 }
 
 .color-taylorSwift {
@@ -669,7 +669,7 @@
 }
 
 .color-taylorSwift-single {
-  color: rgba(127, 213, 224, 0.85);
+  color: #bde9ef;
 }
 
 .border-right-taylorSwift {
@@ -685,7 +685,7 @@
 }
 
 .border-right-taylorSwift-single {
-  border-right: solid 3px rgba(127, 213, 224, 0.85);
+  border-right: solid 3px #9cdee7;
 }
 
 .active-border-taylorSwift {
@@ -701,7 +701,7 @@
 }
 
 .active-border-taylorSwift-single {
-  border: solid 4px rgba(127, 213, 224, 0.85);
+  border: solid 4px #9cdee7;
 }
 
 .background-color-carolina {
@@ -717,7 +717,7 @@
 }
 
 .background-color-carolina-single {
-  background-color: rgba(195, 186, 170, 0.75);
+  background-color: #d2cbbf;
 }
 
 .color-carolina {
@@ -733,7 +733,7 @@
 }
 
 .color-carolina-single {
-  color: rgba(195, 186, 170, 0.85);
+  color: #e3ded7;
 }
 
 .border-right-carolina {
@@ -749,7 +749,7 @@
 }
 
 .border-right-carolina-single {
-  border-right: solid 3px rgba(195, 186, 170, 0.85);
+  border-right: solid 3px #d2cbbf;
 }
 
 .active-border-carolina {
@@ -765,7 +765,7 @@
 }
 
 .active-border-carolina-single {
-  border: solid 4px rgba(195, 186, 170, 0.85);
+  border: solid 4px #d2cbbf;
 }
 
 .background-color-christmas {
@@ -781,7 +781,7 @@
 }
 
 .background-color-christmas-single {
-  background-color: rgba(28, 99, 54, 0.75);
+  background-color: #247f45;
 }
 
 .color-christmas {
@@ -797,7 +797,7 @@
 }
 
 .color-christmas-single {
-  color: rgba(28, 99, 54, 0.85);
+  color: #2d9f57;
 }
 
 .border-right-christmas {
@@ -813,7 +813,7 @@
 }
 
 .border-right-christmas-single {
-  border-right: solid 3px rgba(28, 99, 54, 0.85);
+  border-right: solid 3px #247f45;
 }
 
 .active-border-christmas {
@@ -829,7 +829,7 @@
 }
 
 .active-border-christmas-single {
-  border: solid 4px rgba(28, 99, 54, 0.85);
+  border: solid 4px #247f45;
 }
 
 .background-color-renegade {
@@ -845,7 +845,7 @@
 }
 
 .background-color-renegade-single {
-  background-color: rgba(99, 141, 152, 0.75);
+  background-color: #789da7;
 }
 
 .color-renegade {
@@ -861,7 +861,7 @@
 }
 
 .color-renegade-single {
-  color: rgba(99, 141, 152, 0.85);
+  color: #90afb7;
 }
 
 .border-right-renegade {
@@ -877,7 +877,7 @@
 }
 
 .border-right-renegade-single {
-  border-right: solid 3px rgba(99, 141, 152, 0.85);
+  border-right: solid 3px #789da7;
 }
 
 .active-border-renegade {
@@ -893,7 +893,7 @@
 }
 
 .active-border-renegade-single {
-  border: solid 4px rgba(99, 141, 152, 0.85);
+  border: solid 4px #789da7;
 }
 
 @keyframes colorCycle {
@@ -916,7 +916,7 @@
     color: rgb(4, 32, 27);
   }
   50% {
-    color: #e4b0f5;
+    color: #e49afc;
   }
   58.3333333333% {
     color: #aeb4b2;
@@ -954,7 +954,7 @@
     border-color: rgb(4, 32, 27);
   }
   50% {
-    border-color: #e4b0f5;
+    border-color: #e49afc;
   }
   58.3333333333% {
     border-color: #aeb4b2;
@@ -992,7 +992,7 @@
     background-color: rgb(4, 32, 27);
   }
   50% {
-    background-color: #e4b0f5;
+    background-color: #e49afc;
   }
   58.3333333333% {
     background-color: #aeb4b2;
@@ -1427,7 +1427,21 @@
   align-items: center;
 }
 
-.quiz-options-container {
+.quiz-next-button {
+  border: 4px solid rgb(237, 236, 232);
+  margin: 2rem auto;
+  border-radius: 19px;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  text-decoration: none;
+  animation: backgroundErasColorCycle 120s infinite;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.quiz-options-container, .quiz-both-stacks {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -1437,7 +1451,7 @@
   width: 700px;
 }
 @media (min-width: 370px) {
-  .quiz-options-container {
+  .quiz-options-container, .quiz-both-stacks {
     flex-flow: row;
     justify-content: space-evenly;
   }
@@ -1502,22 +1516,31 @@
 }
 
 .quiz-both-stacks {
+  border: none;
   display: flex;
   position: relative;
   justify-content: center;
   padding: 1rem;
   width: 700px;
   height: 100px;
+  left: 1rem;
+  right: 1rem;
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .quiz-stack-group-container {
   position: absolute;
-  height: 100px;
-  background-color: aqua;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgb(77, 144, 144);
+  top: -10px;
 }
 
 .quiz-stack-group-A {
-  left: 0;
+  left: 50px;
 }
 
 .quiz-stack-group-B {
@@ -1526,7 +1549,6 @@
 
 .quiz-stack {
   position: relative;
-  opacity: 0.35;
 }
 
 .quiz-stack-current-song {
@@ -1550,6 +1572,17 @@
 
 .quiz-stack-item-container {
   position: "absolute";
+}
+
+.quiz-sorted-piece-list {
+  background-color: #fff;
+  border-radius: 19px;
+  padding: 1rem;
+}
+
+.quiz-sorted-item-container {
+  border-radius: 10px;
+  border-width: 2px;
 }
 
 .quiz-sorted-item {
@@ -2096,6 +2129,10 @@ ul {
   list-style-type: none;
   /* Removes bullets from an unordered list */
   padding: 0;
+}
+
+p {
+  color: #aaa592;
 }
 
 .main-container {

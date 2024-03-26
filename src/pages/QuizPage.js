@@ -13,6 +13,7 @@ import { allTracks } from "../app/data/current_data/all_tracks";
 import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import { filterTracks } from "../app/utilities/filterTracks";
 import { useDispatch, useSelector } from 'react-redux';
+import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 
 const QuizPage = () => {
 
@@ -21,27 +22,17 @@ const QuizPage = () => {
 
   // for Filters, initialize with allTracks from database 
   const [filteredTracks, setFilteredTracks] = useState(allTracks);
-
-
-  const defaultPoints = filteredTracks.length / 2;
-  const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
-  const [rankedTracks, setRankedTracks] = useState(defaultPointsTracks);
-  const [tracksToSort, setTracksToSort] = useState([...filteredTracks]);
-
   const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
+  const  tracksForQuiz = filteredTracks.filter(track => track.eraIndex != -1);
 
-
+  const [pairs, setPairs] = useState(splitIntoPairs(filteredTracks, filteredTracks));
 
   useEffect(() => {
-    // Update rankedTracks after filteredTracks has been updated
-    const defaultPoints = filteredTracks.length / 2;
-    const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
-    setRankedTracks(defaultPointsTracks);
-    setTracksToSort(filteredTracks);
-  }, [filteredTracks]);
+    setPairs(splitIntoPairs(filteredTracks, filteredTracks))
+}, [filteredTracks])
 
-  // I cant find the error that is causing issues with filteredTracks in quiz, so for now this catches those errors. 
-  const tracksForQuiz = filteredTracks.filter(track => track.eraIndex != -1);
+  const defaultPoints = 50;
+  const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
 
 
   return (
@@ -58,24 +49,19 @@ const QuizPage = () => {
         defaultFilters={defaultFilters}
       />
 
-      <Condensed tracks={rankedTracks} sortType='preference' />
+      <Condensed tracks={defaultPointsTracks} sortType='preference' />
 
       {tracksForQuiz ?
         (<>
           <Quiz
-            tracks={tracksForQuiz}
-            setRankedTracks={setRankedTracks}
-            rankedTracks={rankedTracks}
-            setTracksToSort={setTracksToSort}
+            tracks={filteredTracks}
+            initialPairs ={pairs}
+            // graphTracks={defaultPointsTracks}
           />
         </>) : (<></>)}
 
-      <h3>tracks to sort {tracksToSort.length}</h3>
-      <h3>filtered {filteredTracks.length}</h3>
-      <h3> ranked {rankedTracks.length}</h3>
-
-      <Condensed tracks={rankedTracks} sortType='preference' />
-      <FullSizeAllTracks tracks={rankedTracks} sortType='preference' orderOption={orderOption} />
+      <Condensed tracks={defaultPointsTracks} sortType='preference' />
+      <FullSizeAllTracks tracks={defaultPointsTracks} sortType='preference' orderOption={orderOption} />
 
     </>
   );

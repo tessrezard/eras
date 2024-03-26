@@ -6,6 +6,22 @@ export const getPair = (remainingTracks, localRankedTracks) => {
         throw new Error('Insufficient tracks remaining to form a pair');
     }
 
+    if (remainingTracks.length === 3) {
+        const track1 = remainingTracks[0];
+        const track2 = remainingTracks[1];
+        const id1 = track1.id;
+        const id2 = track2.id;
+        const eraIndex1 = localRankedTracks.findIndex((trackObj) => trackObj.id == id1);
+        const eraIndex2 = localRankedTracks.findIndex((trackObj) => trackObj.id == id2);
+        // only remove 1, so all tracks can be sorted
+        // one track will be sorted twice (be in two pairs)
+        const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== 0 );
+        return [
+            updatedRemainingTracks,
+            { track: track1, eraIndex: eraIndex1 },
+            { track: track2, eraIndex: eraIndex2 },
+        ];
+    }
     // get two random indices
     const randomIndex1 = Math.floor(Math.random() * remainingTracks.length);
     let randomIndex2 = Math.floor(Math.random() * remainingTracks.length);

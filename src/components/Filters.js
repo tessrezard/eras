@@ -5,8 +5,8 @@ import CheckBox from "./FiltersCheckbox";
 
 const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
 
-    // const [selectedFilters, setSelectedFilters] = useState(defaultFilters);
     const [selectedFilters, setSelectedFilters] = useState([]);
+    // const [selectedFilters, setSelectedFilters] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
 
 
@@ -15,8 +15,14 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
     };
 
 
+    useEffect(() => {
+        if (defaultFilters) {
+            setSelectedFilters(defaultFilters);
+        }
+    }, []);
 
     useEffect(() => {
+        
         setFiltered(filterTracks(inputTracks, selectedFilters));
     }, [selectedFilters])
 
@@ -38,7 +44,11 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
                         {filterOptions.map(filter => {
                             return (
                                 <div key={filter}>
-                                    <CheckBox filter={filter} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
+                                    <CheckBox 
+                                        filter={filter} 
+                                        selectedFilters={selectedFilters} 
+                                        setSelectedFilters={setSelectedFilters}
+                                        />
                                 </div>
                             )
                         })}

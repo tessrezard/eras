@@ -5,6 +5,7 @@ import { sortbyExplicit } from "../app/utilities/sortByExplicit";
 import CondensedTrackDuration from "./CondensedTrackDuration";
 import CondensedTrackExplicit from "./CondensedTrackExplicit";
 import CondensedTrackPreference from "./CondensedTrackPreference";
+
 const Condensed = ({ tracks, sortType, orderOption }) => {
 
     const [trackName, setTrackName] = useState('Hover over track to see name');
