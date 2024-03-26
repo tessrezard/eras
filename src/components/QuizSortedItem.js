@@ -27,8 +27,8 @@ const QuizSortedItem = ({ item, index }) => {
 
 
     return (
-        <div className={`${albumActiveBorder} quiz-sorted-item-container`}>
-            <p className={`quiz-sorted-item ${albumColor}`} >
+        <div className={` ${albumActiveBorder} quiz-sorted-item-container ${albumBackgroundColor} `}>
+            <p className={`quiz-sorted-item ${albumBackgroundColor} `} >
                 {index + 1} : {item.track.name}
                 </p>
 

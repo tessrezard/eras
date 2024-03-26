@@ -68,7 +68,6 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
             case 'A':
                 if (pieceCopy[groupA].length > indexTrackA + 1) {
                     setIndexTrackA(indexTrackA + 1);
-                    console.log(`index A is ${indexA}`)
                     indexA++;
                     setTrackA(pieceCopy[groupA][indexA].track);
                 }
@@ -76,10 +75,8 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
             case 'B':
                 if (pieceCopy[groupB].length > indexTrackB + 1) {
                     setIndexTrackB(indexTrackB + 1);
-                    console.log(`index B is ${indexB}`)
                     indexB++;
                     setTrackB(pieceCopy[groupB][indexB].track);
-                    console.log('clicked group b', 'indexb', indexB)
 
                 }
                 break;
