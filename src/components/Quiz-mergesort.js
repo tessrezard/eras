@@ -77,13 +77,12 @@ const Quiz = ({ initialPairs }) => {
 
         if (isOdd(toSort)) {
 
-
             if (oddPair.length) {
                 setAddUpSortedPieces([...addUpSortedPieces, oddPair]);
-                // setOddPair(true);
+                setOddPair(true);
             } else if (oddPiece.length) {
                 setAddUpSortedPieces([...addUpSortedPieces, oddPiece]);
-                // setOddPiece(true);
+                setOddPiece(true);
             }
             
         }
@@ -109,7 +108,8 @@ const Quiz = ({ initialPairs }) => {
         if (oddPair.length) {
             setAddUpSortedPieces([oddPair]);
             setOddPair(true);
-        } else if (oddPiece.length) {
+        } 
+        if (oddPiece.length) {
             setAddUpSortedPieces([oddPiece]);
             setOddPiece(true);
         }
