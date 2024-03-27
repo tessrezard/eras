@@ -80,9 +80,9 @@ const Quiz = ({ initialPairs }) => {
             if (oddPair.length) {
                 setAddUpSortedPieces([...addUpSortedPieces, oddPair]);
                 setOddPair(true);
-            } else if (oddPiece.length) {
-                setAddUpSortedPieces([...addUpSortedPieces, oddPiece]);
-                setOddPiece(true);
+            //} else if (oddPiece.length) {
+            //     setAddUpSortedPieces([...addUpSortedPieces, oddPiece]);
+            //     setOddPiece(true);
             }
             
         }
