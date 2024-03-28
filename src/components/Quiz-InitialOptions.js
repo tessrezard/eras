@@ -13,6 +13,7 @@ import QuizContent from "./QuizContent";
 
 const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
     const [activeIndex, setActiveIndex] = useState(2);
+    // const [updatePair, setUpdatePair] = useState();
     let numRanked;
 
     const handleClick = (index) => {
@@ -22,16 +23,20 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
             return;
         }
         setActiveIndex(index);
-        //-----
-
+       
         //-----FOR UPDATING RANKING
         const updateRankedPairs = [...rankedPairs];
-        const updatePair = [...pair];
+        let updatePair = [...pair];
+        // setUpdatePair(pair);
         if (index === 1) {
-            updatePair.reverse();
+            updatePair = [...updatePair.reverse()];
+            // setUpdatePair(...updatePair.reverse());
         }
-        // const alreadySorted = rankedPairs.findIndex((rankedPair) => rankedPair[0].eraIndex === pair[index].eraIndex || rankedPair[1].eraIndex === pair[index].eraIndex)
-        const alreadySorted = updateRankedPairs.findIndex((rankedPair) => rankedPair[0].eraIndex === pair[index].eraIndex || rankedPair[1].eraIndex === pair[index].eraIndex)
+
+        const alreadySorted = updateRankedPairs.findIndex((rankedPair) => 
+        rankedPair[0].eraIndex === pair[index].eraIndex || 
+        rankedPair[1].eraIndex === pair[index].eraIndex
+        );
         // if pair is in rankedPairs, alreadySorted will be the index at which the pair already is. 
         // if pair is new, alreadySorted will be -1
 
@@ -41,16 +46,11 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
             updateRankedPairs[alreadySorted] = updatePair;
         } else {
             numRanked = updateRankedPairs.push(updatePair);
-            onUpdateRankedPairs(updateRankedPairs)
         }
-        //-----
+        onUpdateRankedPairs(updateRankedPairs)
+
     }
 
-
-    useEffect(() => {
-        // This will be called every time rankedPairs changes
-        // console.log(rankedPairs.length, "Ranked pairs updated:", rankedPairs);
-    }, [rankedPairs]);
 
     if (pair.length >= 2) {
         return (
