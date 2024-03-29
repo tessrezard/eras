@@ -6,6 +6,7 @@ import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
 import { isEven, isOdd } from "../app/utilities/isEven";
 import QuizSortedItem from "./QuizSortedItem";
 import { scrollToTop } from "../app/utilities/scrollToTop";
+
 const Quiz = ({ initialPairs }) => {
 
     const [rankedPairs, setRankedPairs] = useState([]); // in the initial step, this get updated as the user chooses and ranks pairs. 
@@ -15,7 +16,9 @@ const Quiz = ({ initialPairs }) => {
     const [step, setStep] = useState(0); // this state is to track which step we are one , and if the step has changed. Passing it to components will allow them to reset for the next step.
     const [oddPair, setOddPair] = useState(true); // this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [oddPiece, setOddPiece] = useState(true); // this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
+    const [message, setMessage] = useState();
 
+    console.log('addUpSortedPieces', addUpSortedPieces);
 
     // function passed to initial stage to update rankedPairs & latestRankedTracks
     const updateRankedPairs = (updatedRankedPairs) => {
@@ -28,31 +31,55 @@ const Quiz = ({ initialPairs }) => {
         setAddUpSortedPieces([...addUpSortedPieces, sortedPiece]);
     }
 
-  
-
-    const handleNextStep = (step) => {
-
-        // console.log('addUpSortedPieces', addUpSortedPieces)
-        if (step == 0) {
-
-            if (isOdd(rankedPairs)) {
-                // console.log('isOdd(rankedPairs)', isOdd(rankedPairs));
-                setOddPair(rankedPairs[rankedPairs.length - 1]);
+    const allowNextStep = (step) => {
+        if (step === 0) {
+            if (rankedPairs.length > 2) {
+                return true;
+            } else {
+                setMessage('Please select at least 3');
+                return false;
             }
-            setLatestSortedTracks(rankedPairs);
         } else {
-            if (isOdd(addUpSortedPieces)) {
-                // console.log('isOdd(addUpSortedPieces)', isOdd(addUpSortedPieces));
-                if (!oddPiece.length) {
-                    // console.log('set off piece with ', addUpSortedPieces[addUpSortedPieces.length - 1])
-                    setOddPiece(addUpSortedPieces[addUpSortedPieces.length - 1]);
-                } else {
-                    // console.log('oddPiece already set')
-                }
+            if (addUpSortedPieces.length >= latestSortedTracks.length / 2) {
+                return true;
+            } else {
+                setMessage('You need to sort all the stacks before moving on to the next step.');
+                return false;
 
             }
         }
-        setStep(prev => prev + 1);
+
+    }
+
+    const handleNextStep = (step) => {
+        console.log('step', step);
+        console.log('allowNextStep', allowNextStep(step));
+
+
+        if (allowNextStep(step)) {
+            if (step == 0) {
+                if (isOdd(rankedPairs)) {
+                    // console.log('isOdd(rankedPairs)', isOdd(rankedPairs));
+                    setOddPair(rankedPairs[rankedPairs.length - 1]);
+                }
+                setLatestSortedTracks(rankedPairs);
+            } else {
+                if (isOdd(addUpSortedPieces)) {
+                    // console.log('isOdd(addUpSortedPieces)', isOdd(addUpSortedPieces));
+                    if (!oddPiece.length) {
+                        // console.log('set off piece with ', addUpSortedPieces[addUpSortedPieces.length - 1])
+                        setOddPiece(addUpSortedPieces[addUpSortedPieces.length - 1]);
+                    } else {
+                        // console.log('oddPiece already set')
+                    }
+
+                }
+            }
+            setStep(prev => prev + 1);
+            setMessage();
+        }
+        console.log('message', message);
+
     }
 
 
@@ -74,7 +101,7 @@ const Quiz = ({ initialPairs }) => {
         if (addUpSortedPieces.length >= toSort.length) {
             setLatestSortedTracks(addUpSortedPieces);
         }
-       
+
 
     }, [step])
 
@@ -101,10 +128,10 @@ const Quiz = ({ initialPairs }) => {
 
 
 
-      // Function to handle saving data to localStorage
-  const saveToLocalStorage = () => {
-    localStorage.setItem('sorted-tracks', JSON.stringify(latestSortedTracks[0])); // 'myData' is the key used to store data in localStorage
-  };
+    // Function to handle saving data to localStorage
+    const saveToLocalStorage = () => {
+        localStorage.setItem('sorted-tracks', JSON.stringify(latestSortedTracks[0])); // 'myData' is the key used to store data in localStorage
+    };
 
     // ALL SORTED
     if (rankedPairs.length > 2 && latestSortedTracks[0].length === rankedPairs.length * 2) {
@@ -132,12 +159,19 @@ const Quiz = ({ initialPairs }) => {
         <>
 
             <div className="quiz-container" >
+                {message ? (<><p className="quiz-message">{message}</p></>) : (<></>)}
+
                 <button
                     className="quiz-next-button"
                     onClick={() => handleNextStep(step)}
                 >Next Step ➸</button>
                 {step === 0 ? (
                     <>
+                    <div className="quiz-instructions">
+                    <p>Choose your favorite song from a pair!</p>
+                        <p >Select as many as you would like.</p>
+                    </div>
+                       
                         {initialPairs.map((pair, index) => {
                             return (
                                 <InitialOptions
@@ -169,6 +203,8 @@ const Quiz = ({ initialPairs }) => {
                         })}</>) : <></>}
                     </>
                 ) : (<></>)}
+
+{message ? (<><p className="quiz-message">{message}</p></>) : (<></>)}
 
                 <button
                     className="quiz-next-button"

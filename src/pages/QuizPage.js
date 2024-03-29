@@ -14,7 +14,7 @@ import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import { filterTracks } from "../app/utilities/filterTracks";
 import { useDispatch, useSelector } from 'react-redux';
 import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
-
+import ReloadButton from "../components/ReloadButton";
 const QuizPage = () => {
 
   // for OrderOptions, to view tracks in era order or preference order 
@@ -38,11 +38,15 @@ const QuizPage = () => {
   
   return (
     <>
-      <OrderOptions
+      {/* <OrderOptions
         sorting='Preference'
         orderOption={orderOption}
         setOrderOption={setOrderOption}
-      />
+      /> */}
+<div className="quiz-reload-btn-container">
+<ReloadButton/>
+
+</div>
 
       <Filters
         inputTracks={allTracks}

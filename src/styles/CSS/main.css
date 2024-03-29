@@ -1420,6 +1420,34 @@
   }
 }
 
+.quiz-reload-btn-container {
+  display: flex;
+  justify-content: end;
+}
+
+.quiz-reload-button {
+  width: 110px;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 19px;
+  background-color: #fff;
+  border: 3px solid rgb(237, 236, 232);
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.quiz-reload-button .quiz-reload-btn-arrow {
+  margin: 0;
+  margin-right: 3px;
+  transform: rotate(180deg);
+  position: relative;
+  top: 2px;
+  animation: colorCycle 120s infinite;
+}
+.quiz-reload-button .quiz-reload-btn-text {
+  margin: 0;
+  animation: colorCycle 120s infinite;
+}
+
 .quiz-container {
   display: flex;
   flex-flow: column;
@@ -1441,14 +1469,34 @@
   letter-spacing: 4px;
 }
 
+.quiz-message {
+  color: rgb(255, 203, 91);
+  margin: 0;
+  position: relative;
+  top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.quiz-instructions {
+  margin: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quiz-instructions p {
+  margin: 0;
+}
+
 .quiz-options-container, .quiz-both-stacks {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   border: 3px solid rgb(237, 236, 232);
-  margin: 0.2rem;
+  margin: 0.7rem 0;
   width: 700px;
+  border-radius: 3px;
 }
 @media (min-width: 370px) {
   .quiz-options-container, .quiz-both-stacks {
@@ -1460,7 +1508,6 @@
 .quiz-option-container {
   border-radius: 19px;
   margin: 0.75rem 0.25rem;
-  padding: 0.25rem;
 }
 
 .quiz-option {
