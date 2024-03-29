@@ -17,24 +17,25 @@ import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 
 const QuizPage = () => {
 
-// for OrderOptions, to view tracks in era order or preference order 
+  // for OrderOptions, to view tracks in era order or preference order 
   const [orderOption, setOrderOption] = useState('eraOrderOption')
 
   // for Filters, initialize with allTracks from database 
-  const [filteredTracks, setFilteredTracks] = useState(allTracks);
+  // const [filteredTracks, setFilteredTracks] = useState(allTracks);
+  const [filteredTracks, setFilteredTracks] = useState([]);
   const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
-  const  tracksForQuiz = filteredTracks.filter(track => track.eraIndex != -1);
 
-  const [pairs, setPairs] = useState(splitIntoPairs(filteredTracks, filteredTracks));
+  // const [pairs, setPairs] = useState(splitIntoPairs(filteredTracks, filteredTracks));
+  const [pairs, setPairs] = useState(true);
 
   useEffect(() => {
-    setPairs(splitIntoPairs(filteredTracks, filteredTracks))
-}, [filteredTracks])
-
-  const defaultPoints = 50;
-  const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
-
-
+    setPairs(splitIntoPairs(filteredTracks, filteredTracks));
+    const defaultPoints = 50;
+    const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
+  
+  
+  }, [filteredTracks])
+  
   return (
     <>
       <OrderOptions
@@ -49,19 +50,20 @@ const QuizPage = () => {
         defaultFilters={defaultFilters}
       />
 
-      <Condensed tracks={defaultPointsTracks} sortType='preference' />
 
-      {tracksForQuiz ?
-        (<>
+
+      {pairs.length ? (
+        <>
           <Quiz
             tracks={filteredTracks}
-            initialPairs ={pairs}
-            // graphTracks={defaultPointsTracks}
+            initialPairs={pairs}
+          // graphTracks={defaultPointsTracks}
           />
-        </>) : (<></>)}
+        </>
+        ) : (<></>)}
 
-      <Condensed tracks={defaultPointsTracks} sortType='preference' />
-      <FullSizeAllTracks tracks={defaultPointsTracks} sortType='preference' orderOption={orderOption} />
+      {/* <Condensed tracks={defaultPointsTracks} sortType='preference' /> */}
+      {/* <FullSizeAllTracks tracks={defaultPointsTracks} sortType='preference' orderOption={orderOption} /> */}
 
     </>
   );

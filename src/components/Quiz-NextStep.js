@@ -32,6 +32,8 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
     const [trackA, setTrackA] = useState(pieceCopy[groupA][0].track);
     const [trackB, setTrackB] = useState(pieceCopy[groupB][0].track);
 
+    const [lastElementA, setLastElementA] = useState(false);
+    const [lastElementB, setLastElementB] = useState(false);
 
 
 
@@ -40,12 +42,9 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
         setIndexTrackA(0);
         setIndexTrackB(0);
         setSortedPiece([])
+        setLastElementA(false);
+        setLastElementB(false);
     }, [step])
-
-    // useEffect(() => {
-    //     setTrackA(pieceCopy[groupA][indexTrackA].track);
-    //     setTrackB(pieceCopy[groupB][indexTrackB].track);
-    // }, [indexTrackA, indexTrackB])
 
 
     // figure out how many elements in the piece ( to know when they have all been sorted. )
@@ -70,14 +69,18 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                     setIndexTrackA(indexTrackA + 1);
                     indexA++;
                     setTrackA(pieceCopy[groupA][indexA].track);
+                } else {
+                    setLastElementA(true);
                 }
+                
                 break;
             case 'B':
                 if (pieceCopy[groupB].length > indexTrackB + 1) {
                     setIndexTrackB(indexTrackB + 1);
                     indexB++;
                     setTrackB(pieceCopy[groupB][indexB].track);
-
+                } else {
+                    setLastElementB(true);
                 }
                 break;
             default:
@@ -88,6 +91,23 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 
 
     useEffect(() => {
+        // if last element on stack added, automatically add the other stack in its current order
+
+        if (lastElementA && !lastElementB){
+            const toAutoAdd = pieceCopy[groupB].slice(indexTrackB, pieceCopy[groupB].length);
+            const autoAddUp = [...sortedPiece, ...toAutoAdd];
+            setSortedPiece(autoAddUp);
+            setLastElementB(true);
+        }
+        if (lastElementB && !lastElementA){
+            const toAutoAdd = pieceCopy[groupA].slice(indexTrackA, pieceCopy[groupA].length);
+            const autoAddUp = [...sortedPiece, ...toAutoAdd];
+            setSortedPiece(autoAddUp);
+            setLastElementA(true);
+        }
+    }, [lastElementA, lastElementB])
+
+    useEffect(() => {
         if (sortedPiece.length == totalElements) {
             updateLatestSortedTracks(sortedPiece);
         }
@@ -95,7 +115,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 
 
     const renderStackA = piece[0].map((track, index) => {
-        // console.log('inside renderStack A',track);
+
         if (index > indexTrackA) {
             return (
                 <div key={index}>
@@ -105,23 +125,13 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                         index={index}
                         position={index - indexTrackA}
                     />
-                </div>); // Display the number in JSX if index < stopIndex
+                </div>);
         }
         return null; // Return null for elements beyond the stopIndex
     });
 
     const renderStackB = piece[1].map((track, index) => {
-        // console.log('inside renderStack B',track);
-        //     return (
-        //         <div key={index}>
-        //             <QuizStackedOption
-        //                 track={track.track}
-        //                 group='B'
-        //                 index={index}
-        //                 position={index - indexTrackB}
-        //             />
-        //         </div>); // Display the number in JSX if index < stopIndex
-        // }
+
         if (index > indexTrackB) {
             return (
                 <div key={index}>
@@ -131,60 +141,67 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                         index={index}
                         position={index - indexTrackB}
                     />
-                </div>); // Display the number in JSX if index < stopIndex
+                </div>);
         }
         return null; // Return null for elements beyond the stopIndex
     });
 
     return (
         <>
-            <div >
+            <div>
 
-                <div className="quiz-both-stacks">
+                {lastElementA && lastElementB ? (<></>) : (
+                    <>
+                        <div className="quiz-both-stacks">
 
-                    <div className="quiz-stack-group-container quiz-stack-group-A">
+                            <div className="quiz-stack-group-container quiz-stack-group-A">
+                                <div className="quiz-stack">
+                                    {renderStackA}
+                                </div>
+                                {lastElementA ? (
+                                    <></>) : (
+                                    <>
+                                        <button className="quiz-stack-current-song">
+                                            <QuizSongOption
+                                                track={pieceCopy[groupA][indexTrackA].track}
+                                                onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
+                                            />
+                                        </button>
+                                    </>)}
+                            </div>
 
-                        <div className="quiz-stack">
-                            {renderStackA}
+                            <p className="quiz-vs">vs</p>
+
+                            <div className="quiz-stack-group-container quiz-stack-group-B">
+                                <div className="quiz-stack">
+                                    {renderStackB}
+                                </div>
+                                {lastElementB ? (
+                                    <></>) : (
+                                    <>
+                                        <button className="quiz-stack-current-song">
+                                            <QuizSongOption
+                                                track={pieceCopy[groupB][indexTrackB].track}
+                                                onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B', trackB)}
+                                            />
+                                        </button>
+                                    </>)}
+                            </div>
+
                         </div>
-
-                        <button className="quiz-stack-current-song">
-                            <QuizSongOption
-                                track={pieceCopy[groupA][indexTrackA].track}
-                                onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
-                            />
-                        </button>
+                    </>)}
                     </div>
 
-                    <p>vs</p>
+                    <div>
+                <div className="quiz-sorted-piece-list">
 
-                    <div className="quiz-stack-group-container quiz-stack-group-B">
-
-                        <div className="quiz-stack">
-                            {renderStackB}
-                        </div>
-
-                        <button className="quiz-stack-current-song">
-                            <QuizSongOption
-                                track={pieceCopy[groupB][indexTrackB].track}
-                                onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B', trackB)}
-                            />
-                        </button>
-                    </div>
-
+                    {sortedPiece.map((item, index) => {
+                        return (
+                            <QuizSortedItem item={item} index={index} key={index} />
+                        )
+                    })}
                 </div>
-
-            </div>
-
-
-            <div className="quiz-sorted-piece-list">
-
-                {sortedPiece.map((item, index) => {
-                    return (
-                        <QuizSortedItem item={item} index={index} key={index} />
-                    )
-                })}
-            </div>
+        </div>
 
         </>
     )

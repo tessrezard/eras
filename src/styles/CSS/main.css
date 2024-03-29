@@ -1494,8 +1494,8 @@
 }
 @media (min-width: 570px) {
   .quiz-option {
-    width: 235px;
     margin: 0.15rem;
+    width: 240px;
     height: 55px;
     flex-flow: row;
     justify-content: space-evenly;
@@ -1505,9 +1505,6 @@
   .quiz-option {
     margin: 0.25rem;
     width: 260px;
-    height: 55px;
-    flex-flow: row;
-    justify-content: space-evenly;
   }
 }
 
@@ -1527,6 +1524,12 @@
   right: 1rem;
   margin: auto;
   margin-top: 1rem;
+  border-top: 5px solid rgb(237, 236, 232);
+  transition: all 500ms ease;
+}
+
+.quiz-vs {
+  align-self: flex-start;
 }
 
 .quiz-stack-group-container {
@@ -1537,6 +1540,7 @@
   width: fit-content;
   background-color: rgb(77, 144, 144);
   top: -10px;
+  transition: all 500ms ease;
 }
 
 .quiz-stack-group-A {
@@ -1560,6 +1564,7 @@
   border: 0;
   padding: 0;
   background-color: 0;
+  transition: all 500ms ease;
 }
 .quiz-stack-current-song:hover {
   top: -5px;
@@ -1578,6 +1583,20 @@
   background-color: #fff;
   border-radius: 19px;
   padding: 1rem;
+  margin: auto;
+  transition: all 500ms ease;
+  width: 270px;
+  padding-bottom: 2rem;
+}
+@media (min-width: 370px) {
+  .quiz-sorted-piece-list {
+    width: 370px;
+  }
+}
+@media (min-width: 470px) {
+  .quiz-sorted-piece-list {
+    width: 470px;
+  }
 }
 
 .quiz-sorted-item-container {
@@ -1591,6 +1610,21 @@
   font-size: 0.8rem;
   font-weight: 400;
   color: #fff;
+}
+
+.quiz-all-sorted {
+  margin: 3rem;
+  margin: auto;
+}
+@media (min-width: 370px) {
+  .quiz-all-sorted {
+    width: 370px;
+  }
+}
+@media (min-width: 470px) {
+  .quiz-all-sorted {
+    width: 470px;
+  }
 }
 
 .options-pill-whole-container {
@@ -2121,6 +2155,7 @@ h1.sort-options-header {
 html {
   font-size: 16px;
   margin: auto;
+  transition: all 500ms ease;
 }
 
 body {
