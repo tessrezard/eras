@@ -6,6 +6,7 @@ import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
 import { isEven, isOdd } from "../app/utilities/isEven";
 import QuizSortedItem from "./QuizSortedItem";
 import { scrollToTop } from "../app/utilities/scrollToTop";
+import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 
 const Quiz = ({ initialPairs }) => {
 
@@ -18,7 +19,6 @@ const Quiz = ({ initialPairs }) => {
     const [oddPiece, setOddPiece] = useState(true); // this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [message, setMessage] = useState();
 
-    console.log('addUpSortedPieces', addUpSortedPieces);
 
     // function passed to initial stage to update rankedPairs & latestRankedTracks
     const updateRankedPairs = (updatedRankedPairs) => {
@@ -40,22 +40,23 @@ const Quiz = ({ initialPairs }) => {
                 return false;
             }
         } else {
-            if (addUpSortedPieces.length >= latestSortedTracks.length / 2) {
+            
+            if (oddPair.length){
+                if (addUpSortedPieces.length + 1 >= latestSortedTracks.length / 2 ) {
+                    return true;
+                }
+            } else if (addUpSortedPieces.length >= latestSortedTracks.length / 2 ) {
                 return true;
             } else {
                 setMessage('You need to sort all the stacks before moving on to the next step.');
                 return false;
-
             }
         }
 
     }
 
     const handleNextStep = (step) => {
-        console.log('step', step);
-        console.log('allowNextStep', allowNextStep(step));
-
-
+     
         if (allowNextStep(step)) {
             if (step == 0) {
                 if (isOdd(rankedPairs)) {
@@ -67,7 +68,6 @@ const Quiz = ({ initialPairs }) => {
                 if (isOdd(addUpSortedPieces)) {
                     // console.log('isOdd(addUpSortedPieces)', isOdd(addUpSortedPieces));
                     if (!oddPiece.length) {
-                        // console.log('set off piece with ', addUpSortedPieces[addUpSortedPieces.length - 1])
                         setOddPiece(addUpSortedPieces[addUpSortedPieces.length - 1]);
                     } else {
                         // console.log('oddPiece already set')
@@ -78,7 +78,6 @@ const Quiz = ({ initialPairs }) => {
             setStep(prev => prev + 1);
             setMessage();
         }
-        console.log('message', message);
 
     }
 

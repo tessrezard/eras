@@ -29,6 +29,7 @@
     }
 }
 
+// whole thing below filter, from top next step to bottom next step buttons
 .quiz-container {
     display: flex;
     flex-flow: column;
@@ -50,6 +51,7 @@
     letter-spacing: 4px;
 }
 
+// if user tries to next step but prevented : message
 .quiz-message {
     color: rgb(255, 203, 91);
     margin: 0;
@@ -58,6 +60,8 @@
     font-size: 0.9rem;
 }
 
+
+// two lines on step 0
 .quiz-instructions {
     margin: 0;
     margin-bottom: 1rem;
@@ -70,49 +74,44 @@
     }
 }
 
-.quiz-options-container {
+
+.quiz-battle-container{
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid $lead-color;
-    margin: 0.7rem 0;
-    width: 700px;
-    border-radius: 3px;
-
-    @media (min-width: $small-phone) {
-        flex-flow: row;
-        justify-content: space-evenly;
-    }
+    flex-direction: column;
+   align-items: center;
+    width: 100%;
 }
-
-.quiz-option-container {
-    border-radius: $rounded-rectangle;
-    margin: 0.75rem 0.25rem;
-
-}
-
+// variant coloured option, with active variant color border on click
 .quiz-option {
-    width: 210px;
-    height: 55px;
+    width: 100px;
+    // width: 210px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.25rem;
     border-radius: $rounded-rectangle;
     margin: 0.25rem 0.25rem;
 
+    @media (min-width: $smallest-phone) {
+        width: 112px;
+        height: 75px;
+
+    }
+
     @media (min-width: $small-phone) {
-        width: 142px;
+        width: 132px;
+        height: 65px;
         margin: 0.15rem;
-        height: 55px;
         flex-flow: row;
         justify-content: space-evenly;
     }
 
     @media (min-width: $phone) {
-        width: 182px;
+        width: 192px;
+        height: 80px;
+
         margin: 0.15rem;
         height: 55px;
         flex-flow: row;
@@ -121,8 +120,8 @@
 
     @media (min-width: $wide-phone) {
         margin: 0.15rem;
-        width: 240px;
-        height: 55px;
+        padding: 0.5rem;
+        height: 65px;
         flex-flow: row;
         justify-content: space-evenly;
     }
@@ -130,14 +129,73 @@
     @media (min-width: $tablet) {
         margin: 0.25rem;
         width: 260px;
+
     }
 }
 
 .quiz-song-name {
-    font-size: 1rem;
+    font-size: 0.75rem;
+
+    @media (min-width: $wide-phone) {
+        font-size: 1rem;
+    }
 }
 
+.quiz-vs {
+    align-self: flex-start;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0.75rem;
 
+}
+
+// ------------------------------------- FOR INITIAL (PAIR) PHASE ----------
+// initial stage - pairs container 
+.quiz-options-container {
+    display: flex;
+    flex-flow: row;
+    // flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $lead-color;
+    margin: 0.7rem 0;
+    width: 200px;
+    border-radius: 3px;
+    height: 100px;
+
+    @media (min-width: $small-phone) {
+        border: 3px solid $lead-color;
+        flex-flow: row;
+        justify-content: center;
+        width: 200px;
+    }
+
+    @media (min-width: $phone) {
+        width: 355px;
+    }
+
+    @media (min-width: $wide-phone) {
+        width: 375px;
+    }
+
+    @media (min-width: $small-tablet) {
+        height: 130px;
+        width: 630px;
+    }
+}
+
+// one of initial pair
+.quiz-option-container {
+    border-radius: $rounded-rectangle;
+    margin: 0.75rem 0.25rem;
+}
+
+// ------------------------------------- 
+
+
+// ------------------------------------- FOR STACKS PHASE ----------
 .quiz-both-stacks {
     @extend .quiz-options-container;
     border: none;
@@ -145,43 +203,76 @@
     position: relative;
     justify-content: center;
     padding: 1rem;
-    width: 700px;
+    // width: 700px;
+    width: 40%; // of quiz container 
+max-width: 400px;
     height: 100px;
-    left: 1rem;
-    right: 1rem;
+    // left: 1rem;
+    // right: 1rem;
     margin: auto;
     margin-top: 1rem;
+    border-radius: $rounded-rectangle;
     border-top: 5px solid $lead-color;
     transition: all 500ms ease;
-
 }
 
-.quiz-vs {
-    align-self: flex-start;
-}
 
 .quiz-stack-group-container {
     position: absolute;
     height: fit-content;
     width: fit-content;
-    background-color: rgb(77, 144, 144);
-    top: -10px;
+    top: -1px;
     transition: all 500ms ease;
 }
 
 .quiz-stack-group-A {
-    left: 50px;
-
+    // left: 50px;
+    left: -230px;
+    // right: 130px;
+    @media (min-width: $small-phone) {
+        left: -230px;
+    }
+    @media (min-width: $phone) {
+        left: -190px;
+    }
+    @media (min-width: $small-tablet) {
+        left: -165px;
+    }
+    
+    @media (min-width: $desktop) {
+        left: -132px;
+    }
+    
+    @media (min-width: $small-desktop) {
+        left: -122px;
+    }
 }
 
 .quiz-stack-group-B {
-    left: 380px;
+    // left: 380px;
+    right: 75px;
+    @media (min-width: $small-phone) {
+        right: 75px;
+    }
+    @media (min-width: $phone) {
+        right: 100px;
+    }
+    @media (min-width: $small-tablet) {
+    right: 135px;
+    }
+    
+    @media (min-width: $desktop) {
+    right: 170px;
+    }
+    
+    @media (min-width: $small-desktop) {
+    right: 180px;
+    }
 }
 
 .quiz-stack {
     position: relative;
     // opacity: 0.8;
-
 }
 
 .quiz-stack-current-song {
@@ -189,11 +280,8 @@
     position: absolute;
     margin: auto;
     top: 0;
-    transition: all 100ms ease;
     border: 0;
     padding: 0;
-    background-color: 0;
-    transition: all 500ms ease;
 
     &:hover {
         top: -5px;
@@ -207,19 +295,46 @@
     }
 }
 
+.quiz-stack-current-song-A {
+    left: 175px;
+
+    @media (min-width: $small-phone) {
+        left: 150px;
+    }
+    @media (min-width: $phone) {
+        left: 90px;
+    }
+    @media (min-width: $wide-phone) {
+        left: 80px;
+    }
+
+    @media (min-width: $tablet) {
+        left: 10px;
+    }
+}
+
 .quiz-stack-item-container {
     position: 'absolute';
     // left: 30px;
 }
 
+// ------------------------------------- 
+
+
+
+// ------------------------------------- FOR SORTED LIST ----------
 .quiz-sorted-piece-list {
     background-color: $background-color;
     border-radius: $rounded-rectangle;
     padding: 1rem;
+
     margin: auto;
+    margin-top: 1rem;
     transition: all 500ms ease;
-    width: 270px;
     padding-bottom: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 
     @media (min-width: $small-phone) {
         width: $small-phone;
@@ -233,7 +348,15 @@
 .quiz-sorted-item-container {
     border-radius: 10px;
     border-width: 3px;
+    width: 250px;
 
+    @media (min-width: $small-phone) {
+        width: $small-phone;
+    }
+
+    @media (min-width: $phone) {
+        width: $phone;
+    }
 }
 
 .quiz-sorted-item {

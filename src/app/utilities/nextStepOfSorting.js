@@ -3,7 +3,7 @@
 export const nextStepOfSorting = (rankedArr) => {
     const pieces = [];
     const pieceSize = 2;
-    console.log('rankedARR', rankedArr);
+    // console.log('rankedARR', rankedArr);
     if (rankedArr) {
             // for (let i = 0; i < rankedArr.length; i += pieceSize) {
             //     pieces.push(rankedArr.slice(i, i + pieceSize));

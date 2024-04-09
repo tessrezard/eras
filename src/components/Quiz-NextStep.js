@@ -72,7 +72,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                 } else {
                     setLastElementA(true);
                 }
-                
+
                 break;
             case 'B':
                 if (pieceCopy[groupB].length > indexTrackB + 1) {
@@ -93,13 +93,13 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
     useEffect(() => {
         // if last element on stack added, automatically add the other stack in its current order
 
-        if (lastElementA && !lastElementB){
+        if (lastElementA && !lastElementB) {
             const toAutoAdd = pieceCopy[groupB].slice(indexTrackB, pieceCopy[groupB].length);
             const autoAddUp = [...sortedPiece, ...toAutoAdd];
             setSortedPiece(autoAddUp);
             setLastElementB(true);
         }
-        if (lastElementB && !lastElementA){
+        if (lastElementB && !lastElementA) {
             const toAutoAdd = pieceCopy[groupA].slice(indexTrackA, pieceCopy[groupA].length);
             const autoAddUp = [...sortedPiece, ...toAutoAdd];
             setSortedPiece(autoAddUp);
@@ -148,10 +148,14 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 
     return (
         <>
-            <div>
+            {/* <div> */}
 
-                {lastElementA && lastElementB ? (<></>) : (
-                    <>
+            {lastElementA && lastElementB ? (<></>) : (
+                <>
+                    <div className="quiz-battle-container">
+
+                        <p className="quiz-vs">vs</p>
+
                         <div className="quiz-both-stacks">
 
                             <div className="quiz-stack-group-container quiz-stack-group-A">
@@ -161,7 +165,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                                 {lastElementA ? (
                                     <></>) : (
                                     <>
-                                        <button className="quiz-stack-current-song">
+                                        <button className="quiz-stack-current-song quiz-stack-current-song-A">
                                             <QuizSongOption
                                                 track={pieceCopy[groupA][indexTrackA].track}
                                                 onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
@@ -170,7 +174,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                                     </>)}
                             </div>
 
-                            <p className="quiz-vs">vs</p>
+                            {/* <p className="quiz-vs">vs</p> */}
 
                             <div className="quiz-stack-group-container quiz-stack-group-B">
                                 <div className="quiz-stack">
@@ -189,10 +193,12 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                             </div>
 
                         </div>
-                    </>)}
                     </div>
 
-                    <div>
+                </>)}
+            {/* </div> */}
+
+            <div>
                 <div className="quiz-sorted-piece-list">
 
                     {sortedPiece.map((item, index) => {
@@ -201,7 +207,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                         )
                     })}
                 </div>
-        </div>
+            </div>
 
         </>
     )
