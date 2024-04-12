@@ -2,10 +2,10 @@ import React, { useState, useEffect, useReducer } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { setPreferenceSortedTracks, updatePreferencePoints } from '../store/slices/preference_sorted_slice';
 import '../styles/CSS/main.css';
-import Condensed from "./Condensed";
-import QuizSongOption from "./QuizSongOption";
+import Condensed from "../components/Condensed";
+import QuizSongOption from "../components/QuizSongOption";
 import { getRandomTrack } from "../app/utilities/getPair";
-import FullSizeAllTracks from "./FullSizeAllTracks";
+import FullSizeAllTracks from "../components/FullSizeAllTracks";
 import QuizContent from "./QuizContent";
 
 const Quiz = ({ tracks, setRankedTracks, rankedTracks, setTracksToSort }) => {

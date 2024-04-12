@@ -1,27 +1,50 @@
+import { allTracks } from "../data/current_data/all_tracks";
+import { isOdd } from "./isEven";
 // ---------------------------------------GET ONE PAIR ---------------------------------------
 
-export const getPair = (remainingTracks, localRankedTracks) => {
+export const getPair = (remainingTracks, filteredTracks) => {
     // check there are enough remaining tracks to form a pair
     if (remainingTracks.length < 2) {
         throw new Error('Insufficient tracks remaining to form a pair');
     }
 
-    if (remainingTracks.length === 3) {
-        const track1 = remainingTracks[0];
-        const track2 = remainingTracks[1];
-        const id1 = track1.id;
-        const id2 = track2.id;
-        const eraIndex1 = localRankedTracks.findIndex((trackObj) => trackObj.id == id1);
-        const eraIndex2 = localRankedTracks.findIndex((trackObj) => trackObj.id == id2);
-        // only remove 1, so all tracks can be sorted
-        // one track will be sorted twice (be in two pairs)
-        const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== 0 );
-        return [
-            updatedRemainingTracks,
-            { track: track1, eraIndex: eraIndex1 },
-            { track: track2, eraIndex: eraIndex2 },
-        ];
-    }
+    // FOR ODD NUMBER OF TRACKS --- REPEAT TRACK TO MAKE TWO PAIRS - OPTION
+    // if (remainingTracks.length === 3) {
+    //     const track1 = remainingTracks[0];
+    //     const track2 = remainingTracks[1];
+    //     const id1 = track1.id;
+    //     const id2 = track2.id;
+    //     const eraIndex1 = filteredTracks.findIndex((trackObj) => trackObj.id == id1);
+    //     const eraIndex2 = filteredTracks.findIndex((trackObj) => trackObj.id == id2);
+    //     // only remove 1, so all tracks can be sorted
+    //     // one track will be sorted twice (be in two pairs)
+    //     const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== 0 );
+    //     return [
+    //         updatedRemainingTracks,
+    //         { track: track1, eraIndex: eraIndex1 },
+    //         { track: track2, eraIndex: eraIndex2 },
+    //     ];
+    // }
+
+    // // FOR ODD NUMBER OF TRACKS --- RETURN SINGLE TRACK - OPTION
+    // if (remainingTracks.length == 1) {
+    //     console.log('IN IN IN IFFFF')
+    //     const track1 = remainingTracks[0];
+    //     const id1 = track1.id;
+    //     const eraIndex1 = filteredTracks.findIndex((trackObj) => trackObj.id == id1);
+    //     // only remove 1, so all tracks can be sorted
+    //     // one track will be sorted twice (be in two pairs)
+    //     const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== 0);
+    //     console.log('what to return', [
+    //         updatedRemainingTracks,
+    //         { track: track1, eraIndex: eraIndex1 },
+    //     ])
+    //     return [
+    //         updatedRemainingTracks,
+    //         { track: track1, eraIndex: eraIndex1 },
+    //     ];
+    // }
+
     // get two random indices
     const randomIndex1 = Math.floor(Math.random() * remainingTracks.length);
     let randomIndex2 = Math.floor(Math.random() * remainingTracks.length);
@@ -37,11 +60,11 @@ export const getPair = (remainingTracks, localRankedTracks) => {
 
 
 
-    // find the index of tracks 1 and 2 in localRankedTracks
+    // find the index of tracks 1 and 2 in filteredTracks
     const id1 = track1.id;
     const id2 = track2.id;
-    const eraIndex1 = localRankedTracks.findIndex((trackObj) => trackObj.id == id1);
-    const eraIndex2 = localRankedTracks.findIndex((trackObj) => trackObj.id == id2);
+    const eraIndex1 = allTracks.findIndex((trackObj) => trackObj.id == id1);
+    const eraIndex2 = allTracks.findIndex((trackObj) => trackObj.id == id2);
 
 
     // remove chosen tracks from remainingTracks
@@ -66,25 +89,37 @@ export const getPair = (remainingTracks, localRankedTracks) => {
 
 
 
-// ---------------------------------------GET ALL PAIRS ---------------------------------------
+// ---------------------------------------ITERATE OVER GET PAIR TO GET ALL PAIRS ---------------------------------------
 
-export const splitIntoPairs  = (localRankedTracks, remainingTracks) => {
+export const splitIntoPairs = (filteredTracks, remainingTracks) => {
+
+    let numTracks = filteredTracks.length;
+
+    if (isOdd(filteredTracks)){
+        numTracks++;
+    }
     let pairs = [];
     let remaining = remainingTracks;
-     
-        for (let i = 0; i < (localRankedTracks.length / 2 ); i++){
-            if (remaining.length < 2) {
-                pairs.push([remaining])
-            }else {
-            // console.log('localRankedTracks[i]', localRankedTracks[i]);
-            const newPair = getPair(remaining, localRankedTracks);
-            const [updatedRemainingTracks, track1, track2 ] = newPair;
+
+    for (let i = 0; i < (filteredTracks.length / 2); i++) {
+        if (remaining.length < 2) {
+            // pairs.push([remaining])
+            // console.log('remaining', remaining[0])
+            const eraIndex1 = allTracks.findIndex((trackObj) => trackObj.id == remaining[0].id);
+            // console.log('eraIndex', eraIndex1)
+            const lastTrack = {track: remaining[0], eraIndex: eraIndex1};
+            pairs.push([lastTrack])
+
+        } else {
+            // console.log('filteredTracks[i]', filteredTracks[i]);
+            const newPair = getPair(remaining, filteredTracks);
+            const [updatedRemainingTracks, track1, track2] = newPair;
             remaining = updatedRemainingTracks;
             const trackPair = [track1, track2]
             pairs.push(trackPair);
         }
     }
-    
+
     return pairs;
 }
 // --------------------------------------------------------------------------------------------
@@ -97,7 +132,7 @@ export const splitIntoPairs  = (localRankedTracks, remainingTracks) => {
 
 
 // ---------------------------------------GET ONE TRACK ---------------------------------------
-export const getRandomTrack = (remainingTracks, localRankedTracks, randomPivotIndex, pivot) => {
+export const getRandomTrack = (remainingTracks, filteredTracks, randomPivotIndex, pivot) => {
     // check there are enough remaining tracks to form a pair
     if (remainingTracks.length < 2) {
         throw new Error('Insufficient tracks remaining to form a pair');
@@ -108,21 +143,21 @@ export const getRandomTrack = (remainingTracks, localRankedTracks, randomPivotIn
 
     // check randomIndex2 is different from randomIndex1
     while (randomIndex === randomPivotIndex) {
-         randomIndex = Math.floor(Math.random() * remainingTracks.length);
+        randomIndex = Math.floor(Math.random() * remainingTracks.length);
     }
 
     // get the chosen tracks
     const randomTrack = remainingTracks[randomIndex];
 
-    // find the index of tracks 1 and 2 in localRankedTracks
+    // find the index of tracks 1 and 2 in filteredTracks
     const randomTrackId = randomTrack.id;
     const pivotId = pivot.id;
 
-    const eraIndex = localRankedTracks.findIndex((trackObj) => trackObj.id == randomTrackId);
-    const pivotEraIndex =  localRankedTracks.findIndex((trackObj) => trackObj.id == pivotId);
+    const eraIndex = filteredTracks.findIndex((trackObj) => trackObj.id == randomTrackId);
+    const pivotEraIndex = filteredTracks.findIndex((trackObj) => trackObj.id == pivotId);
 
     // remove chosen tracks from remainingTracks
-    const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== randomIndex );
+    const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== randomIndex);
 
     // Return the pair of tracks along with their indices
     return [

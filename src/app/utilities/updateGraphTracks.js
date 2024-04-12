@@ -1,19 +1,33 @@
-export const updateGraphTracks = ( latestSortedTracks ) => {
-    const eraSortedTracks = latestSortedTracks.sort((a, b) => a.eraIndex - b.eraIndex);
+import React from "react";
+import { allTracks } from "../data/current_data/all_tracks";
 
-    console.log(eraSortedTracks);
-    
-    // Iterate through the array and assign points
-    latestSortedTracks.forEach((obj, index) => {
-    // Calculate points based on ranking (index)
-    let points = 201 - index; // Adjust the scale from 1 to 201
-    obj.track.points = points;
-});
+export const updateGraphTracks = (latestSortedTracks) => {
 
-// Print updated objects
-latestSortedTracks.forEach(obj => {
-    console.log(obj);
-});
+    // is this the final list? (length === 1)
+    const tracks = latestSortedTracks.length === 1 ? latestSortedTracks[0] : latestSortedTracks;
 
+    // const tracksInEraOrder = tracks.sort((a, b) => a.eraIndex - b.eraIndex);
+
+    // assign points
+    tracks.forEach((obj, index) => {
+        // Calculate points based on ranking (index)
+        let points = allTracks.length - index;
+        obj.track.points = points;
+    });
+
+    console.log('tracks', tracks);
+    let graphTracks = [...allTracks];
+
+     // Update points value of graphTracks based on tracks
+     graphTracks.forEach((graphTrack, index) => {
+        const eraIndex = graphTrack.eraIndex;
+        const trackToUpdate = tracks.find(track => track.eraIndex === eraIndex);
+        if (trackToUpdate) {
+            graphTracks[index].points = trackToUpdate.track.points;
+        }
+    });
+
+    console.log('graphTracks', graphTracks);
+    return graphTracks;
 
 }

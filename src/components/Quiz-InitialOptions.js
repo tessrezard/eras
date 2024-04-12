@@ -1,25 +1,17 @@
-import React, { useState, useEffect, useReducer } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { setPreferenceSortedTracks, updatePreferencePoints } from '../store/slices/preference_sorted_slice';
+import React, { useState } from "react";
 import '../styles/CSS/main.css';
-import Condensed from "./Condensed";
 import QuizSongOption from "./QuizSongOption";
-import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
-import FullSizeAllTracks from "./FullSizeAllTracks";
-import QuizContent from "./QuizContent";
-
 
 
 
 const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
     const [activeIndex, setActiveIndex] = useState(2);
-    // const [updatePair, setUpdatePair] = useState();
     let numRanked;
 
     const handleClick = (index) => {
         //-----FOR ACTIVE STYLING 
         if (activeIndex === index) {
-            // If the same option with same choice is clicked again, do nothing
+            // --If the same option with same choice is clicked again, do nothing
             return;
         }
         setActiveIndex(index);
@@ -27,22 +19,21 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
         //-----FOR UPDATING RANKING
         const updateRankedPairs = [...rankedPairs];
         let updatePair = [...pair];
-        // setUpdatePair(pair);
         if (index === 1) {
             updatePair = [...updatePair.reverse()];
-            // setUpdatePair(...updatePair.reverse());
         }
 
         const alreadySorted = updateRankedPairs.findIndex((rankedPair) => 
         rankedPair[0].eraIndex === pair[index].eraIndex || 
-        rankedPair[1].eraIndex === pair[index].eraIndex
+        rankedPair[1]?.eraIndex === pair[index]?.eraIndex
         );
-        // if pair is in rankedPairs, alreadySorted will be the index at which the pair already is. 
-        // if pair is new, alreadySorted will be -1
+        // --if pair is in rankedPairs, alreadySorted will be the index at which the pair already is. 
+        // --if pair is new, alreadySorted will be -1
+        // --if you're on the last track and there is no rankedPair[1] then don't it wont break because of the '?'.
 
         if (alreadySorted != -1) {
-            // ie: IF PAIR ALREADY SORTED
-            // replace with new pair. 
+            // --ie: IF PAIR ALREADY SORTED
+            // --replace with new pair. 
             updateRankedPairs[alreadySorted] = updatePair;
         } else {
             numRanked = updateRankedPairs.push(updatePair);

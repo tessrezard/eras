@@ -1712,7 +1712,7 @@
 }
 
 .quiz-stack-current-song-A {
-  left: 175px;
+  left: 170px;
 }
 @media (min-width: 370px) {
   .quiz-stack-current-song-A {
@@ -1744,7 +1744,6 @@
   border-radius: 19px;
   padding: 1rem;
   margin: auto;
-  margin-top: 1rem;
   transition: all 500ms ease;
   padding-bottom: 2rem;
   display: flex;
@@ -1766,16 +1765,6 @@
   border-radius: 10px;
   border-width: 3px;
   width: 250px;
-}
-@media (min-width: 370px) {
-  .quiz-sorted-item-container {
-    width: 370px;
-  }
-}
-@media (min-width: 470px) {
-  .quiz-sorted-item-container {
-    width: 470px;
-  }
 }
 
 .quiz-sorted-item {

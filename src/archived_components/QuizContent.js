@@ -2,7 +2,7 @@
 // https://en.wikipedia.org/wiki/Quicksort#Algorithm
 
 import React, { useState } from "react";
-import QuizSongOption from "./QuizSongOption";
+import QuizSongOption from "../components/QuizSongOption";
 
 const QuizContent = ({ tracks }) => {
 

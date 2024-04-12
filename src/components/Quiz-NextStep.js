@@ -7,7 +7,7 @@ import QuizSongOption from "./QuizSongOption";
 import QuizStackedOption from "./QuizStackedOption";
 import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 import FullSizeAllTracks from "./FullSizeAllTracks";
-import QuizContent from "./QuizContent";
+import QuizContent from "../archived_components/QuizContent";
 import { isAbsolute } from "path-browserify";
 import QuizSortedItem from "./QuizSortedItem";
 

@@ -3,39 +3,34 @@ import '../styles/CSS/main.css';
 
 import Filters from "../components/Filters";
 import OrderOptions from "../components/OrderOptions";
-// import Quiz from "../components/Quiz";
-// import Quiz from "../components/Quiz-quicksort";
 import Quiz from "../components/Quiz-mergesort";
 import Condensed from "../components/Condensed";
 import FullSizeAllTracks from "../components/FullSizeAllTracks";
-import QuizContent from "../app/utilities/quicksort";
 import { allTracks } from "../app/data/current_data/all_tracks";
-import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
-import { filterTracks } from "../app/utilities/filterTracks";
-import { useDispatch, useSelector } from 'react-redux';
 import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 import ReloadButton from "../components/ReloadButton";
+
+
 const QuizPage = () => {
 
   // for OrderOptions, to view tracks in era order or preference order 
   const [orderOption, setOrderOption] = useState('eraOrderOption')
-
   // for Filters, initialize with allTracks from database 
   // const [filteredTracks, setFilteredTracks] = useState(allTracks);
   const [filteredTracks, setFilteredTracks] = useState([]);
+  const [started, setStarted] = useState(false);
   const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
-
-  // const [pairs, setPairs] = useState(splitIntoPairs(filteredTracks, filteredTracks));
   const [pairs, setPairs] = useState(true);
 
+
   useEffect(() => {
+    // setPairs(splitIntoPairs(filteredTracks, filteredTracks));
     setPairs(splitIntoPairs(filteredTracks, filteredTracks));
     const defaultPoints = 50;
     const defaultPointsTracks = filteredTracks.map(track => ({ ...track, points: defaultPoints }));
-  
-  
+
   }, [filteredTracks])
-  
+
   return (
     <>
       {/* <OrderOptions
@@ -43,16 +38,25 @@ const QuizPage = () => {
         orderOption={orderOption}
         setOrderOption={setOrderOption}
       /> */}
-<div className="quiz-reload-btn-container">
-<ReloadButton/>
+      <div className="quiz-reload-btn-container">
+        <ReloadButton />
 
-</div>
-
-      <Filters
+      </div>
+      {started? (
+      <>
+       
+      
+      </>):(<>
+        <Filters
         inputTracks={allTracks}
         setFiltered={setFilteredTracks}
         defaultFilters={defaultFilters}
-      />
+      /></>)}
+      {/* <Filters
+        inputTracks={allTracks}
+        setFiltered={setFilteredTracks}
+        defaultFilters={defaultFilters}
+      /> */}
 
 
 
@@ -61,10 +65,11 @@ const QuizPage = () => {
           <Quiz
             tracks={filteredTracks}
             initialPairs={pairs}
+            setStarted={setStarted}
           // graphTracks={defaultPointsTracks}
           />
         </>
-        ) : (<></>)}
+      ) : (<></>)}
 
       {/* <Condensed tracks={defaultPointsTracks} sortType='preference' /> */}
       {/* <FullSizeAllTracks tracks={defaultPointsTracks} sortType='preference' orderOption={orderOption} /> */}

@@ -3,7 +3,6 @@ import '../styles/CSS/main.css';
 import Condensed from "../components/Condensed";
 import VerticalChronology from "../components/VerticalChronology";
 import { allTracks } from "../app/data/current_data/all_tracks";
-import Quiz from "../components/Quiz";
 import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import { filterTracks } from "../app/utilities/filterTracks";
 import { useDispatch, useSelector } from 'react-redux';

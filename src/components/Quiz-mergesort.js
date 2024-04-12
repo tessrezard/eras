@@ -1,38 +1,45 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect,  } from "react";
 import '../styles/CSS/main.css';
 import InitialOptions from "./Quiz-InitialOptions";
 import NextStep from "./Quiz-NextStep";
 import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
 import { isEven, isOdd } from "../app/utilities/isEven";
-import QuizSortedItem from "./QuizSortedItem";
 import { scrollToTop } from "../app/utilities/scrollToTop";
-import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
+import QuizFinished from "./Quiz-Finished";
 
-const Quiz = ({ initialPairs }) => {
+const Quiz = ({ initialPairs, setStarted }) => {
 
-    const [rankedPairs, setRankedPairs] = useState([]); // in the initial step, this get updated as the user chooses and ranks pairs. 
-    const [latestSortedTracks, setLatestSortedTracks] = useState([rankedPairs]); // this holds the latest sorted/ranked tracks. in the initial stage with single depth pairs, it updates every time a pair is added (this is because the user can choose as many pairs as they wish). In the further steps, this gets updated when moving to next step.
-    const [addUpSortedPieces, setAddUpSortedPieces] = useState([]); // when we move past the initial pairs stage, we move into working with pieces (stacks). As these get sorted, they are added here, and when they are all sorted, will will update the latestSortedTracks with the added up pieces. 
-    const [toSort, setToSort] = useState(true); // this state will hold the returned value of nextStepOfSorting. we take latestSortedTracks and pair up the pieces to be compared. 
-    const [step, setStep] = useState(0); // this state is to track which step we are one , and if the step has changed. Passing it to components will allow them to reset for the next step.
-    const [oddPair, setOddPair] = useState(true); // this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
-    const [oddPiece, setOddPiece] = useState(true); // this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
+    const [rankedPairs, setRankedPairs] = useState([]); // --in the initial step, this get updated as the user chooses and ranks pairs. 
+    const [latestSortedTracks, setLatestSortedTracks] = useState([rankedPairs]); // --this holds the latest sorted/ranked tracks. in the initial stage with single depth pairs, it updates every time a pair is added (this is because the user can choose as many pairs as they wish). In the further steps, this gets updated when moving to next step.
+    const [addUpSortedPieces, setAddUpSortedPieces] = useState([]); // --when we move past the initial pairs stage, we move into working with pieces (stacks). As these get sorted, they are added here, and when they are all sorted, will will update the latestSortedTracks with the added up pieces. 
+    const [toSort, setToSort] = useState(true); // --this state will hold the returned value of nextStepOfSorting. we take latestSortedTracks and pair up the pieces to be compared. 
+    const [step, setStep] = useState(0); // --this state is to track which step we are one , and if the step has changed. Passing it to components will allow them to reset for the next step.
+    const [oddPair, setOddPair] = useState(true); // --this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
+    const [oddPiece, setOddPiece] = useState(true); // --this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [message, setMessage] = useState();
 
 
-    // function passed to initial stage to update rankedPairs & latestRankedTracks
+    // DEBUGGER
+    console.log('latestSortedTracks', latestSortedTracks)
+
+
+
+    // --function passed to initial stage to update rankedPairs & latestRankedTracks
     const updateRankedPairs = (updatedRankedPairs) => {
         setRankedPairs(updatedRankedPairs);
         setLatestSortedTracks(updatedRankedPairs);
+        setStarted(true)
     };
 
-    // function passed to 'next' stage(s) to update addUpSortedPieces
+
+
+    // --function passed to 'next' stage(s) to update addUpSortedPieces
     const updateLatestSortedTracks = (sortedPiece) => {
         setAddUpSortedPieces([...addUpSortedPieces, sortedPiece]);
     }
 
     const allowNextStep = (step) => {
-        if (step === 0) {
+        if (step == 0) {
             if (rankedPairs.length > 2) {
                 return true;
             } else {
@@ -40,12 +47,12 @@ const Quiz = ({ initialPairs }) => {
                 return false;
             }
         } else {
-            
-            if (oddPair.length){
-                if (addUpSortedPieces.length + 1 >= latestSortedTracks.length / 2 ) {
+
+            if (oddPair.length) {
+                if (addUpSortedPieces.length + 1 >= latestSortedTracks.length / 2) {
                     return true;
                 }
-            } else if (addUpSortedPieces.length >= latestSortedTracks.length / 2 ) {
+            } else if (addUpSortedPieces.length >= latestSortedTracks.length / 2) {
                 return true;
             } else {
                 setMessage('You need to sort all the stacks before moving on to the next step.');
@@ -56,7 +63,7 @@ const Quiz = ({ initialPairs }) => {
     }
 
     const handleNextStep = (step) => {
-     
+
         if (allowNextStep(step)) {
             if (step == 0) {
                 if (isOdd(rankedPairs)) {
@@ -96,7 +103,7 @@ const Quiz = ({ initialPairs }) => {
 
             }
         }
-        //if user has sorted all of toSort
+        // --if user has sorted all of toSort
         if (addUpSortedPieces.length >= toSort.length) {
             setLatestSortedTracks(addUpSortedPieces);
         }
@@ -125,31 +132,13 @@ const Quiz = ({ initialPairs }) => {
 
 
 
-
-
-    // Function to handle saving data to localStorage
-    const saveToLocalStorage = () => {
-        localStorage.setItem('sorted-tracks', JSON.stringify(latestSortedTracks[0])); // 'myData' is the key used to store data in localStorage
-    };
-
-    // ALL SORTED
-    if (rankedPairs.length > 2 && latestSortedTracks[0].length === rankedPairs.length * 2) {
+    // --ALL SORTED
+    if (latestSortedTracks?.length == 1 && rankedPairs?.length > 2 ) {
+    // if (rankedPairs?.length > 2 && latestSortedTracks[0]?.length === rankedPairs?.length * 2) {
 
         return (
             <>
-                <div className="quiz-all-sorted">
-                    <h3> You're all sorted ! </h3>
-                    <button onClick={saveToLocalStorage}>Save to Local Storage</button>
-
-
-                    {latestSortedTracks[0].map((item, index) => {
-                        return (
-
-                            <QuizSortedItem item={item} index={index} key={index} />
-                        )
-                    })}
-                </div>
-
+                <QuizFinished latestSortedTracks={latestSortedTracks}/>
             </>
         )
     }
@@ -166,11 +155,11 @@ const Quiz = ({ initialPairs }) => {
                 >Next Step ➸</button>
                 {step === 0 ? (
                     <>
-                    <div className="quiz-instructions">
-                    <p>Choose your favorite song from a pair!</p>
-                        <p >Select as many as you would like.</p>
-                    </div>
-                       
+                        <div className="quiz-instructions">
+                            <p>Choose your favorite song from a pair!</p>
+                            <p >Select as many as you would like.</p>
+                        </div>
+
                         {initialPairs.map((pair, index) => {
                             return (
                                 <InitialOptions
@@ -203,13 +192,13 @@ const Quiz = ({ initialPairs }) => {
                     </>
                 ) : (<></>)}
 
-{message ? (<><p className="quiz-message">{message}</p></>) : (<></>)}
+                {message ? (<><p className="quiz-message">{message}</p></>) : (<></>)}
+
 
                 <button
                     className="quiz-next-button"
-                    onClick={() => handleNextStep()}
+                    onClick={() => handleNextStep(step)}
                 >Next Step ➸</button>
-
 
 
             </div>
