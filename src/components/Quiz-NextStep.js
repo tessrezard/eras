@@ -1,26 +1,17 @@
-import React, { useState, useEffect, useReducer } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { setPreferenceSortedTracks, updatePreferencePoints } from '../store/slices/preference_sorted_slice';
+import React, { useState, useEffect } from "react";
 import '../styles/CSS/main.css';
-import Condensed from "./Condensed";
 import QuizSongOption from "./QuizSongOption";
 import QuizStackedOption from "./QuizStackedOption";
-import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
-import FullSizeAllTracks from "./FullSizeAllTracks";
-import QuizContent from "../archived_components/QuizContent";
-import { isAbsolute } from "path-browserify";
 import QuizSortedItem from "./QuizSortedItem";
 
-
-// 
 
 const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 
 
-    let pieceCopy = [...piece]; // we will work from a copy of piece to fortify against issues of mutation
+    let pieceCopy = [...piece]; // --we will work from a copy of piece to fortify against issues of mutation
     const [sortedPiece, setSortedPiece] = useState([]); // list of chosen favorites, used to render sorted list and to update addUpSortedPieces 
-    const groupA = 0; // named for more readable code : left hand pile
-    const groupB = 1; // named for more readable code : right hand pile
+    const groupA = 0; // --named for more readable code : left hand pile
+    const groupB = 1; // --named for more readable code : right hand pile
 
     let indexA = 0;
     let indexB = 0;
@@ -38,7 +29,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 
 
     useEffect(() => {
-        // if new step, reset these values to sort again
+        // --if new step, reset these values to sort again
         setIndexTrackA(0);
         setIndexTrackB(0);
         setSortedPiece([])
@@ -47,7 +38,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
     }, [step])
 
 
-    // figure out how many elements in the piece ( to know when they have all been sorted. )
+    // --figure out how many elements in the piece ( to know when they have all been sorted. )
     let totalElements = 0;
     piece.forEach(innerArray => {
         totalElements += innerArray.length;
@@ -57,8 +48,8 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
     const handleClick = (item, group) => {
         let updatePiece = [...sortedPiece];
         const alreadySorted = sortedPiece.findIndex((track) => track.eraIndex === item.eraIndex)
-        // if track is in sortedPiece, alreadySorted will be the index at which the pair already is. 
-        // if track is new, alreadySorted will be -1
+        // --if track is in sortedPiece, alreadySorted will be the index at which the pair already is. 
+        // --if track is new, alreadySorted will be -1
         if (alreadySorted === -1) {
             updatePiece.push(item);
             setSortedPiece(updatePiece)
@@ -91,7 +82,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 
 
     useEffect(() => {
-        // if last element on stack added, automatically add the other stack in its current order
+        // --if last element on stack added, automatically add the other stack in its current order
 
         if (lastElementA && !lastElementB) {
             const toAutoAdd = pieceCopy[groupB].slice(indexTrackB, pieceCopy[groupB].length);
@@ -127,7 +118,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                     />
                 </div>);
         }
-        return null; // Return null for elements beyond the stopIndex
+        return null; // --Return null for elements beyond the stopIndex
     });
 
     const renderStackB = piece[1].map((track, index) => {
@@ -143,7 +134,7 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
                     />
                 </div>);
         }
-        return null; // Return null for elements beyond the stopIndex
+        return null; //-- Return null for elements beyond the stopIndex
     });
 
     return (

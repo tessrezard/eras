@@ -8,15 +8,30 @@ export const updateGraphTracks = (latestSortedTracks) => {
 
     // const tracksInEraOrder = tracks.sort((a, b) => a.eraIndex - b.eraIndex);
 
+    // // assign points
+    // tracks.forEach((obj, index) => {
+    //     // Calculate points based on ranking (index)
+    //     let points = tracks.length - index;
+    //     // let points = tracks.length - index;
+    //     if (tracks.length < 100){
+    //         points = points + 100;
+    //     }
+    //     obj.track.points = points;
+
+    // });
+
+
     // assign points
     tracks.forEach((obj, index) => {
-        // Calculate points based on ranking (index)
-        let points = allTracks.length - index;
+        // Calculate points based on ranking (index) and scale them to ensure a clean graph
+        let points = scalePoint(index, tracks.length);
         obj.track.points = points;
     });
 
-    console.log('tracks', tracks);
+    // console.log('tracks', tracks);
     let graphTracks = [...allTracks];
+    // graphTracks = graphTracks.filter(graphTrack => tracks.some(track => track.eraIndex === graphTrack));
+    graphTracks = graphTracks.filter((graphTrack, index) => tracks.some(track => track.eraIndex === index));
 
      // Update points value of graphTracks based on tracks
      graphTracks.forEach((graphTrack, index) => {
@@ -27,7 +42,14 @@ export const updateGraphTracks = (latestSortedTracks) => {
         }
     });
 
-    console.log('graphTracks', graphTracks);
+    // console.log('graphTracks', graphTracks);
     return graphTracks;
 
+}
+
+
+// Scale the points based on the index and total tracks
+function scalePoint(index, totalTracks) {
+    const scale = 300 / totalTracks; // Adjust as needed
+    return Math.ceil((totalTracks - index) * scale);
 }

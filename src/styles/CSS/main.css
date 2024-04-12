@@ -1054,7 +1054,7 @@
   border-radius: 19px;
   background-color: #fff;
   padding: 0.25rem;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   width: -moz-fit-content;
@@ -1121,6 +1121,7 @@
   width: 2px;
   padding: 0;
   border-radius: 1px;
+  flex-grow: 1;
 }
 @media (min-width: 570px) {
   .condensed-track-container .condensed-track-bar {
@@ -1776,18 +1777,17 @@
 }
 
 .quiz-all-sorted {
-  margin: 3rem;
   margin: auto;
 }
-@media (min-width: 370px) {
-  .quiz-all-sorted {
-    width: 370px;
-  }
+
+.quiz-finished-save-button {
+  margin: 1rem;
 }
-@media (min-width: 470px) {
-  .quiz-all-sorted {
-    width: 470px;
-  }
+
+.quiz-final-list {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 
 .options-pill-whole-container {
@@ -2319,6 +2319,7 @@ html {
   font-size: 16px;
   margin: auto;
   transition: all 500ms ease;
+  box-sizing: border-box;
 }
 
 body {

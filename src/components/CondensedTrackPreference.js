@@ -50,7 +50,7 @@ const CondensedTrackPreference = ({ track, setTrackName, setTrackEraColor }) => 
     sortedWidth = pointsInPx;
  }
  
-    let sortedHeight = '200px';
+    let sortedHeight = '300px';
     if (track) {
         const pointsInPx = (points * 0.75) + 'px';
         sortedHeight = pointsInPx;

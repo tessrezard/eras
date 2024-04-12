@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import { sortbyExplicit } from "../app/utilities/sortByExplicit";
+import { sortByPreference } from "../app/utilities/sortByPreference";
+
 import CondensedTrackDuration from "./CondensedTrackDuration";
 import CondensedTrackExplicit from "./CondensedTrackExplicit";
 import CondensedTrackPreference from "./CondensedTrackPreference";
@@ -11,8 +13,31 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
     const [trackName, setTrackName] = useState('Hover over track to see name');
     const [trackEraColor, setTrackEraColor] = useState();
 
+
     //_____________________________________________________________________________________________________
+    // ------------------------ ORDER OPTIONS: era/sorted ------------------------
+    //DETERMINE WHETHER TO SHOW IN ERA ORDER OR SORTED ORDER (orderOption)
+
+    let eraOrder = true;
+    let sortedOrder = false;
+    switch (orderOption) {
+        case 'eraOrderOption':
+            eraOrder = true;
+            sortedOrder = false;
+            break;
+        case 'sortedOrderOption':
+            eraOrder = false;
+            sortedOrder = true;
+            break;
+        default:
+            eraOrder = true;
+            sortedOrder = false;
+    }
+
+    //_____________________________________________________________________________________________________
+    // --------------- SORT TYPE: duration/preference/explicit ---------------
     //DETERMINE THE TYPE OF SORT, WHAT DATA TO ILLUSTRATE? DURATION, EXPLICIT, PREFERENCE... (sortType)
+    
     let durationSortType = false;
     let explicitSortType = false;
     let preferenceSortType = false;
@@ -31,30 +56,13 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
 
     const sortedDuration = sortTracksByDuration(tracks);
     const sortedExplicit = sortbyExplicit(tracks);
-
-    //_____________________________________________________________________________________________________
-    //DETERMINE WHETHER TO SHOW IN ERA ORDER OR SORTED ORDER (orderOption)
-    let eraOrder = true;
-    let sortedOrder = false;
-    switch (orderOption) {
-        case 'eraOrderOption':
-            eraOrder = true;
-            sortedOrder = false;
-            break;
-        case 'sortedOrderOption':
-            eraOrder = false;
-            sortedOrder = true;
-            break;
-        default:
-            eraOrder = true;
-            sortedOrder = false;
-    }
-
-
+    const sortedPreference = sortByPreference(tracks);
+    console.log('sortedDuration', sortedDuration)
 
     return (
         <>
             <p className={`condensed-title ${trackEraColor}`}>{trackName}</p>
+            {/* <div className="condensed-resize-wrapper"> */}
 
             {/* -----------------------------------------------------DISPLAY IN ERA ORDER----------------------------------------------------- */}
             {eraOrder ? (
@@ -83,7 +91,7 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
                                             setTrackEraColor={setTrackEraColor}
                                             trackName={trackName} />) : (<></>)}
 
-                                    {/* -------explicit sort type------- */}
+                                    {/* -------preference sort type------- */}
                                     {preferenceSortType ? (
                                         <CondensedTrackPreference
                                             track={track}
@@ -139,11 +147,29 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
                                     ))
                                     }
                                 </>) : (<></>)}
+
+
+                            {/* -------preference sort type------- */}
+                            {preferenceSortType ? (
+                                <>
+                                    {/* ------------------------MAP tracks in explicit sorted order------------------------ */}
+                                    {sortedPreference.map((track, index) => (
+                                        <div key={index}>
+                                            <CondensedTrackPreference
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />
+                                        </div>
+                                    ))
+                                    }
+                                </>) : (<></>)}
                         </div>
                     </div>
                 </>) : (<></>)}
 
-
+            {/* </div> */}
 
         </>
     );

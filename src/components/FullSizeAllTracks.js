@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import '../styles/CSS/main.css';
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import { sortbyExplicit } from "../app/utilities/sortByExplicit";
+import { sortByPreference } from "../app/utilities/sortByPreference";
 import FullSizeTrack from "./FullSizeTrack";
 
 
 const FullSizeAllTracks = ({ tracks, sortType, orderOption }) => {
 
-
+    //_____________________________________________________________________________________________________
     // ------------------------ ORDER OPTIONS: era/sorted ------------------------
+    //DETERMINE WHETHER TO SHOW IN ERA ORDER OR SORTED ORDER (orderOption)
+
     let eraOrder = true;
     let sortedOrder = false;
     switch (orderOption) {
@@ -20,9 +23,15 @@ const FullSizeAllTracks = ({ tracks, sortType, orderOption }) => {
             eraOrder = false;
             sortedOrder = true;
             break;
+        default:
+            eraOrder = true;
+            sortedOrder = false;
     }
 
+
+    //_____________________________________________________________________________________________________
     // --------------- SORT TYPE: duration/preference/explicit ---------------
+    //DETERMINE THE TYPE OF SORT, WHAT DATA TO ILLUSTRATE? DURATION, EXPLICIT, PREFERENCE... (sortType)
     let durationSortType = false;
     let explicitSortType = false;
     let preferenceSortType = false;
@@ -34,13 +43,14 @@ const FullSizeAllTracks = ({ tracks, sortType, orderOption }) => {
         case 'explicit':
             explicitSortType = true;
             break;
-        case 'sortedOrderOption':
+        case 'preference':
             preferenceSortType = true;
             break;
     }
 
     const sortedDuration = sortTracksByDuration(tracks);
     const sortedExplicit = sortbyExplicit(tracks);
+    const sortedPreference = sortByPreference(tracks);
 
 
 
@@ -82,6 +92,20 @@ const FullSizeAllTracks = ({ tracks, sortType, orderOption }) => {
                 {sortedOrder && explicitSortType ? (
                     <>
                         {sortedExplicit.map((track, index) => (
+                            <div key={index}>
+                                <FullSizeTrack
+                                    orderOption='sortedOrder'
+                                    track={track}
+                                    sortType={sortType}
+
+                                />
+                            </div>
+                        ))}
+                    </>) : (<></>)}
+
+                    {sortedOrder && preferenceSortType ? (
+                    <>
+                        {sortedPreference.map((track, index) => (
                             <div key={index}>
                                 <FullSizeTrack
                                     orderOption='sortedOrder'

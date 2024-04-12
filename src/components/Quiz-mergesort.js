@@ -1,4 +1,4 @@
-import React, { useState, useEffect,  } from "react";
+import React, { useState, useEffect, } from "react";
 import '../styles/CSS/main.css';
 import InitialOptions from "./Quiz-InitialOptions";
 import NextStep from "./Quiz-NextStep";
@@ -133,12 +133,15 @@ const Quiz = ({ initialPairs, setStarted }) => {
 
 
     // --ALL SORTED
-    if (latestSortedTracks?.length == 1 && rankedPairs?.length > 2 ) {
-    // if (rankedPairs?.length > 2 && latestSortedTracks[0]?.length === rankedPairs?.length * 2) {
+    if (latestSortedTracks?.length == 1 && rankedPairs?.length > 2) {
+        // if (rankedPairs?.length > 2 && latestSortedTracks[0]?.length === rankedPairs?.length * 2) {
 
         return (
             <>
-                <QuizFinished latestSortedTracks={latestSortedTracks}/>
+                <div className="quiz-container" >
+
+                    <QuizFinished latestSortedTracks={latestSortedTracks} />
+                </div>
             </>
         )
     }

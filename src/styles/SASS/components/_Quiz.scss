@@ -365,15 +365,26 @@ max-width: 400px;
     color: $background-color;
 }
 
+
+// ------------------------------------- FINISHED ----------
+
 .quiz-all-sorted {
-    margin: 3rem;
     margin: auto;
 
-    @media (min-width: $small-phone) {
-        width: $small-phone;
-    }
+    // @media (min-width: $small-phone) {
+    //     width: $small-phone;
+    // }
 
-    @media (min-width: $phone) {
-        width: $phone;
-    }
+    // @media (min-width: $phone) {
+    //     width: $phone;
+    // }
+}
+.quiz-finished-save-button{
+    margin: 1rem;
+
+}
+.quiz-final-list{
+    width: fit-content;
+    margin: auto;
+
 }
