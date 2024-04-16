@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import '../styles/CSS/main.css';
 import Condensed from "./Condensed";
 import FullSizeAllTracks from "./FullSizeAllTracks";
@@ -13,15 +13,25 @@ import OrderOptions from "../components/OrderOptions";
 
 const QuizFinished = ({ latestSortedTracks }) => {
 
+    const quizFinalGraphsRef = useRef(null);
 
     const reverseTracks = reverseEraOrder(allTracks);
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")
+    let orderKeyWord;
 
+    switch (orderOption) {
+        case ('eraOrderOption'):
+            orderKeyWord = 'era';
+            break;
+        case ('sortedOrderOption'):
+            orderKeyWord =  'your preference';
+            break;
+    }
     // Function to handle saving data to localStorage
-    const saveToLocalStorage = () => {
-        localStorage.setItem('sorted-tracks', JSON.stringify(latestSortedTracks[0])); 
+    const scrollToGraphs = () => {
+        quizFinalGraphsRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
 
@@ -33,7 +43,9 @@ const QuizFinished = ({ latestSortedTracks }) => {
             <div className="quiz-finished-container">
                 <h1> Well done! You're all sorted ! </h1>
 
-                <button className="quiz-finished-save-button" onClick={saveToLocalStorage}>Save to Local Storage</button>
+                <button className="quiz-finished-button" onClick={scrollToGraphs}>
+                    <p>See Graphs
+                    </p></button>
 
 
                 <div className="quiz-final-list">
@@ -46,7 +58,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
                 </div>
 
 
-                <div className="quiz-final-graphs">
+                <div ref={quizFinalGraphsRef} className="quiz-final-graphs">
                     <h2 className="quiz-final-list-header" >Here is your data vitalisation: </h2>
 
                     <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
@@ -62,6 +74,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
 
                     <div className="quiz-final-graph-fullSize">
+                        <h3>Songs in {orderKeyWord} order</h3>
                         <FullSizeAllTracks
                             tracks={graphTracks}
                             sortType='preference'

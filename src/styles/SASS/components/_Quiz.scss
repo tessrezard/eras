@@ -75,12 +75,13 @@
 }
 
 
-.quiz-battle-container{
+.quiz-battle-container {
     display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
     width: 100%;
 }
+
 // variant coloured option, with active variant color border on click
 .quiz-option {
     width: 100px;
@@ -205,7 +206,7 @@
     padding: 1rem;
     // width: 700px;
     width: 40%; // of quiz container 
-max-width: 400px;
+    max-width: 400px;
     height: 100px;
     // left: 1rem;
     // right: 1rem;
@@ -228,21 +229,24 @@ max-width: 400px;
 .quiz-stack-group-A {
     // left: 50px;
     left: -230px;
+
     // right: 130px;
     @media (min-width: $small-phone) {
         left: -230px;
     }
+
     @media (min-width: $phone) {
         left: -190px;
     }
+
     @media (min-width: $small-tablet) {
         left: -165px;
     }
-    
+
     @media (min-width: $desktop) {
         left: -132px;
     }
-    
+
     @media (min-width: $small-desktop) {
         left: -122px;
     }
@@ -251,22 +255,25 @@ max-width: 400px;
 .quiz-stack-group-B {
     // left: 380px;
     right: 75px;
+
     @media (min-width: $small-phone) {
         right: 75px;
     }
+
     @media (min-width: $phone) {
         right: 100px;
     }
+
     @media (min-width: $small-tablet) {
-    right: 135px;
+        right: 135px;
     }
-    
+
     @media (min-width: $desktop) {
-    right: 170px;
+        right: 170px;
     }
-    
+
     @media (min-width: $small-desktop) {
-    right: 180px;
+        right: 180px;
     }
 }
 
@@ -301,9 +308,11 @@ max-width: 400px;
     @media (min-width: $small-phone) {
         left: 150px;
     }
+
     @media (min-width: $phone) {
         left: 90px;
     }
+
     @media (min-width: $wide-phone) {
         left: 80px;
     }
@@ -374,6 +383,9 @@ max-width: 400px;
 
 .quiz-finished-container {
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
     // @media (min-width: $small-phone) {
@@ -383,15 +395,26 @@ max-width: 400px;
     // @media (min-width: $phone) {
     //     width: $phone;
     // }
-    h1{
+    h1 {
+
+        color: $lead-text-color;
+        animation: colorCycle 120s infinite;
         text-align: center;
     }
 }
-.quiz-finished-save-button{
-    margin: 1rem;
 
+.quiz-finished-button {
+    @extend .quiz-reload-button;
+    margin: 1rem;
+    animation: borderErasColorCycle 120s infinite;
+
+    p {
+        animation: colorCycle 120s infinite;
+
+    }
 }
-.quiz-final-list{
+
+.quiz-final-list {
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -402,13 +425,14 @@ max-width: 400px;
     border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
-    h2{
+
+    h2 {
         text-align: center;
         margin-top: 0;
     }
 }
 
-.quiz-final-graphs{
+.quiz-final-graphs {
     width: fit-content;
     margin: 1rem;
     margin-bottom: 2rem;
@@ -416,21 +440,29 @@ max-width: 400px;
     border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
-    h2{
+
+    h2 {
         text-align: center;
         margin-top: 0;
     }
-.quiz-final-graph-condensed{
-    margin-bottom: 1rem;
-}
-.quiz-final-graph-fullSize{
-    margin-bottom: 2rem;
+
+    h3 {
+        color: $lead-text-color;
+        text-align: center;
+        margin-top: 0;
+    }
+    .quiz-final-graph-condensed {
+        margin-bottom: 1rem;
+    }
+
+    .quiz-final-graph-fullSize {
+        margin-bottom: 2rem;
+
+    }
 
 }
 
-}
-
-.quiz-final-list-header{
- text-align: center;
-animation: colorCycle 120s infinite;
+.quiz-final-list-header {
+    text-align: center;
+    animation: colorCycle 120s infinite;
 }
