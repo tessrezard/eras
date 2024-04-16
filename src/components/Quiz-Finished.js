@@ -49,7 +49,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
                 </button>
 
 
-                <div className="quiz-final-list">
+                <div className="quiz-final-list-container">
                     <h2 className="quiz-final-list-header" >Here is your ranked list: </h2>
                     {latestSortedTracks[0].map((item, index) => {
                         return (
@@ -59,7 +59,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
                 </div>
 
 
-                <div ref={quizFinalGraphsRef} className="quiz-final-graphs">
+                <div ref={quizFinalGraphsRef} className="quiz-final-graphs-container">
                     <h2 className="quiz-final-list-header" >Here is your data vitalisation: </h2>
 
                     <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />

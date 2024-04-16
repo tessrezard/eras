@@ -6,8 +6,8 @@ const FullSizeTrackDuration = ({ track, albumBackgroundColor, albumColor }) => {
 
     const duration_ms = track.duration_ms;
     const mobileDurationInPx = ((duration_ms / 1000) / 2) + 'px';
-    const tabletDurationInPx = ((duration_ms / 1000)) + 'px';
-    const desktopDurationInPx = ((duration_ms / 1000) * 1.7) + 'px';
+    const tabletDurationInPx = ((duration_ms / 1000) / 1.33) + 'px';
+    const desktopDurationInPx = ((duration_ms / 1000) * 1.4) + 'px';
     const monitorDurationInPx = ((duration_ms / 1000) * 2) + 'px';
 
 

@@ -1832,6 +1832,31 @@
     width: 470px;
   }
 }
+@media (min-width: 650px) {
+  .quiz-finished-container {
+    width: 650px;
+  }
+}
+@media (min-width: 768px) {
+  .quiz-finished-container {
+    width: 768px;
+  }
+}
+@media (min-width: 960px) {
+  .quiz-finished-container {
+    width: 928px;
+  }
+}
+@media (min-width: 1200px) {
+  .quiz-finished-container {
+    width: 1168px;
+  }
+}
+@media (min-width: 1400px) {
+  .quiz-finished-container {
+    width: 1368px;
+  }
+}
 .quiz-finished-container h1 {
   color: #aaa592;
   animation: colorCycle 120s infinite;
@@ -1859,32 +1884,11 @@
   font-size: 1rem;
 }
 
-.quiz-final-list {
+.quiz-final-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-bottom: 2rem;
-  padding: 0.5rem;
-  border: 5px solid rgb(237, 236, 232);
-  border-radius: 19px;
-  animation: borderErasColorCycle 120s infinite;
-  max-width: 90%;
-}
-@media (min-width: 650px) {
-  .quiz-final-list {
-    padding: 1rem;
-  }
-}
-.quiz-final-list h2 {
-  text-align: center;
-  margin-top: 0;
-  max-width: 95%;
-}
-
-.quiz-final-graphs {
-  max-width: 100%;
-  margin: 1rem;
   margin-bottom: 2rem;
   padding: 0.25rem;
   border: 5px solid rgb(237, 236, 232);
@@ -1892,25 +1896,56 @@
   animation: borderErasColorCycle 120s infinite;
 }
 @media (min-width: 650px) {
-  .quiz-final-graphs {
+  .quiz-final-list-container {
     padding: 1rem;
   }
 }
-.quiz-final-graphs h2 {
+.quiz-final-list-container h2 {
   text-align: center;
   margin-top: 0;
   max-width: 95%;
 }
-.quiz-final-graphs h3 {
+
+.quiz-final-graphs-container {
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  padding: 0.25rem;
+  border: 5px solid rgb(237, 236, 232);
+  border-radius: 19px;
+  animation: borderErasColorCycle 120s infinite;
+}
+@media (min-width: 280px) {
+  .quiz-final-graphs-container {
+    width: 280px;
+  }
+}
+@media (min-width: 370px) {
+  .quiz-final-graphs-container {
+    width: 90%;
+  }
+}
+@media (min-width: 960px) {
+  .quiz-final-graphs-container {
+    width: 960px;
+  }
+}
+.quiz-final-graphs-container h2 {
+  text-align: center;
+  margin-top: 0;
+  max-width: 95%;
+}
+.quiz-final-graphs-container h3 {
   color: #aaa592;
   text-align: center;
   margin-top: 0;
 }
-.quiz-final-graphs .quiz-final-graph-condensed {
+.quiz-final-graphs-container .quiz-final-graph-condensed {
   margin-bottom: 1rem;
   max-width: 100%;
 }
-.quiz-final-graphs .quiz-final-graph-fullSize {
+.quiz-final-graphs-container .quiz-final-graph-fullSize {
+  margin: 0;
   margin-bottom: 2rem;
   max-width: 100%;
 }
