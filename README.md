@@ -1,7 +1,7 @@
 # Eras
 Work in Progress
 
-A Sorting quiz and data visualization project. 
+A sorting quiz and data visualization project. 
 
 ## Main Technologies: 
 
