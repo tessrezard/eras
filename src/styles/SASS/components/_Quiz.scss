@@ -390,19 +390,21 @@
 // ------------------------------------- FINISHED ----------
 
 .quiz-finished-container {
-    margin: 1rem;
+    margin: 0;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: fit-content;
+    @media (min-width: $smallest-phone) {
+        width: $smallest-phone;
+    }
+    @media (min-width: $small-phone) {
+        width: $small-phone;
+    }
 
-    // @media (min-width: $small-phone) {
-    //     width: $small-phone;
-    // }
-
-    // @media (min-width: $phone) {
-    //     width: $phone;
-    // }
+    @media (min-width: $phone) {
+        width: $phone;
+    }
     h1 {
         color: $lead-text-color;
         animation: colorCycle 120s infinite;
@@ -414,13 +416,23 @@
 }
 
 .quiz-finished-button {
-    @extend .quiz-reload-button;
+    // @extend .quiz-reload-button;
+    @extend .quiz-next-button;
+    display: flex;
     margin: 1rem;
+    padding: 0.5rem ;
+    letter-spacing: normal;
     animation: borderErasColorCycle 120s infinite;
 
     p {
+        padding: 0;
+        margin: 0;
+    letter-spacing: normal;
         animation: colorCycle 120s infinite;
 
+    }
+    .quiz-scrollTo-btn-arrow{
+        transform: rotate(90deg);
     }
 }
 
@@ -446,17 +458,18 @@
 }
 
 .quiz-final-graphs {
-    max-width: 90%;    
+    max-width: 100%;    
     margin: 1rem;
     margin-bottom: 2rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
     border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
-    
+
     @media (min-width: $small-tablet) {
         padding: 1rem;
         }
+
     h2 {
         text-align: center;
         margin-top: 0;
@@ -470,10 +483,14 @@
     }
     .quiz-final-graph-condensed {
         margin-bottom: 1rem;
+    max-width: 100%;    
+
     }
 
     .quiz-final-graph-fullSize {
         margin-bottom: 2rem;
+    max-width: 100%;    
+
 
     }
 

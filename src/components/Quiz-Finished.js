@@ -26,7 +26,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
             orderKeyWord = 'era';
             break;
         case ('sortedOrderOption'):
-            orderKeyWord =  'your preference';
+            orderKeyWord = 'your preference';
             break;
     }
     // Function to handle saving data to localStorage
@@ -44,8 +44,9 @@ const QuizFinished = ({ latestSortedTracks }) => {
                 <h1> Well done! You're all sorted ! </h1>
 
                 <button className="quiz-finished-button" onClick={scrollToGraphs}>
-                    <p>See Graphs
-                    </p></button>
+                    <p>See Graphs</p>
+                    <p className="quiz-scrollTo-btn-arrow">➸</p>
+                </button>
 
 
                 <div className="quiz-final-list">

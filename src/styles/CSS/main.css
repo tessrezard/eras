@@ -1435,7 +1435,7 @@
   justify-content: end;
 }
 
-.quiz-reload-button, .quiz-finished-button {
+.quiz-reload-button {
   width: 110px;
   margin: 0 1rem;
   display: flex;
@@ -1445,7 +1445,7 @@
   border: 3px solid rgb(237, 236, 232);
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
-.quiz-reload-button .quiz-reload-btn-arrow, .quiz-finished-button .quiz-reload-btn-arrow {
+.quiz-reload-button .quiz-reload-btn-arrow {
   margin: 0;
   margin-right: 3px;
   transform: rotate(180deg);
@@ -1453,7 +1453,7 @@
   top: 2px;
   animation: colorCycle 120s infinite;
 }
-.quiz-reload-button .quiz-reload-btn-text, .quiz-finished-button .quiz-reload-btn-text {
+.quiz-reload-button .quiz-reload-btn-text {
   margin: 0;
   animation: colorCycle 120s infinite;
 }
@@ -1465,7 +1465,7 @@
   align-items: center;
 }
 
-.quiz-next-button {
+.quiz-next-button, .quiz-finished-button {
   border: 4px solid rgb(237, 236, 232);
   margin: 2rem auto;
   border-radius: 19px;
@@ -1811,12 +1811,26 @@
 }
 
 .quiz-finished-container {
-  margin: 1rem;
+  margin: 0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
+}
+@media (min-width: 280px) {
+  .quiz-finished-container {
+    width: 280px;
+  }
+}
+@media (min-width: 370px) {
+  .quiz-finished-container {
+    width: 370px;
+  }
+}
+@media (min-width: 470px) {
+  .quiz-finished-container {
+    width: 470px;
+  }
 }
 .quiz-finished-container h1 {
   color: #aaa592;
@@ -1828,11 +1842,20 @@
 }
 
 .quiz-finished-button {
+  display: flex;
   margin: 1rem;
+  padding: 0.5rem;
+  letter-spacing: normal;
   animation: borderErasColorCycle 120s infinite;
 }
 .quiz-finished-button p {
+  padding: 0;
+  margin: 0;
+  letter-spacing: normal;
   animation: colorCycle 120s infinite;
+}
+.quiz-finished-button .quiz-scrollTo-btn-arrow {
+  transform: rotate(90deg);
 }
 
 .quiz-final-list {
@@ -1859,10 +1882,10 @@
 }
 
 .quiz-final-graphs {
-  max-width: 90%;
+  max-width: 100%;
   margin: 1rem;
   margin-bottom: 2rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
   border: 5px solid rgb(237, 236, 232);
   border-radius: 19px;
   animation: borderErasColorCycle 120s infinite;
@@ -1884,9 +1907,11 @@
 }
 .quiz-final-graphs .quiz-final-graph-condensed {
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 .quiz-final-graphs .quiz-final-graph-fullSize {
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .quiz-final-list-header {
