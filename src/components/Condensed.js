@@ -8,11 +8,17 @@ import CondensedTrackDuration from "./CondensedTrackDuration";
 import CondensedTrackExplicit from "./CondensedTrackExplicit";
 import CondensedTrackPreference from "./CondensedTrackPreference";
 
-const Condensed = ({ tracks, sortType, orderOption }) => {
+const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
 
     const [trackName, setTrackName] = useState('Hover over track to see name');
     const [trackEraColor, setTrackEraColor] = useState();
-
+    
+    let direction;
+        if (directionUp == true){
+            console.log('directionUp', directionUp);
+            direction = 'condensed-direction-up';
+        }
+    
 
     //_____________________________________________________________________________________________________
     // ------------------------ ORDER OPTIONS: era/sorted ------------------------
@@ -57,7 +63,7 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
     const sortedDuration = sortTracksByDuration(tracks);
     const sortedExplicit = sortbyExplicit(tracks);
     const sortedPreference = sortByPreference(tracks);
-    console.log('sortedDuration', sortedDuration)
+    // console.log('sortedDuration', sortedDuration)
 
     return (
         <>
@@ -68,7 +74,7 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
             {eraOrder ? (
                 <>
                     <div className="condensed-container">
-                        <div className="condensed-tracks">
+                        <div className={`condensed-tracks ${direction}`}>
 
                             {/* ------------------------MAP tracks in era order------------------------ */}
                             {tracks.map((track, index) => (
@@ -112,7 +118,7 @@ const Condensed = ({ tracks, sortType, orderOption }) => {
             {sortedOrder ? (
                 <>
                     <div className="condensed-container">
-                        <div className="condensed-tracks">
+                        <div className={`condensed-tracks ${direction}`}>
                             {/* -------duration sort type------- */}
                             {durationSortType ? (
                                 <>
