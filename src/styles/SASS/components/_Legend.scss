@@ -79,11 +79,11 @@
     transition: all 0.5s ease;
 
     @media (min-width: $small-phone) {
-        width: 120px;
+        width: 100px;
     }
 
     @media (min-width: $wide-phone) {
-        width: 150px;
+        width: 120px;
         left: 6rem;
         right: 2rem;
         top: 1rem;
@@ -201,7 +201,7 @@
     padding-bottom: 1rem;
 
     @media (min-width: $small-phone) {
-        left: 123px;
+        left: 103px;
     }
 
     @media (min-width: $wide-phone) {
@@ -283,17 +283,16 @@
 
     margin-bottom: 0.25rem;
 
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 0.55rem;
+    font-weight: 600;
 
     p {
         margin: 0.25rem;
         color: white;
     }
 
-    font-size: 0.65rem;
 
-    @media (min-width: $phone) {
+    @media (min-width: $wide-phone) {
         font-size: 0.75rem;
     }
 }

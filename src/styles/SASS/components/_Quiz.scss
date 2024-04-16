@@ -343,17 +343,17 @@
     flex-flow: column;
     align-items: center;
 
-    // @media (min-width: $small-phone) {
-    //     width: $small-phone;
-    // }
+    @media (min-width: $small-phone) {
+        width: $small-phone;
+    }
 
-    // @media (min-width: $phone) {
-    //     width: $phone;
-    // }
+    @media (min-width: $phone) {
+        width: $phone;
+    }
 
-    // @media (min-width: $wide-phone) {
-    //     width: $wide-phone;
-    // }
+    @media (min-width: $wide-phone) {
+        width: $wide-phone;
+    }
 }
 
 .quiz-sorted-item-container {
@@ -362,10 +362,18 @@
     width: 250px;
 
     @media (min-width: $small-phone) {
-        width: $small-phone;
+        width: $smallest-phone;
     }
 
     @media (min-width: $phone) {
+        width: $small-phone;
+    }
+
+    @media (min-width: $wide-phone) {
+        width: $phone;
+    }
+
+    @media (min-width: $small-tablet) {
         width: $phone;
     }
 }
@@ -386,7 +394,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: fit-content;
 
     // @media (min-width: $small-phone) {
     //     width: $small-phone;
@@ -396,10 +404,12 @@
     //     width: $phone;
     // }
     h1 {
-
         color: $lead-text-color;
         animation: colorCycle 120s infinite;
         text-align: center;
+        word-wrap: break-word;
+        font-size: 2rem; 
+        max-width: 90%;
     }
 }
 
@@ -415,35 +425,42 @@
 }
 
 .quiz-final-list {
-    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
-
+    max-width: 90%;
+    @media (min-width: $small-tablet) {
+    padding: 1rem;
+    }
     h2 {
         text-align: center;
         margin-top: 0;
+        max-width: 95%;
     }
 }
 
 .quiz-final-graphs {
-    width: fit-content;
+    max-width: 90%;    
     margin: 1rem;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
-
+    
+    @media (min-width: $small-tablet) {
+        padding: 1rem;
+        }
     h2 {
         text-align: center;
         margin-top: 0;
+        max-width: 95%;
     }
 
     h3 {
