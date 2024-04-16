@@ -2285,7 +2285,6 @@ h1.sort-options-header {
   margin: 0;
   margin-left: 0.5rem;
   margin-right: 1rem;
-  max-width: 70%;
   margin-bottom: 0.25rem;
   font-size: 0.55rem;
   font-weight: 600;
@@ -2305,6 +2304,9 @@ h1.sort-options-header {
   transform: rotate(90deg);
   position: relative;
   right: 10px;
+  margin: 0;
+  margin-left: 1.2rem;
+  max-width: 3%;
 }
 
 .header-container {
@@ -2456,6 +2458,7 @@ html {
   margin: auto;
   transition: all 500ms ease;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 body {
