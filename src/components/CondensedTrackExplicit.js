@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import '../styles/CSS/main.css';
 import CondensedTrackVertical from "./CondensedTrack-Vertical";
 import CondensedTrackHorizontal from "./CondensedTrack-Horizontal";
@@ -26,7 +26,7 @@ const CondensedTrackExplicit = ({ track, setTrackName, setTrackEraColor }) => {
 
     const variantBackGroundColor = 'background-color-' + track.era + '-' + variant;
     const variantColor = 'color-' + track.era + '-' + variant;
-    const duration_ms = track.duration_ms;
+    // const duration_ms = track.duration_ms;
 
 
     // EVENT HANDLERS --------------------------------------------

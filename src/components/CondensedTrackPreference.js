@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import '../styles/CSS/main.css';
 import CondensedTrackVertical from "./CondensedTrack-Vertical";
 import CondensedTrackHorizontal from "./CondensedTrack-Horizontal";

@@ -1,9 +1,9 @@
 import axios from 'axios';
 // import { CLIENT_SECRET, CLIENT_ID } from '../secrets';
 import { artistDataTS } from './data/current_data/artist_data';
-import { artist_albums } from './data/current_data/artist_albums';
-import { prepForAudioFeatures } from './utilities/prepForAudioFeatures';
-import { allTracks } from './data/current_data/all_tracks';
+// import { artist_albums } from './data/current_data/artist_albums';
+// import { prepForAudioFeatures } from './utilities/prepForAudioFeatures';
+// import { allTracks } from './data/current_data/all_tracks';
 export const API_ROOT = 'https://www.reddit.com';
 export const SUBREDDITS_ENDPOINT = `${API_ROOT}/subreddits.json`;
 
@@ -14,7 +14,7 @@ export const SUBREDDITS_ENDPOINT = `${API_ROOT}/subreddits.json`;
 export const getSpotifyToken = async () => {
 
   const CLIENT_SECRET = process.env.CLIENT_SECRET;
-  const CLIENT_ID = process.env.CLIENT_ID;
+  const CLIENT_ID = process.env.CLIENT_SECRET;
 
   // CHECK IF TOKEN IS EXPIRED. RETURNS TRUE IF EXPIRED, FALSE IF OK
   const tokenExpired = () => {

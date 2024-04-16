@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import '../styles/CSS/main.css';
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import { sortbyExplicit } from "../app/utilities/sortByExplicit";

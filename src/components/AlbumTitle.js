@@ -1,8 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import '../styles/CSS/main.css';
-import { albumsTracksArr } from "../data/albums-tracks";
-
-
 
 const TrackTitle = ({ album, albumHover }) => {
 
