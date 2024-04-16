@@ -1,7 +1,7 @@
 import React, { useState, useEffect, } from "react";
 import '../styles/CSS/main.css';
 import InitialOptions from "./Quiz-InitialOptions";
-import NextStep from "./Quiz-NextStep";
+import StacksBattles from "./Quiz-StacksBattles";
 import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
 import { isEven, isOdd } from "../app/utilities/isEven";
 import { scrollToTop } from "../app/utilities/scrollToTop";
@@ -20,7 +20,6 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
 
     // DEBUGGER
-    console.log('latestSortedTracks', JSON.stringify(latestSortedTracks))
 
     //    // Function to handle saving data to localStorage
     //    const saveLatestToLocalStorage = (tracks) => {
@@ -34,7 +33,6 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
         setStarted(true)
     };
 
-    console.log('step:', step);
 
     // if (step === 0 && localStorage.getItem('latestSortedTracks')) {
     //     console.log('IN IF')
@@ -200,7 +198,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                         {toSort ? (<>{toSort.map((piece, index) => {
                             if (piece.length = 2) {
                                 return (
-                                    <NextStep
+                                    <StacksBattles
                                         step={step}
                                         piece={piece}
                                         index={index}

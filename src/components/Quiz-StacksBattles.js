@@ -5,7 +5,7 @@ import QuizStackedOption from "./QuizStackedOption";
 import QuizSortedItem from "./QuizSortedItem";
 
 
-const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
+const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
 
 
     let pieceCopy = [...piece]; // --we will work from a copy of piece to fortify against issues of mutation
@@ -26,7 +26,8 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
     const [lastElementA, setLastElementA] = useState(false);
     const [lastElementB, setLastElementB] = useState(false);
 
-
+// LOG BAY ________________
+console.log('sortedPiece', sortedPiece);
 
     useEffect(() => {
         // --if new step, reset these values to sort again
@@ -205,6 +206,6 @@ const NextStep = ({ step, piece, index, updateLatestSortedTracks }) => {
 }
 
 
-export default NextStep;
+export default StacksBattles;
 
 
