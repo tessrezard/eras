@@ -32,7 +32,7 @@ function NavMenu() {
                     style={({ isActive }) => {
                         return isActive ? { borderBottom: 'solid 1.5px rgb(192, 189, 175)' } : {};
                     }}
-                > Sorted </NavLink>
+                > Data </NavLink>
 
                 <NavLink to={'/notes'} className='nav-link'
                     style={({ isActive }) => {
