@@ -26,9 +26,6 @@ const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
     const [lastElementA, setLastElementA] = useState(false);
     const [lastElementB, setLastElementB] = useState(false);
 
-// LOG BAY ________________
-console.log('sortedPiece', sortedPiece);
-
     useEffect(() => {
         // --if new step, reset these values to sort again
         setIndexTrackA(0);

@@ -1722,7 +1722,7 @@
 }
 
 .quiz-stack-current-song-A {
-  left: 170px;
+  left: 165px;
 }
 @media (min-width: 370px) {
   .quiz-stack-current-song-A {
@@ -1992,7 +1992,7 @@ h1.sort-options-header {
   position: absolute;
   left: 0rem;
   top: 6rem;
-  width: 100px;
+  width: 90px;
   margin-right: 3rem;
   padding-bottom: 1rem;
   background-color: rgb(254, 255, 254);
@@ -2005,7 +2005,7 @@ h1.sort-options-header {
 }
 @media (min-width: 370px) {
   .legend-container, .era-legend-container {
-    width: 140px;
+    width: 120px;
   }
 }
 @media (min-width: 570px) {
@@ -2122,14 +2122,14 @@ h1.sort-options-header {
 
 .era-legend-container {
   position: absolute;
-  left: 103px;
+  left: 93px;
   width: -moz-fit-content;
   width: fit-content;
   padding-bottom: 1rem;
 }
 @media (min-width: 370px) {
   .era-legend-container {
-    left: 143px;
+    left: 123px;
   }
 }
 @media (min-width: 570px) {

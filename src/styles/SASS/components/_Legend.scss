@@ -67,7 +67,7 @@
     position: absolute;
     left: 0rem;
     top: 6rem;
-    width: 100px;
+    width: 90px;
     margin-right: 3rem;
     padding-bottom: 1rem;
 
@@ -79,7 +79,7 @@
     transition: all 0.5s ease;
 
     @media (min-width: $small-phone) {
-        width: 140px;
+        width: 120px;
     }
 
     @media (min-width: $wide-phone) {
@@ -196,12 +196,12 @@
 .era-legend-container {
     @extend .legend-container;
     position: absolute;
-    left: 103px;
+    left: 93px;
     width: fit-content;
     padding-bottom: 1rem;
 
     @media (min-width: $small-phone) {
-        left: 143px;
+        left: 123px;
     }
 
     @media (min-width: $wide-phone) {
