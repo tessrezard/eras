@@ -1856,6 +1856,7 @@
 }
 .quiz-finished-button .quiz-scrollTo-btn-arrow {
   transform: rotate(90deg);
+  font-size: 1rem;
 }
 
 .quiz-final-list {
@@ -2284,6 +2285,7 @@ h1.sort-options-header {
   margin: 0;
   margin-left: 0.5rem;
   margin-right: 1rem;
+  max-width: 70%;
   margin-bottom: 0.25rem;
   font-size: 0.55rem;
   font-weight: 600;
