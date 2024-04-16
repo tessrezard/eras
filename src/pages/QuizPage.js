@@ -19,6 +19,25 @@ const QuizPage = () => {
   const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
   const [pairs, setPairs] = useState(true);
 
+  // Function to handle saving data to localStorage
+  const saveLatestToLocalStorage = (tracks) => {
+    localStorage.setItem('latestSortedTracks', JSON.stringify(tracks));
+  };
+
+  const saveOddPairToLocalStorage = (oddPair) => {
+    localStorage.setItem('oddPair', JSON.stringify(oddPair));
+  };
+
+  const saveOddPieceToLocalStorage = (oddPiece) => {
+    localStorage.setItem('oddPiece', JSON.stringify(oddPiece));
+  };
+
+  const removeLatestFromLocalStorage = () => {
+    localStorage.removeItem('latestSortedTracks');
+    localStorage.removeItem('oddPair');
+    localStorage.removeItem('oddPiece');
+
+  };
 
   useEffect(() => {
     // setPairs(splitIntoPairs(filteredTracks, filteredTracks));
@@ -31,7 +50,9 @@ const QuizPage = () => {
   return (
     <>
       <div className="quiz-reload-btn-container">
-        <ReloadButton />
+        <ReloadButton          
+          removeLatestFromLocalStorage={removeLatestFromLocalStorage}
+          />
       </div>
       {started ? (
         <></>) : (<>
@@ -49,6 +70,9 @@ const QuizPage = () => {
             tracks={filteredTracks}
             initialPairs={pairs}
             setStarted={setStarted}
+            saveLatestToLocalStorage={saveLatestToLocalStorage}
+            saveOddPairToLocalStorage={saveOddPairToLocalStorage}
+            saveOddPieceToLocalStorage={saveOddPieceToLocalStorage}
           />
         </>
       ) : (<></>)}

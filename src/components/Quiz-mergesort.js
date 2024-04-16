@@ -7,7 +7,7 @@ import { isEven, isOdd } from "../app/utilities/isEven";
 import { scrollToTop } from "../app/utilities/scrollToTop";
 import QuizFinished from "./Quiz-Finished";
 
-const Quiz = ({ initialPairs, setStarted }) => {
+const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage }) => {
 
     const [rankedPairs, setRankedPairs] = useState([]); // --in the initial step, this get updated as the user chooses and ranks pairs. 
     const [latestSortedTracks, setLatestSortedTracks] = useState([rankedPairs]); // --this holds the latest sorted/ranked tracks. in the initial stage with single depth pairs, it updates every time a pair is added (this is because the user can choose as many pairs as they wish). In the further steps, this gets updated when moving to next step.
@@ -20,9 +20,12 @@ const Quiz = ({ initialPairs, setStarted }) => {
 
 
     // DEBUGGER
-    console.log('latestSortedTracks', latestSortedTracks)
+    console.log('latestSortedTracks', JSON.stringify(latestSortedTracks))
 
-
+    //    // Function to handle saving data to localStorage
+    //    const saveLatestToLocalStorage = (tracks) => {
+    //     localStorage.setItem('latest-sorted-tracks', JSON.stringify(tracks)); 
+    // };
 
     // --function passed to initial stage to update rankedPairs & latestRankedTracks
     const updateRankedPairs = (updatedRankedPairs) => {
@@ -31,7 +34,17 @@ const Quiz = ({ initialPairs, setStarted }) => {
         setStarted(true)
     };
 
+    console.log('step:', step);
 
+    // if (step === 0 && localStorage.getItem('latestSortedTracks')) {
+    //     console.log('IN IF')
+    //     setStarted(true);
+    //     setStep(1);
+    //     setLatestSortedTracks(localStorage.getItem('latestSortedTracks'))
+    //     setToSort(localStorage.getItem('latestSortedTracks'));
+    //     setOddPair()
+    //     setOddPiece()
+    // }
 
     // --function passed to 'next' stage(s) to update addUpSortedPieces
     const updateLatestSortedTracks = (sortedPiece) => {
@@ -62,6 +75,7 @@ const Quiz = ({ initialPairs, setStarted }) => {
 
     }
 
+
     const handleNextStep = (step) => {
 
         if (allowNextStep(step)) {
@@ -69,13 +83,16 @@ const Quiz = ({ initialPairs, setStarted }) => {
                 if (isOdd(rankedPairs)) {
                     // console.log('isOdd(rankedPairs)', isOdd(rankedPairs));
                     setOddPair(rankedPairs[rankedPairs.length - 1]);
+                    saveOddPairToLocalStorage(rankedPairs[rankedPairs.length - 1])
                 }
                 setLatestSortedTracks(rankedPairs);
+                saveLatestToLocalStorage(rankedPairs);
             } else {
                 if (isOdd(addUpSortedPieces)) {
                     // console.log('isOdd(addUpSortedPieces)', isOdd(addUpSortedPieces));
                     if (!oddPiece.length) {
                         setOddPiece(addUpSortedPieces[addUpSortedPieces.length - 1]);
+                        saveOddPieceToLocalStorage(addUpSortedPieces[addUpSortedPieces.length - 1]);
                     } else {
                         // console.log('oddPiece already set')
                     }
@@ -106,6 +123,8 @@ const Quiz = ({ initialPairs, setStarted }) => {
         // --if user has sorted all of toSort
         if (addUpSortedPieces.length >= toSort.length) {
             setLatestSortedTracks(addUpSortedPieces);
+            saveLatestToLocalStorage(addUpSortedPieces);
+
         }
 
 
@@ -139,7 +158,6 @@ const Quiz = ({ initialPairs, setStarted }) => {
         return (
             <>
                 <div className="quiz-container" >
-
                     <QuizFinished latestSortedTracks={latestSortedTracks} />
                 </div>
             </>

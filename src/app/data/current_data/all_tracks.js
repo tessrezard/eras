@@ -3227,23 +3227,23 @@ export const allTracks =
             "acoustic": false,
             "points": 1
         },
-        {
-            "name": "Girl At Home (Original Version)",
-            "id": "6VFpuI0DDmbC5UyWZQ4IRY",
-            "disc_number": 1,
-            "era": "red",
-            "duration_ms": 220840,
-            "explicit": false,
-            "track_number": 19,
-            "type": "track",
-            "artists": [
-                "Taylor Swift"
-            ],
-            "albumName": "Red (Deluxe Edition)",
-            "trackVariant": "extended",
-            "acoustic": false,
-            "points": 1
-        },
+        // {
+        //     "name": "Girl At Home (Original Version)",
+        //     "id": "6VFpuI0DDmbC5UyWZQ4IRY",
+        //     "disc_number": 1,
+        //     "era": "red",
+        //     "duration_ms": 220840,
+        //     "explicit": false,
+        //     "track_number": 19,
+        //     "type": "track",
+        //     "artists": [
+        //         "Taylor Swift"
+        //     ],
+        //     "albumName": "Red (Deluxe Edition)",
+        //     "trackVariant": "extended",
+        //     "acoustic": false,
+        //     "points": 1
+        // },
         // {
         //     "name": "Treacherous - Original Demo Recording",
         //     "id": "7skiELMb9SiQCcBpsExIJf",

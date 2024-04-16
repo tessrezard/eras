@@ -65,10 +65,15 @@
     @media (min-width: $wide-phone) {
         flex-flow: row;
         align-items: flex-start;
-
     }
 }
+.condensed-direction-up{
+    align-items: flex-start;
+    @media (min-width: $wide-phone) {
+    align-items: flex-end;
+    }
 
+}
 
 //_______________________________________________________________________________________________________________
 

@@ -334,20 +334,6 @@ max-width: 400px;
     flex-flow: column;
     align-items: center;
 
-    @media (min-width: $small-phone) {
-        width: $small-phone;
-    }
-
-    @media (min-width: $phone) {
-        width: $phone;
-    }
-}
-
-.quiz-sorted-item-container {
-    border-radius: 10px;
-    border-width: 3px;
-    width: 250px;
-
     // @media (min-width: $small-phone) {
     //     width: $small-phone;
     // }
@@ -355,6 +341,24 @@ max-width: 400px;
     // @media (min-width: $phone) {
     //     width: $phone;
     // }
+
+    // @media (min-width: $wide-phone) {
+    //     width: $wide-phone;
+    // }
+}
+
+.quiz-sorted-item-container {
+    border-radius: 10px;
+    border-width: 3px;
+    width: 250px;
+
+    @media (min-width: $small-phone) {
+        width: $small-phone;
+    }
+
+    @media (min-width: $phone) {
+        width: $phone;
+    }
 }
 
 .quiz-sorted-item {
@@ -368,8 +372,9 @@ max-width: 400px;
 
 // ------------------------------------- FINISHED ----------
 
-.quiz-all-sorted {
-    margin: auto;
+.quiz-finished-container {
+    margin: 1rem;
+
 
     // @media (min-width: $small-phone) {
     //     width: $small-phone;
@@ -378,6 +383,9 @@ max-width: 400px;
     // @media (min-width: $phone) {
     //     width: $phone;
     // }
+    h1{
+        text-align: center;
+    }
 }
 .quiz-finished-save-button{
     margin: 1rem;
@@ -385,6 +393,44 @@ max-width: 400px;
 }
 .quiz-final-list{
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 5px solid $lead-color;
+    border-radius: $rounded-rectangle;
+    animation: borderErasColorCycle 120s infinite;
+    h2{
+        text-align: center;
+        margin-top: 0;
+    }
+}
 
+.quiz-final-graphs{
+    width: fit-content;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 5px solid $lead-color;
+    border-radius: $rounded-rectangle;
+    animation: borderErasColorCycle 120s infinite;
+    h2{
+        text-align: center;
+        margin-top: 0;
+    }
+.quiz-final-graph-condensed{
+    margin-bottom: 1rem;
+}
+.quiz-final-graph-fullSize{
+    margin-bottom: 2rem;
+
+}
+
+}
+
+.quiz-final-list-header{
+ text-align: center;
+animation: colorCycle 120s infinite;
 }

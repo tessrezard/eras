@@ -37,7 +37,7 @@ const SortedByPage = () => {
                     <button className={`sorted-by-view-arrow`}  >➸</button>
                     <h2>Condensed View</h2>
                 </div>
-                <Condensed tracks={filteredTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} directionUp={true} />
+                <Condensed tracks={filteredTracks} sortType={sorting.toLowerCase()} orderOption={orderOption} directionUp={false} />
             </div>
 
             <div className="sorted-by-view-container" >

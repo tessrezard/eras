@@ -21,7 +21,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     // Function to handle saving data to localStorage
     const saveToLocalStorage = () => {
-        localStorage.setItem('sorted-tracks', JSON.stringify(latestSortedTracks[0])); // 'myData' is the key used to store data in localStorage
+        localStorage.setItem('sorted-tracks', JSON.stringify(latestSortedTracks[0])); 
     };
 
 
@@ -30,39 +30,47 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     return (
         <>
-            <div className="quiz-all-sorted">
-                <h3> You're all sorted ! </h3>
+            <div className="quiz-finished-container">
+                <h1> Well done! You're all sorted ! </h1>
+
                 <button className="quiz-finished-save-button" onClick={saveToLocalStorage}>Save to Local Storage</button>
-                
+
 
                 <div className="quiz-final-list">
+                    <h2 className="quiz-final-list-header" >Here is your ranked list: </h2>
                     {latestSortedTracks[0].map((item, index) => {
                         return (
                             <QuizSortedItem item={item} index={index} key={index} />
                         )
                     })}
                 </div>
-                
-                <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
-
-                <Condensed
-                    tracks={graphTracks}
-                    sortType='preference'
-                    // orderOption='eraOrderOption'
-                    orderOption={orderOption} 
-                    directionUp={true}
-                />
 
 
+                <div className="quiz-final-graphs">
+                    <h2 className="quiz-final-list-header" >Here is your data vitalisation: </h2>
 
-                <FullSizeAllTracks
-                    tracks={graphTracks}
-                    sortType='preference'
-                    // orderOption='eraOrderOption'
-                    orderOption={orderOption}
-                />
+                    <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
+                    <div className="quiz-final-graph-condensed">
+                        <Condensed
+                            tracks={graphTracks}
+                            sortType='preference'
+                            // orderOption='eraOrderOption'
+                            orderOption={orderOption}
+                            directionUp={true}
+                        />
+                    </div>
+
+
+                    <div className="quiz-final-graph-fullSize">
+                        <FullSizeAllTracks
+                            tracks={graphTracks}
+                            sortType='preference'
+                            // orderOption='eraOrderOption'
+                            orderOption={orderOption}
+                        />
+                    </div>
+                </div>
             </div>
-
         </>
     )
 

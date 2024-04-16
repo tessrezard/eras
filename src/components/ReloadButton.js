@@ -1,9 +1,10 @@
 import React from 'react';
 import '../styles/CSS/main.css';
 
-const ReloadButton = () => {
+const ReloadButton = ({removeLatestFromLocalStorage}) => {
     const handleReload = () => {
         window.location.reload(); // Reloads the page
+        removeLatestFromLocalStorage();
     };
 
     return (
