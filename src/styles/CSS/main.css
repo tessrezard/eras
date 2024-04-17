@@ -1856,6 +1856,11 @@
     width: 1368px;
   }
 }
+@media (min-width: 1500px) {
+  .quiz-finished-container {
+    width: 1500px;
+  }
+}
 .quiz-finished-container h1 {
   color: #aaa592;
   animation: colorCycle 120s infinite;
@@ -1927,6 +1932,21 @@
 @media (min-width: 960px) {
   .quiz-final-graphs-container {
     width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .quiz-final-graphs-container {
+    width: 1200px;
+  }
+}
+@media (min-width: 1400px) {
+  .quiz-final-graphs-container {
+    width: 1400px;
+  }
+}
+@media (min-width: 1500px) {
+  .quiz-final-graphs-container {
+    width: 1500px;
   }
 }
 .quiz-final-graphs-container h2 {

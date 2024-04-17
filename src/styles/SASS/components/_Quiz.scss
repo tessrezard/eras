@@ -422,7 +422,9 @@
     @media (min-width: $XL-desktop) {
         width: $XL-desktop - 32px;
     }
-
+    @media (min-width: $XXL-desktop) {
+        width: $XXL-desktop;
+    }
 
     h1 {
         color: $lead-text-color;
@@ -493,7 +495,15 @@
     @media (min-width: $desktop) {
         width: $desktop;
     }
-
+    @media (min-width: $large-desktop) {
+        width: $large-desktop ;
+    } 
+    @media (min-width: $XL-desktop) {
+        width: $XL-desktop ;
+    }
+    @media (min-width: $XXL-desktop) {
+        width: $XXL-desktop;
+    }
    
 
     h2 {
