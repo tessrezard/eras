@@ -1363,7 +1363,6 @@
   justify-content: flex-end;
   align-items: flex-start;
   bottom: 1px;
-  overflow: scroll;
 }
 .full-track-container .full-track-title {
   display: block;
@@ -2490,7 +2489,6 @@ h1.sort-options-header {
 
 html {
   font-size: 16px;
-  margin: auto;
   transition: all 500ms ease;
   box-sizing: border-box;
   background-color: #fff;
