@@ -137,6 +137,9 @@
     font-size: 0.75rem;
 
     @media (min-width: $wide-phone) {
+        font-size: 0.8rem;
+    }
+    @media (min-width: $tablet) {
         font-size: 1rem;
     }
 }
@@ -215,6 +218,9 @@
     border-top: 5px solid $lead-color;
     transition: all 500ms ease;
 
+    @media (min-width: $smallest-phone) {
+    width: 38%; // of quiz container 
+        }
     @media (min-width: $small-phone) {
     width: 30%; 
     }
@@ -311,14 +317,18 @@
 }
 
 .quiz-stack-current-song-A {
-    left: 165px;
+
+    // the larger the number, the further left
+    // INCREASE for left
+    // DECREASE for right
+    left: 164px;
 
     @media (min-width: $small-phone) {
-        left: 150px;
+        left: 147px;
     }
 
     @media (min-width: $phone) {
-        left: 120px;
+        left: 117px;
     }
 
     @media (min-width: $wide-phone) {

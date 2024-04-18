@@ -1561,6 +1561,11 @@
 }
 @media (min-width: 570px) {
   .quiz-song-name {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .quiz-song-name {
     font-size: 1rem;
   }
 }
@@ -1629,6 +1634,11 @@
   border-radius: 19px;
   border-top: 5px solid rgb(237, 236, 232);
   transition: all 500ms ease;
+}
+@media (min-width: 280px) {
+  .quiz-both-stacks {
+    width: 38%;
+  }
 }
 @media (min-width: 370px) {
   .quiz-both-stacks {
@@ -1731,16 +1741,16 @@
 }
 
 .quiz-stack-current-song-A {
-  left: 165px;
+  left: 164px;
 }
 @media (min-width: 370px) {
   .quiz-stack-current-song-A {
-    left: 150px;
+    left: 147px;
   }
 }
 @media (min-width: 470px) {
   .quiz-stack-current-song-A {
-    left: 120px;
+    left: 117px;
   }
 }
 @media (min-width: 570px) {
