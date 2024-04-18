@@ -338,13 +338,15 @@
 
 .quiz-undo-button {
     @extend .quiz-reload-button;
+    align-items: center;
     margin: 0.25rem 1rem;
     
 
     .quiz-undo-btn-arrow {
         @extend .quiz-reload-btn-arrow;
         animation: none;
-        color: $lead-text-color
+        color: $lead-text-color;
+        font-size: 1rem;
     }
 
     .quiz-undo-btn-text {
@@ -361,26 +363,28 @@
 // ------------------------------------- FOR SORTED LIST ----------
 .quiz-sorted-piece-list {
     background-color: $background-color;
+    background-color: $lead-color;
     border-radius: $rounded-rectangle;
     padding: 1rem;
     margin: auto;
+    margin-top: 1rem;
     transition: all 500ms ease;
     padding-bottom: 2rem;
     display: flex;
     flex-flow: column;
     align-items: center;
 
-    @media (min-width: $small-phone) {
-        width: $small-phone;
-    }
+    // @media (min-width: $small-phone) {
+    //     width: $small-phone;
+    // }
 
-    @media (min-width: $phone) {
-        width: $phone;
-    }
+    // @media (min-width: $phone) {
+    //     width: $phone;
+    // }
 
-    @media (min-width: $wide-phone) {
-        width: $wide-phone;
-    }
+    // @media (min-width: $wide-phone) {
+    //     width: $wide-phone;
+    // }
 }
 
 .quiz-sorted-item-container {

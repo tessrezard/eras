@@ -191,15 +191,20 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
             {/* </div> */}
 
             <div>
-                <div className="quiz-sorted-piece-list">
 
-                    {sortedPiece.map((item, index) => {
+                {/* {sortedPiece.map((item, index) => {
                         return (
                             <QuizSortedItem item={item} index={index} key={index} />
                         )
-                    })}
-                    {sortedPiece.length ? (
-                        <>
+                    })} */}
+                {sortedPiece.length ? (
+                    <>
+                        <div className="quiz-sorted-piece-list">
+                            {sortedPiece.map((item, index) => {
+                                return (
+                                    <QuizSortedItem item={item} index={index} key={index} />
+                                )
+                            })}
                             <UndoButton
                                 piece={piece}
                                 sortedPiece={sortedPiece}
@@ -211,8 +216,9 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
                                 addUpSortedPieces={addUpSortedPieces}
                                 setAddUpSortedPieces={setAddUpSortedPieces}
                             />
-                        </>) : (<></>)}
-                </div>
+                        </div>
+
+                    </>) : (<></>)}
             </div>
 
         </>
