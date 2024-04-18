@@ -31,7 +31,7 @@ const NotesPage = () => {
       <p>Once you get into the second phase of the quiz, you can no longer undo a choice, so think carefully about which song to choose. </p>
       
       <p>NOTES:</p>
-      <p> This quiz can be very long it you want sort all the tracks!</p>
+      <p> This quiz can be very long if you want sort all the tracks!</p>
       <p> Do not refresh the page, or you will loose you progress and have to start again!</p>
     </div>
         </>

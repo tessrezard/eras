@@ -45,7 +45,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     // }
 
     // --function passed to 'next' stage(s) to update addUpSortedPieces
-    const updateLatestSortedTracks = (sortedPiece) => {
+    const updateAddUpSortedPieces = (sortedPiece) => {
         setAddUpSortedPieces([...addUpSortedPieces, sortedPiece]);
     }
 
@@ -203,7 +203,9 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                                         piece={piece}
                                         index={index}
                                         key={index}
-                                        updateLatestSortedTracks={updateLatestSortedTracks}
+                                        updateAddUpSortedPieces={updateAddUpSortedPieces}
+                                        addUpSortedPieces={addUpSortedPieces}
+                                        setAddUpSortedPieces={setAddUpSortedPieces}
                                     />
                                 )
                             }

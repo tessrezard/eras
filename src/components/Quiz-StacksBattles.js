@@ -3,9 +3,10 @@ import '../styles/CSS/main.css';
 import QuizSongOption from "./QuizSongOption";
 import QuizStackedOption from "./QuizStackedOption";
 import QuizSortedItem from "./QuizSortedItem";
+import UndoButton from "./Quiz-UndoButton";
 
 
-const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
+const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSortedPieces, setAddUpSortedPieces }) => {
 
 
     let pieceCopy = [...piece]; // --we will work from a copy of piece to fortify against issues of mutation
@@ -81,7 +82,6 @@ const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
 
     useEffect(() => {
         // --if last element on stack added, automatically add the other stack in its current order
-
         if (lastElementA && !lastElementB) {
             const toAutoAdd = pieceCopy[groupB].slice(indexTrackB, pieceCopy[groupB].length);
             const autoAddUp = [...sortedPiece, ...toAutoAdd];
@@ -96,15 +96,16 @@ const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
         }
     }, [lastElementA, lastElementB])
 
+
+
     useEffect(() => {
         if (sortedPiece.length == totalElements) {
-            updateLatestSortedTracks(sortedPiece);
+            updateAddUpSortedPieces(sortedPiece);
         }
     }, [sortedPiece])
 
 
     const renderStackA = piece[0].map((track, index) => {
-
         if (index > indexTrackA) {
             return (
                 <div key={index}>
@@ -119,8 +120,8 @@ const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
         return null; // --Return null for elements beyond the stopIndex
     });
 
-    const renderStackB = piece[1].map((track, index) => {
 
+    const renderStackB = piece[1].map((track, index) => {
         if (index > indexTrackB) {
             return (
                 <div key={index}>
@@ -134,6 +135,8 @@ const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
         }
         return null; //-- Return null for elements beyond the stopIndex
     });
+
+
 
     return (
         <>
@@ -195,6 +198,20 @@ const StacksBattles = ({ step, piece, index, updateLatestSortedTracks }) => {
                             <QuizSortedItem item={item} index={index} key={index} />
                         )
                     })}
+                    {sortedPiece.length ? (
+                        <>
+                            <UndoButton
+                                piece={piece}
+                                sortedPiece={sortedPiece}
+                                setSortedPiece={setSortedPiece}
+                                setIndexTrackA={setIndexTrackA}
+                                setIndexTrackB={setIndexTrackB}
+                                setLastElementA={setLastElementA}
+                                setLastElementB={setLastElementB}
+                                addUpSortedPieces={addUpSortedPieces}
+                                setAddUpSortedPieces={setAddUpSortedPieces}
+                            />
+                        </>) : (<></>)}
                 </div>
             </div>
 
