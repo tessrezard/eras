@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchToken  } from '../../store/thunks';
 
-import ArtistAlbums from './ArtistAlbums';
-import AlbumTracks from './AlbumTracks';
 import ChronologicallySortAlbumTracks from './ChronologicallySortAlbumTracks.js';
 const Services = () => {
     const dispatch = useDispatch();
