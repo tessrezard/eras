@@ -33,12 +33,14 @@ html {
     transition: all 500ms ease;
     box-sizing: border-box;
     background-color: $background-color;
+    
 
 }
 
 body {
     font-family: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-family: $lead-font;
+    // padding-left: 1rem;
 }
 
 ul {
