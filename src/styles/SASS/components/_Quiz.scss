@@ -110,9 +110,8 @@
     }
 
     @media (min-width: $phone) {
-        width: 192px;
+        width: 162px;
         height: 80px;
-
         margin: 0.15rem;
         height: 55px;
         flex-flow: row;
@@ -215,6 +214,14 @@
     border-radius: $rounded-rectangle;
     border-top: 5px solid $lead-color;
     transition: all 500ms ease;
+
+    @media (min-width: $small-phone) {
+    width: 30%; 
+    }
+
+    @media (min-width: $phone) {
+    width: 38%;  
+    }
 }
 
 
@@ -241,6 +248,7 @@
 
     @media (min-width: $small-tablet) {
         left: -165px;
+        // left: -145px;
     }
 
     @media (min-width: $desktop) {
@@ -310,11 +318,11 @@
     }
 
     @media (min-width: $phone) {
-        left: 90px;
+        left: 120px;
     }
 
     @media (min-width: $wide-phone) {
-        left: 80px;
+        left: 110px;
     }
 
     @media (min-width: $tablet) {

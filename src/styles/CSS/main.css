@@ -1532,7 +1532,7 @@
 }
 @media (min-width: 470px) {
   .quiz-option {
-    width: 192px;
+    width: 162px;
     height: 80px;
     margin: 0.15rem;
     height: 55px;
@@ -1629,6 +1629,16 @@
   border-radius: 19px;
   border-top: 5px solid rgb(237, 236, 232);
   transition: all 500ms ease;
+}
+@media (min-width: 370px) {
+  .quiz-both-stacks {
+    width: 30%;
+  }
+}
+@media (min-width: 470px) {
+  .quiz-both-stacks {
+    width: 38%;
+  }
 }
 
 .quiz-stack-group-container {
@@ -1730,12 +1740,12 @@
 }
 @media (min-width: 470px) {
   .quiz-stack-current-song-A {
-    left: 90px;
+    left: 120px;
   }
 }
 @media (min-width: 570px) {
   .quiz-stack-current-song-A {
-    left: 80px;
+    left: 110px;
   }
 }
 @media (min-width: 768px) {
