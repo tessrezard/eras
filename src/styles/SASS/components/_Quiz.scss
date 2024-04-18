@@ -327,6 +327,25 @@
     // left: 30px;
 }
 
+
+.quiz-undo-button {
+    @extend .quiz-reload-button;
+    margin: 0.25rem 1rem;
+    
+
+    .quiz-undo-btn-arrow {
+        @extend .quiz-reload-btn-arrow;
+        animation: none;
+        color: $lead-text-color
+    }
+
+    .quiz-undo-btn-text {
+        @extend .quiz-reload-btn-text;
+        animation: none;
+        color: $lead-text-color
+
+    }
+}
 // ------------------------------------- 
 
 

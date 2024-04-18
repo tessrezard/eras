@@ -1434,7 +1434,7 @@
   justify-content: end;
 }
 
-.quiz-reload-button {
+.quiz-reload-button, .quiz-undo-button {
   width: 110px;
   margin: 0 1rem;
   display: flex;
@@ -1444,7 +1444,7 @@
   border: 3px solid rgb(237, 236, 232);
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
-.quiz-reload-button .quiz-reload-btn-arrow {
+.quiz-reload-button .quiz-reload-btn-arrow, .quiz-undo-button .quiz-reload-btn-arrow, .quiz-undo-button .quiz-undo-btn-arrow {
   margin: 0;
   margin-right: 3px;
   transform: rotate(180deg);
@@ -1452,7 +1452,7 @@
   top: 2px;
   animation: colorCycle 120s infinite;
 }
-.quiz-reload-button .quiz-reload-btn-text {
+.quiz-reload-button .quiz-reload-btn-text, .quiz-undo-button .quiz-reload-btn-text, .quiz-undo-button .quiz-undo-btn-text {
   margin: 0;
   animation: colorCycle 120s infinite;
 }
@@ -1746,6 +1746,18 @@
 
 .quiz-stack-item-container {
   position: "absolute";
+}
+
+.quiz-undo-button {
+  margin: 0.25rem 1rem;
+}
+.quiz-undo-button .quiz-undo-btn-arrow {
+  animation: none;
+  color: #aaa592;
+}
+.quiz-undo-button .quiz-undo-btn-text {
+  animation: none;
+  color: #aaa592;
 }
 
 .quiz-sorted-piece-list {
