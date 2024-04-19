@@ -25,7 +25,7 @@ const Legend = ({ setActiveLegend }) => {
     const reversedEras = [...erasList].reverse();
 
     const [seeEra, setSeeEra] = useState(false);
-    const [whichEra, setWhichEra] = useState('midnights');
+    const [whichEra, setWhichEra] = useState('theTorturedPoetsDepartment');
 
     const handleEraClick = (era) => {
         setSeeEra(prev => !prev);

@@ -4,7 +4,8 @@ import '../styles/CSS/main.css';
 import Filters from "../components/Filters";
 import OrderOptions from "../components/OrderOptions";
 import Quiz from "../components/Quiz-mergesort";
-import { allTracks } from "../app/data/current_data/all_tracks";
+// import { allTracks } from "../app/data/current_data/all_tracks";
+import { allTracks } from "../app/data/current_data/all_tracks_update";
 import { splitIntoPairs, getRandomTrack } from "../app/utilities/getPair";
 import ReloadButton from "../components/ReloadButton";
 

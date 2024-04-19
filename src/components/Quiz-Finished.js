@@ -15,7 +15,6 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     const quizFinalGraphsRef = useRef(null);
 
-    const reverseTracks = reverseEraOrder(allTracks);
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")

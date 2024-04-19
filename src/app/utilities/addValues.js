@@ -1,6 +1,4 @@
-// import { albumTracks } from "../data/spotify_order_album_tracks";
-import { albumTracks } from "../data/current_data/album_tracks";
-
+import { newTracks } from "../data/current_data/new_tracks";
 // THERE ARE A COUPLE OF KEY VALUE PAIRS THAT I NEED TO ADD TO THE MAIN DATASET, WHICH SPOTIFY CANNOT PROVIDE
 // THESE INCLUDE :
 //      
@@ -9,12 +7,13 @@ import { albumTracks } from "../data/current_data/album_tracks";
 //      "trackVariant": "VARIANT_TO_REPLACE";
 
 
-export const addValues = () => {
 
+// HOW TO ADD VALUES: 
+//      addValues receives 
+export const addValues = (tracks) => {
 
     // --------------------------------------------------------------------------
     // BECAUSE WE TAKE THE TRACKS OUT OF THE CONTEXT OF THEIR ALBUM (TO DISPLAY THEM SORTED) 
-
 
     const addAlbumName = (albumsTrackList) => {
         const dataWithValue = albumsTrackList.map(albumObj => {
@@ -36,7 +35,7 @@ export const addValues = () => {
     //           \/
 
     // ADD VALUE TO TRACK : albumName
-    const dataWithAlbumName = addAlbumName(albumTracks);
+    const dataWithAlbumName = addAlbumName(tracks);
 
 
     //          |        |
@@ -67,7 +66,7 @@ export const addValues = () => {
             if (album.album_type === 'single') {
                 trackVariant = 'single';
             }
-            if (album.name.toLowerCase().includes('deluxe') || album.name.toLowerCase().includes('edition')) {
+            if (album.name.toLowerCase().includes('deluxe') || album.name.toLowerCase().includes('edition')|| album.name.toLowerCase().includes('anthology') ) {
                 trackVariant = 'extended';
             }
             if (album.name.toLowerCase().includes('live')) {
@@ -95,7 +94,7 @@ export const addValues = () => {
         const trackVariant = determineTrackVariantFromAlbum(albumObj);
 
         // Add trackName property to each track object
-        const tracksWithTrackVariant = tracks.map(track => ({ ...track, trackVariant }));
+        const tracksWithTrackVariant = tracks.map(track => ({ ...track, trackVariant, era:'' }));
 
         return { album: { ...album }, tracks: tracksWithTrackVariant };
     });
@@ -129,7 +128,7 @@ export const addValues = () => {
 
     // MANUALLY COPY JUSTTRACKS TO all_tracks 
 
-    console.log(justTracks, 'just Tracks')
+    // console.log(justTracks, 'TRACKS TO ADD TO DATABASE')
     //  WE NOW TRANSITION FROM WORKING WITH THE ALBUM DATA, TO JUST TRACKS DATA
 
     //          |        |
@@ -154,7 +153,7 @@ export const addValues = () => {
             if (track.name.toLowerCase().includes('from the vault')) {
                 trackVariant = 'extended';
             }
-            if (track.name.toLowerCase().includes('live') || track.name.toLowerCase().includes('session')) {
+            if (track.name.toLowerCase().includes('live ') || track.name.toLowerCase().includes('session')) {
                 trackVariant = 'live';
             }
             if (track.name.toLowerCase().includes('remix')) {
@@ -180,6 +179,25 @@ export const addValues = () => {
     };
 
 
+    // IF YOU ADDED A NEW ALBUM YOU SHOULD FIGURE OUT HOW TO IDENTIFY THE ALBUM TO GET THE ERA
+    const determineEra = (track) => {
+
+        let era = track.era;
+        // I AM ONLY ADDING TTPD TRACKS SO THIS IS OKAY
+        era = 'theTorturedPoetsDepartment';
+
+        try {
+            if (track.albumName.toLowerCase().includes('POETS')) {
+                console.log(track);
+                era = 'theTorturedPoetsDepartment';
+            }
+        } catch (error) {
+            console.log(error);
+        }
+        return era;
+    };
+
+
     //          |  |
     //          |  |
     //         \    /
@@ -191,17 +209,19 @@ export const addValues = () => {
     const addValuesFromTrack = justTracks.map(track => {
         const trackVariant = determineTrackVariantFromTrack(track);
         const acoustic = determineIfAcoustic(track);
+        const era = determineEra(track);
         const points = 1;
-        return { ...track, trackVariant, acoustic, points };
+        return { ...track, trackVariant, acoustic, points, era };
     });
 
+    console.log('TRACKS TO ADD TO DATABASE:', addValuesFromTrack)
 
     return addValuesFromTrack;
 }
 
 
 
-// console.log(addValues());
+console.log(addValues(newTracks));
 
 
 

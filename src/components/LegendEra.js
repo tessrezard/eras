@@ -1,10 +1,12 @@
 import { albumTracks } from "../app/data/current_data/album_tracks";
 import { allTracks } from "../app/data/current_data/all_tracks";
+// import { allTracks } from "../app/data/current_data/all_tracks_update";
 import { removeTV } from "../app/utilities/removeTaylorsVersion";
 
 
 const LegendEra = ({ era }) => {
 
+    console.log('allTracks', allTracks);
     const filteredAlbums = [];
     albumTracks.forEach(item => {
         if (item.album && item.album.era === era) {
