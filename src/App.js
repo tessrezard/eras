@@ -22,7 +22,10 @@ function App() {
           </Route>
         </Routes>
       </Router>
+
+
       <Services/>
+
     </div>
   );
 }

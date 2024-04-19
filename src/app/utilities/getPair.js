@@ -8,43 +8,6 @@ export const getPair = (remainingTracks, filteredTracks) => {
         throw new Error('Insufficient tracks remaining to form a pair');
     }
 
-    // FOR ODD NUMBER OF TRACKS --- REPEAT TRACK TO MAKE TWO PAIRS - OPTION
-    // if (remainingTracks.length === 3) {
-    //     const track1 = remainingTracks[0];
-    //     const track2 = remainingTracks[1];
-    //     const id1 = track1.id;
-    //     const id2 = track2.id;
-    //     const eraIndex1 = filteredTracks.findIndex((trackObj) => trackObj.id == id1);
-    //     const eraIndex2 = filteredTracks.findIndex((trackObj) => trackObj.id == id2);
-    //     // only remove 1, so all tracks can be sorted
-    //     // one track will be sorted twice (be in two pairs)
-    //     const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== 0 );
-    //     return [
-    //         updatedRemainingTracks,
-    //         { track: track1, eraIndex: eraIndex1 },
-    //         { track: track2, eraIndex: eraIndex2 },
-    //     ];
-    // }
-
-    // // FOR ODD NUMBER OF TRACKS --- RETURN SINGLE TRACK - OPTION
-    // if (remainingTracks.length == 1) {
-    //     console.log('IN IN IN IFFFF')
-    //     const track1 = remainingTracks[0];
-    //     const id1 = track1.id;
-    //     const eraIndex1 = filteredTracks.findIndex((trackObj) => trackObj.id == id1);
-    //     // only remove 1, so all tracks can be sorted
-    //     // one track will be sorted twice (be in two pairs)
-    //     const updatedRemainingTracks = remainingTracks.filter((_, index) => index !== 0);
-    //     console.log('what to return', [
-    //         updatedRemainingTracks,
-    //         { track: track1, eraIndex: eraIndex1 },
-    //     ])
-    //     return [
-    //         updatedRemainingTracks,
-    //         { track: track1, eraIndex: eraIndex1 },
-    //     ];
-    // }
-
     // get two random indices
     const randomIndex1 = Math.floor(Math.random() * remainingTracks.length);
     let randomIndex2 = Math.floor(Math.random() * remainingTracks.length);
