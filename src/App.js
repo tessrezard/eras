@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Root from './Root';
 import HomePage from './pages/HomePage';
-// import Services from './app/services/Services';
+import Services from './app/services/Services';
 import QuizPage from './pages/QuizPage';
 import SortedByPage from './pages/SortedByPage';
 import NotesPage from './pages/NotesPage ';
@@ -24,7 +24,7 @@ function App() {
       </Router>
 
 
-      {/* <Services/> */}
+      <Services/>
 
     </div>
   );
