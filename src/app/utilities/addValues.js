@@ -214,14 +214,15 @@ export const addValues = (tracks) => {
         return { ...track, trackVariant, acoustic, points, era };
     });
 
-    console.log('TRACKS TO ADD TO DATABASE:', addValuesFromTrack)
+    // UNCOMMENT THIS TO COPY 
+    // console.log('TRACKS TO ADD TO DATABASE:', addValuesFromTrack)
 
     return addValuesFromTrack;
 }
 
 
-
-console.log(addValues(newTracks));
+    // UNCOMMENT THIS TO COPY 
+// console.log(addValues(newTracks));
 
 
 

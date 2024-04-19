@@ -24,7 +24,7 @@ function App() {
       </Router>
 
 
-      <Services/>
+      {/* <Services/> */}
 
     </div>
   );

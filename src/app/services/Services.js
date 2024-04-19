@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { fetchToken  } from '../../store/thunks';
 import { newTracks } from '../data/current_data/new_tracks.js';
 import ChronologicallySortAlbumTracks from './ChronologicallySortAlbumTracks.js';
-import { addValues } from '../utilities/addValues.js';
 const Services = () => {
     const dispatch = useDispatch();
 
@@ -12,9 +11,6 @@ const Services = () => {
         dispatch(fetchToken());
 
     }, [dispatch]);
-
-    // const prepTracks = addValues(newTracks);
-    // console.log('prepTracks', prepTracks);
 
     // <ArtistAlbums /> to find new albums to add to data set
     // <AlbumTracks /> to get albums & corresponding tracks, and sort. 

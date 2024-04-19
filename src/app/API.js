@@ -16,7 +16,6 @@ export const getSpotifyToken = async () => {
   // const CLIENT_SECRET = process.env.CLIENT_SECRET;
   // const CLIENT_ID = process.env.CLIENT_SECRET;
 
-  console.log('CLIENT_SECRET', CLIENT_SECRET)
   // CHECK IF TOKEN IS EXPIRED. RETURNS TRUE IF EXPIRED, FALSE IF OK
   const tokenExpired = () => {
     if (window.localStorage.getItem('tokenTimestamp')) {
@@ -169,8 +168,8 @@ export const getSpotifyAlbum = async (id) => {
 {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1Mo4aZ8pdj6L1jx8zSwJnt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
 //id = 1Mo4aZ8pdj6L1jx8zSwJnt
 
-const newAlbum = await getSpotifyAlbum('5H7ixXZfsNMGbIE5OBSpcb');
-console.log(newAlbum);
+// const newAlbum = await getSpotifyAlbum('5H7ixXZfsNMGbIE5OBSpcb');
+// console.log(newAlbum);
 
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -216,8 +215,8 @@ export const getSpotifyAlbumTracks = async (id) => {
 // TO GET ALBUM TRACKS: go to the album on spotify, share, view code, and get the album id from the URL 
 //id = 1Mo4aZ8pdj6L1jx8zSwJnt
 
-const newAlbumTracks = await getSpotifyAlbumTracks('5H7ixXZfsNMGbIE5OBSpcb');
-console.log('newAlbumTracks', newAlbumTracks);
+// const newAlbumTracks = await getSpotifyAlbumTracks('5H7ixXZfsNMGbIE5OBSpcb');
+// console.log('newAlbumTracks', newAlbumTracks);
 
 {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5H7ixXZfsNMGbIE5OBSpcb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
 

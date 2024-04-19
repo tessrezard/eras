@@ -6,7 +6,6 @@ import { removeTV } from "../app/utilities/removeTaylorsVersion";
 
 const LegendEra = ({ era }) => {
 
-    console.log('allTracks', allTracks);
     const filteredAlbums = [];
     albumTracks.forEach(item => {
         if (item.album && item.album.era === era) {
