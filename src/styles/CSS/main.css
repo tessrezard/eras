@@ -1306,7 +1306,7 @@
 }
 .full-track-container .full-track-duration-display {
   margin: 0;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   font-weight: 700;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   min-width: 1.2rem;
@@ -1367,7 +1367,7 @@
 .full-track-container .full-track-title {
   display: block;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.5rem;
   font-weight: 600;
   letter-spacing: 1px;
   overflow: hidden;
