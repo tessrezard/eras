@@ -36,7 +36,6 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
 
     const graphTracks = updateGraphTracks(latestSortedTracks);
-    console.log('graphTracks', graphTracks);
 
     return (
         <>

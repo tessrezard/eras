@@ -1,6 +1,5 @@
 export const sortByPreference = (tracks) => {
 
-    // console.log(addValues(albumTracks))
     
     // Function to sort tracks by duration_ms in descending order
     const sortTracksByPreference = (a, b) => b.points - a.points;

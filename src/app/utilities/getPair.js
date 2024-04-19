@@ -66,15 +66,11 @@ export const splitIntoPairs = (filteredTracks, remainingTracks) => {
 
     for (let i = 0; i < (filteredTracks.length / 2); i++) {
         if (remaining.length < 2) {
-            // pairs.push([remaining])
-            // console.log('remaining', remaining[0])
             const eraIndex1 = allTracks.findIndex((trackObj) => trackObj.id == remaining[0].id);
-            // console.log('eraIndex', eraIndex1)
             const lastTrack = {track: remaining[0], eraIndex: eraIndex1};
             pairs.push([lastTrack])
 
         } else {
-            // console.log('filteredTracks[i]', filteredTracks[i]);
             const newPair = getPair(remaining, filteredTracks);
             const [updatedRemainingTracks, track1, track2] = newPair;
             remaining = updatedRemainingTracks;

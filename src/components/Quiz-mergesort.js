@@ -33,17 +33,6 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
         setStarted(true)
     };
 
-
-    // if (step === 0 && localStorage.getItem('latestSortedTracks')) {
-    //     console.log('IN IF')
-    //     setStarted(true);
-    //     setStep(1);
-    //     setLatestSortedTracks(localStorage.getItem('latestSortedTracks'))
-    //     setToSort(localStorage.getItem('latestSortedTracks'));
-    //     setOddPair()
-    //     setOddPiece()
-    // }
-
     // --function passed to 'next' stage(s) to update addUpSortedPieces
     const updateAddUpSortedPieces = (sortedPiece) => {
         setAddUpSortedPieces([...addUpSortedPieces, sortedPiece]);
@@ -79,7 +68,6 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
         if (allowNextStep(step)) {
             if (step == 0) {
                 if (isOdd(rankedPairs)) {
-                    // console.log('isOdd(rankedPairs)', isOdd(rankedPairs));
                     setOddPair(rankedPairs[rankedPairs.length - 1]);
                     saveOddPairToLocalStorage(rankedPairs[rankedPairs.length - 1])
                 }

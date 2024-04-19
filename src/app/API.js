@@ -16,6 +16,7 @@ export const getSpotifyToken = async () => {
   const CLIENT_SECRET = process.env.CLIENT_SECRET;
   const CLIENT_ID = process.env.CLIENT_SECRET;
 
+  console.log('CLIENT_SECRET', CLIENT_SECRET)
   // CHECK IF TOKEN IS EXPIRED. RETURNS TRUE IF EXPIRED, FALSE IF OK
   const tokenExpired = () => {
     if (window.localStorage.getItem('tokenTimestamp')) {

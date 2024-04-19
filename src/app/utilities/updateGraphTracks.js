@@ -28,7 +28,6 @@ export const updateGraphTracks = (latestSortedTracks) => {
         obj.track.points = points;
     });
 
-    // console.log('tracks', tracks);
     let graphTracks = [...allTracks];
     // graphTracks = graphTracks.filter(graphTrack => tracks.some(track => track.eraIndex === graphTrack));
     graphTracks = graphTracks.filter((graphTrack, index) => tracks.some(track => track.eraIndex === index));
@@ -42,7 +41,6 @@ export const updateGraphTracks = (latestSortedTracks) => {
         }
     });
 
-    // console.log('graphTracks', graphTracks);
     return graphTracks;
 
 }

@@ -16,7 +16,6 @@ const FullSizeTrackExplicit = ({ track, albumBackgroundColor, albumColor }) => {
 
     const mobileExplicitInPx = explicitInPx ;
     const tabletExplicitInPx = explicitInPx * 2;
-    console.log(tabletExplicitInPx)
     const desktopExplicitInPx = explicitInPx * 3;
     const monitorExplicitInPx = explicitInPx * 5;
 

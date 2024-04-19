@@ -15,7 +15,6 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
     
     let direction;
         if (directionUp == true){
-            console.log('directionUp', directionUp);
             direction = 'condensed-direction-up';
         }
     
@@ -63,7 +62,6 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
     const sortedDuration = sortTracksByDuration(tracks);
     const sortedExplicit = sortbyExplicit(tracks);
     const sortedPreference = sortByPreference(tracks);
-    // console.log('sortedDuration', sortedDuration)
 
     return (
         <>
