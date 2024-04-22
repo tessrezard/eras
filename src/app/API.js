@@ -13,8 +13,8 @@ export const SUBREDDITS_ENDPOINT = `${API_ROOT}/subreddits.json`;
 
 export const getSpotifyToken = async () => {
 
-  // const CLIENT_SECRET = process.env.CLIENT_SECRET;
-  // const CLIENT_ID = process.env.CLIENT_SECRET;
+  const CLIENT_SECRET = process.env.CLIENT_SECRET;
+  const CLIENT_ID = process.env.CLIENT_SECRET;
 
   // CHECK IF TOKEN IS EXPIRED. RETURNS TRUE IF EXPIRED, FALSE IF OK
   const tokenExpired = () => {
