@@ -6,7 +6,7 @@ import { nextStepOfSorting } from "../app/utilities/nextStepOfSorting";
 import { isEven, isOdd } from "../app/utilities/isEven";
 import { scrollToTop } from "../app/utilities/scrollToTop";
 import QuizFinished from "./Quiz-Finished";
-
+import { determineNumSteps } from "../app/utilities/determineNumberOfSteps";
 const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage }) => {
 
     const [rankedPairs, setRankedPairs] = useState([]); // --in the initial step, this get updated as the user chooses and ranks pairs. 
@@ -18,8 +18,12 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     const [oddPiece, setOddPiece] = useState(true); // --this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [message, setMessage] = useState();
 
+  
 
-    // DEBUGGER
+    const expectedSteps = determineNumSteps(rankedPairs.length, step);
+    const displayStep = step + 1;
+
+    console.log(`expected number of steps : ${expectedSteps}, actual number of steps: ${step}`)
 
     //    // Function to handle saving data to localStorage
     //    const saveLatestToLocalStorage = (tracks) => {
@@ -162,6 +166,8 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                 >Next Step ➸</button>
                 {step === 0 ? (
                     <>
+                        <p>STEP 1</p>
+
                         <div className="quiz-instructions">
                             <p>Choose your favorite song from a pair!</p>
                             <p >Select as many as you would like.</p>
@@ -183,6 +189,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
                 {step > 0 ? (
                     <>
+                        <p>STEP {displayStep} of {expectedSteps}</p>
                         {toSort ? (<>{toSort.map((piece, index) => {
                             if (piece.length = 2) {
                                 return (
