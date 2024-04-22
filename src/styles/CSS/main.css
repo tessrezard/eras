@@ -1,67 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 .background-color-theTorturedPoetsDepartment {
-  background-color: rgb(237, 236, 232);
+  background-color: rgb(192, 184, 170);
 }
 
 .background-color-theTorturedPoetsDepartment-extended {
-  background-color: rgb(237, 236, 232);
+  background-color: rgb(192, 184, 170);
 }
 
 .background-color-theTorturedPoetsDepartment-album {
-  background-color: #d9d7ce;
+  background-color: #aca290;
 }
 
 .background-color-theTorturedPoetsDepartment-single {
-  background-color: #fdfdfc;
+  background-color: #cfc9bf;
 }
 
 .color-theTorturedPoetsDepartment {
-  color: rgb(237, 236, 232);
+  color: rgb(192, 184, 170);
 }
 
 .color-theTorturedPoetsDepartment-album {
-  color: #d9d7ce;
+  color: #aca290;
 }
 
 .color-theTorturedPoetsDepartment-extended {
-  color: rgb(237, 236, 232);
+  color: rgb(192, 184, 170);
 }
 
 .color-theTorturedPoetsDepartment-single {
-  color: white;
+  color: #e1ddd6;
 }
 
 .border-right-theTorturedPoetsDepartment {
-  border-right: solid 3px rgb(237, 236, 232);
+  border-right: solid 3px rgb(192, 184, 170);
 }
 
 .border-right-theTorturedPoetsDepartment-album {
-  border-right: solid 3px #d9d7ce;
+  border-right: solid 3px #aca290;
 }
 
 .border-right-theTorturedPoetsDepartment-extended {
-  border-right: solid 3px rgb(237, 236, 232);
+  border-right: solid 3px rgb(192, 184, 170);
 }
 
 .border-right-theTorturedPoetsDepartment-single {
-  border-right: solid 3px #fdfdfc;
+  border-right: solid 3px #cfc9bf;
 }
 
 .active-border-theTorturedPoetsDepartment {
-  border: solid 4px rgb(237, 236, 232);
+  border: solid 4px rgb(192, 184, 170);
 }
 
 .active-border-theTorturedPoetsDepartment-album {
-  border: solid 4px #d9d7ce;
+  border: solid 4px #aca290;
 }
 
 .active-border-theTorturedPoetsDepartment-extended {
-  border: solid 4px rgb(237, 236, 232);
+  border: solid 4px rgb(192, 184, 170);
 }
 
 .active-border-theTorturedPoetsDepartment-single {
-  border: solid 4px #fdfdfc;
+  border: solid 4px #cfc9bf;
 }
 
 .background-color-midnights {
@@ -928,7 +928,7 @@
     color: #2536a4;
   }
   83.3333333333% {
-    color: rgb(237, 236, 232);
+    color: rgb(192, 184, 170);
   }
   91.6666666667% {
     color: #7fd5e0;
@@ -966,7 +966,7 @@
     border-color: #2536a4;
   }
   83.3333333333% {
-    border-color: rgb(237, 236, 232);
+    border-color: rgb(192, 184, 170);
   }
   91.6666666667% {
     border-color: #7fd5e0;
@@ -1004,7 +1004,7 @@
     background-color: #2536a4;
   }
   83.3333333333% {
-    background-color: rgb(237, 236, 232);
+    background-color: rgb(192, 184, 170);
   }
   91.6666666667% {
     background-color: #7fd5e0;
@@ -1306,7 +1306,7 @@
 }
 .full-track-container .full-track-duration-display {
   margin: 0;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   font-weight: 700;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   min-width: 1.2rem;
@@ -1367,7 +1367,7 @@
 .full-track-container .full-track-title {
   display: block;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.5rem;
   font-weight: 600;
   letter-spacing: 1px;
   overflow: hidden;

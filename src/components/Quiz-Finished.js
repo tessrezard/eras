@@ -15,7 +15,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     const quizFinalGraphsRef = useRef(null);
 
-    const reverseTracks = reverseEraOrder(allTracks);
+    console.log('latestSortedTracks', latestSortedTracks);
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")
@@ -35,7 +35,12 @@ const QuizFinished = ({ latestSortedTracks }) => {
     };
 
 
+
     const graphTracks = updateGraphTracks(latestSortedTracks);
+
+
+    console.log('latestSortedTracks',latestSortedTracks);
+console.log('graphTracks',graphTracks);
 
     return (
         <>
@@ -59,7 +64,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
 
                 <div ref={quizFinalGraphsRef} className="quiz-final-graphs-container">
-                    <h2 className="quiz-final-list-header" >Here is your data vitalisation: </h2>
+                    <h2 className="quiz-final-list-header" >Here is your data visualisation: </h2>
 
                     <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
                     <div className="quiz-final-graph-condensed">

@@ -22,7 +22,7 @@ $XXL-monitor: 2100px;
 
 
 // era colors
-$theTorturedPoetsDepartment: rgb(237, 236, 232);
+$theTorturedPoetsDepartment: rgb(192, 184, 170);
 $midnights: #2536a4;
 $evermore: #af7039;
 $folklore: #aeb4b2;
@@ -52,10 +52,10 @@ $eraList: (
 );
 
 
-$lead-color: $theTorturedPoetsDepartment;
+$lead-color:  rgb(237, 236, 232);
 $lead-text-color: darken($lead-color, 30%);
 $second-color: #f3f4ff;
-$border-standard: 7px solid $theTorturedPoetsDepartment;
+$border-standard: 7px solid $lead-color;
 $background-color: #fff;
 $header-height: 71px;
 $nav-height: 20px;
