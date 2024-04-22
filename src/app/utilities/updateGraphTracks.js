@@ -23,17 +23,6 @@ export const updateGraphTracks = (latestSortedTracks) => {
     graphTracks = graphTracks.filter((graphTrack, index) => tracks.some(track => track.eraIndex === index));
     console.log('filtered graphTracks', graphTracks)
 
-    // // Update points value of graphTracks based on tracks
-    // tracks.forEach((track, index) => {
-    //     const eraIndex = track.eraIndex;
-    //     console.log('THIS IS THE ISSUE eraIndex', eraIndex)
-
-    //     const trackToUpdate = tracks.find(track => track.eraIndex === eraIndex);
-    //     if (trackToUpdate) {
-    //         graphTracks[index].points = trackToUpdate.track.points;
-    //     }
-    // });
-
     // Update points value of graphTracks based on tracks
     graphTracks.forEach((graphTrack, index) => {
         // GRAPHTRACK DOES NOT HAVE A ERA INDEX PROPERTY
