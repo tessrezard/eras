@@ -35,7 +35,6 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding-left: 1rem;
 
 }
 
@@ -97,8 +96,8 @@
     border-radius: $rounded-rectangle;
     margin: 0.25rem 0.25rem;
 
-    @media (min-width: $smallest-phone) {
-        width: 112px;
+    @media (min-width: $smallest-phone ) {
+        width: 112px ;
         height: 75px;
 
     }
@@ -306,15 +305,21 @@
     border: 0;
     padding: 0;
 
-    &:hover {
-        top: -5px;
-        transition: all 100ms ease;
+    &:active {
+        top: 5px;
+        transition: all 900ms ease;
     }
 
-    &:active {
-        top: 3px;
-        transition: all 900ms ease;
-
+    @media (min-width: $desktop) {
+        &:hover {
+            top: -5px;
+            transition: all 100ms ease;
+        }
+    
+        &:active {
+            top: 3px;
+            transition: all 900ms ease;
+        }
     }
 }
 
@@ -377,7 +382,7 @@
     background-color: $background-color;
     background-color: $lead-color;
     border-radius: $rounded-rectangle;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: auto;
     margin-top: 1rem;
     transition: all 500ms ease;
@@ -385,24 +390,27 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    @media (min-width: $smallest-phone) {
+        width: $smallest-phone -24px;
+    }
+    @media (min-width: $small-phone) {
+        width: $small-phone -24px;
+    }
 
-    // @media (min-width: $small-phone) {
-    //     width: $small-phone;
-    // }
+    @media (min-width: $phone) {
+        width: $phone -24px;
+    }
 
-    // @media (min-width: $phone) {
-    //     width: $phone;
-    // }
+    @media (min-width: $wide-phone) {
+        width: $wide-phone -24px;
+    }
 
-    // @media (min-width: $wide-phone) {
-    //     width: $wide-phone;
-    // }
 }
 
 .quiz-sorted-item-container {
     border-radius: 10px;
     border-width: 3px;
-    width: 250px;
+    width: 240px;
 
     @media (min-width: $small-phone) {
         width: $smallest-phone;
@@ -438,36 +446,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (min-width: $smallest-phone) {
-        width: $smallest-phone;
-    }
-    @media (min-width: $small-phone) {
-        width: $small-phone;
-    }
-
-    @media (min-width: $phone) {
-        width: $phone;
-    }
-
-    @media (min-width: $small-tablet) {
-        width: $small-tablet;
-    }
-    @media (min-width: $tablet) {
-        width: $tablet;
-    } 
-    @media (min-width: $desktop) {
-        width: $desktop - 32px;
-
-    } 
-    @media (min-width: $large-desktop) {
-        width: $large-desktop - 32px;
-    } 
-    @media (min-width: $XL-desktop) {
-        width: $XL-desktop - 32px;
-    }
-    @media (min-width: $XXL-desktop) {
-        width: $XXL-desktop;
-    }
+    width: 100%;
 
     h1 {
         color: $lead-text-color;
@@ -508,12 +487,19 @@
     margin: auto;
     margin-bottom: 2rem;
     padding: 0.25rem;
-    border: 5px solid $lead-color;
+    // border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
+
+    @media (min-width: $small-phone) {
+        border: 5px solid $lead-color;
+        }
+
     @media (min-width: $small-tablet) {
+    border: 5px solid $lead-color;
     padding: 1rem;
     }
+
     h2 {
         text-align: center;
         margin-top: 0;
@@ -533,19 +519,19 @@
         width: $smallest-phone ;
     }
     @media (min-width: $small-phone) {
-        width: 90%;
+        width: $small-phone;
     }
     @media (min-width: $desktop) {
-        width: $desktop;
+        width: $desktop -32px;
     }
     @media (min-width: $large-desktop) {
-        width: $large-desktop ;
+        width: $large-desktop -32px ;
     } 
     @media (min-width: $XL-desktop) {
-        width: $XL-desktop ;
+        width: $XL-desktop -32px;
     }
     @media (min-width: $XXL-desktop) {
-        width: $XXL-desktop;
+        width: $XXL-desktop -32px;
     }
    
 
@@ -570,7 +556,7 @@
         margin: 0;
         margin-bottom: 2rem;
         max-width: 100%;    
-
+        border: none;
 
     }
 

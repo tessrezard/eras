@@ -42,7 +42,7 @@ const CondensedTrackDuration = ({ track, setTrackName, setTrackEraColor }) => {
 
     let sortedWidth = '100px';
     if (track) {
-        const durationInPx = ((duration_ms / 1000) / 2) + 'px';
+        const durationInPx = ((duration_ms / 1000) / 2.5) + 'px';
         sortedWidth = durationInPx;
     }
 

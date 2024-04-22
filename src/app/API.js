@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CLIENT_ID, CLIENT_SECRET } from './services/secrets';
+// import { CLIENT_ID, CLIENT_SECRET } from './services/secrets';
 import { artistDataTS } from './data/current_data/artist_data';
 // import { artist_albums } from './data/current_data/artist_albums';
 // import { prepForAudioFeatures } from './utilities/prepForAudioFeatures';

@@ -10,8 +10,8 @@ const QuizStackedOption = ({ track, group, index, position }) => {
     // console.log(track, group, index, position)
 
 
-    let offset = (5 * position);
-    let fromBottom = (5 * position);
+    let offset = (3 * position);
+    let fromBottom = (3 * position);
     let depth = (1 * position);
 
     let leftOrRight;

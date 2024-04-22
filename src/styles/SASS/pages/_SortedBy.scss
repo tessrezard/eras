@@ -4,9 +4,13 @@
     display: flex;
     flex-direction: column;
     border-radius: $rounded-rectangle;
-    padding: 0.5rem;
-    margin: 0.35rem 1rem;
+    // padding: 0.5rem;
+    // margin: 0.35rem 1rem;
     transition: all 0.5s ease;
+    @media (min-width: $small-phone) {
+        padding: 0.5rem;
+        margin: 0.35rem 1rem;
+        }
 }
 
 .sorted-by-view-header{

@@ -49,6 +49,10 @@
     width: fit-content;
     margin: auto;
 
+    @media (min-width: $phone) {
+        border: $border-standard;
+        }
+
     @media (min-width: $wide-phone) {
         padding: 1rem;
         flex-flow: row;
