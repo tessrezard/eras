@@ -509,30 +509,30 @@
 
 .quiz-final-graphs-container {
     margin: auto;
-    max-width: 100%;    
+    max-width: 90%;    
     margin-bottom: 2rem;
     padding: 0.25rem;
     border: 5px solid $lead-color;
     border-radius: $rounded-rectangle;
     animation: borderErasColorCycle 120s infinite;
-    @media (min-width: $smallest-phone) {
-        width: $smallest-phone ;
-    }
-    @media (min-width: $small-phone) {
-        width: $small-phone;
-    }
-    @media (min-width: $desktop) {
-        width: $desktop -32px;
-    }
-    @media (min-width: $large-desktop) {
-        width: $large-desktop -32px ;
-    } 
-    @media (min-width: $XL-desktop) {
-        width: $XL-desktop -32px;
-    }
-    @media (min-width: $XXL-desktop) {
-        width: $XXL-desktop -32px;
-    }
+    // @media (min-width: $smallest-phone) {
+    //     width: $smallest-phone ;
+    // }
+    // @media (min-width: $small-phone) {
+    //     width: $small-phone;
+    // }
+    // @media (min-width: $desktop) {
+    //     width: $desktop -32px;
+    // }
+    // @media (min-width: $large-desktop) {
+    //     width: $large-desktop -32px ;
+    // } 
+    // @media (min-width: $XL-desktop) {
+    //     width: $XL-desktop -32px;
+    // }
+    // @media (min-width: $XXL-desktop) {
+    //     width: $XXL-desktop -32px;
+    // }
    
 
     h2 {

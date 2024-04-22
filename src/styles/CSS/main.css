@@ -1928,42 +1928,12 @@
 
 .quiz-final-graphs-container {
   margin: auto;
-  max-width: 100%;
+  max-width: 90%;
   margin-bottom: 2rem;
   padding: 0.25rem;
   border: 5px solid rgb(237, 236, 232);
   border-radius: 19px;
   animation: borderErasColorCycle 120s infinite;
-}
-@media (min-width: 280px) {
-  .quiz-final-graphs-container {
-    width: 280px;
-  }
-}
-@media (min-width: 370px) {
-  .quiz-final-graphs-container {
-    width: 370px;
-  }
-}
-@media (min-width: 960px) {
-  .quiz-final-graphs-container {
-    width: 960px -32px;
-  }
-}
-@media (min-width: 1200px) {
-  .quiz-final-graphs-container {
-    width: 1200px -32px;
-  }
-}
-@media (min-width: 1400px) {
-  .quiz-final-graphs-container {
-    width: 1400px -32px;
-  }
-}
-@media (min-width: 1500px) {
-  .quiz-final-graphs-container {
-    width: 1500px -32px;
-  }
 }
 .quiz-final-graphs-container h2 {
   text-align: center;
