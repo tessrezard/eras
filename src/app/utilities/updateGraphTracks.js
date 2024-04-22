@@ -1,36 +1,42 @@
 import React from "react";
 import { allTracks } from "../data/current_data/all_tracks";
 
-
 export const updateGraphTracks = (latestSortedTracks) => {
 
-    // is this the final list? (length === 1)
+    // -- is this the final list? (length === 1)
     const tracks = latestSortedTracks.length === 1 ? latestSortedTracks[0] : latestSortedTracks;
 
-    // assign points
+    
+    // -- assign points
     tracks.forEach((obj, index) => {
-        // Calculate points based on ranking (index) and scale them to ensure a clean graph
+        // -- calculate points based on ranking (tracks index) and scale them to ensure a clean graph
         let points = scalePoint(index, tracks.length);
         obj.track.points = points;
-        console.log('points', obj, points)
-
     });
 
+
     let graphTracks = [...allTracks];
-    console.log('graphTracks', graphTracks)
 
-    // graphTracks = graphTracks.filter(graphTrack => tracks.some(track => track.eraIndex === graphTrack));
+    // -- give the graph tracks a 'eraIndex' key-value pair
+    graphTracks = graphTracks.map((graphTrack, index) => {
+        graphTrack.eraIndex = index;
+        return graphTrack;
+    });
+
+    // -- graphTracks = graphTracks.filter(graphTrack => tracks.some(track => track.eraIndex === graphTrack));
     graphTracks = graphTracks.filter((graphTrack, index) => tracks.some(track => track.eraIndex === index));
-    console.log('filtered graphTracks', graphTracks)
 
-    // Update points value of graphTracks based on tracks
+
+    // -- update points value of graphTracks based on tracks
     graphTracks.forEach((graphTrack, index) => {
-        // GRAPHTRACK DOES NOT HAVE A ERA INDEX PROPERTY
-        const eraIndex = graphTrack.eraIndex;
-
-        console.log('THIS IS THE ISSUE eraIndex', eraIndex)
-
-        const trackToUpdate = tracks.find(track => track.eraIndex === eraIndex);
+        const i = graphTrack.eraIndex;
+        let trackToUpdate;
+        for (const track of tracks) {
+            if (track.eraIndex === i) {
+                trackToUpdate = track;
+                break; 
+            }
+        }
         if (trackToUpdate) {
             graphTracks[index].points = trackToUpdate.track.points;
         }
@@ -41,7 +47,7 @@ export const updateGraphTracks = (latestSortedTracks) => {
 }
 
 
-// Scale the points based on the index and total tracks
+// scale the points based on the index and total tracks
 function scalePoint(index, totalTracks) {
     const scale = 300 / totalTracks; // Adjust as needed
     return Math.ceil((totalTracks - index) * scale);
