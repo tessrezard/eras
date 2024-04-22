@@ -15,7 +15,6 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     const quizFinalGraphsRef = useRef(null);
 
-    console.log('latestSortedTracks', latestSortedTracks);
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")
@@ -38,9 +37,6 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     const graphTracks = updateGraphTracks(latestSortedTracks);
 
-
-    console.log('latestSortedTracks',latestSortedTracks);
-console.log('graphTracks',graphTracks);
 
     return (
         <>

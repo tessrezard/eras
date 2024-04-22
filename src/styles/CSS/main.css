@@ -2534,6 +2534,7 @@ html {
   transition: all 500ms ease;
   box-sizing: border-box;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 body {

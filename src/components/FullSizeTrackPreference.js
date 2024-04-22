@@ -6,7 +6,6 @@ const FullSizeTrackPreference = ({ track, albumBackgroundColor, albumColor }) =>
 
     // each track has a base amount of points : 1
     const points = track.points;
-    console.log('points', points);
 
     const mobileDurationInPx = ((points * 0.7) ) + 'px';
     const tabletDurationInPx = ((points * 1.2) ) + 'px';
