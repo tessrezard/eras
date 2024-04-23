@@ -1386,11 +1386,19 @@
 }
 @media (min-width: 570px) {
   .full-track-container .full-track-title {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+@media (min-width: 768px) {
+  .full-track-container .full-track-title {
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 1px;
   }
 }
+
 .full-track-mobile {
   display: flex;
 }
