@@ -115,8 +115,9 @@
             font-weight: 600;
             letter-spacing: 1px;
         }
-        @media (min-width: $tablet) {
-            font-size: 0.75rem;
+
+        @media (min-width: $desktop) {
+            font-size: 0.6rem;
             font-weight: 600;
             letter-spacing: 1px;
         }

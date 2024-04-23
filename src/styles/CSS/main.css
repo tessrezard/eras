@@ -1391,9 +1391,9 @@
     letter-spacing: 1px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .full-track-container .full-track-title {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     font-weight: 600;
     letter-spacing: 1px;
   }
