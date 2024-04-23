@@ -13,8 +13,11 @@ const QuizStackedOption = ({ track, group, index, position }) => {
     let offset = (3 * position);
     let fromBottom = (3 * position);
     let depth = (1 * position);
-
+    
     let leftOrRight;
+
+
+
     switch (group) {
         case 'A':
             leftOrRight = 'right';
@@ -66,10 +69,10 @@ const QuizStackedOption = ({ track, group, index, position }) => {
                 }}
                 className={
                     `quiz-option-container 
-                    quiz-stack-item-container`}>
-
+                    quiz-stack-item-container`}
+                    >
                 <div className={` quiz-option ${albumBackgroundColor}`} >
-                    <p className="quiz-song-name" style={{ color: '#fff' }}>{trackName}</p>
+                    <p className="quiz-song-name" style={{ color: '#fff' }}> {trackName}</p>
                 </div>
             </div>
 

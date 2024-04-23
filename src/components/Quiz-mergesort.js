@@ -7,6 +7,8 @@ import { isEven, isOdd } from "../app/utilities/isEven";
 import { scrollToTop } from "../app/utilities/scrollToTop";
 import QuizFinished from "./Quiz-Finished";
 import { determineNumSteps } from "../app/utilities/determineNumberOfSteps";
+
+
 const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage }) => {
 
     const [rankedPairs, setRankedPairs] = useState([]); // --in the initial step, this get updated as the user chooses and ranks pairs. 
@@ -23,7 +25,6 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     const expectedSteps = determineNumSteps(rankedPairs.length, step);
     const displayStep = step + 1;
 
-    console.log(`expected number of steps : ${expectedSteps}, actual number of steps: ${step}`)
 
     //    // Function to handle saving data to localStorage
     //    const saveLatestToLocalStorage = (tracks) => {
