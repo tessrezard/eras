@@ -7,8 +7,6 @@ export const determineNumSteps = (numPairs, step) => {
         // console.log(`${numPairs} is POWER OF 2`)
     }
 
-
-
      // Initialize the steps counter
      let steps = 0;
     let pairCount = numPairs;
