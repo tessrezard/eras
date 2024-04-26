@@ -7,8 +7,8 @@ import UndoButton from "./Quiz-UndoButton";
 
 
 const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSortedPieces, setAddUpSortedPieces }) => {
-    let stackBattleId = `stacks${index}`;
-    console.log('stackBattleId', stackBattleId);
+    let stackBattleId = `stack${index}`;
+    console.log('stackId', stackBattleId);
 
     let pieceCopy = [...piece]; // --we will work from a copy of piece to fortify against issues of mutation
     const [sortedPiece, setSortedPiece] = useState([]); // list of chosen favorites, used to render sorted list and to update addUpSortedPieces 

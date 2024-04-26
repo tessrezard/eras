@@ -40,7 +40,7 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
                     onClick={handleShowClick}
                 >
                     <p className="options-pill-arrow" >➸</p>
-                    <p>Filters</p>
+                    <p>Song Type</p>
                 </div>
                 {showOptions ? (
                     <>
@@ -49,11 +49,6 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
                         {filterOptions.map(filter => {
                             return (
                                 <div key={filter}>
-                                    {/* <CheckBox 
-                                        filter={filter} 
-                                        selectedFilters={selectedFilters} 
-                                        setSelectedFilters={setSelectedFilters}
-                                        /> */}
                                     <NewCheckBox 
                                     filter={filter} 
                                     selectedFilters={selectedFilters} 
