@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import '../styles/CSS/main.css';
-import { filterOptions, filterTracks } from "../app/utilities/filterTracks";
+import { filterOptions, filterByType } from "../app/utilities/filterByType";
 import CheckBox from "./FiltersCheckbox";
+import NewCheckBox from "./NewFiltersCheckbox";
 
-const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
+const FilterTypes = ({ inputTracks, setTypeFilteredTracks }) => {
 
-//   const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
+    const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
 
     const [selectedFilters, setSelectedFilters] = useState([]);
-    // const [selectedFilters, setSelectedFilters] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
+
 
 
     const handleShowClick = () => {
@@ -25,7 +26,7 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
 
     useEffect(() => {
         
-        setFiltered(filterTracks(inputTracks, selectedFilters));
+        setTypeFilteredTracks(filterByType(inputTracks, selectedFilters));
     }, [selectedFilters])
 
 
@@ -37,7 +38,7 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
                     onClick={handleShowClick}
                 >
                     <p className="options-pill-arrow" >➸</p>
-                    <p>Filters</p>
+                    <p>Song Type</p>
                 </div>
                 {showOptions ? (
                     <>
@@ -46,11 +47,11 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
                         {filterOptions.map(filter => {
                             return (
                                 <div key={filter}>
-                                    <CheckBox 
-                                        filter={filter} 
-                                        selectedFilters={selectedFilters} 
-                                        setSelectedFilters={setSelectedFilters}
-                                        />
+                                    <NewCheckBox 
+                                    filter={filter} 
+                                    selectedFilters={selectedFilters} 
+                                    setSelectedFilters={setSelectedFilters}
+                                    />
                                 </div>
                             )
                         })}
@@ -70,4 +71,4 @@ const Filters = ({ inputTracks, setFiltered, defaultFilters }) => {
 
 
 
-export default Filters;
+export default FilterTypes;

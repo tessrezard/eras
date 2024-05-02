@@ -1,5 +1,7 @@
-//_______________________________________________________
 
+
+// TEXT COLOR
+//_______________________________________________________
 @keyframes colorCycle {
   @for $i from 0 to length($eraList) + 1 { // Add 1 to the length for the extra step
     $color: nth($eraList, $i % length($eraList) + 1); // Use modulo to wrap around
@@ -15,6 +17,8 @@
 
 
 
+
+// BORDER COLOR
 //_______________________________________________________
 
 @keyframes borderErasColorCycle {
@@ -32,6 +36,8 @@
 
 
 
+
+// BACKGROUND COLOR
 //_______________________________________________________
 
 @keyframes backgroundErasColorCycle {

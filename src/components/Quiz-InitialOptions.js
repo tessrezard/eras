@@ -15,7 +15,7 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
             return;
         }
         setActiveIndex(index);
-       
+
         //-----FOR UPDATING RANKING
         const updateRankedPairs = [...rankedPairs];
         let updatePair = [...pair];
@@ -23,9 +23,9 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
             updatePair = [...updatePair.reverse()];
         }
 
-        const alreadySorted = updateRankedPairs.findIndex((rankedPair) => 
-        rankedPair[0].eraIndex === pair[index].eraIndex || 
-        rankedPair[1]?.eraIndex === pair[index]?.eraIndex
+        const alreadySorted = updateRankedPairs.findIndex((rankedPair) =>
+            rankedPair[0].eraIndex === pair[index].eraIndex ||
+            rankedPair[1]?.eraIndex === pair[index]?.eraIndex
         );
         // --if pair is in rankedPairs, alreadySorted will be the index at which the pair already is. 
         // --if pair is new, alreadySorted will be -1
@@ -46,18 +46,27 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
     if (pair.length >= 2) {
         return (
             <>
-                <div className="quiz-options-container">
-                    <QuizSongOption
-                        track={pair[0].track}
-                        onClick={() => handleClick(0)}
-                        isActive={activeIndex === 0}
-                    />
-                    <p>vs</p>
-                    <QuizSongOption
-                        track={pair[1].track}
-                        onClick={() => handleClick(1)}
-                        isActive={activeIndex === 1}
-                    />
+                {/* <div className="quiz-options-container"> */}
+                <div className="quiz-battle-container">
+
+                    <p className="quiz-vs">vs</p>
+
+                    <div className="quiz-both-stacks">
+                        <div className="quiz-initial-pairing">
+
+                            <QuizSongOption
+                                track={pair[0].track}
+                                onClick={() => handleClick(0)}
+                                isActive={activeIndex === 0}
+                            />
+
+                            <QuizSongOption
+                                track={pair[1].track}
+                                onClick={() => handleClick(1)}
+                                isActive={activeIndex === 1}
+                            />
+                        </div>
+                    </div>
 
                 </div>
             </>
@@ -65,7 +74,7 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
     } else {
         return (
             <>
-                <div className="quiz-options-container">
+                <div>
                     <QuizSongOption
                         track={pair[0].track}
                         onClick={() => handleClick(0)}

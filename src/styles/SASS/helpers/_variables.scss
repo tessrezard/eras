@@ -54,6 +54,12 @@ $eraList: (
 
 $lead-color:  rgb(237, 236, 232);
 $lead-text-color: darken($lead-color, 30%);
+
+$btn-hover-color: rgb(245, 243, 237);
+$btn-hover-color: lighten($lead-color, 5%);
+$btn-active-color: rgb(245, 243, 237);
+
+
 $second-color: #f3f4ff;
 $border-standard: 7px solid $lead-color;
 $background-color: #fff;

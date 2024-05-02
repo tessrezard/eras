@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from "react";
 import LegendEra from "./LegendEra";
+import { erasList } from "../app/utilities/globalVariables";
 import '../styles/CSS/main.css';
 
 
 const Legend = ({ setActiveLegend }) => {
 
-    const erasList = [
-        'theTorturedPoetsDepartment',
-        'midnights',
-        'evermore',
-        'folklore',
-        'lover',
-        'reputation',
-        'nineteenEightyNine',
-        'red',
-        'speakNow',
-        'fearless',
-        'taylorSwift',
-        'carolina',
-        'renegade',
-        'christmas',
-    ];
+    // const erasList = [
+    //     'theTorturedPoetsDepartment',
+    //     'midnights',
+    //     'evermore',
+    //     'folklore',
+    //     'lover',
+    //     'reputation',
+    //     'nineteenEightyNine',
+    //     'red',
+    //     'speakNow',
+    //     'fearless',
+    //     'taylorSwift',
+    //     'carolina',
+    //     'renegade',
+    //     'christmas',
+    // ];
 
     const reversedEras = [...erasList].reverse();
 

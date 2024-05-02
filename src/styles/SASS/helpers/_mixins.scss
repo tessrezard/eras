@@ -1,77 +1,161 @@
-
 // Mixins
 @mixin generate-era-styles($name, $color) {
-    // Background colors
-    .background-color-#{$name} {
-      background-color: $color;
-    }
-    
-    .background-color-#{$name}-extended {
-      background-color: $color;
-    }
-    
-    .background-color-#{$name}-album {
-      background-color: darken($color, 9%);
-    }
-    
-    .background-color-#{$name}-single {
-      background-color: lighten($color, 7%);
-    }
-  
 
-
-    // Text colors
-    .color-#{$name} {
-      color: $color;
-    }
-
-    .color-#{$name}-album {
-      color: darken($color, 9%);
-    }
-
-    .color-#{$name}-extended {
-      color: $color;
-    }
-  
-    .color-#{$name}-single {
-      color: lighten($color, 15%);
-    }
-
-
-    // Border colors
-    .border-right-#{$name} {
-      border-right: solid 3px $color;
-    }
-
-    .border-right-#{$name}-album {
-      border-right: solid 3px  darken($color, 9%);
-    }
-
-    .border-right-#{$name}-extended {
-      border-right: solid 3px  $color;
-    }
-  
-    .border-right-#{$name}-single {
-      border-right: solid 3px lighten($color, 7%);
-    }
-
-
-
-    // Border colors
-    .active-border-#{$name} {
-      border: solid 4px $color;
-    }
-
-    .active-border-#{$name}-album {
-      border: solid 4px  darken($color, 9%);
-    }
-
-    .active-border-#{$name}-extended {
-      border: solid 4px  $color;
-    }
-  
-    .active-border-#{$name}-single {
-      border: solid 4px lighten($color, 7%);
-    }
+  // ------------------------------------
+  // Background colors
+  .background-color-#{$name} {
+    background-color: $color;
   }
-  
+
+  .background-color-#{$name}-extended {
+    background-color: $color;
+  }
+
+  .background-color-#{$name}-album {
+    background-color: darken($color, 9%);
+  }
+
+  .background-color-#{$name}-single {
+    background-color: lighten($color, 7%);
+  }
+
+  // ------------------------------------
+  // Text colors
+  .color-#{$name} {
+    color: $color;
+  }
+
+  .color-#{$name}-album {
+    color: darken($color, 9%);
+  }
+
+  .color-#{$name}-extended {
+    color: $color;
+  }
+
+  .color-#{$name}-single {
+    color: lighten($color, 15%);
+  }
+
+  // ------------------------------------
+  // Border colors
+  .border-right-#{$name} {
+    border-right: solid 3px $color;
+  }
+
+  .border-right-#{$name}-album {
+    border-right: solid 3px darken($color, 9%);
+  }
+
+  .border-right-#{$name}-extended {
+    border-right: solid 3px $color;
+  }
+
+  .border-right-#{$name}-single {
+    border-right: solid 3px lighten($color, 7%);
+  }
+
+  // ------------------------------------
+  // Active border colors
+  .active-border-#{$name} {
+    border: solid 4px $color;
+  }
+
+  .active-border-#{$name}-album {
+    border: solid 4px darken($color, 9%);
+  }
+
+  .active-border-#{$name}-extended {
+    border: solid 4px $color;
+  }
+
+  .active-border-#{$name}-single {
+    border: solid 4px lighten($color, 7%);
+  }
+}
+
+
+
+
+
+  // ------------------------------------------------------------------------------------------------------------
+// above @generate-styles' mixin makes the variations progressively lighter from album, to extended to live etc. 
+// Tortured Poets shout be the opposite.
+// This also has a higher contrast between album & extended to reflect the 'double album' concept
+
+
+@mixin generate-reverse-era-styles($name, $color) {
+
+  // Background colors
+  .background-color-#{$name} {
+    background-color: $color;
+  }
+
+  .background-color-#{$name}-extended {
+    background-color: darken($color, 9%); 
+  }
+
+  .background-color-#{$name}-album {
+    background-color:  $color
+  }
+
+  .background-color-#{$name}-single {
+    background-color: lighten($color, 7%);
+  }
+
+
+
+  // Text colors
+  .color-#{$name} {
+    color: $color;
+  }
+
+  .color-#{$name}-album {
+    color: $color;
+  }
+
+  .color-#{$name}-extended {
+    color: darken($color, 9%);
+  }
+
+  .color-#{$name}-single {
+    color: lighten($color, 7%);
+  }
+
+
+  // Border colors
+  .border-right-#{$name} {
+    border-right: solid 3px $color;
+  }
+
+  .border-right-#{$name}-album {
+    border-right: solid 3px $color
+  }
+
+  .border-right-#{$name}-extended {
+    border-right: solid 3px darken($color, 15%);
+  }
+
+  .border-right-#{$name}-single {
+    border-right: solid 3px lighten($color, 7%);
+  }
+
+
+
+  // Border colors
+  .active-border-#{$name} {
+    border: solid 4px $color;
+  }
+
+  .active-border-#{$name}-album {
+    border: solid 4px $color;
+  }
+
+  .active-border-#{$name}-extended {
+    border: solid 4px darken($color, 9%);
+  }
+
+  .active-border-#{$name}-single {
+    border: solid 4px lighten($color, 7%);
+  }
+}

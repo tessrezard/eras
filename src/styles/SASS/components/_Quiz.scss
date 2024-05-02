@@ -155,6 +155,12 @@
 
 }
 
+// one of initial pair
+.quiz-option-container {
+    border-radius: $rounded-rectangle;
+    margin: 0.75rem 0.25rem;
+}
+
 // ------------------------------------- FOR INITIAL (PAIR) PHASE ----------
 // initial stage - pairs container 
 .quiz-options-container {
@@ -194,12 +200,51 @@
         height: 130px;
         width: 300px;
     }
+
+    @extend .quiz-options-container;
+    border: none;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 1rem;
+    // width: 700px;
+    width: 40%; // of quiz container 
+    max-width: 400px;
+    height: 100px;
+    // left: 1rem;
+    // right: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: $rounded-rectangle;
+    border-top: 5px solid $lead-color;
+    transition: all 500ms ease;
+
+    @media (min-width: $smallest-phone) {
+    width: 38%; // of quiz container 
+        }
+    @media (min-width: $small-phone) {
+    width: 30%; 
+    }
+
+    @media (min-width: $phone) {
+    width: 38%;  
+    }
 }
 
-// one of initial pair
-.quiz-option-container {
-    border-radius: $rounded-rectangle;
-    margin: 0.75rem 0.25rem;
+.quiz-initial-pairing{
+    display: flex;
+    position: relative;
+    bottom: 9px;
+    align-items: center;
+    @media (min-width: $small-phone) {
+        bottom: 17px; 
+        }
+    @media (min-width: $small-tablet) {
+        bottom: 9px;
+    }
+    @media (min-width: $desktop) {
+        bottom: 9px;
+    }
 }
 
 // ------------------------------------- 

@@ -7,6 +7,7 @@ function CheckBox({ filter, selectedFilters, setSelectedFilters }) {
 
     const isChecked = !selectedFilters.includes(filter);
     const [checked, setChecked] = useState(true);
+    console.log('selectedFilters', selectedFilters);
 
     const handleAddFilter = (filter) => {
         setSelectedFilters((prevSelected) => (
@@ -41,12 +42,16 @@ function CheckBox({ filter, selectedFilters, setSelectedFilters }) {
                 id={filterId}
                 checked={isChecked}
                 onChange={() => handleClick(filter)}
+                // onChange={handleClick}
+
             />
 
             <label htmlFor={filterId}> {filter} </label>
         </div>
 
     );
+
+    
 
 }
 export default CheckBox;

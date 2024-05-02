@@ -1,3 +1,15 @@
+.filters-container {
+    border: $border-standard;
+    border-radius: $rounded-rectangle;
+    margin: 0.25rem;
+
+    p {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+}
+
 %options-filters-containers {
     background-color: $lead-color;
     display: flex;
@@ -40,6 +52,29 @@
     }
 }
 
+.options-pill-select-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.options-pill-select-button {
+    border-radius: $rounded-rectangle;
+    border: $lead-text-color 2px solid;
+    background-color: $background-color;
+    margin: 0 0.75rem 0.5rem;
+    color: $lead-text-color;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+
+    &:hover {
+        // background-color: $btn-hover-color;
+        animation: colorCycle 60s infinite;
+    }
+
+    &:active {
+        background-color: $lead-color;
+    }
+}
 
 .options-pill-content-container {
     display: flex;
@@ -54,6 +89,15 @@
     }
 }
 
+.options-pill-content-container-album {
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: darken($lead-color, 40%);
+
+}
+
 
 // SORT OPTIONS ________________________________________
 
@@ -64,8 +108,9 @@ h1.sort-options-header {
     text-align: center;
     display: flex;
     justify-content: center;
-    
+
 }
+
 .sort-options-form {
     display: flex;
     flex-flow: column wrap;

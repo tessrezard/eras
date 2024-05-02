@@ -5,11 +5,11 @@
 }
 
 .background-color-theTorturedPoetsDepartment-extended {
-  background-color: rgb(192, 184, 170);
+  background-color: #aca290;
 }
 
 .background-color-theTorturedPoetsDepartment-album {
-  background-color: #aca290;
+  background-color: rgb(192, 184, 170);
 }
 
 .background-color-theTorturedPoetsDepartment-single {
@@ -21,15 +21,15 @@
 }
 
 .color-theTorturedPoetsDepartment-album {
-  color: #aca290;
-}
-
-.color-theTorturedPoetsDepartment-extended {
   color: rgb(192, 184, 170);
 }
 
+.color-theTorturedPoetsDepartment-extended {
+  color: #aca290;
+}
+
 .color-theTorturedPoetsDepartment-single {
-  color: #e1ddd6;
+  color: #cfc9bf;
 }
 
 .border-right-theTorturedPoetsDepartment {
@@ -37,11 +37,11 @@
 }
 
 .border-right-theTorturedPoetsDepartment-album {
-  border-right: solid 3px #aca290;
+  border-right: solid 3px rgb(192, 184, 170);
 }
 
 .border-right-theTorturedPoetsDepartment-extended {
-  border-right: solid 3px rgb(192, 184, 170);
+  border-right: solid 3px #9f937e;
 }
 
 .border-right-theTorturedPoetsDepartment-single {
@@ -53,11 +53,11 @@
 }
 
 .active-border-theTorturedPoetsDepartment-album {
-  border: solid 4px #aca290;
+  border: solid 4px rgb(192, 184, 170);
 }
 
 .active-border-theTorturedPoetsDepartment-extended {
-  border: solid 4px rgb(192, 184, 170);
+  border: solid 4px #aca290;
 }
 
 .active-border-theTorturedPoetsDepartment-single {
@@ -1595,6 +1595,11 @@
   top: 0.75rem;
 }
 
+.quiz-option-container {
+  border-radius: 19px;
+  margin: 0.75rem 0.25rem;
+}
+
 .quiz-options-container, .quiz-both-stacks {
   display: flex;
   flex-flow: row;
@@ -1605,6 +1610,19 @@
   margin: 0.7rem 0;
   width: 200px;
   height: 100px;
+  border: none;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 1rem;
+  width: 40%;
+  max-width: 400px;
+  height: 100px;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 19px;
+  border-top: 5px solid rgb(237, 236, 232);
+  transition: all 500ms ease;
 }
 @media (min-width: 370px) {
   .quiz-options-container, .quiz-both-stacks {
@@ -1636,10 +1654,42 @@
     width: 300px;
   }
 }
+@media (min-width: 280px) {
+  .quiz-options-container, .quiz-both-stacks {
+    width: 38%;
+  }
+}
+@media (min-width: 370px) {
+  .quiz-options-container, .quiz-both-stacks {
+    width: 30%;
+  }
+}
+@media (min-width: 470px) {
+  .quiz-options-container, .quiz-both-stacks {
+    width: 38%;
+  }
+}
 
-.quiz-option-container {
-  border-radius: 19px;
-  margin: 0.75rem 0.25rem;
+.quiz-initial-pairing {
+  display: flex;
+  position: relative;
+  bottom: 9px;
+  align-items: center;
+}
+@media (min-width: 370px) {
+  .quiz-initial-pairing {
+    bottom: 17px;
+  }
+}
+@media (min-width: 650px) {
+  .quiz-initial-pairing {
+    bottom: 9px;
+  }
+}
+@media (min-width: 960px) {
+  .quiz-initial-pairing {
+    bottom: 9px;
+  }
 }
 
 .quiz-both-stacks {
@@ -1975,6 +2025,16 @@
   animation: colorCycle 120s infinite;
 }
 
+.filters-container {
+  border: 7px solid rgb(237, 236, 232);
+  border-radius: 19px;
+  margin: 0.25rem;
+}
+.filters-container p {
+  text-align: center;
+  margin: 0.5rem;
+}
+
 .options-pill-whole-container {
   background-color: rgb(237, 236, 232);
   display: flex;
@@ -2010,6 +2070,27 @@
   transition: all 0.5s ease;
 }
 
+.options-pill-select-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.options-pill-select-button {
+  border-radius: 19px;
+  border: #aaa592 2px solid;
+  background-color: #fff;
+  margin: 0 0.75rem 0.5rem;
+  color: #aaa592;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+.options-pill-select-button:hover {
+  animation: colorCycle 60s infinite;
+}
+.options-pill-select-button:active {
+  background-color: rgb(237, 236, 232);
+}
+
 .options-pill-content-container {
   display: flex;
   flex-flow: column wrap;
@@ -2022,6 +2103,14 @@
   .options-pill-content-container {
     flex-flow: row wrap;
   }
+}
+
+.options-pill-content-container-album {
+  flex-flow: column wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color: #938d76;
 }
 
 h1.sort-options-header {
