@@ -167,11 +167,10 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                 >Next Step ➸</button>
                 {step === 0 ? (
                     <>
-                        <p>STEP 1</p>
+                        <p className="quiz-step-counter"> STEP 1 </p>
 
                         <div className="quiz-instructions">
-                            <p>Choose your favorite song from a pair!</p>
-                            <p >Select as many as you would like.</p>
+                            <p>Choose your favorite song from a pair! Select as many as you would like.</p>
                         </div>
 
                         {initialPairs.map((pair, index) => {

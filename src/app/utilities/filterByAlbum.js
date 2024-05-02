@@ -6,7 +6,6 @@ export const filterByAlbum = (tracks, filters) => {
 
   // console.log('filtered', filtered);
 
-  // if (Array.isArray(filters) && filters.every((filter) => erasList.includes(filter))) {
     filters.forEach((filter) => {
       switch (filter) {
         case "theTorturedPoetsDepartment":
@@ -31,10 +30,7 @@ export const filterByAlbum = (tracks, filters) => {
           break;
       }
     });
-  // } else {
-  //   return tracks;
-  // }
-  console.log('filtered', filtered)
+
   return filtered;
 
 }

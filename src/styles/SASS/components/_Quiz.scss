@@ -40,16 +40,21 @@
 
 .quiz-next-button {
     border: 4px solid $lead-color;
-    margin: 2rem auto;
+    margin: 1em auto;
     border-radius: $rounded-rectangle;
     padding: 1rem;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     font-family: $titleFont;
     text-decoration: none;
     animation: backgroundErasColorCycle 120s infinite;
     color: $background-color;
     font-weight: 700;
     letter-spacing: 4px;
+}
+
+.quiz-step-counter{
+    margin: 0;
+    margin-bottom: 0.25rem;
 }
 
 // if user tries to next step but prevented : message

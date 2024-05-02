@@ -23,7 +23,6 @@ const QuizPage = () => {
 
 
   const [started, setStarted] = useState(false);
-  const defaultAlbums = albumsList;
 
   const [pairs, setPairs] = useState(true);
 

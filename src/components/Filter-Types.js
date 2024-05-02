@@ -6,7 +6,7 @@ import NewCheckBox from "./NewFiltersCheckbox";
 
 const FilterTypes = ({ inputTracks, setTypeFilteredTracks }) => {
 
-    const defaultFilters = ['remix', 'live', 'acoustic', 'single'];
+    const defaultFilters = ['remix', 'live', 'single'];
 
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
@@ -25,7 +25,6 @@ const FilterTypes = ({ inputTracks, setTypeFilteredTracks }) => {
     }, []);
 
     useEffect(() => {
-        
         setTypeFilteredTracks(filterByType(inputTracks, selectedFilters));
     }, [selectedFilters])
 

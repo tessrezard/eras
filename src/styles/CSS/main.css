@@ -1482,16 +1482,20 @@
 
 .quiz-next-button, .quiz-finished-button {
   border: 4px solid rgb(237, 236, 232);
-  margin: 2rem auto;
+  margin: 1em auto;
   border-radius: 19px;
   padding: 1rem;
-  margin-top: 2rem;
   font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   text-decoration: none;
   animation: backgroundErasColorCycle 120s infinite;
   color: #fff;
   font-weight: 700;
   letter-spacing: 4px;
+}
+
+.quiz-step-counter {
+  margin: 0;
+  margin-bottom: 0.25rem;
 }
 
 .quiz-message {
@@ -2028,7 +2032,7 @@
 .filters-container {
   border: 7px solid rgb(237, 236, 232);
   border-radius: 19px;
-  margin: 0.25rem;
+  margin: 0.5rem;
 }
 .filters-container p {
   text-align: center;
