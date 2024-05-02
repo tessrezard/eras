@@ -22,10 +22,6 @@ const QuizPage = () => {
   const [filteredTracks, setFilteredTracks] = useState(allTracks);
 
 
-  
-  console.log('typeFilteredTracks', typeFilteredTracks);
-  // console.log('albumFilteredTracks', albumFilteredTracks);
-
   const [started, setStarted] = useState(false);
   const defaultAlbums = albumsList;
 
@@ -64,7 +60,6 @@ const QuizPage = () => {
 
   useEffect(() => {
     const commonItems = albumFilteredTracks.filter(item => typeFilteredTracks.includes(item));
-    console.log('commonItems',commonItems); 
     setFilteredTracks(commonItems);
   }, [typeFilteredTracks, albumFilteredTracks])
 
