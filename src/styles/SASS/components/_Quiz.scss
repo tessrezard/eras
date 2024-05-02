@@ -234,9 +234,17 @@
 .quiz-initial-pairing{
     display: flex;
     position: relative;
-    bottom: 8px;
+    bottom: 9px;
     align-items: center;
-    
+    @media (min-width: $small-phone) {
+        bottom: 17px; 
+        }
+    @media (min-width: $small-tablet) {
+        bottom: 9px;
+    }
+    @media (min-width: $desktop) {
+        bottom: 9px;
+    }
 }
 
 // ------------------------------------- 

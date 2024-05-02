@@ -1,6 +1,6 @@
 export const filterOptions = [ "album", "extended", "remix", "live", "single", "acoustic" ]
 
-export const filterTracks = (tracks, filters) => {
+export const filterByType = (tracks, filters) => {
     let filtered = [...tracks];
 
 

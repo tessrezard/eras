@@ -74,7 +74,7 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
     } else {
         return (
             <>
-                <div className="quiz-options-container">
+                <div>
                     <QuizSongOption
                         track={pair[0].track}
                         onClick={() => handleClick(0)}

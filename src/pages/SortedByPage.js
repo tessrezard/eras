@@ -3,7 +3,9 @@ import '../styles/CSS/main.css';
 import Condensed from "../components/Condensed";
 import { allTracks } from "../app/data/current_data/all_tracks";
 import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
-import Filters from "../components/Filters";
+// import Filters from "../components/Filters";
+import FilterTypes from "../components/Filter-Types";
+
 import OrderOptions from "../components/OrderOptions";
 import SortOptions from "../components/SortOptions";
 import FullSizeAllTracks from "../components/FullSizeAllTracks";
@@ -30,7 +32,7 @@ const SortedByPage = () => {
             <h1 className="sort-options-header">Sorted by {sorting}</h1>
             <SortOptions sorting={sorting} setSorting={setSorting} />
             <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
-            <Filters inputTracks={allTracks} setFiltered={setFilteredTracks} />
+            {/* <Filters inputTracks={allTracks} setFiltered={setFilteredTracks} /> */}
 
             <div className="sorted-by-view-container" >
                 <div className="sorted-by-view-header">
