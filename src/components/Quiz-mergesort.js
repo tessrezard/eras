@@ -46,6 +46,11 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     // Function to handle saving data to localStorage
     const scrollToTop = () => {
         quizTop.current.scrollIntoView({ behavior: 'smooth' });
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // or 'auto' for instant scrolling
+        });
+        window.scrollTo(0, 0);
     };
 
 
