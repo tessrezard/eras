@@ -10,10 +10,10 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
     let stackBattleId = `stack${index}`;
     console.log('stackId', stackBattleId);
 
-    let pieceCopy = [...piece]; // --we will work from a copy of piece to fortify against issues of mutation
+    let pieceCopy = [...piece];
     const [sortedPiece, setSortedPiece] = useState([]); // list of chosen favorites, used to render sorted list and to update addUpSortedPieces 
-    const groupA = 0; // --named for more readable code : left hand pile
-    const groupB = 1; // --named for more readable code : right hand pile
+    const groupA = 0; // --: left hand pile
+    const groupB = 1; // --: right hand pile
 
     let indexA = 0;
     let indexB = 0;

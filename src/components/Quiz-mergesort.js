@@ -76,7 +76,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
 
     const handleNextStep = (step) => {
-
+        scrollToTop()
         if (allowNextStep(step)) {
             if (step == 0) {
                 if (isOdd(rankedPairs)) {
@@ -98,7 +98,6 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                 }
             }
             setStep(prev => prev + 1);
-            scrollToTop()
             setMessage();
         }
 
@@ -108,7 +107,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
     // --------------- if step updated, 
     useEffect(() => {
-        scrollToTop();
+        // scrollToTop();
 
         if (isOdd(toSort)) {
 
