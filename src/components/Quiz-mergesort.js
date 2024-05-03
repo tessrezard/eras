@@ -106,7 +106,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
     // --------------- if step updated, 
     useEffect(() => {
-        // scrollToTop();
+        scrollToTop();
 
         if (isOdd(toSort)) {
 
@@ -164,11 +164,18 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     return (
         <>
 
-            <div className="quiz-container" >
-                {message ? (<><p className="quiz-message">{message}</p></>) : (<></>)}
+            <div className="quiz-container" ref={quizTop} >
+
+
+                {message ?
+                    (<>
+                        <p className="quiz-message">
+                            {message}
+                        </p>
+                    </>) : (<></>)}
 
                 <button
-                    ref={quizTop}
+
                     className="quiz-next-button"
                     onClick={() => handleNextStep(step)}
                 >Next Step ➸</button>
@@ -179,9 +186,9 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                         <p className="quiz-step-counter"> STEP 1 </p>
 
                         <div className="quiz-instructions">
-                            <p>Choose your favorite song from a pair! <br/> 
-                            Select as many as you would like. <br/>
-                            Select the filters before you start :)</p>
+                            <p>Choose your favorite song from a pair! <br />
+                                Select as many as you would like. <br />
+                                Select the filters before you start :)</p>
                         </div>
 
                         {initialPairs.map((pair, index) => {
