@@ -106,8 +106,9 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
     // --------------- if step updated, 
     useEffect(() => {
+        if (step > 0){
         scrollToTop();
-
+        }
         if (isOdd(toSort)) {
 
             if (oddPair.length) {
@@ -164,7 +165,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     return (
         <>
 
-            <div className="quiz-container" ref={quizTop} >
+            <div className="quiz-container"  >
 
 
                 {message ?
@@ -175,7 +176,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                     </>) : (<></>)}
 
                 <button
-
+                    ref={quizTop}
                     className="quiz-next-button"
                     onClick={() => handleNextStep(step)}
                 >Next Step ➸</button>
