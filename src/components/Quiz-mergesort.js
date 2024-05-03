@@ -9,13 +9,12 @@ import QuizFinished from "./Quiz-Finished";
 import { determineNumSteps } from "../app/utilities/determineNumberOfSteps";
 
 
-const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage }) => {
+const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage, step, setStep }) => {
 
     const [rankedPairs, setRankedPairs] = useState([]); // --in the initial step, this get updated as the user chooses and ranks pairs. 
     const [latestSortedTracks, setLatestSortedTracks] = useState([rankedPairs]); // --this holds the latest sorted/ranked tracks. in the initial stage with single depth pairs, it updates every time a pair is added (this is because the user can choose as many pairs as they wish). In the further steps, this gets updated when moving to next step.
     const [addUpSortedPieces, setAddUpSortedPieces] = useState([]); // --when we move past the initial pairs stage, we move into working with pieces (stacks). As these get sorted, they are added here, and when they are all sorted, will will update the latestSortedTracks with the added up pieces. 
     const [toSort, setToSort] = useState(true); // --this state will hold the returned value of nextStepOfSorting. we take latestSortedTracks and pair up the pieces to be compared. 
-    const [step, setStep] = useState(0); // --this state is to track which step we are one , and if the step has changed. Passing it to components will allow them to reset for the next step.
     const [oddPair, setOddPair] = useState(true); // --this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [oddPiece, setOddPiece] = useState(true); // --this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [message, setMessage] = useState();
@@ -175,10 +174,14 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                 >Next Step ➸</button>
                 {step === 0 ? (
                     <>
+
+
                         <p className="quiz-step-counter"> STEP 1 </p>
 
                         <div className="quiz-instructions">
-                            <p>Choose your favorite song from a pair! Select as many as you would like.</p>
+                            <p>Choose your favorite song from a pair! <br/> 
+                            Select as many as you would like. <br/>
+                            Select the filters before you start :)</p>
                         </div>
 
                         {initialPairs.map((pair, index) => {

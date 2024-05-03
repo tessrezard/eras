@@ -23,6 +23,7 @@ const QuizPage = () => {
 
 
   const [started, setStarted] = useState(false);
+  const [step, setStep] = useState(0); // --this state is to track which step we are one , and if the step has changed. Passing it to components will allow them to reset for the next step.
 
   const [pairs, setPairs] = useState(true);
 
@@ -70,24 +71,34 @@ const QuizPage = () => {
           removeLatestFromLocalStorage={removeLatestFromLocalStorage}
         />
       </div>
-      {started ? (
-        <></>) : (<>
-        <div className="filters-container">
-        <p >Filters</p>
-          <FilterTypes
-            inputTracks={allTracks}
-            setTypeFilteredTracks={setTypeFilteredTracks}
-          />
+      {step === 0 ? (
+        <>
+        <div className={`quiz-filters-container ${started ? 'quiz-filters-container-non-accessible' : 'quiz-filters-container-accessible'}`}>
+            <p>Filters</p>
+            <FilterTypes
+              inputTracks={allTracks}
+              setTypeFilteredTracks={setTypeFilteredTracks}
+            />
 
-          <FilterAlbums
-            inputTracks={allTracks}
-            setAlbumFilteredTracks={setAlbumFilteredTracks}
-          />
-        </div>
-        
-
-        </>
+            <FilterAlbums
+              inputTracks={allTracks}
+              setAlbumFilteredTracks={setAlbumFilteredTracks}
+            />
+          </div>
+        </>) : (<></>
       )}
+      {/* <div className={`quiz-filters-container ${started ? 'quiz-filters-container-non-accessible' : 'quiz-filters-container-accessible'}`}>
+            <p>Filters</p>
+            <FilterTypes
+              inputTracks={allTracks}
+              setTypeFilteredTracks={setTypeFilteredTracks}
+            />
+
+            <FilterAlbums
+              inputTracks={allTracks}
+              setAlbumFilteredTracks={setAlbumFilteredTracks}
+            />
+          </div> */}
 
 
 
@@ -100,6 +111,8 @@ const QuizPage = () => {
             saveLatestToLocalStorage={saveLatestToLocalStorage}
             saveOddPairToLocalStorage={saveOddPairToLocalStorage}
             saveOddPieceToLocalStorage={saveOddPieceToLocalStorage}
+            step={step}
+            setStep={setStep}
           />
         </>
       ) : (<></>)}

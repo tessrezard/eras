@@ -38,6 +38,29 @@
 
 }
 
+.quiz-filters-container {
+    border: $border-standard;
+    border-radius: $rounded-rectangle;
+    margin: 0.5rem;
+
+    p {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+}
+
+.quiz-filters-container-non-accessible{
+    // background-color: $lead-color;
+    opacity: 0.3;
+    pointer-events: none; /* Disable pointer events to make it non-clickable */
+}
+
+.quiz-filters-container-accessible{
+
+}
+
+
 .quiz-next-button {
     border: 4px solid $lead-color;
     margin: 1em auto;
@@ -74,9 +97,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
 
     p {
         margin: 0;
+        text-align: center;
     }
 }
 
