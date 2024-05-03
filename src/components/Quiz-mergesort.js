@@ -1,4 +1,4 @@
-import React, { useState, useEffect, } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import '../styles/CSS/main.css';
 import InitialOptions from "./Quiz-InitialOptions";
 import StacksBattles from "./Quiz-StacksBattles";
@@ -20,7 +20,8 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     const [oddPiece, setOddPiece] = useState(true); // --this state holds the 'extra' or 'odd' piece which cannot be paired if latestsSortedTracks.length was an odd number. 
     const [message, setMessage] = useState();
 
-  
+    const quizTop = useRef(null);
+
 
     const expectedSteps = determineNumSteps(rankedPairs.length, step);
     const displayStep = step + 1;
@@ -42,6 +43,12 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
     const updateAddUpSortedPieces = (sortedPiece) => {
         setAddUpSortedPieces([...addUpSortedPieces, sortedPiece]);
     }
+
+    // Function to handle saving data to localStorage
+    const scrollToTop = () => {
+        quizTop.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
 
     const allowNextStep = (step) => {
         if (step == 0) {
@@ -91,6 +98,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                 }
             }
             setStep(prev => prev + 1);
+            scrollToTop()
             setMessage();
         }
 
@@ -162,6 +170,7 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
                 {message ? (<><p className="quiz-message">{message}</p></>) : (<></>)}
 
                 <button
+                    ref={quizTop}
                     className="quiz-next-button"
                     onClick={() => handleNextStep(step)}
                 >Next Step ➸</button>
