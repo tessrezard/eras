@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import '../styles/CSS/main.css';
 import Condensed from "./Condensed";
 import FullSizeAllTracks from "./FullSizeAllTracks";
+import SaveRanking from "./Quiz-SaveRanking";
 import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 import QuizSortedItem from "./QuizSortedItem";
 import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
@@ -18,6 +19,9 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")
+    
+    const finalSorted = latestSortedTracks[0];
+
     let orderKeyWord;
 
     switch (orderOption) {
@@ -43,6 +47,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
             <div className="quiz-finished-container">
                 <h1> Well done! You're all sorted ! </h1>
 
+                <SaveRanking finalSorted={finalSorted} graphTracks={graphTracks} />
                 <button className="quiz-finished-button" onClick={scrollToGraphs}>
                     <p>See Graphs</p>
                     <p className="quiz-scrollTo-btn-arrow">➸</p>
@@ -51,7 +56,7 @@ const QuizFinished = ({ latestSortedTracks }) => {
 
                 <div className="quiz-final-list-container">
                     <h2 className="quiz-final-list-header" >Here is your ranked list: </h2>
-                    {latestSortedTracks[0].map((item, index) => {
+                    {finalSorted.map((item, index) => {
                         return (
                             <QuizSortedItem item={item} index={index} key={index} />
                         )

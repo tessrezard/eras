@@ -48,6 +48,7 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
             <>
                 {/* <div className="quiz-options-container"> */}
                 <div className="quiz-battle-container">
+                </div>
 
                     <p className="quiz-vs">vs</p>
 
@@ -68,7 +69,7 @@ const InitialOptions = ({ pair, rankedPairs, onUpdateRankedPairs }) => {
                         </div>
                     </div>
 
-                </div>
+                {/* </div> */}
             </>
         )
     } else {
