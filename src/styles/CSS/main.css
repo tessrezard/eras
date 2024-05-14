@@ -2042,6 +2042,11 @@
   margin: 0;
   animation: colorCycle 120s infinite;
 }
+.quiz-SaveRanking-container .quiz-SaveRanking-saved-message {
+  animation: none;
+  font-weight: 500;
+  color: #aaa592;
+}
 
 .quiz-SaveRanking-form {
   display: flex;
