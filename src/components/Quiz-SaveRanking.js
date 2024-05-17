@@ -1,26 +1,25 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import '../styles/CSS/main.css';
+import { getItemsStartingWith } from "../app/utilities/getItemsStartingWith-fromLocalStorage";
+import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 
-
-const SaveRanking = ({ finalSorted, graphTracks }) => {
+const SaveRanking = ({ finalSorted, graphTracks, rankingSaved, setRankingSaved}) => {
 
     const [givenName, setGivenName] =  useState('');
     const [saved, setSaved] =  useState(false);
 
+ 
+    
+
 
       // Function to handle saving data to localStorage
-  const saveFinalRankingToLocalStorage = (givenName, finalSorted, graphTracks) => {
+    const saveFinalRankingToLocalStorage = (givenName, finalSorted) => {
     const nameString = JSON.stringify(givenName);
-    const finalRankingName = givenName + '-ranking';
-    const graphTracksName = givenName + '-graphTracks';
-
+    const currentTime = Date.now();
+    const finalRankingName = 'savedRanking-' + givenName + `-${currentTime}`;
     const tracksString = JSON.stringify(finalSorted);
-    const graphTracksString = JSON.stringify(graphTracks);
-
     localStorage.setItem(finalRankingName, tracksString);
-    localStorage.setItem(graphTracksName, graphTracksString);
-
   };
 
     const handleInputChange = (e) => {
@@ -31,19 +30,21 @@ const SaveRanking = ({ finalSorted, graphTracks }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (givenName){
+            // check if is Valid name: IE : 
+            // does name it already exist?
+            // does ti contain bad chars or destructive combo?
             // const validName = givenName.replace(/\//g, '_');
         }
-        saveFinalRankingToLocalStorage(givenName, finalSorted, graphTracks);
+        saveFinalRankingToLocalStorage(givenName, finalSorted);
         setGivenName('');
-        setSaved(true);
+        setRankingSaved(true);
     };
 
-    console.log('givenName', givenName)
     
     return (
         <>
             <div className="quiz-SaveRanking-container">
-                {saved? (
+                {rankingSaved? (
                     <>
                     <h2 className="quiz-SaveRanking-saved-message">{givenName} Saved!</h2>
                     </>

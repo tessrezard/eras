@@ -9,7 +9,7 @@ import QuizFinished from "./Quiz-Finished";
 import { determineNumSteps } from "../app/utilities/determineNumberOfSteps";
 
 
-const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage, step, setStep }) => {
+const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairToLocalStorage, saveOddPieceToLocalStorage, step, setStep,rankingSaved, setRankingSaved }) => {
 
     const [rankedPairs, setRankedPairs] = useState([]); // --in the initial step, this get updated as the user chooses and ranks pairs. 
     const [latestSortedTracks, setLatestSortedTracks] = useState([rankedPairs]); // --this holds the latest sorted/ranked tracks. in the initial stage with single depth pairs, it updates every time a pair is added (this is because the user can choose as many pairs as they wish). In the further steps, this gets updated when moving to next step.
@@ -111,8 +111,8 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
 
     // --------------- if step updated, 
     useEffect(() => {
-        if (step > 0){
-        scrollToTop();
+        if (step > 0) {
+            scrollToTop();
         }
         if (isOdd(toSort)) {
 
@@ -161,7 +161,11 @@ const Quiz = ({ initialPairs, setStarted, saveLatestToLocalStorage, saveOddPairT
         return (
             <>
                 <div className="quiz-container" >
-                    <QuizFinished latestSortedTracks={latestSortedTracks} />
+                    <QuizFinished
+                        latestSortedTracks={latestSortedTracks}
+                        rankingSaved={rankingSaved}
+                        setRankingSaved={setRankingSaved}
+                    />
                 </div>
             </>
         )

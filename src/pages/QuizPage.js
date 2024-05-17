@@ -3,6 +3,7 @@ import '../styles/CSS/main.css';
 
 import FilterTypes from "../components/Filter-Types";
 import FilterAlbums from "../components/Filter-Albums";
+import DisplaySavedRankings from "../components/Saved-DisplaySavedRankings";
 
 import Quiz from "../components/Quiz-mergesort";
 // import { allTracks } from "../app/data/current_data/all_tracks";
@@ -26,6 +27,10 @@ const QuizPage = () => {
   const [step, setStep] = useState(0); // --this state is to track which step we are one , and if the step has changed. Passing it to components will allow them to reset for the next step.
 
   const [pairs, setPairs] = useState(true);
+
+
+  // this is so that display saved will reload if saved 
+  const [rankingSaved, setRankingSaved] = useState(false);
 
 
 
@@ -66,6 +71,8 @@ const QuizPage = () => {
 
   return (
     <>
+
+      <DisplaySavedRankings />
       <div className="quiz-reload-btn-container">
         <ReloadButton
           removeLatestFromLocalStorage={removeLatestFromLocalStorage}
@@ -73,7 +80,7 @@ const QuizPage = () => {
       </div>
       {step === 0 ? (
         <>
-        <div className={`quiz-filters-container ${started ? 'quiz-filters-container-non-accessible' : 'quiz-filters-container-accessible'}`}>
+          <div className={`quiz-filters-container ${started ? 'quiz-filters-container-non-accessible' : 'quiz-filters-container-accessible'}`}>
             <p>Filters</p>
             <FilterTypes
               inputTracks={allTracks}
@@ -113,6 +120,8 @@ const QuizPage = () => {
             saveOddPieceToLocalStorage={saveOddPieceToLocalStorage}
             step={step}
             setStep={setStep}
+            rankingSaved={rankingSaved}
+            setRankingSaved={setRankingSaved}
           />
         </>
       ) : (<></>)}
