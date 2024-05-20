@@ -1043,7 +1043,15 @@
 @media (min-width: 570px) {
   .condensed-title {
     margin: auto;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    height: 1rem;
+    width: 570px;
+  }
+}
+@media (min-width: 960px) {
+  .condensed-title {
+    margin: auto;
+    font-size: 0.8rem;
     height: 1rem;
     width: 570px;
   }
@@ -2486,6 +2494,69 @@ h1.sort-options-header {
   margin: 0;
   margin-left: 1.2rem;
   max-width: 3%;
+}
+
+.saved-grid-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.saved-item {
+  width: 250px;
+  height: 250px;
+  margin: 0.25rem;
+  border: 7px solid rgb(237, 236, 232);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.saved-item-name {
+  margin: 0;
+  text-align: center;
+}
+
+.saved-thumbnail-container {
+  display: flex;
+  background-color: #fff;
+  align-items: flex-end;
+  justify-content: baseline;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 570px) {
+  .saved-thumbnail-container {
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.thumbnail-tracks {
+  display: flex;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  align-items: flex-end;
+}
+
+.thumbnail-track-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row;
+}
+.thumbnail-track-container .thumbnail-track-bar {
+  display: flex;
+  padding: 0;
+  border-radius: 1px;
+  flex-grow: 1;
 }
 
 .header-container {

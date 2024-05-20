@@ -6,7 +6,7 @@ import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 
 const SaveRanking = ({ finalSorted, graphTracks, rankingSaved, setRankingSaved}) => {
 
-    const [givenName, setGivenName] =  useState('');
+    const [givenName, setGivenName] =  useState('Your ranking');
     const [saved, setSaved] =  useState(false);
 
  
@@ -40,6 +40,11 @@ const SaveRanking = ({ finalSorted, graphTracks, rankingSaved, setRankingSaved})
         setRankingSaved(true);
     };
 
+    useEffect(() => {
+        
+    }
+    
+    ,[])
     
     return (
         <>

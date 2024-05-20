@@ -72,7 +72,6 @@ const QuizPage = () => {
   return (
     <>
 
-      <DisplaySavedRankings />
       <div className="quiz-reload-btn-container">
         <ReloadButton
           removeLatestFromLocalStorage={removeLatestFromLocalStorage}

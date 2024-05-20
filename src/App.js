@@ -6,8 +6,9 @@ import Services from './app/services/Services';
 import QuizPage from './pages/QuizPage';
 import SortedByPage from './pages/SortedByPage';
 import NotesPage from './pages/NotesPage ';
+import SavedPage from './pages/SavedPage';
+
 function App() {
-  
 
   return (
     <div className="App">
@@ -17,8 +18,8 @@ function App() {
             <Route path="home" element={<HomePage />} />
             <Route path="quiz" element={<QuizPage />} />
             <Route path="sorted_by" element={<SortedByPage />} />
+            <Route path="saved" element={<SavedPage />} />
             <Route path="notes" element={<NotesPage />} />
-
           </Route>
         </Routes>
       </Router>
