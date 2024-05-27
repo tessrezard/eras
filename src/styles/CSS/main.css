@@ -2504,6 +2504,10 @@ h1.sort-options-header {
   justify-content: center;
 }
 
+.saved-thumbnail-and-button-container {
+  display: flex;
+}
+
 .saved-item {
   width: 250px;
   height: 250px;
@@ -2528,6 +2532,7 @@ h1.sort-options-header {
 .saved-item-name {
   margin: 0;
   text-align: center;
+  text-decoration: none;
 }
 
 .saved-item-delete-btn {
@@ -2544,6 +2549,9 @@ h1.sort-options-header {
   color: #aaa592;
   text-align: center;
   font-size: 1rem;
+  position: relative;
+  top: 1rem;
+  right: 2.5rem;
 }
 .saved-item-delete-btn:hover {
   background-color: #f8f8f6;

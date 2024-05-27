@@ -19,8 +19,8 @@ function App() {
             <Route path="home" element={<HomePage />} />
             <Route path="quiz" element={<QuizPage />} />
             <Route path="sorted_by" element={<SortedByPage />} />
-            <Route path="saved-all" element={<SavedPage />} />
-            <Route path="saved-ranking-item" element={<SavedRankingPage />} />
+            <Route path="saved" element={<SavedPage />} />
+            <Route path="saved/:id" element={<SavedRankingPage />} />
             <Route path="notes" element={<NotesPage />} />
           </Route>
         </Routes>

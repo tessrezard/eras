@@ -7,32 +7,35 @@ import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 import Condensed from "./Condensed";
 import SavedItem from "./Saved-SavedItem";
 import OrderOptions from "./OrderOptions";
+import { Link, useNavigate } from "react-router-dom";
+import SavedRankingPage from "../pages/SavedRankingPage";
 
 const DisplaySavedRankings = () => {
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference");
-
+    const [showAll, setShowAll] = useState(true);
+    const navigate = useNavigate();
 
     const deleteItem = (key) => {
         const userConfirmed = window.confirm('Are you sure you want to delete the ranking?');
         if (userConfirmed) {
-        localStorage.removeItem(key);
-        window.location.reload(); // Reloads the page
+            //Need to counteract the naviation
+            localStorage.removeItem(key);
+            window.location.reload(); // Reloads the page
         }
+
     }
 
     const getSavedRankings = () => {
         // - get from local storage
         const savedItems = getItemsStartingWith("savedRanking-");
-
         // - sort by timestamp
         if (savedItems && Array.isArray(savedItems)) {
             // Function to extract the timestamp from the key
             const extractTimestamp = (key) => {
                 return parseInt(key.slice(-13), 10);
             };
-
             // Implementing Bubble Sort to sort the items by timestamp in descending order
             let n = savedItems.length;
             for (let i = 0; i < n - 1; i++) {
@@ -45,31 +48,42 @@ const DisplaySavedRankings = () => {
                     }
                 }
             }
-
         }
-
         return savedItems;
     }
+
 
 
     useEffect(() => {
         getSavedRankings();
     }, [])
 
+
+
     return (
         <>
             <div className="saved-page-container">
 
-                <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
+                <OrderOptions
+                    sorting={sorting}
+                    orderOption={orderOption}
+                    setOrderOption={setOrderOption}
+                />
+
                 <div className="saved-grid-container">
 
-                    {getSavedRankings().map((item, index) => {
-                        return (<>
-                            <SavedItem item={item} orderOption={orderOption} deleteItem={deleteItem}/>
-                        </>
+                    {
+                        getSavedRankings().map((item, index) => (
+                                <SavedItem
+                                key={index}
+                                    item={item}
+                                    orderOption={orderOption}
+                                    deleteItem={deleteItem}
+                                />
+                        ))
+           }
 
-                        )
-                    })}
+
 
                 </div>
             </div>

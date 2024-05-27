@@ -27,6 +27,7 @@ const SortedByPage = () => {
         setFilteredTracks(commonItems);
     }, [typeFilteredTracks, albumFilteredTracks])
 
+    console.log('filteredTracks', filteredTracks);
 
     // NOTE: the styling for all the filters & options are in the Filters.scss file. 
     return (

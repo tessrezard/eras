@@ -1,9 +1,12 @@
-
 .saved-grid-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+}
+
+.saved-thumbnail-and-button-container {
+    display: flex;
 }
 
 .saved-item {
@@ -31,6 +34,7 @@
 .saved-item-name {
     margin: 0;
     text-align: center;
+    text-decoration: none;
 }
 
 .saved-item-delete-btn {
@@ -47,6 +51,9 @@
     color: $lead-text-color;
     text-align: center;
     font-size: 1rem;
+    position: relative;
+    top: 1rem;
+    right: 2.5rem;
 
     &:hover {
         background-color: $btn-hover-color;

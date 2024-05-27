@@ -7,7 +7,6 @@ import CondensedTrackHorizontal from "./CondensedTrack-Horizontal";
 
 const ThumbnailTrack = ({ track, setTrackName, setTrackEraColor, totalNumTracks }) => {
 
-    console.log('totalNumTracks', totalNumTracks);
 
     let variant = track.trackVariant
     if (variant) {
