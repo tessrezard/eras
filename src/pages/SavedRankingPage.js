@@ -7,14 +7,23 @@ import Condensed from "../components/Condensed";
 import OrderOptions from "../components/OrderOptions";
 import FullSizeAllTracks from "../components/FullSizeAllTracks";
 import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
+import QuizSortedItem from "../components/QuizSortedItem";
 
 const SavedRankingPage = () => {
 
     let { id } = useParams();
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")
-    // const [item, setItem] = useState(null);
+    const [graphTab, setGraphTab] = useState(true)
 
+
+    const toggleGraphTab = () => {
+        setGraphTab(true);
+    };
+
+    const toggleListTab = () => {
+        setGraphTab(false);
+    };
     console.log('id', id);
 
     // const fetchItem = async () => {
@@ -52,54 +61,63 @@ const SavedRankingPage = () => {
 
     return (
         <>
-        {id? ( <div>
+            <div>
                 <h1>{rankingName}</h1>
-                <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
-                <div className="quiz-final-graph-condensed">
-                    <Condensed
-                        tracks={graphTracks}
-                        sortType='preference'
-                        // orderOption='eraOrderOption'
-                        orderOption={orderOption}
-                        directionUp={true}
-                    />
+
+                <div className="tab-toggle-buttons-container">
+                    <button onClick={toggleGraphTab} className={`tab-toggle-btn ${graphTab ? 'activeToggleTabBtn' : ''}`} >
+                        Graphs
+                    </button>
+                    <button onClick={toggleListTab} className={`tab-toggle-btn ${!graphTab ? 'activeToggleTabBtn' : ''}`}  >
+                        List
+                    </button>
                 </div>
 
-                <div className="quiz-final-graph-fullSize">
-                    <h3>Songs in {orderOption} order</h3>
-                    <FullSizeAllTracks
-                        tracks={graphTracks}
-                        sortType='preference'
-                        // orderOption='eraOrderOption'
-                        orderOption={orderOption}
-                    />
-                </div>
 
-            </div>):(<></>)}
-            {/* <div>
-                <h1>{rankingName}</h1>
-                <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
-                <div className="quiz-final-graph-condensed">
-                    <Condensed
-                        tracks={graphTracks}
-                        sortType='preference'
-                        // orderOption='eraOrderOption'
-                        orderOption={orderOption}
-                        directionUp={true}
-                    />
-                </div>
 
-                <div className="quiz-final-graph-fullSize">
-                    <h3>Songs in {orderOption} order</h3>
-                    <FullSizeAllTracks
-                        tracks={graphTracks}
-                        sortType='preference'
-                        // orderOption='eraOrderOption'
-                        orderOption={orderOption}
-                    />
-                </div>
 
-            </div> */}
+                {graphTab ? (
+                    <div>
+                        {/* Content for Graph view */}
+                        <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
+                        <div className="quiz-final-graph-condensed">
+                            <Condensed
+                                tracks={graphTracks}
+                                sortType='preference'
+                                // orderOption='eraOrderOption'
+                                orderOption={orderOption}
+                                directionUp={true}
+                            />
+                        </div>
+
+                        <div className="quiz-final-graph-fullSize">
+                            <h3>Songs in {orderOption} order</h3>
+                            <FullSizeAllTracks
+                                tracks={graphTracks}
+                                sortType='preference'
+                                // orderOption='eraOrderOption'
+                                orderOption={orderOption}
+                            />
+                        </div>        </div>
+                ) : (
+                    <div className="saved-list">
+                        {/* Content for List view */}
+
+                        <div>
+                            {item.tracks.map((item, index) => {
+                                return (
+                                    <QuizSortedItem item={item} index={index} key={index} />
+                                )
+                            })}        </div>
+                    </div>
+
+                )}
+
+
+            </div>
+
+
+
 
             <Link className="home-link-button" to={'/quiz'}>Take the Quiz Again</Link>
 

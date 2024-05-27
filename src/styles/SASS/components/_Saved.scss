@@ -112,3 +112,46 @@
     }
 
 }
+
+
+//SAVED PAGE
+.tab-toggle-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tab-toggle-btn {
+    border: 7px solid $lead-color;
+    margin: 1em auto;
+    border-radius: $rounded-rectangle;
+    padding: 0.75rem 0;
+    margin: 0 1rem;
+    font-family: $titleFont;
+    text-decoration: none;
+    background-color: $background-color;
+    // animation: backgroundErasColorCycle 120s infinite;
+    color: $lead-text-color;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    width: 7em;
+
+    p {
+        padding: 0;
+    }
+
+}
+
+.activeToggleTabBtn {
+    animation: colorCycle 60s infinite;
+    animation: borderErasColorCycle 60s infinite;
+
+}
+
+.saved-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
