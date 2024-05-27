@@ -5,8 +5,9 @@ import CondensedTrackHorizontal from "./CondensedTrack-Horizontal";
 
 
 
-const ThumbnailTrack = ({ track, setTrackName, setTrackEraColor }) => {
+const ThumbnailTrack = ({ track, setTrackName, setTrackEraColor, totalNumTracks }) => {
 
+    console.log('totalNumTracks', totalNumTracks);
 
     let variant = track.trackVariant
     if (variant) {
@@ -30,13 +31,18 @@ const ThumbnailTrack = ({ track, setTrackName, setTrackEraColor }) => {
     const points = track.points;
 
     // -------------------------------------------------------------
-
     let sortedWidth = '1px';
+    if (totalNumTracks < 200){
+        sortedWidth = '2px';
+   }
+    if (totalNumTracks < 100){
+         sortedWidth = '3px';
+    }
 
 
-    let sortedHeight = '300px';
+    let sortedHeight = '200px';
     if (track) {
-        const pointsInPx = (points * 0.45) + 'px';
+        const pointsInPx = (points * 0.6) + 'px';
         sortedHeight = pointsInPx;
     }
 

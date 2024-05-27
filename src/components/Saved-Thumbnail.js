@@ -62,7 +62,9 @@ const Thumbnail = ({ tracks, sortType, orderOption, directionUp }) => {
                                             sortType={sortType}
                                             setTrackName={setTrackName}
                                             setTrackEraColor={setTrackEraColor}
-                                            trackName={trackName} />
+                                            trackName={trackName}
+                                            totalNumTracks={tracks.length}
+                                            />
                                 </div>
                             ))}
 

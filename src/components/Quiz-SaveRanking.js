@@ -6,11 +6,8 @@ import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 
 const SaveRanking = ({ finalSorted, graphTracks, rankingSaved, setRankingSaved}) => {
 
-    const [givenName, setGivenName] =  useState('Your ranking');
+    const [givenName, setGivenName] =  useState('');
     const [saved, setSaved] =  useState(false);
-
- 
-    
 
 
       // Function to handle saving data to localStorage
@@ -54,8 +51,8 @@ const SaveRanking = ({ finalSorted, graphTracks, rankingSaved, setRankingSaved})
                     <h2 className="quiz-SaveRanking-saved-message">{givenName} Saved!</h2>
                     </>
                 ) : (
-                    <>
-                    <h2>Save this ranking</h2>
+                    <>                    
+                        <h2> Save this ranking: </h2>
                 <div>
                     <form onSubmit={handleSubmit} className="quiz-SaveRanking-form">
                             <input 

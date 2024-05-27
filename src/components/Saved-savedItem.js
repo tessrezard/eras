@@ -7,19 +7,31 @@ import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 import Thumbnail from "./Saved-Thumbnail";
 
 
-const SavedItem = ({ item, orderOption }) => {
+const SavedItem = ({ item, orderOption, deleteItem }) => {
 
+    console.log('item', item);
     const key = item.key;
     // parse item data : 
     const itemName = key;
     let withoutPrefix = itemName.substring("savedRanking-".length); // Removes the prefix
     let withoutSuffix = withoutPrefix.split("-")[0]; // Removes the suffix
-    
+
 
 
     return (
-        <div className="saved-item">
-            <p className="saved-item-name">{withoutSuffix}</p>
+        <div 
+            className="saved-item"
+            >
+            <div className="saved-item-header" >
+                <p className="saved-item-name">{withoutSuffix}</p>
+                <button
+                    onClick={() => deleteItem(key)}
+                    className="saved-item-delete-btn"
+                >
+                    x
+                </button>
+            </div>
+
             <Thumbnail
                 tracks={updateGraphTracks(item.value)}
                 sortType='preference'

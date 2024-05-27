@@ -3,7 +3,7 @@ import '../styles/CSS/main.css';
 import { Link } from "react-router-dom";
 import DisplaySavedRankings from "../components/Saved-DisplaySavedRankings";
 
-const SavedPage = () => {
+const SavedRankingPage = () => {
 
 
 
@@ -20,4 +20,4 @@ const SavedPage = () => {
 };
 
 
-export default SavedPage;
+export default SavedRankingPage;

@@ -29,7 +29,7 @@ function NavMenu() {
                 > Quiz </NavLink>
 
 
-                <NavLink to={'/saved'} className='nav-link'
+                <NavLink to={'/saved-all'} className='nav-link'
                     style={({ isActive }) => {
                         return isActive ? { borderBottom: 'solid 1.5px rgb(192, 189, 175)' } : {};
                     }}

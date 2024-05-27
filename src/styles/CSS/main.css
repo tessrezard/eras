@@ -2039,6 +2039,7 @@
 }
 
 .quiz-SaveRanking-container {
+  border: 4px solid #f3f4ff;
   border-radius: 19px;
   animation: borderErasColorCycle 120s infinite;
   padding: 1rem;
@@ -2514,10 +2515,40 @@ h1.sort-options-header {
   justify-content: flex-end;
   padding: 0;
 }
+.saved-item:hover {
+  animation: borderErasColorCycle 60s infinite;
+}
+
+.saved-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
 
 .saved-item-name {
   margin: 0;
   text-align: center;
+}
+
+.saved-item-delete-btn {
+  background-color: rgb(237, 236, 232);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px outset #aaa592;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: #aaa592;
+  text-align: center;
+  font-size: 1rem;
+}
+.saved-item-delete-btn:hover {
+  background-color: #f8f8f6;
+  animation: backgroundErasColorCycle 60s infinite;
+  color: #fff;
 }
 
 .saved-thumbnail-container {

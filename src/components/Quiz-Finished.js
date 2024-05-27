@@ -45,13 +45,16 @@ const QuizFinished = ({ latestSortedTracks, rankingSaved, setRankingSaved }) => 
     return (
         <>
             <div className="quiz-finished-container">
-                <h1> Well done! You're all sorted ! </h1>
+            <h1>Finished! </h1>
 
                 <SaveRanking
                     finalSorted={finalSorted}
                     graphTracks={graphTracks}
                     rankingSaved={rankingSaved}
-                    setRankingSaved={setRankingSaved} />
+                    setRankingSaved={setRankingSaved} 
+                />
+
+
                 <button className="quiz-finished-button" onClick={scrollToGraphs}>
                     <p>See Graphs</p>
                     <p className="quiz-scrollTo-btn-arrow">➸</p>

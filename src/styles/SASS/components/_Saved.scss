@@ -1,11 +1,12 @@
-.saved-grid-container{
+
+.saved-grid-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
 }
 
-.saved-item{
+.saved-item {
     width: 250px;
     height: 250px;
     margin: 0.25rem;
@@ -15,19 +16,52 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 0;
+
+    &:hover {
+        animation: borderErasColorCycle 60s infinite;
+    }
 }
-.saved-item-name{
+
+.saved-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.saved-item-name {
     margin: 0;
     text-align: center;
 }
 
-.saved-thumbnail-container{
+.saved-item-delete-btn {
+    background-color: $lead-color;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px outset $lead-text-color;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: $lead-text-color;
+    text-align: center;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: $btn-hover-color;
+        animation: backgroundErasColorCycle 60s infinite;
+        color: $background-color;
+    }
+}
+
+.saved-thumbnail-container {
     display: flex;
     background-color: $background-color;
     // display: block;
     // flex-direction: column;
     align-items: flex-end;
-justify-content: baseline;
+    justify-content: baseline;
     width: fit-content;
     margin: auto;
     margin-bottom: 0.5rem;
@@ -40,11 +74,12 @@ justify-content: baseline;
         justify-content: center;
     }
 }
-.thumbnail-tracks{
+
+.thumbnail-tracks {
     display: flex;
     display: flex;
-        flex-flow: row;
-        align-items: flex-end;
+    flex-flow: row;
+    align-items: flex-end;
 
     align-items: flex-end;
 
@@ -65,7 +100,7 @@ justify-content: baseline;
         padding: 0;
         border-radius: 1px;
         flex-grow: 1;
-       
+
 
     }
 
