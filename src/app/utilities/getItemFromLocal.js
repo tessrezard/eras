@@ -9,4 +9,8 @@ export function getItemFromLocal(id) {
             return { key, tracks };
         }
     }
+
+    // If no matching item is found, return null or handle accordingly
+    console.log('No item found');
+    return null;
 }

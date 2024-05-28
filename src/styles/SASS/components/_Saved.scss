@@ -122,8 +122,15 @@ a {
 
 }
 
-
+// ------------------------------------------------
 //SAVED PAGE
+
+.saved-ranking-title{
+    text-align: center;
+    color: $lead-text-color;
+
+}
+
 .tab-toggle-buttons-container {
     display: flex;
     justify-content: center;
@@ -134,19 +141,21 @@ a {
 .tab-toggle-btn {
     border: 7px solid $lead-color;
     margin: 1em auto;
-    border-radius: $rounded-rectangle;
+    border-top-left-radius: $rounded-rectangle;
+    border-top-right-radius: $rounded-rectangle;
     padding: 0.75rem 0;
-    margin: 0 1rem;
+    margin: 0 5px;
     font-family: $titleFont;
     text-decoration: none;
     background-color: $background-color;
-    // animation: backgroundErasColorCycle 120s infinite;
     color: $lead-text-color;
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: 3px;
     width: 7em;
-
+    @media (min-width: $small-phone){
+    margin: 0 1rem;
+        }
     p {
         padding: 0;
     }
@@ -154,13 +163,33 @@ a {
 }
 
 .activeToggleTabBtn {
-    animation: colorCycle 60s infinite;
-    animation: borderErasColorCycle 60s infinite;
+    border: 7px solid $lead-text-color;
+    border-bottom: 7px solid $background-color;
+    z-index: 2;
 
 }
 
-.saved-list {
+.tab-container {
+    position: relative;
+    top: -7px;
+    border: 7px solid $lead-text-color;
+    border-radius: $rounded-rectangle;
+    margin: auto;
+    padding: 5px;
+
+    max-width: fit-content;
+    @media (min-width: $small-phone){
+    padding: 1rem;
+    }
+}
+
+.graph-tab{
+    padding-bottom: 1rem;
+}
+
+.list-tab {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    padding: 1rem;
 }
+

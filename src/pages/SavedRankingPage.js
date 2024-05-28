@@ -25,15 +25,18 @@ const SavedRankingPage = () => {
     const toggleListTab = () => {
         setGraphTab(false);
     };
-    console.log('id', id);
 
-    // const fetchItem = async () => {
-    //     const fetchedItem = await getItemFromLocal(id);
-    //     const rankingName = item?.key.substring("savedRanking-".length).split("-")[0];
-    //     const graphTracks = updateGraphTracks(item?.tracks);
 
-    //     setItem(fetchedItem);
-    // };
+    let orderKeyWord = 'era';
+    switch (orderOption){
+        case 'eraOrderOption':
+            orderKeyWord = 'era';
+            break;
+        case 'sortedOrderOption': 
+            orderKeyWord = 'ranked';
+            break;
+    }
+   
 
     useEffect(() => {
         // fetchItem();
@@ -52,20 +55,14 @@ const SavedRankingPage = () => {
 
     }
 
-    // const item =  getItemFromLocal(id);
-    // const rankingName = item?.key.substring("savedRanking-".length).split("-")[0];
-
-    // const graphTracks = updateGraphTracks(item?.tracks);
-
-
-
+    
 
     console.log('graphTracks', graphTracks)
 
     return (
         <>
             <div>
-                <h1>{rankingName}</h1>
+                <h1 className="saved-ranking-title">{rankingName}</h1>
 
                 <div className="tab-toggle-buttons-container">
                     <button onClick={toggleGraphTab} className={`tab-toggle-btn ${graphTab ? 'activeToggleTabBtn' : ''}`} >
@@ -80,7 +77,7 @@ const SavedRankingPage = () => {
 
 
                 {graphTab ? (
-                    <div>
+                    <div className={`tab-container ${graphTab ? ' graph-tab ' : ''}`}>
                         {/* Content for Graph view */}
                         <OrderOptions sorting={sorting} orderOption={orderOption} setOrderOption={setOrderOption} />
                         <div className="quiz-final-graph-condensed">
@@ -94,7 +91,7 @@ const SavedRankingPage = () => {
                         </div>
 
                         <div className="quiz-final-graph-fullSize">
-                            <h3>Songs in {orderOption} order</h3>
+                            <h3>Songs in {orderKeyWord} order</h3>
                             <FullSizeAllTracks
                                 tracks={graphTracks}
                                 sortType='preference'
@@ -103,7 +100,7 @@ const SavedRankingPage = () => {
                             />
                         </div>        </div>
                 ) : (
-                    <div className="saved-list">
+                    <div className={`tab-container ${!graphTab ? ' list-tab ' : ''}`}>
                         {/* Content for List view */}
 
                         <div>
