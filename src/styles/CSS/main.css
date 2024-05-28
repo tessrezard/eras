@@ -2507,6 +2507,16 @@ h1.sort-options-header {
   max-width: 3%;
 }
 
+.saved-none-yet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+.saved-none-yet-container .home-link-button {
+  margin: 0;
+}
+
 .saved-grid-container {
   display: flex;
   flex-flow: row wrap;

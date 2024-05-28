@@ -51,7 +51,20 @@ const SavedAllPage = () => {
         getSavedRankings();
     }, [])
 
+    console.log(getSavedRankings().length, 'getSavedRankings().length')
 
+    if (getSavedRankings().length < 1) {
+        return (
+            <>
+                <div className='saved-none-yet-container'>
+                    <p>Looks like you have not saved your quiz results yet.</p>
+                    <Link className="home-link-button" to={'/quiz'}>Take the Quiz</Link>
+                    <p>Remember to save your ranking when you finish it!</p>
+                </div>
+
+            </>
+        )
+    }
 
     return (
         <>
@@ -67,14 +80,14 @@ const SavedAllPage = () => {
 
                     {
                         getSavedRankings().map((item, index) => (
-                                <SavedItem
+                            <SavedItem
                                 key={index}
-                                    item={item}
-                                    orderOption={orderOption}
-                                    deleteItem={deleteItem}
-                                />
+                                item={item}
+                                orderOption={orderOption}
+                                deleteItem={deleteItem}
+                            />
                         ))
-           }
+                    }
 
 
 

@@ -1,3 +1,13 @@
+.saved-none-yet-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    .home-link-button{
+        margin: 0;
+    }
+}
+
 .saved-grid-container {
     display: flex;
     flex-flow: row wrap;
@@ -8,7 +18,7 @@
 .saved-thumbnail-and-button-container {
     display: flex;
     text-decoration: none;
-
+    
 }
 
 .saved-item {
