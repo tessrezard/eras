@@ -14,7 +14,6 @@ const SavedAllPage = () => {
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference");
-    const [showAll, setShowAll] = useState(true);
 
     const deleteItem = (key) => {
         const userConfirmed = window.confirm('Are you sure you want to delete the ranking?');
