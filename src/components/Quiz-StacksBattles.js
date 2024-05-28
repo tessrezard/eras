@@ -7,6 +7,7 @@ import UndoButton from "./Quiz-UndoButton";
 
 
 const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSortedPieces, setAddUpSortedPieces }) => {
+    
     let stackBattleId = `stack${index}`;
 
     let pieceCopy = [...piece];
@@ -14,6 +15,8 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
     const groupA = 0; // --: left hand pile
     const groupB = 1; // --: right hand pile
 
+
+    console.log('sortedPiece.length', piece, sortedPiece.length)
     let indexA = 0;
     let indexB = 0;
 
@@ -192,11 +195,6 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
 
                 <div>
 
-                    {/* {sortedPiece.map((item, index) => {
-                        return (
-                            <QuizSortedItem item={item} index={index} key={index} />
-                        )
-                    })} */}
                     {sortedPiece.length ? (
                         <>
                             <div className="quiz-sorted-piece-list">
