@@ -8,6 +8,7 @@ import OrderOptions from "../components/OrderOptions";
 import FullSizeAllTracks from "../components/FullSizeAllTracks";
 import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 import QuizSortedItem from "../components/QuizSortedItem";
+import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 
 const SavedRankingPage = () => {
 
@@ -42,11 +43,13 @@ const SavedRankingPage = () => {
     let item;
     let rankingName;
     let graphTracks;
-
+    let reverseTracks;
     if (id) {
         item = getItemFromLocal(id);
         rankingName = item?.key.substring("savedRanking-".length).split("-")[0];
         graphTracks = updateGraphTracks(item?.tracks);
+        reverseTracks = reverseEraOrder(graphTracks);
+
     }
 
     // const item =  getItemFromLocal(id);
@@ -108,7 +111,8 @@ const SavedRankingPage = () => {
                                 return (
                                     <QuizSortedItem item={item} index={index} key={index} />
                                 )
-                            })}        </div>
+                            })}
+                        </div>
                     </div>
 
                 )}

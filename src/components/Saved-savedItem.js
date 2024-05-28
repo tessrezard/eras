@@ -6,6 +6,7 @@ import { getItemsStartingWith } from "../app/utilities/getItemsStartingWith-from
 import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
 import Thumbnail from "./Saved-Thumbnail";
 import { Link } from "react-router-dom";
+import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 
 
 const SavedItem = ({ item, orderOption, deleteItem }) => {
@@ -30,24 +31,30 @@ const SavedItem = ({ item, orderOption, deleteItem }) => {
         return URL;
     }
 
+    const reverseGraphTracks = reverseEraOrder(updateGraphTracks(item.value))
 
     return (<>
         <div className="saved-thumbnail-and-button-container">
             <Link to={`/saved/${getKeyForURL(item.key)}`}>
-                <div className="saved-item">
-                    <div className="saved-item-header" >
-                        <p className="saved-item-name">{withoutSuffix}</p>
 
+                <div className="saved-item">
+
+                    <div className="saved-item-header" >
+                        <p className="saved-item-name" >
+                            {withoutSuffix}
+                        </p>
                     </div>
 
                     <Thumbnail
-                        tracks={updateGraphTracks(item.value)}
+                        tracks={reverseGraphTracks}
                         sortType='preference'
                         // orderOption='eraOrderOption'
                         orderOption={orderOption}
                         directionUp={true}
                     />
+
                 </div>
+
             </Link>
             <button
                 onClick={handleClick}

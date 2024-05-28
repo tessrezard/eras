@@ -1,5 +1,26 @@
 // CONDENSED _____________________________________
 
+
+//THESE TWO CLASSES ARE USED BECAUSE I WANT TO DISPLAY THE TRACKS IN THE MOST READABLE CHRONOLOGICAL ORDER
+//WHEN SCREEN IS NARROW, TRACKS VERTICAL : OLDEST ON LEFT, NEWEST ON RIGHT
+.condensed-top-to-bottom-tracks {
+    display: block;
+    @media (min-width: $wide-phone) {
+        display: none;
+    }
+}
+//WHEN SCREEN IS WIDE, TRACKS HORIZONTAL : OLDEST AT BOTTOM, NEWEST AT TOP
+.condensed-left-to-right-tracks {
+    display: none;
+    @media (min-width: $wide-phone) {
+        display: flex;
+        align-items: flex-end;
+        
+    }
+}
+//__________________
+
+
 .condensed-title {
     font-size: 0.7rem;
     height: 2rem;
@@ -8,7 +29,6 @@
     padding-bottom: 0.5rem;
     justify-content: center;
     width: 200px;
-
 
     @media (min-width: $small-phone) {
         height: 1rem;
@@ -26,6 +46,7 @@
         height: 1rem;
         width: $wide-phone;
     }
+
     @media (min-width: $desktop) {
         margin: auto;
         font-size: 0.8rem;
@@ -35,15 +56,6 @@
 }
 
 
-// .condensed-resize-wrapper{
-//     overflow: auto; /* Ensure overflow behavior for the container */
-//     resize: horizontal; /* Allow horizontal resizing */
-//     max-width: 100vw; /* Limit the maximum width of the wrapper */
-//     padding: 1rem;
-//     border: $border-standard;
-//     border-radius: $rounded-rectangle;
-//     background-color: $background-color;
-// }
 .condensed-container {
     border: $border-standard;
     border-radius: $rounded-rectangle;
@@ -62,7 +74,7 @@
     @media (min-width: $wide-phone) {
         padding: 1rem;
         flex-flow: row;
-        align-items: flex-start;
+        align-items: flex-end;
         justify-content: center;
     }
 }
@@ -74,14 +86,14 @@
 
     @media (min-width: $wide-phone) {
         flex-flow: row;
-        align-items: flex-start;
+        align-items: flex-end;
     }
 }
 .condensed-direction-up{
-    align-items: flex-start;
-    @media (min-width: $wide-phone) {
-    align-items: flex-end;
-    }
+    // align-items: flex-start;
+    // @media (min-width: $wide-phone) {
+    // align-items: flex-end;
+    // }
 
 }
 

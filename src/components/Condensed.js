@@ -3,7 +3,7 @@ import '../styles/CSS/main.css';
 import { sortTracksByDuration } from "../app/utilities/sortTracksByDuration";
 import { sortbyExplicit } from "../app/utilities/sortByExplicit";
 import { sortByPreference } from "../app/utilities/sortByPreference";
-
+import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
 import CondensedTrackDuration from "./CondensedTrackDuration";
 import CondensedTrackExplicit from "./CondensedTrackExplicit";
 import CondensedTrackPreference from "./CondensedTrackPreference";
@@ -12,12 +12,15 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
 
     const [trackName, setTrackName] = useState('Hover over track to see name');
     const [trackEraColor, setTrackEraColor] = useState();
-    
+
     let direction;
-        if (directionUp == true){
-            direction = 'condensed-direction-up';
-        }
-    
+    if (directionUp == true) {
+        direction = 'condensed-direction-up';
+    }
+
+
+    const reverseGraphTracks = reverseEraOrder(tracks);
+
 
     //_____________________________________________________________________________________________________
     // ------------------------ ORDER OPTIONS: era/sorted ------------------------
@@ -42,7 +45,7 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
     //_____________________________________________________________________________________________________
     // --------------- SORT TYPE: duration/preference/explicit ---------------
     //DETERMINE THE TYPE OF SORT, WHAT DATA TO ILLUSTRATE? DURATION, EXPLICIT, PREFERENCE... (sortType)
-    
+
     let durationSortType = false;
     let explicitSortType = false;
     let preferenceSortType = false;
@@ -72,40 +75,86 @@ const Condensed = ({ tracks, sortType, orderOption, directionUp }) => {
             {eraOrder ? (
                 <>
                     <div className="condensed-container">
-                        <div className={`condensed-tracks ${direction}`}>
+                        <div className={`condensed-tracks`}>
 
                             {/* ------------------------MAP tracks in era order------------------------ */}
-                            {tracks.map((track, index) => (
-                                <div key={index}>
-                                    {/* -------duration sort type------- */}
-                                    {durationSortType ? (
-                                        <CondensedTrackDuration
-                                            track={track}
-                                            sortType={sortType}
-                                            setTrackName={setTrackName}
-                                            setTrackEraColor={setTrackEraColor}
-                                            trackName={trackName} />) : (<></>)}
 
-                                    {/* -------explicit sort type------- */}
-                                    {explicitSortType ? (
-                                        <CondensedTrackExplicit
-                                            track={track}
-                                            sortType={sortType}
-                                            setTrackName={setTrackName}
-                                            setTrackEraColor={setTrackEraColor}
-                                            trackName={trackName} />) : (<></>)}
+                            <div className={`condensed-top-to-bottom-tracks  ${direction}`}>
+                                
+                                {tracks.map((track, index) => (
+                                    <div key={index}>
 
-                                    {/* -------preference sort type------- */}
-                                    {preferenceSortType ? (
-                                        <CondensedTrackPreference
-                                            track={track}
-                                            sortType={sortType}
-                                            setTrackName={setTrackName}
-                                            setTrackEraColor={setTrackEraColor}
-                                            trackName={trackName} />) : (<></>)}
+                                        {/* -------duration sort type------- */}
+                                        {durationSortType ? (
+                                            <CondensedTrackDuration
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />) : (<></>)}
 
-                                </div>
-                            ))}
+                                        {/* -------explicit sort type------- */}
+                                        {explicitSortType ? (
+                                            <CondensedTrackExplicit
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />) : (<></>)}
+
+                                        {/* -------preference sort type------- */}
+                                        {preferenceSortType ? (
+                                            <CondensedTrackPreference
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />) : (<></>)}
+
+                                    </div>
+                                ))}
+
+                            </div>
+
+                            <div className={`condensed-left-to-right-tracks ${direction}`}>
+                                
+                                {reverseGraphTracks.map((track, index) => (
+                                    <div key={index}>
+
+                                        {/* -------duration sort type------- */}
+                                        {durationSortType ? (
+                                            <CondensedTrackDuration
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />) : (<></>)}
+
+                                        {/* -------explicit sort type------- */}
+                                        {explicitSortType ? (
+                                            <CondensedTrackExplicit
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />) : (<></>)}
+
+                                        {/* -------preference sort type------- */}
+                                        {preferenceSortType ? (
+                                            <CondensedTrackPreference
+                                                track={track}
+                                                sortType={sortType}
+                                                setTrackName={setTrackName}
+                                                setTrackEraColor={setTrackEraColor}
+                                                trackName={trackName} />) : (<></>)}
+
+                                    </div>
+                                ))}
+                                
+                            </div>
+
+
+
                         </div>
 
                     </div>

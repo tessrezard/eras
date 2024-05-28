@@ -7,6 +7,8 @@
 
 .saved-thumbnail-and-button-container {
     display: flex;
+    text-decoration: none;
+
 }
 
 .saved-item {
@@ -29,11 +31,18 @@
     display: flex;
     justify-content: space-between;
     margin: 5px;
+    margin-right: 2rem;
+
 }
 
 .saved-item-name {
     margin: 0;
     text-align: center;
+    font-size: 1rem;
+
+}
+
+a {
     text-decoration: none;
 }
 
@@ -150,7 +159,7 @@
 
 }
 
-.saved-list{
+.saved-list {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
