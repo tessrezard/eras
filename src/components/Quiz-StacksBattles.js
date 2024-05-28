@@ -8,7 +8,6 @@ import UndoButton from "./Quiz-UndoButton";
 
 const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSortedPieces, setAddUpSortedPieces }) => {
     let stackBattleId = `stack${index}`;
-    console.log('stackId', stackBattleId);
 
     let pieceCopy = [...piece];
     const [sortedPiece, setSortedPiece] = useState([]); // list of chosen favorites, used to render sorted list and to update addUpSortedPieces 
@@ -141,87 +140,88 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
 
     return (
         <>
-            {/* <div> */}
+            {/* <div className="quiz-battle-and-list"> */}
 
-            {lastElementA && lastElementB ? (<></>) : (
-                <>
-                    <div className="quiz-battle-container" id={stackBattleId}>
+                {lastElementA && lastElementB ? (<></>) : (
+                    <>
+                        <div className="quiz-battle-container" id={stackBattleId}>
 
-                        <p className="quiz-vs">vs</p>
+                            <p className="quiz-vs">vs</p>
 
-                        <div className="quiz-both-stacks">
+                            <div className="quiz-both-stacks">
 
-                            <div className="quiz-stack-group-container quiz-stack-group-A">
-                                <div className="quiz-stack">
-                                    {renderStackA}
+                                <div className="quiz-stack-group-container quiz-stack-group-A">
+                                    <div className="quiz-stack">
+                                        {renderStackA}
+                                    </div>
+                                    {lastElementA ? (
+                                        <></>) : (
+                                        <>
+                                            <button className="quiz-stack-current-song quiz-stack-current-song-A">
+                                                <QuizSongOption
+                                                    track={pieceCopy[groupA][indexTrackA].track}
+                                                    onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
+                                                />
+                                            </button>
+                                        </>)}
                                 </div>
-                                {lastElementA ? (
-                                    <></>) : (
-                                    <>
-                                        <button className="quiz-stack-current-song quiz-stack-current-song-A">
-                                            <QuizSongOption
-                                                track={pieceCopy[groupA][indexTrackA].track}
-                                                onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
-                                            />
-                                        </button>
-                                    </>)}
-                            </div>
 
-                            {/* <p className="quiz-vs">vs</p> */}
+                                {/* <p className="quiz-vs">vs</p> */}
 
-                            <div className="quiz-stack-group-container quiz-stack-group-B">
-                                <div className="quiz-stack">
-                                    {renderStackB}
+                                <div className="quiz-stack-group-container quiz-stack-group-B">
+                                    <div className="quiz-stack">
+                                        {renderStackB}
+                                    </div>
+                                    {lastElementB ? (
+                                        <></>) : (
+                                        <>
+                                            <button className="quiz-stack-current-song">
+                                                <QuizSongOption
+                                                    track={pieceCopy[groupB][indexTrackB].track}
+                                                    onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B', trackB)}
+                                                />
+                                            </button>
+                                        </>)}
                                 </div>
-                                {lastElementB ? (
-                                    <></>) : (
-                                    <>
-                                        <button className="quiz-stack-current-song">
-                                            <QuizSongOption
-                                                track={pieceCopy[groupB][indexTrackB].track}
-                                                onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B', trackB)}
-                                            />
-                                        </button>
-                                    </>)}
-                            </div>
 
+                            </div>
                         </div>
-                    </div>
 
-                </>)}
-            {/* </div> */}
+                    </>)}
+                {/* </div> */}
 
-            <div>
+                <div>
 
-                {/* {sortedPiece.map((item, index) => {
+                    {/* {sortedPiece.map((item, index) => {
                         return (
                             <QuizSortedItem item={item} index={index} key={index} />
                         )
                     })} */}
-                {sortedPiece.length ? (
-                    <>
-                        <div className="quiz-sorted-piece-list">
-                            {sortedPiece.map((item, index) => {
-                                return (
-                                    <QuizSortedItem item={item} index={index} key={index} />
-                                )
-                            })}
-                            <UndoButton
-                                piece={piece}
-                                sortedPiece={sortedPiece}
-                                setSortedPiece={setSortedPiece}
-                                setIndexTrackA={setIndexTrackA}
-                                setIndexTrackB={setIndexTrackB}
-                                setLastElementA={setLastElementA}
-                                setLastElementB={setLastElementB}
-                                addUpSortedPieces={addUpSortedPieces}
-                                setAddUpSortedPieces={setAddUpSortedPieces}
-                            />
-                        </div>
+                    {sortedPiece.length ? (
+                        <>
+                            <div className="quiz-sorted-piece-list">
+                                {sortedPiece.map((item, index) => {
+                                    return (
+                                        <QuizSortedItem item={item} index={index} key={index} />
+                                    )
+                                })}
+                                <UndoButton
+                                    piece={piece}
+                                    sortedPiece={sortedPiece}
+                                    setSortedPiece={setSortedPiece}
+                                    setIndexTrackA={setIndexTrackA}
+                                    setIndexTrackB={setIndexTrackB}
+                                    setLastElementA={setLastElementA}
+                                    setLastElementB={setLastElementB}
+                                    addUpSortedPieces={addUpSortedPieces}
+                                    setAddUpSortedPieces={setAddUpSortedPieces}
+                                />
+                            </div>
 
-                    </>) : (<></>)}
-            </div>
+                        </>) : (<></>)}
+                </div>
 
+            {/* </div> */}
         </>
     )
 }

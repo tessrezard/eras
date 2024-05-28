@@ -28,6 +28,14 @@ function NavMenu() {
                     }}
                 > Quiz </NavLink>
 
+
+                <NavLink to={'/saved'} className='nav-link'
+                    style={({ isActive }) => {
+                        return isActive ? { borderBottom: 'solid 1.5px rgb(192, 189, 175)' } : {};
+                    }}
+                > Saved Rankings </NavLink>
+
+
                 <NavLink to={'/sorted_by'} className='nav-link'
                     style={({ isActive }) => {
                         return isActive ? { borderBottom: 'solid 1.5px rgb(192, 189, 175)' } : {};
@@ -37,9 +45,9 @@ function NavMenu() {
                 <NavLink to={'/notes'} className='nav-link'
                     style={({ isActive }) => {
                         return isActive ? { borderBottom: 'solid 1.5px rgb(192, 189, 175)' } : {};
-                    }} 
+                    }}
                 > Notes </NavLink>
-                
+
             </nav>
 
         </>

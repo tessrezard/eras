@@ -12,14 +12,14 @@ import OrderOptions from "../components/OrderOptions";
 
 
 
-const QuizFinished = ({ latestSortedTracks }) => {
+const QuizFinished = ({ latestSortedTracks, rankingSaved, setRankingSaved }) => {
 
     const quizFinalGraphsRef = useRef(null);
 
 
     const [orderOption, setOrderOption] = useState('eraOrderOption')
     const [sorting, setSorting] = useState("Preference")
-    
+
     const finalSorted = latestSortedTracks[0];
 
     let orderKeyWord;
@@ -45,9 +45,16 @@ const QuizFinished = ({ latestSortedTracks }) => {
     return (
         <>
             <div className="quiz-finished-container">
-                <h1> Well done! You're all sorted ! </h1>
+            <h1>Finished! </h1>
 
-                <SaveRanking finalSorted={finalSorted} graphTracks={graphTracks} />
+                <SaveRanking
+                    finalSorted={finalSorted}
+                    graphTracks={graphTracks}
+                    rankingSaved={rankingSaved}
+                    setRankingSaved={setRankingSaved} 
+                />
+
+
                 <button className="quiz-finished-button" onClick={scrollToGraphs}>
                     <p>See Graphs</p>
                     <p className="quiz-scrollTo-btn-arrow">➸</p>
