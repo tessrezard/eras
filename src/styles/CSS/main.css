@@ -1872,6 +1872,9 @@
 .quiz-undo-button {
   align-items: center;
   margin: 0.25rem 1rem;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 .quiz-undo-button .quiz-undo-btn-arrow {
   animation: none;
@@ -1881,6 +1884,10 @@
 .quiz-undo-button .quiz-undo-btn-text {
   animation: none;
   color: #aaa592;
+}
+
+.quiz-mini-condensed-container {
+  border: solid 3px green;
 }
 
 .quiz-sorted-piece-list {
