@@ -4,15 +4,21 @@ import QuizSongOption from "./QuizSongOption";
 import QuizStackedOption from "./QuizStackedOption";
 import QuizSortedItem from "./QuizSortedItem";
 import UndoButton from "./Quiz-UndoButton";
+import Thumbnail from "./Saved-Thumbnail";
+import { updateGraphTracks } from "../app/utilities/updateGraphTracks";
+import { reverseEraOrder } from "../app/utilities/reverseEraOrder";
+import MiniCondensed from "./MiniCondensed";
 
 
 const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSortedPieces, setAddUpSortedPieces }) => {
+
     let stackBattleId = `stack${index}`;
 
     let pieceCopy = [...piece];
     const [sortedPiece, setSortedPiece] = useState([]); // list of chosen favorites, used to render sorted list and to update addUpSortedPieces 
     const groupA = 0; // --: left hand pile
     const groupB = 1; // --: right hand pile
+
 
     let indexA = 0;
     let indexB = 0;
@@ -35,6 +41,8 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
         setLastElementA(false);
         setLastElementB(false);
     }, [step])
+
+    console.log('lastElementA, lastElementB', lastElementA, lastElementB)
 
 
     // --figure out how many elements in the piece ( to know when they have all been sorted. )
@@ -142,86 +150,107 @@ const StacksBattles = ({ step, piece, index, updateAddUpSortedPieces, addUpSorte
         <>
             {/* <div className="quiz-battle-and-list"> */}
 
-                {lastElementA && lastElementB ? (<></>) : (
-                    <>
-                        <div className="quiz-battle-container" id={stackBattleId}>
+            {lastElementA && lastElementB ? (
+                <>
+                    {/* finished sorting: show mini condensed */}
 
-                            <p className="quiz-vs">vs</p>
+                    <div className="mini-condensed-container">
 
-                            <div className="quiz-both-stacks">
+                        <MiniCondensed
+                            tracks={reverseEraOrder(updateGraphTracks(sortedPiece))}
+                            sortType='preference'
+                            orderOption='eraOrderOption'
+                            // orderOption={orderOption}
+                            directionUp={true}
+                        />
 
-                                <div className="quiz-stack-group-container quiz-stack-group-A">
-                                    <div className="quiz-stack">
-                                        {renderStackA}
-                                    </div>
-                                    {lastElementA ? (
-                                        <></>) : (
-                                        <>
-                                            <button className="quiz-stack-current-song quiz-stack-current-song-A">
-                                                <QuizSongOption
-                                                    track={pieceCopy[groupA][indexTrackA].track}
-                                                    onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
-                                                />
-                                            </button>
-                                        </>)}
+                        <UndoButton
+                            piece={piece}
+                            sortedPiece={sortedPiece}
+                            setSortedPiece={setSortedPiece}
+                            setIndexTrackA={setIndexTrackA}
+                            setIndexTrackB={setIndexTrackB}
+                            setLastElementA={setLastElementA}
+                            setLastElementB={setLastElementB}
+                            addUpSortedPieces={addUpSortedPieces}
+                            setAddUpSortedPieces={setAddUpSortedPieces}
+                        />
+
+                    </div>
+
+
+                </>) : (
+                <>
+                    <div className="quiz-battle-container" id={stackBattleId}>
+
+                        <p className="quiz-vs">vs</p>
+
+                        <div className="quiz-both-stacks">
+
+                            <div className="quiz-stack-group-container quiz-stack-group-A">
+                                <div className="quiz-stack">
+                                    {renderStackA}
                                 </div>
-
-                                {/* <p className="quiz-vs">vs</p> */}
-
-                                <div className="quiz-stack-group-container quiz-stack-group-B">
-                                    <div className="quiz-stack">
-                                        {renderStackB}
-                                    </div>
-                                    {lastElementB ? (
-                                        <></>) : (
-                                        <>
-                                            <button className="quiz-stack-current-song">
-                                                <QuizSongOption
-                                                    track={pieceCopy[groupB][indexTrackB].track}
-                                                    onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B', trackB)}
-                                                />
-                                            </button>
-                                        </>)}
-                                </div>
-
+                                {lastElementA ? (
+                                    <></>) : (
+                                    <>
+                                        <button className="quiz-stack-current-song quiz-stack-current-song-A">
+                                            <QuizSongOption
+                                                track={pieceCopy[groupA][indexTrackA].track}
+                                                onClick={() => handleClick(pieceCopy[groupA][indexTrackA], 'A', trackA)}
+                                            />
+                                        </button>
+                                    </>)}
                             </div>
+
+                            {/* <p className="quiz-vs">vs</p> */}
+
+                            <div className="quiz-stack-group-container quiz-stack-group-B">
+                                <div className="quiz-stack">
+                                    {renderStackB}
+                                </div>
+                                {lastElementB ? (
+                                    <></>) : (
+                                    <>
+                                        <button className="quiz-stack-current-song">
+                                            <QuizSongOption
+                                                track={pieceCopy[groupB][indexTrackB].track}
+                                                onClick={() => handleClick(pieceCopy[groupB][indexTrackB], 'B', trackB)}
+                                            />
+                                        </button>
+                                    </>)}
+                            </div>
+
                         </div>
+                    </div>
 
-                    </>)}
-                {/* </div> */}
+                    {/* sorted list */}
+                    <div>
+                        {sortedPiece.length ? (
+                            <>
+                                <div className="quiz-sorted-piece-list">
+                                    {sortedPiece.map((item, index) => {
+                                        return (
+                                            <QuizSortedItem item={item} index={index} key={index} />
+                                        )
+                                    })}
+                                    <UndoButton
+                                        piece={piece}
+                                        sortedPiece={sortedPiece}
+                                        setSortedPiece={setSortedPiece}
+                                        setIndexTrackA={setIndexTrackA}
+                                        setIndexTrackB={setIndexTrackB}
+                                        setLastElementA={setLastElementA}
+                                        setLastElementB={setLastElementB}
+                                        addUpSortedPieces={addUpSortedPieces}
+                                        setAddUpSortedPieces={setAddUpSortedPieces}
+                                    />
+                                </div>
+                            </>) : (<></>)}
+                    </div>
 
-                <div>
+                </>)}
 
-                    {/* {sortedPiece.map((item, index) => {
-                        return (
-                            <QuizSortedItem item={item} index={index} key={index} />
-                        )
-                    })} */}
-                    {sortedPiece.length ? (
-                        <>
-                            <div className="quiz-sorted-piece-list">
-                                {sortedPiece.map((item, index) => {
-                                    return (
-                                        <QuizSortedItem item={item} index={index} key={index} />
-                                    )
-                                })}
-                                <UndoButton
-                                    piece={piece}
-                                    sortedPiece={sortedPiece}
-                                    setSortedPiece={setSortedPiece}
-                                    setIndexTrackA={setIndexTrackA}
-                                    setIndexTrackB={setIndexTrackB}
-                                    setLastElementA={setLastElementA}
-                                    setLastElementB={setLastElementB}
-                                    addUpSortedPieces={addUpSortedPieces}
-                                    setAddUpSortedPieces={setAddUpSortedPieces}
-                                />
-                            </div>
-
-                        </>) : (<></>)}
-                </div>
-
-            {/* </div> */}
         </>
     )
 }

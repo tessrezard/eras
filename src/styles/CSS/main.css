@@ -1872,6 +1872,9 @@
 .quiz-undo-button {
   align-items: center;
   margin: 0.25rem 1rem;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 .quiz-undo-button .quiz-undo-btn-arrow {
   animation: none;
@@ -1883,6 +1886,10 @@
   color: #aaa592;
 }
 
+.quiz-mini-condensed-container {
+  border: solid 3px green;
+}
+
 .quiz-sorted-piece-list {
   background-color: #fff;
   background-color: rgb(237, 236, 232);
@@ -1891,7 +1898,7 @@
   margin: auto;
   margin-top: 1rem;
   transition: all 500ms ease;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -1920,33 +1927,13 @@
 .quiz-sorted-item-container {
   border-radius: 10px;
   border-width: 3px;
-  width: 240px;
-}
-@media (min-width: 370px) {
-  .quiz-sorted-item-container {
-    width: 280px;
-  }
-}
-@media (min-width: 470px) {
-  .quiz-sorted-item-container {
-    width: 370px;
-  }
-}
-@media (min-width: 570px) {
-  .quiz-sorted-item-container {
-    width: 470px;
-  }
-}
-@media (min-width: 650px) {
-  .quiz-sorted-item-container {
-    width: 470px;
-  }
+  width: 200px;
 }
 
 .quiz-sorted-item {
   padding: 0;
-  margin: 0.25rem;
-  font-size: 0.8rem;
+  margin: 0.15rem;
+  font-size: 0.65rem;
   font-weight: 400;
   color: #fff;
 }
